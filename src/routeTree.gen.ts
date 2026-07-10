@@ -10,11 +10,29 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as ProcessoRouteImport } from './routes/processo'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosRoute = ServicosRouteImport.update({
+  id: '/servicos',
+  path: '/servicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcessoRoute = ProcessoRouteImport.update({
+  id: '/processo',
+  path: '/processo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +43,39 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/portfolio': typeof PortfolioRoute
+  '/processo': typeof ProcessoRoute
+  '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/portfolio': typeof PortfolioRoute
+  '/processo': typeof ProcessoRoute
+  '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/portfolio': typeof PortfolioRoute
+  '/processo': typeof ProcessoRoute
+  '/servicos': typeof ServicosRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sobre'
+  fullPaths: '/' | '/portfolio' | '/processo' | '/servicos' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sobre'
-  id: '__root__' | '/' | '/sobre'
+  to: '/' | '/portfolio' | '/processo' | '/servicos' | '/sobre'
+  id: '__root__' | '/' | '/portfolio' | '/processo' | '/servicos' | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PortfolioRoute: typeof PortfolioRoute
+  ProcessoRoute: typeof ProcessoRoute
+  ServicosRoute: typeof ServicosRoute
   SobreRoute: typeof SobreRoute
 }
 
@@ -56,6 +86,27 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos': {
+      id: '/servicos'
+      path: '/servicos'
+      fullPath: '/servicos'
+      preLoaderRoute: typeof ServicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/processo': {
+      id: '/processo'
+      path: '/processo'
+      fullPath: '/processo'
+      preLoaderRoute: typeof ProcessoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +121,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PortfolioRoute: PortfolioRoute,
+  ProcessoRoute: ProcessoRoute,
+  ServicosRoute: ServicosRoute,
   SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
