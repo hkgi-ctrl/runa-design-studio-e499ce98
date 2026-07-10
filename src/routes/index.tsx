@@ -7,7 +7,6 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import runaMark from "@/assets/runa-mark.png.asset.json";
-import runaBrandBoard from "@/assets/runa-brand-board.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
