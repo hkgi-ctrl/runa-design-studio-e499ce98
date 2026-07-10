@@ -4,6 +4,8 @@ import { CTASection } from "@/components/cta-section";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Heart, Lightbulb, Users } from "lucide-react";
+import runaBrandBoard from "@/assets/runa-brand-board.png.asset.json";
+import runaValues from "@/assets/runa-values.png.asset.json";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -48,6 +50,14 @@ function SobrePage() {
 
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-20 overflow-hidden rounded-3xl border border-border/50 shadow-2xl shadow-turquoise/10">
+            <img
+              src={runaBrandBoard.url}
+              alt="Sistema de identidade visual RUNA Design"
+              className="w-full"
+              loading="lazy"
+            />
+          </div>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
@@ -60,7 +70,9 @@ function SobrePage() {
                 Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl bg-turquoise/10 blur-2xl" />
+              <div className="relative grid grid-cols-2 gap-4">
               <div className="rounded-2xl bg-card/40 p-6 text-center">
                 <div className="font-display text-4xl font-bold text-turquoise">8+</div>
                 <div className="mt-1 text-sm text-muted-foreground">Anos de experiência</div>
@@ -77,6 +89,7 @@ function SobrePage() {
                 <div className="font-display text-4xl font-bold text-turquoise">12</div>
                 <div className="mt-1 text-sm text-muted-foreground">Prémios recebidos</div>
               </div>
+              </div>
             </div>
           </div>
         </div>
@@ -89,7 +102,16 @@ function SobrePage() {
             title="O que nos guia"
             description="Princípios que definem a nossa forma de trabalhar e criar."
           />
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+            <div className="overflow-hidden rounded-3xl border border-border/50">
+              <img
+                src={runaValues.url}
+                alt="Valores da marca RUNA Design"
+                className="w-full"
+                loading="lazy"
+              />
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
             {values.map((value, index) => (
               <Card key={value.title} className="glass border-border/50 bg-card/40">
                 <CardContent className="p-6">
@@ -105,6 +127,7 @@ function SobrePage() {
                 </CardContent>
               </Card>
             ))}
+            </div>
           </div>
         </div>
       </section>

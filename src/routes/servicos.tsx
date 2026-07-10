@@ -4,6 +4,7 @@ import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Palette, Globe, MousePointer, Video, PenTool, Layers, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import runaSymbol from "@/assets/runa-symbol.png.asset.json";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({
@@ -62,7 +63,8 @@ function ServicosPage() {
       <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.8754_0.105_193.25_/_0.1),_transparent_50%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+            <div className="max-w-3xl">
             <span className="mb-4 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
               Serviços
             </span>
@@ -72,6 +74,13 @@ function ServicosPage() {
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Oferecemos um leque completo de serviços de design para ajudar a sua empresa a comunicar com clareza, beleza e impacto.
             </p>
+            </div>
+            <div className="relative hidden lg:block">
+              <div className="absolute -inset-6 rounded-3xl bg-turquoise/10 blur-3xl" />
+              <div className="relative overflow-hidden rounded-3xl border border-border/50 shadow-2xl">
+                <img src={runaSymbol.url} alt="Símbolo RUNA Design" className="w-full" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import runaMark from "@/assets/runa-mark.png.asset.json";
 
 const footerLinks = {
   servicos: [
@@ -33,12 +34,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link to="/" className="inline-flex items-center gap-2">
-              <span className="font-display text-3xl font-bold text-foreground">
-                RUNA
-              </span>
-              <span className="text-base font-medium text-turquoise">
-                Design
+            <Link to="/" className="inline-flex items-center gap-3">
+              <img src={runaMark.url} alt="RUNA Design" className="h-12 w-12 object-contain" />
+              <span className="flex flex-col leading-none">
+                <span className="font-display text-2xl font-bold tracking-[0.14em] text-foreground">
+                  RUNA
+                </span>
+                <span className="mt-1 text-xs font-medium uppercase tracking-[0.32em] text-turquoise">
+                  Design
+                </span>
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">

@@ -3,6 +3,8 @@ import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import runaGlass from "@/assets/runa-glass.png.asset.json";
+import runaLogo from "@/assets/runa-logo.png.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -47,6 +49,24 @@ function PortfolioPage() {
 
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-20 grid gap-6 lg:grid-cols-2">
+            <div className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/40 shadow-2xl">
+              <img src={runaGlass.url} alt="Aplicação do logo RUNA em vidro corporativo" className="w-full transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-graphite-deep/95 via-graphite-deep/60 to-transparent p-6">
+                <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">Case study</Badge>
+                <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">RUNA — Sinalética corporativa</h3>
+                <p className="mt-1 text-sm text-muted-foreground">Aplicação da identidade em vidro e superfícies de interior.</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-3xl border border-border/50 bg-white shadow-2xl">
+              <img src={runaLogo.url} alt="Logo principal RUNA Design" className="w-full transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-graphite-deep/95 via-graphite-deep/40 to-transparent p-6">
+                <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">Branding</Badge>
+                <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">RUNA — Identidade principal</h3>
+                <p className="mt-1 text-sm text-muted-foreground">Sistema de logotipo com acabamento metálico premium.</p>
+              </div>
+            </div>
+          </div>
           <SectionHeader
             title="Projetos selecionados"
             description="Cada projeto é uma história única de transformação visual e digital."

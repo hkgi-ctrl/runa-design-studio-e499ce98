@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
+import runaMark from "@/assets/runa-mark.png.asset.json";
+import runaBrandBoard from "@/assets/runa-brand-board.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -101,6 +103,11 @@ function HeroSection() {
       <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-turquoise/5 blur-3xl" />
 
       <div ref={ref} className={`reveal relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8 ${isVisible ? "visible" : ""}`}>
+        <img
+          src={runaMark.url}
+          alt="RUNA Design"
+          className="mx-auto mb-8 h-24 w-24 object-contain drop-shadow-[0_10px_40px_oklch(0.8754_0.105_193.25_/_0.4)] sm:h-32 sm:w-32"
+        />
         <Badge variant="outline" className="mb-6 border-turquoise/30 bg-turquoise/10 px-4 py-1.5 text-xs font-semibold text-turquoise">
           <Sparkles className="mr-1.5 h-3 w-3" />
           Estúdio Criativo Premium
