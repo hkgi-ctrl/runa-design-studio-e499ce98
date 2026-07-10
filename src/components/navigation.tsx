@@ -3,6 +3,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import runaMark from "@/assets/runa-mark.png.asset.json";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -43,12 +44,19 @@ export function Navigation() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="font-display text-2xl font-bold tracking-tight text-foreground">
-            RUNA
-          </span>
-          <span className="hidden text-sm font-medium text-turquoise sm:inline">
-            Design
+        <Link to="/" className="group flex items-center gap-2.5">
+          <img
+            src={runaMark.url}
+            alt="RUNA Design"
+            className="h-9 w-9 object-contain drop-shadow-[0_2px_10px_oklch(0.8754_0.105_193.25_/_0.35)] transition-transform duration-300 group-hover:scale-105"
+          />
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-xl font-bold tracking-[0.14em] text-foreground">
+              RUNA
+            </span>
+            <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.32em] text-turquoise">
+              Design
+            </span>
           </span>
         </Link>
 
@@ -94,14 +102,17 @@ export function Navigation() {
             <div className="flex flex-col gap-8 pt-8">
               <Link
                 to="/"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2.5"
                 onClick={() => setMobileOpen(false)}
               >
-                <span className="font-display text-2xl font-bold text-foreground">
-                  RUNA
-                </span>
-                <span className="text-sm font-medium text-turquoise">
-                  Design
+                <img src={runaMark.url} alt="RUNA Design" className="h-10 w-10 object-contain" />
+                <span className="flex flex-col leading-none">
+                  <span className="font-display text-xl font-bold tracking-[0.14em] text-foreground">
+                    RUNA
+                  </span>
+                  <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.32em] text-turquoise">
+                    Design
+                  </span>
                 </span>
               </Link>
               <nav className="flex flex-col gap-2">
