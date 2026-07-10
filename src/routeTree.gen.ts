@@ -13,6 +13,9 @@ import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as ProcessoRouteImport } from './routes/processo'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PlanosRouteImport } from './routes/planos'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SobreRoute = SobreRouteImport.update({
@@ -35,6 +38,21 @@ const PortfolioRoute = PortfolioRouteImport.update({
   path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlanosRoute = PlanosRouteImport.update({
+  id: '/planos',
+  path: '/planos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,6 +61,9 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/faq': typeof FaqRoute
+  '/planos': typeof PlanosRoute
   '/portfolio': typeof PortfolioRoute
   '/processo': typeof ProcessoRoute
   '/servicos': typeof ServicosRoute
@@ -50,6 +71,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/faq': typeof FaqRoute
+  '/planos': typeof PlanosRoute
   '/portfolio': typeof PortfolioRoute
   '/processo': typeof ProcessoRoute
   '/servicos': typeof ServicosRoute
@@ -58,6 +82,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/faq': typeof FaqRoute
+  '/planos': typeof PlanosRoute
   '/portfolio': typeof PortfolioRoute
   '/processo': typeof ProcessoRoute
   '/servicos': typeof ServicosRoute
@@ -65,14 +92,42 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/portfolio' | '/processo' | '/servicos' | '/sobre'
+  fullPaths:
+    | '/'
+    | '/blog'
+    | '/faq'
+    | '/planos'
+    | '/portfolio'
+    | '/processo'
+    | '/servicos'
+    | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/portfolio' | '/processo' | '/servicos' | '/sobre'
-  id: '__root__' | '/' | '/portfolio' | '/processo' | '/servicos' | '/sobre'
+  to:
+    | '/'
+    | '/blog'
+    | '/faq'
+    | '/planos'
+    | '/portfolio'
+    | '/processo'
+    | '/servicos'
+    | '/sobre'
+  id:
+    | '__root__'
+    | '/'
+    | '/blog'
+    | '/faq'
+    | '/planos'
+    | '/portfolio'
+    | '/processo'
+    | '/servicos'
+    | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRoute
+  FaqRoute: typeof FaqRoute
+  PlanosRoute: typeof PlanosRoute
   PortfolioRoute: typeof PortfolioRoute
   ProcessoRoute: typeof ProcessoRoute
   ServicosRoute: typeof ServicosRoute
@@ -109,6 +164,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/planos': {
+      id: '/planos'
+      path: '/planos'
+      fullPath: '/planos'
+      preLoaderRoute: typeof PlanosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -121,6 +197,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRoute,
+  FaqRoute: FaqRoute,
+  PlanosRoute: PlanosRoute,
   PortfolioRoute: PortfolioRoute,
   ProcessoRoute: ProcessoRoute,
   ServicosRoute: ServicosRoute,
