@@ -1,0 +1,32 @@
+name: Deploy Lovable Site to Hostinger Branch
+
+on:
+  push:
+    branches:
+      - main  # Se o Lovable atualizar outra branch, mude aqui (ex: master)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar Dependências e Compilar
+        run: |
+          npm install
+          npm run build
+
+      - name: Enviar pasta DIST para branch de Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: hostinger-deploy # Nome da nova branch com o site pronto
+          folder: dist # Pasta que o Vite gera
+          clean: true
