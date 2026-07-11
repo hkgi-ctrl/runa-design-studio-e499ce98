@@ -145,7 +145,6 @@ export function Footer() {
             © {new Date().getFullYear()} RUNA Design. Todos os direitos reservados.
           </p>
           <div className="flex flex-wrap items-center gap-6">
-            <DownloadCodebaseButton />
             <Link
               to="/"
               className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
