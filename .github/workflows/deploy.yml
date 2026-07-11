@@ -3,7 +3,10 @@ name: Deploy Lovable Site to Hostinger Branch
 on:
   push:
     branches:
-      - main  # Se o Lovable atualizar outra branch, mude aqui (ex: master)
+      - main
+
+permissions:
+  contents: write # Garante que o robô pode criar a nova branch
 
 jobs:
   build-and-deploy:
@@ -17,15 +20,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-         
+
       - name: Instalar Dependências e Compilar
         run: |
           npm install
-          npm run build
+          # Se o build gerar 'build' em vez de 'dist', renomeamos para garantir
+          npm run build --if-present
+          if [ -d "build" ]; then mv build dist; fi 
 
       - name: Enviar pasta DIST para branch de Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: hostinger-deploy # Nome da nova branch com o site pronto
-          folder: dist # Pasta que o Vite gera
-          clean: true 
+          branch: hostinger-deploy
+          folder: dist
+          clean: true
