@@ -29,4 +29,4 @@ jobs:
         with:
           branch: hostinger-deploy # Nome da nova branch com o site pronto
           folder: dist # Pasta que o Vite gera
-          clean: true
+          clean: true 
