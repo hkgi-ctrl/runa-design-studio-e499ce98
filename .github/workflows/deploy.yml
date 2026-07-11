@@ -1,36 +1,35 @@
-name: Deploy Lovable Site to Hostinger Branch
+name: Deploy Estático para Hostinger
 
 on:
   push:
     branches:
-      - main
-
-permissions:
-  contents: write # Garante que o robô pode criar a nova branch
+      - main  # Ou o nome da sua branch padrão do Lovable
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Código
+      - name: Checkout do código
         uses: actions/checkout@v4
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-level: '20'
+          cache: 'npm'
 
-      - name: Instalar Dependências e Compilar
-        run: |
-          npm install
-          # Se o build gerar 'build' em vez de 'dist', renomeamos para garantir
-          npm run build --if-present
-          if [ -d "build" ]; then mv build dist; fi 
+      - name: Instalar dependências
+        run: npm ci
 
-      - name: Enviar pasta DIST para branch de Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Gerar build estático (Preset GitHub Pages)
+        run: npx nitro build --preset github-pages
+
+      - name: Sincronizar arquivos com a Hostinger (FTP)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          branch: hostinger-deploy
-          folder: dist
-          clean: true
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: .output/public/  # Pasta que o comando gera com o index.html correto!
+          server-dir: public_html/
