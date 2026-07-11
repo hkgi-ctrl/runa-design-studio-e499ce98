@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
 import runaMark from "@/assets/runa-mark.png.asset.json";
+import { DownloadCodebaseButton } from "@/components/download-codebase-button";
 
 const footerLinks = {
   servicos: [
@@ -143,7 +144,8 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} RUNA Design. Todos os direitos reservados.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap items-center gap-6">
+            <DownloadCodebaseButton />
             <Link
               to="/"
               className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
