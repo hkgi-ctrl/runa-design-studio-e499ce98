@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
 import runaMark from "@/assets/runa-mark.png.asset.json";
-import { DownloadCodebaseButton } from "@/components/download-codebase-button";
 
 const footerLinks = {
   servicos: [
