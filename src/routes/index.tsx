@@ -105,7 +105,7 @@ function HeroSection() {
         <img
           src={runaMark.url}
           alt="RUNA Design"
-          className="mx-auto mb-8 h-24 w-24 object-contain drop-shadow-[0_10px_40px_oklch(0.8754_0.105_193.25_/_0.4)] sm:h-32 sm:w-32"
+          className="mx-auto mb-8 mt-5 h-[106px] w-[106px] object-contain drop-shadow-[0_10px_40px_oklch(0.8754_0.105_193.25_/_0.4)] sm:h-[141px] sm:w-[141px]"
         />
         <Badge variant="outline" className="mb-6 border-turquoise/30 bg-turquoise/10 px-4 py-1.5 text-xs font-semibold text-turquoise">
           <Sparkles className="mr-1.5 h-3 w-3" />
