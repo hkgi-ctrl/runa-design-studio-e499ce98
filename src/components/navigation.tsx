@@ -3,6 +3,8 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import runaLogo from "@/assets/runa-header-logo.png.asset.json";
 
 const navLinks = [
@@ -21,6 +23,7 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { location } = useRouterState();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +66,7 @@ export function Navigation() {
                   : "text-silver/80 hover:text-foreground"
               }`}
             >
-              {link.label}
+              {t(link.label)}
               {isActive(link.to) && (
                 <span className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-turquoise" />
               )}
@@ -72,21 +75,25 @@ export function Navigation() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <LanguageSwitcher />
           <Button
             asChild
             variant="default"
             className="bg-turquoise text-graphite-deep hover:bg-turquoise/90"
           >
-            <Link to="/contacto">Iniciar projeto</Link>
+            <Link to="/contacto">{t("Iniciar projeto")}</Link>
           </Button>
         </div>
 
         <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-          <SheetTrigger asChild className="lg:hidden">
-            <Button variant="ghost" size="icon" aria-label="Abrir menu">
-              <Menu className="h-6 w-6 text-foreground" />
-            </Button>
-          </SheetTrigger>
+          <div className="flex items-center gap-1 lg:hidden">
+            <LanguageSwitcher />
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" aria-label={t("Abrir menu")}>
+                <Menu className="h-6 w-6 text-foreground" />
+              </Button>
+            </SheetTrigger>
+          </div>
           <SheetContent
             side="right"
             className="w-full border-border/50 bg-background/95 backdrop-blur-xl sm:max-w-md"
@@ -110,7 +117,7 @@ export function Navigation() {
                           : "text-foreground hover:bg-muted"
                       }`}
                     >
-                      {link.label}
+                      {t(link.label)}
                     </Link>
                   </SheetClose>
                 ))}
@@ -120,7 +127,7 @@ export function Navigation() {
                 className="bg-turquoise text-graphite-deep hover:bg-turquoise/90"
               >
                 <Link to="/contacto" onClick={() => setMobileOpen(false)}>
-                  Iniciar projeto
+                  {t("Iniciar projeto")}
                 </Link>
               </Button>
             </div>
