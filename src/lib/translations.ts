@@ -295,7 +295,6 @@ export const es: Dict = {
     "Cada proyecto es una historia única de transformación visual y digital.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Identidad visual completa para marca de cosmética premium portuguesa.",
-  "Packaging": "Packaging",
   "Website institucional minimalista para escritório de arquitetura de referência.":
     "Sitio institucional minimalista para un estudio de arquitectura de referencia.",
   "Design de interface para aplicação de pagamentos mobile.":
@@ -335,13 +334,11 @@ export const es: Dict = {
   "É aqui que a magia acontece. Criamos as soluções visuais e experienciais com atenção meticulosa a cada detalhe, garantindo qualidade e consistência.":
     "Aquí es donde ocurre la magia. Creamos las soluciones visuales y experienciales con atención meticulosa a cada detalle, garantizando calidad y consistencia.",
   "Design exploratório": "Diseño exploratorio",
-  "Prototipagem": "Prototipado",
   "Revisões iterativas": "Revisiones iterativas",
   "Refinamento final": "Refinamiento final",
   "Preparamos todos os assets finais, documentação e apoio necessário para implementação. Garantimos que tudo esteja pronto para produção.":
     "Preparamos todos los assets finales, documentación y apoyo necesario para la implementación. Garantizamos que todo esté listo para producción.",
   "Ficheiros finais": "Ficheros finales",
-  "Documentação": "Documentación",
   "Suporte de implementação": "Soporte de implementación",
   "Handover completo": "Handover completo",
 
