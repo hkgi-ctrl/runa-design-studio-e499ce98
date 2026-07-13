@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useTranslation } from "react-i18next";
 
 interface CTASectionProps {
   title: string;
@@ -21,6 +22,7 @@ export function CTASection({
   secondaryTo = "/portfolio",
 }: CTASectionProps) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <section className="relative overflow-hidden py-24 sm:py-32">
@@ -30,10 +32,10 @@ export function CTASection({
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <div ref={ref} className={`reveal ${isVisible ? "visible" : ""}`}>
           <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-            {title}
+            {t(title)}
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            {description}
+            {t(description)}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
@@ -42,7 +44,7 @@ export function CTASection({
               className="group bg-turquoise text-graphite-deep hover:bg-turquoise/90"
             >
               <Link to={primaryTo}>
-                {primaryLabel}
+                {t(primaryLabel)}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -52,7 +54,7 @@ export function CTASection({
               variant="outline"
               className="border-silver/20 text-foreground hover:bg-silver/10"
             >
-              <Link to={secondaryTo}>{secondaryLabel}</Link>
+              <Link to={secondaryTo}>{t(secondaryLabel)}</Link>
             </Button>
           </div>
         </div>

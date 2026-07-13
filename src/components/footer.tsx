@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import runaMark from "@/assets/runa-mark.png.asset.json";
 
 const footerLinks = {
@@ -29,6 +30,8 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
+  const year = new Date().getFullYear();
   return (
     <footer className="border-t border-border/50 bg-graphite-deep">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -46,7 +49,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
-              Estúdio criativo especializado em branding, web design e experiências digitais premium que convertem.
+              {t("Estúdio criativo especializado em branding, web design e experiências digitais premium que convertem.")}
             </p>
             <div className="mt-6 flex gap-3">
               {socialLinks.map((social) => (
@@ -67,7 +70,7 @@ export function Footer() {
           <div className="grid gap-8 sm:grid-cols-3 lg:col-span-5">
             <div>
               <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
-                Serviços
+                {t("Serviços")}
               </h3>
               <ul className="mt-4 space-y-3">
                 {footerLinks.servicos.map((link) => (
@@ -76,7 +79,7 @@ export function Footer() {
                       to={link.to}
                       className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
                     >
-                      {link.label}
+                      {t(link.label)}
                     </Link>
                   </li>
                 ))}
@@ -84,7 +87,7 @@ export function Footer() {
             </div>
             <div>
               <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
-                Empresa
+                {t("Empresa")}
               </h3>
               <ul className="mt-4 space-y-3">
                 {footerLinks.empresa.map((link) => (
@@ -93,7 +96,7 @@ export function Footer() {
                       to={link.to}
                       className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
                     >
-                      {link.label}
+                      {t(link.label)}
                     </Link>
                   </li>
                 ))}
@@ -101,7 +104,7 @@ export function Footer() {
             </div>
             <div>
               <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
-                Suporte
+                {t("Suporte")}
               </h3>
               <ul className="mt-4 space-y-3">
                 {footerLinks.suporte.map((link) => (
@@ -110,7 +113,7 @@ export function Footer() {
                       to={link.to}
                       className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
                     >
-                      {link.label}
+                      {t(link.label)}
                     </Link>
                   </li>
                 ))}
@@ -120,7 +123,7 @@ export function Footer() {
 
           <div className="lg:col-span-3">
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
-              Contacto
+              {t("Contacto")}
             </h3>
             <ul className="mt-4 space-y-4">
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -141,20 +144,20 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 sm:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} RUNA Design. Todos os direitos reservados.
+            {t("© {{year}} RUNA Design. Todos os direitos reservados.", { year })}
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <Link
               to="/"
               className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
             >
-              Privacidade
+              {t("Privacidade")}
             </Link>
             <Link
               to="/"
               className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
             >
-              Termos
+              {t("Termos")}
             </Link>
           </div>
         </div>

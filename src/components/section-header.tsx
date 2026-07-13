@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useTranslation } from "react-i18next";
 
 interface SectionHeaderProps {
   eyebrow?: string;
@@ -14,6 +15,7 @@ export function SectionHeader({
   align = "center",
 }: SectionHeaderProps) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <div
@@ -24,15 +26,15 @@ export function SectionHeader({
     >
       {eyebrow && (
         <span className="mb-3 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
-          {eyebrow}
+          {t(eyebrow)}
         </span>
       )}
       <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-        {title}
+        {t(title)}
       </h2>
       {description && (
         <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-          {description}
+          {t(description)}
         </p>
       )}
     </div>
