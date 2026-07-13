@@ -1,0 +1,920 @@
+// PT source strings → ES / EN translations.
+// Keep keys equal to the exact PT string used in JSX / props.
+
+type Dict = Record<string, string>;
+
+export const es: Dict = {
+  // Navigation
+  "Home": "Inicio",
+  "Sobre": "Nosotros",
+  "Serviços": "Servicios",
+  "Portfólio": "Portafolio",
+  "Processo": "Proceso",
+  "Planos": "Planes",
+  "FAQ": "FAQ",
+  "Blog": "Blog",
+  "Contacto": "Contacto",
+  "Iniciar projeto": "Iniciar proyecto",
+  "Abrir menu": "Abrir menú",
+  "Idioma": "Idioma",
+
+  // Home hero
+  "Estúdio Criativo Premium": "Estudio Creativo Premium",
+  "Design que ": "Diseño que ",
+  "impulsiona": "impulsa",
+  " negócios": " negocios",
+  "Criamos marcas, websites e experiências digitais premium que captam atenção, transmitem valor e convertem visitantes em clientes.":
+    "Creamos marcas, sitios web y experiencias digitales premium que captan atención, transmiten valor y convierten visitantes en clientes.",
+  "Ver portfólio": "Ver portafolio",
+  "Projetos": "Proyectos",
+  "Anos": "Años",
+  "Clientes": "Clientes",
+
+  // Sections generic
+  "Soluções criativas sob medida": "Soluciones creativas a medida",
+  "Oferecemos um leque completo de serviços de design para ajudar a sua marca a destacar-se e crescer.":
+    "Ofrecemos una amplia gama de servicios de diseño para ayudar a tu marca a destacarse y crecer.",
+  "Trabalhos selecionados": "Trabajos seleccionados",
+  "Uma amostra dos projetos que tivemos o privilégio de criar para clientes ambiciosos.":
+    "Una muestra de los proyectos que tuvimos el privilegio de crear para clientes ambiciosos.",
+  "Como trabalhamos": "Cómo trabajamos",
+  "Um processo estruturado e colaborativo que garante resultados excepcionais em cada projeto.":
+    "Un proceso estructurado y colaborativo que garantiza resultados excepcionales en cada proyecto.",
+  "Testemunhos": "Testimonios",
+  "O que dizem os nossos clientes": "Lo que dicen nuestros clientes",
+  "A satisfação dos nossos clientes é o melhor testemunho da qualidade do nosso trabalho.":
+    "La satisfacción de nuestros clientes es el mejor testimonio de la calidad de nuestro trabajo.",
+  "Investimento transparente": "Inversión transparente",
+  "Escolha o plano que melhor se adapta às necessidades do seu negócio.":
+    "Elige el plan que mejor se adapte a las necesidades de tu negocio.",
+  "Mais popular": "Más popular",
+  " / projeto": " / proyecto",
+  "Escolher plano": "Elegir plan",
+  "Perguntas frequentes": "Preguntas frecuentes",
+  "Respostas às questões mais comuns sobre como trabalhamos.":
+    "Respuestas a las preguntas más habituales sobre cómo trabajamos.",
+  "Ver todas as perguntas": "Ver todas las preguntas",
+  "Insights e inspiração": "Insights e inspiración",
+  "Artigos sobre design, branding e estratégia digital.":
+    "Artículos sobre diseño, branding y estrategia digital.",
+
+  // Services (home cards)
+  "Branding": "Branding",
+  "Identidades visuais memoráveis que contam a história da sua marca e a destacam da concorrência.":
+    "Identidades visuales memorables que cuentan la historia de tu marca y la destacan de la competencia.",
+  "Web Design": "Diseño Web",
+  "Websites premium, responsivos e otimizados para conversão, com foco em resultados mensuráveis.":
+    "Sitios web premium, responsivos y optimizados para conversión, con foco en resultados medibles.",
+  "UI/UX Design": "Diseño UI/UX",
+  "Interfaces intuitivas e experiências digitais que os seus utilizadores adoram usar.":
+    "Interfaces intuitivas y experiencias digitales que a tus usuarios les encantará usar.",
+  "Motion Design": "Motion Design",
+  "Animações e microinterações que dão vida à sua marca e captam a atenção do público.":
+    "Animaciones y microinteracciones que dan vida a tu marca y captan la atención del público.",
+  "Design Gráfico": "Diseño Gráfico",
+  "Materiais gráficos de alta qualidade para comunicação consistente em todos os pontos de contacto.":
+    "Materiales gráficos de alta calidad para una comunicación consistente en todos los puntos de contacto.",
+  "Design Systems": "Design Systems",
+  "Sistemas de design escaláveis que garantem consistência e eficiência nos seus projetos digitais.":
+    "Sistemas de diseño escalables que garantizan consistencia y eficiencia en tus proyectos digitales.",
+
+  // Home portfolio items
+  "Aura Skincare": "Aura Skincare",
+  "Identidade visual para marca de cosmética premium.": "Identidad visual para marca de cosmética premium.",
+  "Vertex Arquitetura": "Vertex Arquitectura",
+  "Website institucional para escritório de arquitetura.": "Sitio institucional para estudio de arquitectura.",
+  "UI/UX": "UI/UX",
+  "PayFlow App": "PayFlow App",
+  "Design de interface para app de pagamentos.": "Diseño de interfaz para app de pagos.",
+  "Motion": "Motion",
+  "Nova Energia": "Nova Energía",
+  "Campanha de motion graphics para empresa de energia.": "Campaña de motion graphics para empresa de energía.",
+
+  // Process steps
+  "Descoberta": "Descubrimiento",
+  "Conhecemos o seu negócio, público-alvo e objetivos para definir a estratégia certa.":
+    "Conocemos tu negocio, público objetivo y metas para definir la estrategia adecuada.",
+  "Estratégia": "Estrategia",
+  "Desenvolvemos o conceito criativo e o plano de execução alinhado aos seus objetivos.":
+    "Desarrollamos el concepto creativo y el plan de ejecución alineado con tus objetivos.",
+  "Design": "Diseño",
+  "Criamos as soluções visuais e experienciais com atenção a cada detalhe.":
+    "Creamos las soluciones visuales y experienciales con atención a cada detalle.",
+  "Entrega": "Entrega",
+  "Preparamos e implementamos todos os assets, garantindo qualidade e consistência.":
+    "Preparamos e implementamos todos los assets, garantizando calidad y consistencia.",
+
+  // Testimonials
+  "A RUNA transformou completamente a nossa presença digital. O novo site triplicou as conversões.":
+    "RUNA transformó completamente nuestra presencia digital. El nuevo sitio triplicó las conversiones.",
+  "Ana Rodrigues": "Ana Rodrigues",
+  "CEO, Aura Skincare": "CEO, Aura Skincare",
+  "Profissionalismo criativo e atenção ao detalhe fora do comum. Recomendo sem hesitar.":
+    "Profesionalismo creativo y atención al detalle fuera de lo común. Lo recomiendo sin dudar.",
+  "Miguel Costa": "Miguel Costa",
+  "Fundador, Vertex Arquitetura": "Fundador, Vertex Arquitectura",
+  "A equipa entendeu exactamente o que precisávamos e superou todas as expectativas.":
+    "El equipo entendió exactamente lo que necesitábamos y superó todas las expectativas.",
+  "Sofia Martins": "Sofia Martins",
+  "CMO, PayFlow": "CMO, PayFlow",
+
+  // Pricing (home + planos)
+  "Essencial": "Esencial",
+  "Ideal para pequenas empresas e startups.": "Ideal para pequeñas empresas y startups.",
+  "Perfeito para pequenas empresas e startups que precisam de uma presença digital profissional.":
+    "Perfecto para pequeñas empresas y startups que necesitan una presencia digital profesional.",
+  "Logo e identidade básica": "Logo e identidad básica",
+  "Website one-page": "Sitio one-page",
+  "Design responsivo": "Diseño responsivo",
+  "2 rondas de revisões": "2 rondas de revisiones",
+  "Entrega de assets": "Entrega de assets",
+  "Suporte por email": "Soporte por email",
+  "Profissional": "Profesional",
+  "Para marcas que querem crescer com qualidade.": "Para marcas que quieren crecer con calidad.",
+  "Para marcas que querem crescer com uma presença digital completa e consistente.":
+    "Para marcas que quieren crecer con una presencia digital completa y consistente.",
+  "Branding completo": "Branding completo",
+  "Website multi-página": "Sitio multipágina",
+  "Design system básico": "Design system básico",
+  "4 rondas de revisões": "4 rondas de revisiones",
+  "Suporte prioritário": "Soporte prioritario",
+  "Enterprise": "Enterprise",
+  "Sob consulta": "Bajo consulta",
+  "Soluções completas para grandes projetos.": "Soluciones completas para grandes proyectos.",
+  "Soluções completas e personalizadas para grandes projetos e organizações.":
+    "Soluciones completas y personalizadas para grandes proyectos y organizaciones.",
+  "Estratégia de marca": "Estrategia de marca",
+  "Estratégia de marca completa": "Estrategia de marca completa",
+  "Website customizado": "Sitio personalizado",
+  "Website customizado avançado": "Sitio personalizado avanzado",
+  "Design system completo": "Design system completo",
+  "Revisões ilimitadas": "Revisiones ilimitadas",
+  "Suporte prioritário dedicado": "Soporte prioritario dedicado",
+
+  // Home FAQ preview
+  "Quanto tempo demora um projeto de branding?": "¿Cuánto tarda un proyecto de branding?",
+  "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade e do número de revisões.":
+    "Un proyecto de branding completo suele tardar entre 4 y 8 semanas, dependiendo de la complejidad y del número de revisiones.",
+  "Qual é o processo de trabalho?": "¿Cuál es el proceso de trabajo?",
+  "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Mantemos comunicação próxima durante todo o processo.":
+    "Empezamos con una fase de descubrimiento, seguida de estrategia, diseño y entrega. Mantenemos comunicación cercana durante todo el proceso.",
+  "Trabalham com clientes internacionais?": "¿Trabajan con clientes internacionales?",
+  "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada e a comunicação é totalmente digital.":
+    "Sí, trabajamos con clientes de todo el mundo. Las reuniones se realizan por videollamada y la comunicación es totalmente digital.",
+
+  // Home blog preview
+  "Como criar uma identidade visual memorável": "Cómo crear una identidad visual memorable",
+  "Os princípios fundamentais para construir uma marca que perdure.":
+    "Los principios fundamentales para construir una marca que perdure.",
+  "Tendências de web design para 2026": "Tendencias de diseño web para 2026",
+  "O que esperar do design digital no próximo ano.": "Qué esperar del diseño digital el próximo año.",
+  "UX": "UX",
+  "A importância da experiência do utilizador": "La importancia de la experiencia del usuario",
+  "Como o UX design impacta diretamente as conversões.": "Cómo el UX design impacta directamente en las conversiones.",
+
+  // CTAs
+  "Pronto para elevar a sua marca?": "¿Listo para elevar tu marca?",
+  "Vamos criar algo extraordinário juntos. Fale connosco e descubra como podemos ajudar o seu negócio a crescer.":
+    "Vamos a crear algo extraordinario juntos. Habla con nosotros y descubre cómo podemos ayudar a tu negocio a crecer.",
+  "Quer conhecer-nos melhor?": "¿Quieres conocernos mejor?",
+  "Vamos conversar sobre o seu projeto e descobrir como podemos ajudá-lo a crescer.":
+    "Hablemos sobre tu proyecto y descubramos cómo podemos ayudarte a crecer.",
+  "Vamos conversar sobre o seu projeto": "Hablemos de tu proyecto",
+  "Escolha o serviço que precisa e fale connosco para receber uma proposta personalizada.":
+    "Elige el servicio que necesitas y contáctanos para recibir una propuesta personalizada.",
+  "Pronto para começar?": "¿Listo para empezar?",
+  "O primeiro passo é simples: marcamos uma conversa para conhecer o seu projeto.":
+    "El primer paso es simple: agendamos una charla para conocer tu proyecto.",
+  "Quer ver o seu projeto aqui?": "¿Quieres ver tu proyecto aquí?",
+  "Vamos trabalhar juntos para criar algo verdadeiramente especial.":
+    "Trabajemos juntos para crear algo verdaderamente especial.",
+  "Ainda tem dúvidas?": "¿Aún tienes dudas?",
+  "Fale connosco para receber uma proposta personalizada adaptada ao seu projeto.":
+    "Contáctanos para recibir una propuesta personalizada adaptada a tu proyecto.",
+  "Estamos aqui para ajudar. Entre em contacto e responderemos com todo o gosto.":
+    "Estamos aquí para ayudar. Ponte en contacto y responderemos con mucho gusto.",
+  "Quer receber os nossos artigos?": "¿Quieres recibir nuestros artículos?",
+  "Fique a par das novidades e insights do mundo do design.":
+    "Mantente al día con las novedades y insights del mundo del diseño.",
+  "Vamos criar algo ": "Vamos a crear algo ",
+  "extraordinário": "extraordinario",
+  "Conte-nos sobre o seu projeto. Responderemos em breve com uma proposta personalizada.":
+    "Cuéntanos sobre tu proyecto. Te responderemos en breve con una propuesta personalizada.",
+
+  // Sobre page
+  "Sobre nós": "Sobre nosotros",
+  "Criamos marcas que ": "Creamos marcas que ",
+  "resistem ao tempo": "resisten al tiempo",
+  "A RUNA Design é um estúdio criativo português dedicado a transformar ideias em experiências visuais memoráveis. Combinamos estratégia, estética e tecnologia para criar marcas e produtos digitais que geram impacto real.":
+    "RUNA Design es un estudio creativo portugués dedicado a transformar ideas en experiencias visuales memorables. Combinamos estrategia, estética y tecnología para crear marcas y productos digitales que generan un impacto real.",
+  "A nossa história": "Nuestra historia",
+  "Fundada em Lisboa, a RUNA Design nasceu da vontade de oferecer design de excelência a empresas que valorizam a qualidade e a originalidade. Ao longo dos anos, ajudámos dezenas de marcas nacionais e internacionais a encontrar a sua voz visual e a destacar-se nos seus mercados.":
+    "Fundada en Lisboa, RUNA Design nació de la voluntad de ofrecer diseño de excelencia a empresas que valoran la calidad y la originalidad. A lo largo de los años, hemos ayudado a decenas de marcas nacionales e internacionales a encontrar su voz visual y destacar en sus mercados.",
+  "Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.":
+    "Creemos que el buen diseño es más que estética: es una herramienta estratégica que comunica valores, construye confianza e impulsa resultados.",
+  "Anos de experiência": "Años de experiencia",
+  "Projetos entregues": "Proyectos entregados",
+  "Clientes satisfeitos": "Clientes satisfechos",
+  "Prémios recebidos": "Premios recibidos",
+  "Valores": "Valores",
+  "O que nos guia": "Lo que nos guía",
+  "Princípios que definem a nossa forma de trabalhar e criar.":
+    "Principios que definen nuestra forma de trabajar y crear.",
+  "Propósito": "Propósito",
+  "Criamos design com intenção, alinhado aos objetivos de negócio dos nossos clientes.":
+    "Creamos diseño con intención, alineado con los objetivos de negocio de nuestros clientes.",
+  "Paixão": "Pasión",
+  "Acreditamos que o melhor design nasce do cuidado e da dedicação a cada detalhe.":
+    "Creemos que el mejor diseño nace del cuidado y la dedicación a cada detalle.",
+  "Inovação": "Innovación",
+  "Exploramos novas ideias e tecnologias para entregar soluções diferenciadoras.":
+    "Exploramos nuevas ideas y tecnologías para entregar soluciones diferenciadoras.",
+  "Colaboração": "Colaboración",
+  "Trabalhamos em parceria próxima com os nossos clientes em cada etapa do projeto.":
+    "Trabajamos en estrecha colaboración con nuestros clientes en cada etapa del proyecto.",
+
+  // Serviços page
+  "Soluções criativas para ": "Soluciones creativas para ",
+  "marcas ambiciosas": "marcas ambiciosas",
+  "Oferecemos um leque completo de serviços de design para ajudar a sua empresa a comunicar com clareza, beleza e impacto.":
+    "Ofrecemos una amplia gama de servicios de diseño para ayudar a tu empresa a comunicar con claridad, belleza e impacto.",
+  "O que fazemos": "Lo que hacemos",
+  "Cada serviço é adaptado às necessidades específicas do seu negócio.":
+    "Cada servicio se adapta a las necesidades específicas de tu negocio.",
+  "Saber mais": "Saber más",
+  "Construímos identidades de marca completas, desde o naming e logotipo até às diretrizes de marca, garantindo consistência em todos os pontos de contacto.":
+    "Construimos identidades de marca completas, desde el naming y el logotipo hasta las guías de marca, garantizando consistencia en todos los puntos de contacto.",
+  "Design de logotipo": "Diseño de logotipo",
+  "Identidade visual": "Identidad visual",
+  "Diretrizes de marca": "Guías de marca",
+  "Criamos websites premium que combinam estética refinada com performance e otimização para conversão, adaptados a todos os dispositivos.":
+    "Creamos sitios web premium que combinan estética refinada con rendimiento y optimización para conversión, adaptados a todos los dispositivos.",
+  "Websites institucionais": "Sitios institucionales",
+  "Landing pages": "Landing pages",
+  "E-commerce": "E-commerce",
+  "SEO técnico": "SEO técnico",
+  "Desenhamos interfaces centradas no utilizador, com pesquisa, prototipagem e testes para garantir experiências digitais intuitivas.":
+    "Diseñamos interfaces centradas en el usuario, con investigación, prototipado y pruebas para garantizar experiencias digitales intuitivas.",
+  "Pesquisa de utilizadores": "Investigación de usuarios",
+  "Wireframes": "Wireframes",
+  "Prototipagem": "Prototipado",
+  "Testes de usabilidade": "Pruebas de usabilidad",
+  "Damos vida à sua marca com animações, microinterações e vídeos explicativos que comunicam mensagens de forma envolvente.":
+    "Damos vida a tu marca con animaciones, microinteracciones y vídeos explicativos que comunican mensajes de forma envolvente.",
+  "Animações de interface": "Animaciones de interfaz",
+  "Vídeos explicativos": "Vídeos explicativos",
+  "Motion graphics": "Motion graphics",
+  "Transições premium": "Transiciones premium",
+  "Produzimos materiais gráficos de alta qualidade, desde brochuras e cartões de visita a posts para redes sociais e apresentações.":
+    "Producimos materiales gráficos de alta calidad, desde folletos y tarjetas de visita hasta publicaciones para redes sociales y presentaciones.",
+  "Editorial": "Editorial",
+  "Social media": "Social media",
+  "Packaging": "Packaging",
+  "Apresentações": "Presentaciones",
+  "Desenvolvemos sistemas de design escaláveis que garantem consistência visual e eficiência no desenvolvimento de produtos digitais.":
+    "Desarrollamos sistemas de diseño escalables que garantizan consistencia visual y eficiencia en el desarrollo de productos digitales.",
+  "Componentes reutilizáveis": "Componentes reutilizables",
+  "Documentação": "Documentación",
+  "Tokens de design": "Tokens de diseño",
+  "Integração com dev": "Integración con dev",
+
+  // Portfolio page
+  "Trabalhos que falam por ": "Trabajos que hablan por ",
+  "si": "sí",
+  "Uma seleção dos projetos mais recentes onde aplicámos estratégia, criatividade e execução impecável.":
+    "Una selección de los proyectos más recientes donde aplicamos estrategia, creatividad y ejecución impecable.",
+  "Case study": "Case study",
+  "RUNA — Sinalética corporativa": "RUNA — Señalética corporativa",
+  "Aplicação da identidade em vidro e superfícies de interior.":
+    "Aplicación de la identidad en vidrio y superficies de interior.",
+  "RUNA — Identidade principal": "RUNA — Identidad principal",
+  "Sistema de logotipo com acabamento metálico premium.":
+    "Sistema de logotipo con acabado metálico premium.",
+  "Projetos selecionados": "Proyectos seleccionados",
+  "Cada projeto é uma história única de transformação visual e digital.":
+    "Cada proyecto es una historia única de transformación visual y digital.",
+  "Identidade visual completa para marca de cosmética premium portuguesa.":
+    "Identidad visual completa para marca de cosmética premium portuguesa.",
+  "Website institucional minimalista para escritório de arquitetura de referência.":
+    "Sitio institucional minimalista para un estudio de arquitectura de referencia.",
+  "Design de interface para aplicação de pagamentos mobile.":
+    "Diseño de interfaz para aplicación de pagos móvil.",
+  "App Design": "Diseño de App",
+  "Campanha de motion graphics para empresa de energias renováveis.":
+    "Campaña de motion graphics para empresa de energías renovables.",
+  "Video": "Vídeo",
+  "Mesa Real": "Mesa Real",
+  "Branding e comunicação para restaurante de alta cozinha lisboeta.":
+    "Branding y comunicación para restaurante de alta cocina lisboeta.",
+  "TechVision": "TechVision",
+  "Website corporativo com design system completo para empresa de tecnologia.":
+    "Sitio corporativo con design system completo para empresa de tecnología.",
+  "Design System": "Design System",
+
+  // Processo page
+  "Um método claro para ": "Un método claro para ",
+  "resultados excecionais": "resultados excepcionales",
+  "O nosso processo foi desenhado para maximizar a colaboração, minimizar riscos e garantir entregas de alta qualidade em cada projeto.":
+    "Nuestro proceso ha sido diseñado para maximizar la colaboración, minimizar riesgos y garantizar entregas de alta calidad en cada proyecto.",
+  "As quatro etapas do nosso processo": "Las cuatro etapas de nuestro proceso",
+  "De ideia a realidade, acompanhá-lo em cada passo do caminho.":
+    "De la idea a la realidad, acompañándote en cada paso del camino.",
+  "Começamos por conhecer profundamente o seu negócio, mercado, concorrência e público-alvo. Realizamos briefings, workshops e pesquisas para recolher todos os insights necessários.":
+    "Comenzamos conociendo en profundidad tu negocio, mercado, competencia y público objetivo. Realizamos briefings, talleres e investigaciones para recopilar todos los insights necesarios.",
+  "Briefing estratégico": "Briefing estratégico",
+  "Análise de mercado": "Análisis de mercado",
+  "Definição de objetivos": "Definición de objetivos",
+  "Mapeamento de público-alvo": "Mapeo del público objetivo",
+  "Com base na informação recolhida, desenvolvemos o conceito criativo e o plano de execução. Definimos a direção visual, a mensagem e os entregáveis do projeto.":
+    "Con base en la información recopilada, desarrollamos el concepto creativo y el plan de ejecución. Definimos la dirección visual, el mensaje y los entregables del proyecto.",
+  "Conceito criativo": "Concepto creativo",
+  "Direção de arte": "Dirección de arte",
+  "Plano de entregáveis": "Plan de entregables",
+  "Cronograma detalhado": "Cronograma detallado",
+  "É aqui que a magia acontece. Criamos as soluções visuais e experienciais com atenção meticulosa a cada detalhe, garantindo qualidade e consistência.":
+    "Aquí es donde ocurre la magia. Creamos las soluciones visuales y experienciales con atención meticulosa a cada detalle, garantizando calidad y consistencia.",
+  "Design exploratório": "Diseño exploratorio",
+  "Revisões iterativas": "Revisiones iterativas",
+  "Refinamento final": "Refinamiento final",
+  "Preparamos todos os assets finais, documentação e apoio necessário para implementação. Garantimos que tudo esteja pronto para produção.":
+    "Preparamos todos los assets finales, documentación y apoyo necesario para la implementación. Garantizamos que todo esté listo para producción.",
+  "Ficheiros finais": "Ficheros finales",
+  "Suporte de implementação": "Soporte de implementación",
+  "Handover completo": "Handover completo",
+
+  // Planos page
+  "Investimento ": "Inversión ",
+  "transparente": "transparente",
+  "Escolha o plano que melhor se adapta às necessidades do seu negócio. Todos os projetos incluem acompanhamento próximo e entrega de alta qualidade.":
+    "Elige el plan que mejor se adapte a las necesidades de tu negocio. Todos los proyectos incluyen acompañamiento cercano y entrega de alta calidad.",
+  "Escolha o seu plano": "Elige tu plan",
+  "Soluções flexíveis para diferentes etapas de crescimento.":
+    "Soluciones flexibles para diferentes etapas de crecimiento.",
+  "Comparativo de funcionalidades": "Comparativa de funcionalidades",
+  "Veja o que está incluído em cada plano.": "Consulta lo que está incluido en cada plan.",
+  "Funcionalidade": "Funcionalidad",
+  "Rondas de revisões": "Rondas de revisiones",
+  "Ilimitadas": "Ilimitadas",
+  "Básico": "Básico",
+  "Completo": "Completo",
+
+  // FAQ page
+  "Perguntas ": "Preguntas ",
+  "frequentes": "frecuentes",
+  "Respostas claras para as questões mais comuns sobre os nossos serviços e forma de trabalhar.":
+    "Respuestas claras a las preguntas más comunes sobre nuestros servicios y forma de trabajar.",
+  "Tudo o que precisa saber": "Todo lo que necesitas saber",
+  "Se não encontrar a resposta que procura, não hesite em contactar-nos.":
+    "Si no encuentras la respuesta que buscas, no dudes en contactarnos.",
+  "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade, do número de revisões e da rapidez no feedback. Projetos mais simples podem ser concluídos em menos tempo.":
+    "Un proyecto de branding completo suele tardar entre 4 y 8 semanas, dependiendo de la complejidad, del número de revisiones y de la rapidez en el feedback. Proyectos más sencillos pueden completarse en menos tiempo.",
+  "O nosso processo divide-se em quatro etapas: Descoberta, Estratégia, Design e Entrega. Mantemos comunicação próxima durante todo o projeto e realizamos checkpoints regulares para garantir alinhamento.":
+    "Nuestro proceso se divide en cuatro etapas: Descubrimiento, Estrategia, Diseño y Entrega. Mantenemos comunicación cercana durante todo el proyecto y realizamos checkpoints regulares para garantizar la alineación.",
+  "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada, a comunicação é totalmente digital e entregamos todos os assets prontos para uso em qualquer mercado.":
+    "Sí, trabajamos con clientes de todo el mundo. Las reuniones se realizan por videollamada, la comunicación es totalmente digital y entregamos todos los assets listos para su uso en cualquier mercado.",
+  "Quantas revisões estão incluídas?": "¿Cuántas revisiones están incluidas?",
+  "O número de revisões depende do plano escolhido. O plano Essencial inclui 2 rondas de revisões, o Profissional inclui 4, e o Enterprise inclui revisões ilimitadas. Sempre que possível, procuramos ser flexíveis.":
+    "El número de revisiones depende del plan elegido. El plan Esencial incluye 2 rondas de revisiones, el Profesional incluye 4 y el Enterprise incluye revisiones ilimitadas. Siempre que sea posible, intentamos ser flexibles.",
+  "Como é feito o pagamento?": "¿Cómo se realiza el pago?",
+  "O pagamento é feito em tranches. Normalmente, solicitamos 50% no início do projeto e os restantes 50% na entrega final. Para projetos de maior dimensão, podemos definir um plano de pagamentos personalizado.":
+    "El pago se realiza por tramos. Normalmente solicitamos el 50% al inicio del proyecto y el 50% restante en la entrega final. Para proyectos de mayor envergadura, podemos definir un plan de pagos personalizado.",
+  "Entregam apenas o design ou também desenvolvem o website?":
+    "¿Entregan solo el diseño o también desarrollan el sitio web?",
+  "O nosso foco principal é o design. No entanto, temos parceiros de desenvolvimento com quem colaboramos regularmente e podemos acompanhar a implementação para garantir fidelidade ao design aprovado.":
+    "Nuestro foco principal es el diseño. No obstante, tenemos socios de desarrollo con quienes colaboramos regularmente y podemos acompañar la implementación para garantizar fidelidad al diseño aprobado.",
+  "Posso pedir alterações após a entrega?": "¿Puedo pedir cambios tras la entrega?",
+  "Sim, oferecemos um período de suporte pós-entrega para pequenos ajustes. Alterações de maior dimensão podem ser orçamentadas separadamente como um novo projeto ou manutenção.":
+    "Sí, ofrecemos un período de soporte post-entrega para pequeños ajustes. Cambios de mayor alcance pueden presupuestarse por separado como un nuevo proyecto o mantenimiento.",
+  "Como posso começar um projeto?": "¿Cómo puedo empezar un proyecto?",
+  "É simples: entre em contacto connosco através do formulário, email ou telefone. Marcaremos uma conversa inicial gratuita para conhecer o seu projeto e apresentar uma proposta personalizada.":
+    "Es sencillo: contáctanos a través del formulario, email o teléfono. Agendaremos una conversación inicial gratuita para conocer tu proyecto y presentar una propuesta personalizada.",
+
+  // Blog page
+  "Insights e ": "Insights e ",
+  "inspiração": "inspiración",
+  "Artigos sobre design, branding, estratégia digital e tudo o que nos inspira a criar melhor.":
+    "Artículos sobre diseño, branding, estrategia digital y todo lo que nos inspira a crear mejor.",
+  "Artigos recentes": "Artículos recientes",
+  "Explore o nosso conteúdo mais recente.": "Explora nuestro contenido más reciente.",
+  "Descubra os princípios fundamentais para construir uma marca que perdure no tempo e ressoe com o seu público.":
+    "Descubre los principios fundamentales para construir una marca que perdure en el tiempo y resuene con tu público.",
+  "min": "min",
+  "de leitura": "de lectura",
+  "O que esperar do design digital no próximo ano, desde animações subtis até tipografia ousada.":
+    "Qué esperar del diseño digital el próximo año, desde animaciones sutiles hasta tipografía audaz.",
+  "Como o UX design impacta diretamente as conversões e a fidelização dos clientes.":
+    "Cómo el UX design impacta directamente en las conversiones y la fidelización de los clientes.",
+  "Design como ferramenta de negócio": "Diseño como herramienta de negocio",
+  "Por que as empresas que investem em design consistente superam a concorrência.":
+    "Por qué las empresas que invierten en diseño consistente superan a la competencia.",
+  "Microinterações que encantam": "Microinteracciones que encantan",
+  "Pequenos detalhes animados que fazem uma grande diferença na experiência digital.":
+    "Pequeños detalles animados que marcan una gran diferencia en la experiencia digital.",
+  "O futuro do branding sustentável": "El futuro del branding sostenible",
+  "Como as marcas estão a adaptar as suas identidades visuais a valores mais sustentáveis.":
+    "Cómo las marcas están adaptando sus identidades visuales a valores más sostenibles.",
+
+  // Contacto page
+  "Vamos criar algo extraordinário": "Vamos a crear algo extraordinario",
+  "Nome": "Nombre",
+  "O seu nome": "Tu nombre",
+  "Email": "Email",
+  "o.seu@email.pt": "tu@email.com",
+  "Assunto": "Asunto",
+  "Assunto da mensagem": "Asunto del mensaje",
+  "Orçamento estimado": "Presupuesto estimado",
+  "Ex: 3.000€": "Ej: 3.000€",
+  "Mensagem": "Mensaje",
+  "Conte-nos sobre o seu projeto...": "Cuéntanos sobre tu proyecto...",
+  "Enviar mensagem": "Enviar mensaje",
+  "Mensagem enviada!": "¡Mensaje enviado!",
+  "Obrigado pelo contacto. Responderemos o mais brevemente possível.":
+    "Gracias por tu mensaje. Responderemos lo antes posible.",
+  "Informações de contacto": "Información de contacto",
+  "Estamos disponíveis de segunda a sexta, das 9h às 18h.":
+    "Estamos disponibles de lunes a viernes, de 9h a 18h.",
+  "Telefone": "Teléfono",
+  "Localização": "Ubicación",
+  "Lisboa, Portugal": "Lisboa, Portugal",
+  "Siga-nos": "Síguenos",
+  "Acompanhe o nosso trabalho nas redes sociais.":
+    "Sigue nuestro trabajo en redes sociales.",
+
+  // Footer
+  "Estúdio criativo especializado em branding, web design e experiências digitais premium que convertem.":
+    "Estudio creativo especializado en branding, diseño web y experiencias digitales premium que convierten.",
+  "Empresa": "Empresa",
+  "Suporte": "Soporte",
+  "© {{year}} RUNA Design. Todos os direitos reservados.":
+    "© {{year}} RUNA Design. Todos los derechos reservados.",
+  "Privacidade": "Privacidad",
+  "Termos": "Términos",
+
+  // 404
+  "Página não encontrada": "Página no encontrada",
+  "A página que procura não existe ou foi movida.":
+    "La página que buscas no existe o ha sido movida.",
+  "Voltar ao início": "Volver al inicio",
+  "Esta página não carregou": "Esta página no cargó",
+  "Algo correu mal do nosso lado. Pode tentar atualizar ou voltar ao início.":
+    "Algo salió mal por nuestro lado. Puedes intentar actualizar o volver al inicio.",
+  "Tentar novamente": "Intentar de nuevo",
+};
+
+export const en: Dict = {
+  // Navigation
+  "Home": "Home",
+  "Sobre": "About",
+  "Serviços": "Services",
+  "Portfólio": "Portfolio",
+  "Processo": "Process",
+  "Planos": "Plans",
+  "FAQ": "FAQ",
+  "Blog": "Blog",
+  "Contacto": "Contact",
+  "Iniciar projeto": "Start a project",
+  "Abrir menu": "Open menu",
+  "Idioma": "Language",
+
+  // Home hero
+  "Estúdio Criativo Premium": "Premium Creative Studio",
+  "Design que ": "Design that ",
+  "impulsiona": "drives",
+  " negócios": " business",
+  "Criamos marcas, websites e experiências digitais premium que captam atenção, transmitem valor e convertem visitantes em clientes.":
+    "We craft brands, websites and premium digital experiences that capture attention, convey value and turn visitors into customers.",
+  "Ver portfólio": "See portfolio",
+  "Projetos": "Projects",
+  "Anos": "Years",
+  "Clientes": "Clients",
+
+  // Sections generic
+  "Soluções criativas sob medida": "Tailor-made creative solutions",
+  "Oferecemos um leque completo de serviços de design para ajudar a sua marca a destacar-se e crescer.":
+    "We offer a complete range of design services to help your brand stand out and grow.",
+  "Trabalhos selecionados": "Selected work",
+  "Uma amostra dos projetos que tivemos o privilégio de criar para clientes ambiciosos.":
+    "A sample of the projects we've had the privilege to create for ambitious clients.",
+  "Como trabalhamos": "How we work",
+  "Um processo estruturado e colaborativo que garante resultados excepcionais em cada projeto.":
+    "A structured, collaborative process that ensures exceptional results on every project.",
+  "Testemunhos": "Testimonials",
+  "O que dizem os nossos clientes": "What our clients say",
+  "A satisfação dos nossos clientes é o melhor testemunho da qualidade do nosso trabalho.":
+    "Our clients' satisfaction is the best testament to the quality of our work.",
+  "Investimento transparente": "Transparent pricing",
+  "Escolha o plano que melhor se adapta às necessidades do seu negócio.":
+    "Choose the plan that best fits your business needs.",
+  "Mais popular": "Most popular",
+  " / projeto": " / project",
+  "Escolher plano": "Choose plan",
+  "Perguntas frequentes": "Frequently asked questions",
+  "Respostas às questões mais comuns sobre como trabalhamos.":
+    "Answers to the most common questions about how we work.",
+  "Ver todas as perguntas": "See all questions",
+  "Insights e inspiração": "Insights & inspiration",
+  "Artigos sobre design, branding e estratégia digital.":
+    "Articles on design, branding and digital strategy.",
+
+  // Services (home cards)
+  "Branding": "Branding",
+  "Identidades visuais memoráveis que contam a história da sua marca e a destacam da concorrência.":
+    "Memorable visual identities that tell your brand's story and set it apart from the competition.",
+  "Web Design": "Web Design",
+  "Websites premium, responsivos e otimizados para conversão, com foco em resultados mensuráveis.":
+    "Premium, responsive websites optimized for conversion, focused on measurable results.",
+  "UI/UX Design": "UI/UX Design",
+  "Interfaces intuitivas e experiências digitais que os seus utilizadores adoram usar.":
+    "Intuitive interfaces and digital experiences your users will love.",
+  "Motion Design": "Motion Design",
+  "Animações e microinterações que dão vida à sua marca e captam a atenção do público.":
+    "Animations and micro-interactions that bring your brand to life and capture attention.",
+  "Design Gráfico": "Graphic Design",
+  "Materiais gráficos de alta qualidade para comunicação consistente em todos os pontos de contacto.":
+    "High-quality graphic materials for consistent communication across every touchpoint.",
+  "Design Systems": "Design Systems",
+  "Sistemas de design escaláveis que garantem consistência e eficiência nos seus projetos digitais.":
+    "Scalable design systems that ensure consistency and efficiency across your digital projects.",
+
+  // Home portfolio items
+  "Aura Skincare": "Aura Skincare",
+  "Identidade visual para marca de cosmética premium.": "Visual identity for a premium cosmetics brand.",
+  "Vertex Arquitetura": "Vertex Architecture",
+  "Website institucional para escritório de arquitetura.": "Corporate website for an architecture studio.",
+  "UI/UX": "UI/UX",
+  "PayFlow App": "PayFlow App",
+  "Design de interface para app de pagamentos.": "Interface design for a payments app.",
+  "Motion": "Motion",
+  "Nova Energia": "Nova Energy",
+  "Campanha de motion graphics para empresa de energia.": "Motion graphics campaign for an energy company.",
+
+  // Process steps
+  "Descoberta": "Discovery",
+  "Conhecemos o seu negócio, público-alvo e objetivos para definir a estratégia certa.":
+    "We get to know your business, audience and goals to define the right strategy.",
+  "Estratégia": "Strategy",
+  "Desenvolvemos o conceito criativo e o plano de execução alinhado aos seus objetivos.":
+    "We develop the creative concept and execution plan aligned with your goals.",
+  "Design": "Design",
+  "Criamos as soluções visuais e experienciais com atenção a cada detalhe.":
+    "We craft visual and experiential solutions with attention to every detail.",
+  "Entrega": "Delivery",
+  "Preparamos e implementamos todos os assets, garantindo qualidade e consistência.":
+    "We prepare and deliver every asset, ensuring quality and consistency.",
+
+  // Testimonials
+  "A RUNA transformou completamente a nossa presença digital. O novo site triplicou as conversões.":
+    "RUNA completely transformed our digital presence. The new site tripled conversions.",
+  "Ana Rodrigues": "Ana Rodrigues",
+  "CEO, Aura Skincare": "CEO, Aura Skincare",
+  "Profissionalismo criativo e atenção ao detalhe fora do comum. Recomendo sem hesitar.":
+    "Creative professionalism and attention to detail beyond the ordinary. I recommend them without hesitation.",
+  "Miguel Costa": "Miguel Costa",
+  "Fundador, Vertex Arquitetura": "Founder, Vertex Architecture",
+  "A equipa entendeu exactamente o que precisávamos e superou todas as expectativas.":
+    "The team understood exactly what we needed and exceeded every expectation.",
+  "Sofia Martins": "Sofia Martins",
+  "CMO, PayFlow": "CMO, PayFlow",
+
+  // Pricing
+  "Essencial": "Essential",
+  "Ideal para pequenas empresas e startups.": "Ideal for small businesses and startups.",
+  "Perfeito para pequenas empresas e startups que precisam de uma presença digital profissional.":
+    "Perfect for small businesses and startups that need a professional digital presence.",
+  "Logo e identidade básica": "Logo and basic identity",
+  "Website one-page": "One-page website",
+  "Design responsivo": "Responsive design",
+  "2 rondas de revisões": "2 rounds of revisions",
+  "Entrega de assets": "Asset delivery",
+  "Suporte por email": "Email support",
+  "Profissional": "Professional",
+  "Para marcas que querem crescer com qualidade.": "For brands that want to grow with quality.",
+  "Para marcas que querem crescer com uma presença digital completa e consistente.":
+    "For brands that want to grow with a complete, consistent digital presence.",
+  "Branding completo": "Full branding",
+  "Website multi-página": "Multi-page website",
+  "Design system básico": "Basic design system",
+  "4 rondas de revisões": "4 rounds of revisions",
+  "Suporte prioritário": "Priority support",
+  "Enterprise": "Enterprise",
+  "Sob consulta": "On request",
+  "Soluções completas para grandes projetos.": "Complete solutions for large projects.",
+  "Soluções completas e personalizadas para grandes projetos e organizações.":
+    "Complete, custom solutions for large projects and organizations.",
+  "Estratégia de marca": "Brand strategy",
+  "Estratégia de marca completa": "Full brand strategy",
+  "Website customizado": "Custom website",
+  "Website customizado avançado": "Advanced custom website",
+  "Design system completo": "Complete design system",
+  "Revisões ilimitadas": "Unlimited revisions",
+  "Suporte prioritário dedicado": "Dedicated priority support",
+
+  // Home FAQ preview
+  "Quanto tempo demora um projeto de branding?": "How long does a branding project take?",
+  "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade e do número de revisões.":
+    "A full branding project typically takes 4 to 8 weeks, depending on complexity and revisions.",
+  "Qual é o processo de trabalho?": "What is your workflow?",
+  "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Mantemos comunicação próxima durante todo o processo.":
+    "We start with discovery, followed by strategy, design and delivery. We keep close communication throughout.",
+  "Trabalham com clientes internacionais?": "Do you work with international clients?",
+  "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada e a comunicação é totalmente digital.":
+    "Yes, we work with clients around the world. Meetings happen over video call and communication is fully digital.",
+
+  // Home blog preview
+  "Como criar uma identidade visual memorável": "How to build a memorable visual identity",
+  "Os princípios fundamentais para construir uma marca que perdure.":
+    "The fundamental principles for building a brand that lasts.",
+  "Tendências de web design para 2026": "Web design trends for 2026",
+  "O que esperar do design digital no próximo ano.": "What to expect from digital design in the year ahead.",
+  "UX": "UX",
+  "A importância da experiência do utilizador": "The importance of user experience",
+  "Como o UX design impacta diretamente as conversões.": "How UX design directly impacts conversions.",
+
+  // CTAs
+  "Pronto para elevar a sua marca?": "Ready to elevate your brand?",
+  "Vamos criar algo extraordinário juntos. Fale connosco e descubra como podemos ajudar o seu negócio a crescer.":
+    "Let's create something extraordinary together. Get in touch and discover how we can help your business grow.",
+  "Quer conhecer-nos melhor?": "Want to know us better?",
+  "Vamos conversar sobre o seu projeto e descobrir como podemos ajudá-lo a crescer.":
+    "Let's talk about your project and find out how we can help you grow.",
+  "Vamos conversar sobre o seu projeto": "Let's talk about your project",
+  "Escolha o serviço que precisa e fale connosco para receber uma proposta personalizada.":
+    "Pick the service you need and reach out for a tailored proposal.",
+  "Pronto para começar?": "Ready to start?",
+  "O primeiro passo é simples: marcamos uma conversa para conhecer o seu projeto.":
+    "The first step is simple: we schedule a call to learn about your project.",
+  "Quer ver o seu projeto aqui?": "Want to see your project here?",
+  "Vamos trabalhar juntos para criar algo verdadeiramente especial.":
+    "Let's work together to create something truly special.",
+  "Ainda tem dúvidas?": "Still have questions?",
+  "Fale connosco para receber uma proposta personalizada adaptada ao seu projeto.":
+    "Get in touch for a personalized proposal tailored to your project.",
+  "Estamos aqui para ajudar. Entre em contacto e responderemos com todo o gosto.":
+    "We're here to help. Get in touch and we'll gladly respond.",
+  "Quer receber os nossos artigos?": "Want to receive our articles?",
+  "Fique a par das novidades e insights do mundo do design.":
+    "Stay up to date with news and insights from the design world.",
+  "Vamos criar algo ": "Let's create something ",
+  "extraordinário": "extraordinary",
+  "Conte-nos sobre o seu projeto. Responderemos em breve com uma proposta personalizada.":
+    "Tell us about your project. We'll respond shortly with a tailored proposal.",
+
+  // Sobre / About
+  "Sobre nós": "About us",
+  "Criamos marcas que ": "We build brands that ",
+  "resistem ao tempo": "stand the test of time",
+  "A RUNA Design é um estúdio criativo português dedicado a transformar ideias em experiências visuais memoráveis. Combinamos estratégia, estética e tecnologia para criar marcas e produtos digitais que geram impacto real.":
+    "RUNA Design is a Portuguese creative studio dedicated to turning ideas into memorable visual experiences. We combine strategy, aesthetics and technology to create brands and digital products that deliver real impact.",
+  "A nossa história": "Our story",
+  "Fundada em Lisboa, a RUNA Design nasceu da vontade de oferecer design de excelência a empresas que valorizam a qualidade e a originalidade. Ao longo dos anos, ajudámos dezenas de marcas nacionais e internacionais a encontrar a sua voz visual e a destacar-se nos seus mercados.":
+    "Founded in Lisbon, RUNA Design was born from the desire to offer design excellence to companies that value quality and originality. Over the years, we've helped dozens of national and international brands find their visual voice and stand out in their markets.",
+  "Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.":
+    "We believe good design is more than aesthetics: it's a strategic tool that communicates values, builds trust and drives results.",
+  "Anos de experiência": "Years of experience",
+  "Projetos entregues": "Projects delivered",
+  "Clientes satisfeitos": "Happy clients",
+  "Prémios recebidos": "Awards received",
+  "Valores": "Values",
+  "O que nos guia": "What guides us",
+  "Princípios que definem a nossa forma de trabalhar e criar.":
+    "Principles that define how we work and create.",
+  "Propósito": "Purpose",
+  "Criamos design com intenção, alinhado aos objetivos de negócio dos nossos clientes.":
+    "We create design with intent, aligned with our clients' business goals.",
+  "Paixão": "Passion",
+  "Acreditamos que o melhor design nasce do cuidado e da dedicação a cada detalhe.":
+    "We believe the best design is born from care and dedication to every detail.",
+  "Inovação": "Innovation",
+  "Exploramos novas ideias e tecnologias para entregar soluções diferenciadoras.":
+    "We explore new ideas and technologies to deliver distinctive solutions.",
+  "Colaboração": "Collaboration",
+  "Trabalhamos em parceria próxima com os nossos clientes em cada etapa do projeto.":
+    "We work in close partnership with our clients at every stage of the project.",
+
+  // Serviços / Services
+  "Soluções criativas para ": "Creative solutions for ",
+  "marcas ambiciosas": "ambitious brands",
+  "Oferecemos um leque completo de serviços de design para ajudar a sua empresa a comunicar com clareza, beleza e impacto.":
+    "We offer a complete range of design services to help your company communicate with clarity, beauty and impact.",
+  "O que fazemos": "What we do",
+  "Cada serviço é adaptado às necessidades específicas do seu negócio.":
+    "Each service is tailored to your business's specific needs.",
+  "Saber mais": "Learn more",
+  "Construímos identidades de marca completas, desde o naming e logotipo até às diretrizes de marca, garantindo consistência em todos os pontos de contacto.":
+    "We build complete brand identities, from naming and logo to brand guidelines, ensuring consistency across every touchpoint.",
+  "Design de logotipo": "Logo design",
+  "Identidade visual": "Visual identity",
+  "Diretrizes de marca": "Brand guidelines",
+  "Criamos websites premium que combinam estética refinada com performance e otimização para conversão, adaptados a todos os dispositivos.":
+    "We create premium websites that blend refined aesthetics with performance and conversion optimization, across every device.",
+  "Websites institucionais": "Corporate websites",
+  "Landing pages": "Landing pages",
+  "E-commerce": "E-commerce",
+  "SEO técnico": "Technical SEO",
+  "Desenhamos interfaces centradas no utilizador, com pesquisa, prototipagem e testes para garantir experiências digitais intuitivas.":
+    "We design user-centered interfaces with research, prototyping and testing to ensure intuitive digital experiences.",
+  "Pesquisa de utilizadores": "User research",
+  "Wireframes": "Wireframes",
+  "Prototipagem": "Prototyping",
+  "Testes de usabilidade": "Usability testing",
+  "Damos vida à sua marca com animações, microinterações e vídeos explicativos que comunicam mensagens de forma envolvente.":
+    "We bring your brand to life with animations, micro-interactions and explainer videos that engage.",
+  "Animações de interface": "Interface animations",
+  "Vídeos explicativos": "Explainer videos",
+  "Motion graphics": "Motion graphics",
+  "Transições premium": "Premium transitions",
+  "Produzimos materiais gráficos de alta qualidade, desde brochuras e cartões de visita a posts para redes sociais e apresentações.":
+    "We produce high-quality graphic materials, from brochures and business cards to social media posts and presentations.",
+  "Editorial": "Editorial",
+  "Social media": "Social media",
+  "Packaging": "Packaging",
+  "Apresentações": "Presentations",
+  "Desenvolvemos sistemas de design escaláveis que garantem consistência visual e eficiência no desenvolvimento de produtos digitais.":
+    "We develop scalable design systems that ensure visual consistency and efficient product development.",
+  "Componentes reutilizáveis": "Reusable components",
+  "Documentação": "Documentation",
+  "Tokens de design": "Design tokens",
+  "Integração com dev": "Dev integration",
+
+  // Portfolio
+  "Trabalhos que falam por ": "Work that speaks for ",
+  "si": "itself",
+  "Uma seleção dos projetos mais recentes onde aplicámos estratégia, criatividade e execução impecável.":
+    "A selection of recent projects where we applied strategy, creativity and flawless execution.",
+  "Case study": "Case study",
+  "RUNA — Sinalética corporativa": "RUNA — Corporate signage",
+  "Aplicação da identidade em vidro e superfícies de interior.":
+    "Identity applied on glass and interior surfaces.",
+  "RUNA — Identidade principal": "RUNA — Primary identity",
+  "Sistema de logotipo com acabamento metálico premium.":
+    "Logo system with premium metallic finish.",
+  "Projetos selecionados": "Selected projects",
+  "Cada projeto é uma história única de transformação visual e digital.":
+    "Each project is a unique story of visual and digital transformation.",
+  "Identidade visual completa para marca de cosmética premium portuguesa.":
+    "Complete visual identity for a premium Portuguese cosmetics brand.",
+  "Website institucional minimalista para escritório de arquitetura de referência.":
+    "Minimalist corporate website for a leading architecture studio.",
+  "Design de interface para aplicação de pagamentos mobile.":
+    "Interface design for a mobile payments app.",
+  "App Design": "App Design",
+  "Campanha de motion graphics para empresa de energias renováveis.":
+    "Motion graphics campaign for a renewable-energy company.",
+  "Video": "Video",
+  "Mesa Real": "Mesa Real",
+  "Branding e comunicação para restaurante de alta cozinha lisboeta.":
+    "Branding and communications for a Lisbon fine-dining restaurant.",
+  "TechVision": "TechVision",
+  "Website corporativo com design system completo para empresa de tecnologia.":
+    "Corporate website with a full design system for a tech company.",
+  "Design System": "Design System",
+
+  // Processo
+  "Um método claro para ": "A clear method for ",
+  "resultados excecionais": "exceptional results",
+  "O nosso processo foi desenhado para maximizar a colaboração, minimizar riscos e garantir entregas de alta qualidade em cada projeto.":
+    "Our process is designed to maximize collaboration, minimize risk and guarantee high-quality deliveries on every project.",
+  "As quatro etapas do nosso processo": "The four stages of our process",
+  "De ideia a realidade, acompanhá-lo em cada passo do caminho.":
+    "From idea to reality, guiding you every step of the way.",
+  "Começamos por conhecer profundamente o seu negócio, mercado, concorrência e público-alvo. Realizamos briefings, workshops e pesquisas para recolher todos os insights necessários.":
+    "We start by deeply understanding your business, market, competition and audience. We run briefings, workshops and research to gather every insight we need.",
+  "Briefing estratégico": "Strategic briefing",
+  "Análise de mercado": "Market analysis",
+  "Definição de objetivos": "Goal setting",
+  "Mapeamento de público-alvo": "Audience mapping",
+  "Com base na informação recolhida, desenvolvemos o conceito criativo e o plano de execução. Definimos a direção visual, a mensagem e os entregáveis do projeto.":
+    "Based on the gathered information, we develop the creative concept and execution plan. We define visual direction, message and project deliverables.",
+  "Conceito criativo": "Creative concept",
+  "Direção de arte": "Art direction",
+  "Plano de entregáveis": "Deliverables plan",
+  "Cronograma detalhado": "Detailed timeline",
+  "É aqui que a magia acontece. Criamos as soluções visuais e experienciais com atenção meticulosa a cada detalhe, garantindo qualidade e consistência.":
+    "This is where the magic happens. We craft the visual and experiential solutions with meticulous attention to every detail, ensuring quality and consistency.",
+  "Design exploratório": "Exploratory design",
+  "Revisões iterativas": "Iterative reviews",
+  "Refinamento final": "Final refinement",
+  "Preparamos todos os assets finais, documentação e apoio necessário para implementação. Garantimos que tudo esteja pronto para produção.":
+    "We prepare all final assets, documentation and support needed for implementation. We make sure everything is production-ready.",
+  "Ficheiros finais": "Final files",
+  "Suporte de implementação": "Implementation support",
+  "Handover completo": "Full handover",
+
+  // Planos
+  "Investimento ": "Transparent ",
+  "transparente": "pricing",
+  "Escolha o plano que melhor se adapta às necessidades do seu negócio. Todos os projetos incluem acompanhamento próximo e entrega de alta qualidade.":
+    "Choose the plan that best fits your business's needs. Every project includes close support and high-quality delivery.",
+  "Escolha o seu plano": "Choose your plan",
+  "Soluções flexíveis para diferentes etapas de crescimento.":
+    "Flexible solutions for different stages of growth.",
+  "Comparativo de funcionalidades": "Features comparison",
+  "Veja o que está incluído em cada plano.": "See what's included in each plan.",
+  "Funcionalidade": "Feature",
+  "Rondas de revisões": "Rounds of revisions",
+  "Ilimitadas": "Unlimited",
+  "Básico": "Basic",
+  "Completo": "Complete",
+
+  // FAQ page
+  "Perguntas ": "Frequently ",
+  "frequentes": "asked",
+  "Respostas claras para as questões mais comuns sobre os nossos serviços e forma de trabalhar.":
+    "Clear answers to the most common questions about our services and how we work.",
+  "Tudo o que precisa saber": "Everything you need to know",
+  "Se não encontrar a resposta que procura, não hesite em contactar-nos.":
+    "If you don't find the answer you're looking for, don't hesitate to reach out.",
+  "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade, do número de revisões e da rapidez no feedback. Projetos mais simples podem ser concluídos em menos tempo.":
+    "A full branding project typically takes 4 to 8 weeks, depending on complexity, number of revisions and how quickly feedback arrives. Simpler projects can wrap up faster.",
+  "O nosso processo divide-se em quatro etapas: Descoberta, Estratégia, Design e Entrega. Mantemos comunicação próxima durante todo o projeto e realizamos checkpoints regulares para garantir alinhamento.":
+    "Our process is split into four stages: Discovery, Strategy, Design and Delivery. We keep close communication throughout and run regular checkpoints to ensure alignment.",
+  "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada, a comunicação é totalmente digital e entregamos todos os assets prontos para uso em qualquer mercado.":
+    "Yes, we work with clients around the world. Meetings happen over video call, communication is fully digital and we deliver assets ready to use in any market.",
+  "Quantas revisões estão incluídas?": "How many revisions are included?",
+  "O número de revisões depende do plano escolhido. O plano Essencial inclui 2 rondas de revisões, o Profissional inclui 4, e o Enterprise inclui revisões ilimitadas. Sempre que possível, procuramos ser flexíveis.":
+    "It depends on the plan you choose. The Essential plan includes 2 rounds of revisions, Professional includes 4 and Enterprise includes unlimited revisions. Whenever possible, we try to be flexible.",
+  "Como é feito o pagamento?": "How is payment handled?",
+  "O pagamento é feito em tranches. Normalmente, solicitamos 50% no início do projeto e os restantes 50% na entrega final. Para projetos de maior dimensão, podemos definir um plano de pagamentos personalizado.":
+    "Payment is split into stages. Usually we take 50% at project start and the remaining 50% on final delivery. For larger projects we can arrange a custom payment plan.",
+  "Entregam apenas o design ou também desenvolvem o website?":
+    "Do you only deliver design or also build the website?",
+  "O nosso foco principal é o design. No entanto, temos parceiros de desenvolvimento com quem colaboramos regularmente e podemos acompanhar a implementação para garantir fidelidade ao design aprovado.":
+    "Our main focus is design. However, we have development partners we regularly collaborate with and we can oversee implementation to ensure fidelity to the approved design.",
+  "Posso pedir alterações após a entrega?": "Can I request changes after delivery?",
+  "Sim, oferecemos um período de suporte pós-entrega para pequenos ajustes. Alterações de maior dimensão podem ser orçamentadas separadamente como um novo projeto ou manutenção.":
+    "Yes, we offer a post-delivery support period for small adjustments. Larger changes can be quoted separately as a new project or ongoing maintenance.",
+  "Como posso começar um projeto?": "How can I start a project?",
+  "É simples: entre em contacto connosco através do formulário, email ou telefone. Marcaremos uma conversa inicial gratuita para conhecer o seu projeto e apresentar uma proposta personalizada.":
+    "It's simple: get in touch via the form, email or phone. We'll schedule a free initial call to learn about your project and present a personalized proposal.",
+
+  // Blog
+  "Insights e ": "Insights & ",
+  "inspiração": "inspiration",
+  "Artigos sobre design, branding, estratégia digital e tudo o que nos inspira a criar melhor.":
+    "Articles on design, branding, digital strategy and everything that inspires us to create better.",
+  "Artigos recentes": "Recent articles",
+  "Explore o nosso conteúdo mais recente.": "Explore our latest content.",
+  "Descubra os princípios fundamentais para construir uma marca que perdure no tempo e ressoe com o seu público.":
+    "Discover the fundamental principles for building a brand that lasts and resonates with your audience.",
+  "min": "min",
+  "de leitura": "read",
+  "O que esperar do design digital no próximo ano, desde animações subtis até tipografia ousada.":
+    "What to expect from digital design in the year ahead, from subtle animation to bold typography.",
+  "Como o UX design impacta diretamente as conversões e a fidelização dos clientes.":
+    "How UX design directly impacts conversions and customer loyalty.",
+  "Design como ferramenta de negócio": "Design as a business tool",
+  "Por que as empresas que investem em design consistente superam a concorrência.":
+    "Why companies that invest in consistent design outperform the competition.",
+  "Microinterações que encantam": "Delightful micro-interactions",
+  "Pequenos detalhes animados que fazem uma grande diferença na experiência digital.":
+    "Small animated details that make a big difference in the digital experience.",
+  "O futuro do branding sustentável": "The future of sustainable branding",
+  "Como as marcas estão a adaptar as suas identidades visuais a valores mais sustentáveis.":
+    "How brands are adapting their visual identities to more sustainable values.",
+
+  // Contacto
+  "Vamos criar algo extraordinário": "Let's create something extraordinary",
+  "Nome": "Name",
+  "O seu nome": "Your name",
+  "Email": "Email",
+  "o.seu@email.pt": "you@email.com",
+  "Assunto": "Subject",
+  "Assunto da mensagem": "Message subject",
+  "Orçamento estimado": "Estimated budget",
+  "Ex: 3.000€": "e.g. €3,000",
+  "Mensagem": "Message",
+  "Conte-nos sobre o seu projeto...": "Tell us about your project...",
+  "Enviar mensagem": "Send message",
+  "Mensagem enviada!": "Message sent!",
+  "Obrigado pelo contacto. Responderemos o mais brevemente possível.":
+    "Thanks for reaching out. We'll respond as soon as possible.",
+  "Informações de contacto": "Contact info",
+  "Estamos disponíveis de segunda a sexta, das 9h às 18h.":
+    "We're available Monday to Friday, 9am to 6pm.",
+  "Telefone": "Phone",
+  "Localização": "Location",
+  "Lisboa, Portugal": "Lisbon, Portugal",
+  "Siga-nos": "Follow us",
+  "Acompanhe o nosso trabalho nas redes sociais.":
+    "Follow our work on social media.",
+
+  // Footer
+  "Estúdio criativo especializado em branding, web design e experiências digitais premium que convertem.":
+    "Creative studio specialized in branding, web design and premium digital experiences that convert.",
+  "Empresa": "Company",
+  "Suporte": "Support",
+  "© {{year}} RUNA Design. Todos os direitos reservados.":
+    "© {{year}} RUNA Design. All rights reserved.",
+  "Privacidade": "Privacy",
+  "Termos": "Terms",
+
+  // 404 / error
+  "Página não encontrada": "Page not found",
+  "A página que procura não existe ou foi movida.":
+    "The page you're looking for doesn't exist or has been moved.",
+  "Voltar ao início": "Back to home",
+  "Esta página não carregou": "This page didn't load",
+  "Algo correu mal do nosso lado. Pode tentar atualizar ou voltar ao início.":
+    "Something went wrong on our side. You can retry or return home.",
+  "Tentar novamente": "Try again",
+};
