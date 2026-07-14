@@ -58,7 +58,7 @@ function SobrePage() {
               loading="lazy"
             />
           </div>
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-12">
             <div>
               <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
                 A nossa história
