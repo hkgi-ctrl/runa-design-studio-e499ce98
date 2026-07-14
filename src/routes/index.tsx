@@ -81,7 +81,6 @@ function HomePage() {
       <PortfolioSection />
       <ProcessSection />
       <TestimonialsSection />
-      <PricingPreviewSection />
       <FAQPreviewSection />
       <CTASection
         title="Pronto para elevar a sua marca?"
@@ -306,73 +305,6 @@ function TestimonialsSection() {
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function PricingPreviewSection() {
-  const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
-
-  const plans = [
-    { name: "Essencial", price: "1.200€", description: "Ideal para pequenas empresas e startups.", features: ["Logo e identidade básica", "Website one-page", "Design responsivo", "2 rondas de revisões"] },
-    { name: "Profissional", price: "3.500€", description: "Para marcas que querem crescer com qualidade.", features: ["Branding completo", "Website multi-página", "UI/UX design", "Design system básico", "4 rondas de revisões"], popular: true },
-    { name: "Enterprise", price: "Sob consulta", description: "Soluções completas para grandes projetos.", features: ["Estratégia de marca", "Website customizado", "Motion design", "Design system completo", "Suporte prioritário"] },
-  ];
-
-  return (
-    <section className="py-24 sm:py-32" ref={ref}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          eyebrow="Planos"
-          title="Investimento transparente"
-          description="Escolha o plano que melhor se adapta às necessidades do seu negócio."
-        />
-        <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 lg:grid-cols-3`}>
-          {plans.map((plan, index) => (
-            <Card
-              key={plan.name}
-              className={`relative glass border-border/50 ${plan.popular ? "border-turquoise/50 bg-card/60" : "bg-card/40"}`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-turquoise px-3 py-1 text-xs font-semibold text-graphite-deep">
-                  Mais popular
-                </div>
-              )}
-              <CardContent className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground">
-                  {plan.name}
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {plan.description}
-                </p>
-                <div className="mt-4">
-                  <span className="font-display text-4xl font-bold text-foreground">
-                    {plan.price}
-                  </span>
-                  {plan.price !== "Sob consulta" && (
-                    <span className="text-muted-foreground"> / projeto</span>
-                  )}
-                </div>
-                <ul className="mt-6 space-y-3">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="h-1.5 w-1.5 rounded-full bg-turquoise" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  asChild
-                  className={`mt-6 w-full ${plan.popular ? "bg-turquoise text-graphite-deep hover:bg-turquoise/90" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"}`}
-                >
-                  <Link to="/contacto">Escolher plano</Link>
-                </Button>
               </CardContent>
             </Card>
           ))}
