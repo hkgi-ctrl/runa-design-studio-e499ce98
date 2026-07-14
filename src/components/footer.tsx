@@ -18,7 +18,6 @@ const footerLinks = {
   suporte: [
     { to: "/faq", label: "FAQ" },
     { to: "/contacto", label: "Contacto" },
-    { to: "/planos", label: "Planos" },
   ],
 };
 
