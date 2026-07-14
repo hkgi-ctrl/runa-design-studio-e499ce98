@@ -17,7 +17,6 @@ import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PlanosRouteImport } from './routes/planos'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactoRouteImport } from './routes/contacto'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SobreRoute = SobreRouteImport.update({
@@ -60,11 +59,6 @@ const ContactoRoute = ContactoRouteImport.update({
   path: '/contacto',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -73,7 +67,6 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
   '/contacto': typeof ContactoRoute
   '/faq': typeof FaqRoute
   '/planos': typeof PlanosRoute
@@ -85,7 +78,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
   '/contacto': typeof ContactoRoute
   '/faq': typeof FaqRoute
   '/planos': typeof PlanosRoute
@@ -98,7 +90,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
   '/contacto': typeof ContactoRoute
   '/faq': typeof FaqRoute
   '/planos': typeof PlanosRoute
@@ -112,7 +103,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/blog'
     | '/contacto'
     | '/faq'
     | '/planos'
@@ -124,7 +114,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/blog'
     | '/contacto'
     | '/faq'
     | '/planos'
@@ -136,7 +125,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/blog'
     | '/contacto'
     | '/faq'
     | '/planos'
@@ -149,7 +137,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BlogRoute: typeof BlogRoute
   ContactoRoute: typeof ContactoRoute
   FaqRoute: typeof FaqRoute
   PlanosRoute: typeof PlanosRoute
@@ -218,13 +205,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -237,7 +217,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BlogRoute: BlogRoute,
   ContactoRoute: ContactoRoute,
   FaqRoute: FaqRoute,
   PlanosRoute: PlanosRoute,
@@ -250,13 +229,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
