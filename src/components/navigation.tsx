@@ -15,7 +15,6 @@ const navLinks = [
   { to: "/processo", label: "Processo" },
   { to: "/planos", label: "Planos" },
   { to: "/faq", label: "FAQ" },
-  { to: "/blog", label: "Blog" },
   { to: "/contacto", label: "Contacto" },
 ];
 

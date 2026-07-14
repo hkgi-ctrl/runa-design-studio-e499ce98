@@ -14,7 +14,6 @@ const footerLinks = {
     { to: "/sobre", label: "Sobre nós" },
     { to: "/portfolio", label: "Portfólio" },
     { to: "/processo", label: "Processo" },
-    { to: "/blog", label: "Blog" },
   ],
   suporte: [
     { to: "/faq", label: "FAQ" },
