@@ -58,7 +58,7 @@ function SobrePage() {
               loading="lazy"
             />
           </div>
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-12">
             <div>
               <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
                 A nossa história
@@ -69,27 +69,6 @@ function SobrePage() {
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.
               </p>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-3xl bg-turquoise/10 blur-2xl" />
-              <div className="relative grid grid-cols-2 gap-4">
-              <div className="rounded-2xl bg-card/40 p-6 text-center">
-                <div className="font-display text-4xl font-bold text-turquoise">8+</div>
-                <div className="mt-1 text-sm text-muted-foreground">Anos de experiência</div>
-              </div>
-              <div className="rounded-2xl bg-card/40 p-6 text-center">
-                <div className="font-display text-4xl font-bold text-turquoise">120+</div>
-                <div className="mt-1 text-sm text-muted-foreground">Projetos entregues</div>
-              </div>
-              <div className="rounded-2xl bg-card/40 p-6 text-center">
-                <div className="font-display text-4xl font-bold text-turquoise">50+</div>
-                <div className="mt-1 text-sm text-muted-foreground">Clientes satisfeitos</div>
-              </div>
-              <div className="rounded-2xl bg-card/40 p-6 text-center">
-                <div className="font-display text-4xl font-bold text-turquoise">12</div>
-                <div className="mt-1 text-sm text-muted-foreground">Prémios recebidos</div>
-              </div>
-              </div>
             </div>
           </div>
         </div>
