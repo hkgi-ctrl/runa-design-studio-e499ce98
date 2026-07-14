@@ -423,6 +423,3 @@ function FAQPreviewSection() {
       </div>
     </section>
   );
-}
-
-function BlogPreviewSection() {
