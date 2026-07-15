@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useTranslation } from "react-i18next";
 
 export const Route = createFileRoute("/processo")({
   head: () => ({
@@ -44,6 +45,7 @@ const steps = [
 
 function ProcessoPage() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -52,13 +54,13 @@ function ProcessoPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div ref={ref} className={`reveal ${isVisible ? "visible" : ""} max-w-3xl`}>
             <span className="mb-4 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
-              Processo
+              {t("Processo")}
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              Um método claro para <span className="gradient-text">resultados excecionais</span>
+              {t("Um método claro para ")}<span className="gradient-text">{t("resultados excecionais")}</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              O nosso processo foi desenhado para maximizar a colaboração, minimizar riscos e garantir entregas de alta qualidade em cada projeto.
+              {t("O nosso processo foi desenhado para maximizar a colaboração, minimizar riscos e garantir entregas de alta qualidade em cada projeto.")}
             </p>
           </div>
         </div>
@@ -84,16 +86,16 @@ function ProcessoPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-display text-2xl font-semibold text-foreground">
-                      {step.title}
+                      {t(step.title)}
                     </h3>
                     <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                      {step.description}
+                      {t(step.description)}
                     </p>
                     <ul className="mt-4 grid gap-2 sm:grid-cols-2">
                       {step.details.map((detail) => (
                         <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
                           <div className="h-1.5 w-1.5 rounded-full bg-turquoise" />
-                          {detail}
+                          {t(detail)}
                         </li>
                       ))}
                     </ul>
