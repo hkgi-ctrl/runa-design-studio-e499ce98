@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
+import { useTranslation } from "react-i18next";
 import runaMark from "@/assets/runa-mark.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -92,6 +93,7 @@ function HomePage() {
 
 function HeroSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
@@ -111,13 +113,13 @@ function HeroSection() {
         </div>
         <Badge variant="outline" className="mb-6 border-turquoise/30 bg-turquoise/10 px-4 py-1.5 text-xs font-semibold text-turquoise">
           <Sparkles className="mr-1.5 h-3 w-3" />
-          Estúdio Criativo Premium
+          {t("Estúdio Criativo Premium")}
         </Badge>
         <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
-          Design que <span className="gradient-text">impulsiona</span> negócios
+          {t("Design que ")}<span className="gradient-text">{t("impulsiona")}</span>{t(" negócios")}
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-          Criamos marcas, websites e experiências digitais premium que captam atenção, transmitem valor e convertem visitantes em clientes.
+          {t("Criamos marcas, websites e experiências digitais premium que captam atenção, transmitem valor e convertem visitantes em clientes.")}
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button
@@ -126,7 +128,7 @@ function HeroSection() {
             className="group bg-turquoise text-graphite-deep hover:bg-turquoise/90"
           >
             <Link to="/contacto">
-              Iniciar projeto
+              {t("Iniciar projeto")}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -136,7 +138,7 @@ function HeroSection() {
             variant="outline"
             className="border-silver/20 text-foreground hover:bg-silver/10"
           >
-            <Link to="/portfolio">Ver portfólio</Link>
+            <Link to="/portfolio">{t("Ver portfólio")}</Link>
           </Button>
         </div>
       </div>
@@ -146,6 +148,7 @@ function HeroSection() {
 
 function ServicesSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <section className="py-24 sm:py-32" ref={ref}>
@@ -167,10 +170,10 @@ function ServicesSection() {
                   <service.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
-                  {service.title}
+                  {t(service.title)}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {service.description}
+                  {t(service.description)}
                 </p>
               </CardContent>
             </Card>
@@ -183,6 +186,7 @@ function ServicesSection() {
 
 function PortfolioSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <section className="py-24 sm:py-32" ref={ref}>
@@ -204,13 +208,13 @@ function PortfolioSection() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_oklch(0.8754_0.105_193.25_/_0.15),_transparent_60%)]" />
               <div className="absolute inset-0 flex flex-col justify-end p-6">
                 <span className="text-xs font-semibold uppercase tracking-wider text-turquoise">
-                  {item.category}
+                  {t(item.category)}
                 </span>
                 <h3 className="mt-2 font-display text-xl font-semibold text-foreground">
-                  {item.title}
+                  {t(item.title)}
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  {item.description}
+                  {t(item.description)}
                 </p>
               </div>
             </Link>
@@ -223,6 +227,7 @@ function PortfolioSection() {
 
 function ProcessSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <section className="py-24 sm:py-32" ref={ref}>
@@ -243,10 +248,10 @@ function ProcessSection() {
                 {step.step}
               </span>
               <h3 className="mt-4 font-display text-xl font-semibold text-foreground">
-                {step.title}
+                {t(step.title)}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {step.description}
+                {t(step.description)}
               </p>
             </div>
           ))}
@@ -258,6 +263,7 @@ function ProcessSection() {
 
 function TestimonialsSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <section className="py-24 sm:py-32" ref={ref}>
@@ -276,16 +282,16 @@ function TestimonialsSection() {
             >
               <CardContent className="p-6">
                 <p className="text-base leading-relaxed text-foreground">
-                  &ldquo;{testimonial.quote}&rdquo;
+                  &ldquo;{t(testimonial.quote)}&rdquo;
                 </p>
                 <div className="mt-6 flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-gradient-to-br from-turquoise to-petroleum" />
                   <div>
                     <div className="font-display text-sm font-semibold text-foreground">
-                      {testimonial.author}
+                      {t(testimonial.author)}
                     </div>
                     <div className="text-xs text-muted-foreground">
-                      {testimonial.role}
+                      {t(testimonial.role)}
                     </div>
                   </div>
                 </div>
@@ -300,6 +306,7 @@ function TestimonialsSection() {
 
 function FAQPreviewSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   const faqs = [
     { question: "Quanto tempo demora um projeto de branding?", answer: "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade e do número de revisões." },
@@ -323,17 +330,17 @@ function FAQPreviewSection() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <h3 className="font-display text-lg font-semibold text-foreground">
-                {faq.question}
+                {t(faq.question)}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {faq.answer}
+                {t(faq.answer)}
               </p>
             </div>
           ))}
         </div>
         <div className="mt-8 text-center">
           <Button asChild variant="outline" className="border-silver/20 text-foreground hover:bg-silver/10">
-            <Link to="/faq">Ver todas as perguntas</Link>
+            <Link to="/faq">{t("Ver todas as perguntas")}</Link>
           </Button>
         </div>
       </div>
