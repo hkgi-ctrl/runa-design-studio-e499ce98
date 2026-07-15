@@ -4,6 +4,7 @@ import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Palette, Globe, MousePointer, Video, PenTool, Layers, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import runaSymbol from "@/assets/runa-symbol.png.asset.json";
 
 export const Route = createFileRoute("/servicos")({
@@ -58,6 +59,7 @@ const services = [
 ];
 
 function ServicosPage() {
+  const { t } = useTranslation();
   return (
     <>
       <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
@@ -66,13 +68,13 @@ function ServicosPage() {
           <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-center">
             <div className="max-w-3xl">
             <span className="mb-4 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
-              Serviços
+              {t("Serviços")}
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              Soluções criativas para <span className="gradient-text">marcas ambiciosas</span>
+              {t("Soluções criativas para ")}<span className="gradient-text">{t("marcas ambiciosas")}</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Oferecemos um leque completo de serviços de design para ajudar a sua empresa a comunicar com clareza, beleza e impacto.
+              {t("Oferecemos um leque completo de serviços de design para ajudar a sua empresa a comunicar com clareza, beleza e impacto.")}
             </p>
             </div>
             <div className="relative hidden lg:block">
@@ -103,20 +105,20 @@ function ServicosPage() {
                       to="/contacto"
                       className="flex items-center gap-1 text-sm font-medium text-turquoise opacity-0 transition-opacity group-hover:opacity-100"
                     >
-                      Saber mais <ArrowRight className="h-4 w-4" />
+                      {t("Saber mais")} <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
                   <h3 className="mt-6 font-display text-2xl font-semibold text-foreground">
-                    {service.title}
+                    {t(service.title)}
                   </h3>
                   <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                    {service.description}
+                    {t(service.description)}
                   </p>
                   <ul className="mt-6 grid grid-cols-2 gap-2">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
                         <div className="h-1.5 w-1.5 rounded-full bg-turquoise" />
-                        {feature}
+                        {t(feature)}
                       </li>
                     ))}
                   </ul>
