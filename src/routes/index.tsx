@@ -139,22 +139,6 @@ function HeroSection() {
             <Link to="/portfolio">Ver portfólio</Link>
           </Button>
         </div>
-        <div className="mt-12 flex items-center justify-center gap-8 text-muted-foreground">
-          <div className="text-center">
-            <div className="font-display text-2xl font-bold text-foreground">120+</div>
-            <div className="text-xs uppercase tracking-wider">Projetos</div>
-          </div>
-          <div className="h-8 w-px bg-border" />
-          <div className="text-center">
-            <div className="font-display text-2xl font-bold text-foreground">8</div>
-            <div className="text-xs uppercase tracking-wider">Anos</div>
-          </div>
-          <div className="h-8 w-px bg-border" />
-          <div className="text-center">
-            <div className="font-display text-2xl font-bold text-foreground">50+</div>
-            <div className="text-xs uppercase tracking-wider">Clientes</div>
-          </div>
-        </div>
       </div>
     </section>
   );
