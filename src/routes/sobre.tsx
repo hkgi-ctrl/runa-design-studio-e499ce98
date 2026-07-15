@@ -4,6 +4,7 @@ import { CTASection } from "@/components/cta-section";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Heart, Lightbulb, Users } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import runaBrandBoard from "@/assets/runa-brand-board.png.asset.json";
 import runaValues from "@/assets/runa-values.png.asset.json";
 
@@ -28,6 +29,7 @@ const values = [
 
 function SobrePage() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -36,13 +38,13 @@ function SobrePage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div ref={ref} className={`reveal ${isVisible ? "visible" : ""} max-w-3xl`}>
             <span className="mb-4 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
-              Sobre nós
+              {t("Sobre nós")}
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              Criamos marcas que <span className="gradient-text">resistem ao tempo</span>
+              {t("Criamos marcas que ")}<span className="gradient-text">{t("resistem ao tempo")}</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              A RUNA Design é um estúdio criativo português dedicado a transformar ideias em experiências visuais memoráveis. Combinamos estratégia, estética e tecnologia para criar marcas e produtos digitais que geram impacto real.
+              {t("A RUNA Design é um estúdio criativo português dedicado a transformar ideias em experiências visuais memoráveis. Combinamos estratégia, estética e tecnologia para criar marcas e produtos digitais que geram impacto real.")}
             </p>
           </div>
         </div>
@@ -61,13 +63,13 @@ function SobrePage() {
           <div className="grid gap-12">
             <div>
               <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
-                A nossa história
+                {t("A nossa história")}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Fundada em Lisboa, a RUNA Design nasceu da vontade de oferecer design de excelência a empresas que valorizam a qualidade e a originalidade. Ao longo dos anos, ajudámos dezenas de marcas nacionais e internacionais a encontrar a sua voz visual e a destacar-se nos seus mercados.
+                {t("Fundada em Lisboa, a RUNA Design nasceu da vontade de oferecer design de excelência a empresas que valorizam a qualidade e a originalidade. Ao longo dos anos, ajudámos dezenas de marcas nacionais e internacionais a encontrar a sua voz visual e a destacar-se nos seus mercados.")}
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.
+                {t("Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.")}
               </p>
             </div>
           </div>
@@ -98,10 +100,10 @@ function SobrePage() {
                     <value.icon className="h-6 w-6" />
                   </div>
                   <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
-                    {value.title}
+                    {t(value.title)}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {value.description}
+                    {t(value.description)}
                   </p>
                 </CardContent>
               </Card>

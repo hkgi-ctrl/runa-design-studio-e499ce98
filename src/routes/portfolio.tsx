@@ -3,6 +3,7 @@ import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 import runaGlass from "@/assets/runa-glass.png.asset.json";
 import runaLogo from "@/assets/runa-logo.png.asset.json";
 
@@ -28,6 +29,7 @@ const projects = [
 ];
 
 function PortfolioPage() {
+  const { t } = useTranslation();
   return (
     <>
       <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
@@ -35,13 +37,13 @@ function PortfolioPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="mb-4 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
-              Portfólio
+              {t("Portfólio")}
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              Trabalhos que falam por <span className="gradient-text">si</span>
+              {t("Trabalhos que falam por ")}<span className="gradient-text">{t("si")}</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Uma seleção dos projetos mais recentes onde aplicámos estratégia, criatividade e execução impecável.
+              {t("Uma seleção dos projetos mais recentes onde aplicámos estratégia, criatividade e execução impecável.")}
             </p>
           </div>
         </div>
@@ -53,17 +55,17 @@ function PortfolioPage() {
             <div className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/40 shadow-2xl">
               <img src={runaGlass.url} alt="Aplicação do logo RUNA em vidro corporativo" className="w-full transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-graphite-deep/95 via-graphite-deep/60 to-transparent p-6">
-                <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">Case study</Badge>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">RUNA — Sinalética corporativa</h3>
-                <p className="mt-1 text-sm text-muted-foreground">Aplicação da identidade em vidro e superfícies de interior.</p>
+                <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">{t("Case study")}</Badge>
+                <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">{t("RUNA — Sinalética corporativa")}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{t("Aplicação da identidade em vidro e superfícies de interior.")}</p>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-3xl border border-border/50 bg-white shadow-2xl">
               <img src={runaLogo.url} alt="Logo principal RUNA Design" className="w-full transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-graphite-deep/95 via-graphite-deep/40 to-transparent p-6">
-                <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">Branding</Badge>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">RUNA — Identidade principal</h3>
-                <p className="mt-1 text-sm text-muted-foreground">Sistema de logotipo com acabamento metálico premium.</p>
+                <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">{t("Branding")}</Badge>
+                <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">{t("RUNA — Identidade principal")}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{t("Sistema de logotipo com acabamento metálico premium.")}</p>
               </div>
             </div>
           </div>
@@ -79,18 +81,18 @@ function PortfolioPage() {
                 </div>
                 <CardContent className="p-6">
                   <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">
-                    {project.category}
+                    {t(project.category)}
                   </Badge>
                   <h3 className="mt-3 font-display text-xl font-semibold text-foreground transition-colors group-hover:text-turquoise">
-                    {project.title}
+                    {t(project.title)}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {project.description}
+                    {t(project.description)}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span key={tag} className="rounded-full bg-secondary px-2.5 py-1 text-xs text-secondary-foreground">
-                        {tag}
+                        {t(tag)}
                       </span>
                     ))}
                   </div>

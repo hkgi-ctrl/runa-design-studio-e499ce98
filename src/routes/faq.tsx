@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
+import { useTranslation } from "react-i18next";
 import {
   Accordion,
   AccordionContent,
@@ -56,6 +57,7 @@ const faqs = [
 ];
 
 function FAQPage() {
+  const { t } = useTranslation();
   return (
     <>
       <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
@@ -63,13 +65,13 @@ function FAQPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-center mx-auto">
             <span className="mb-4 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
-              FAQ
+              {t("FAQ")}
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              Perguntas <span className="gradient-text">frequentes</span>
+              {t("Perguntas ")}<span className="gradient-text">{t("frequentes")}</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Respostas claras para as questões mais comuns sobre os nossos serviços e forma de trabalhar.
+              {t("Respostas claras para as questões mais comuns sobre os nossos serviços e forma de trabalhar.")}
             </p>
           </div>
         </div>
@@ -90,10 +92,10 @@ function FAQPage() {
                   className="rounded-2xl border border-border/50 bg-card/30 px-6 backdrop-blur-sm"
                 >
                   <AccordionTrigger className="text-left font-display text-lg font-semibold text-foreground hover:no-underline">
-                    {faq.question}
+                    {t(faq.question)}
                   </AccordionTrigger>
                   <AccordionContent className="pb-6 text-base leading-relaxed text-muted-foreground">
-                    {faq.answer}
+                    {t(faq.answer)}
                   </AccordionContent>
                 </AccordionItem>
               ))}
