@@ -7,7 +7,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { useTranslation } from "react-i18next";
-import runaMark from "@/assets/runa-mark.png.asset.json";
+import runaMark from "@/assets/runa-mark-new.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -111,10 +111,6 @@ function HeroSection() {
             className="relative z-10 h-full w-full object-contain drop-shadow-[0_8px_30px_oklch(0.8754_0.105_193.25_/_0.55)]"
           />
         </div>
-        <Badge variant="outline" className="mb-6 border-turquoise/30 bg-turquoise/10 px-4 py-1.5 text-xs font-semibold text-turquoise">
-          <Sparkles className="mr-1.5 h-3 w-3" />
-          {t("Estúdio Criativo Premium")}
-        </Badge>
         <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
           {t("Design que ")}<span className="gradient-text">{t("impulsiona")}</span>{t(" negócios")}
         </h1>
