@@ -658,41 +658,27 @@ export const en: Dict = {
   "Cada serviço é adaptado às necessidades específicas do seu negócio.":
     "Each service is tailored to your business's specific needs.",
   "Saber mais": "Learn more",
-  "Construímos identidades de marca completas, desde o naming e logotipo até às diretrizes de marca, garantindo consistência em todos os pontos de contacto.":
-    "We build complete brand identities, from naming and logo to brand guidelines, ensuring consistency across every touchpoint.",
+  "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.":
+    "We create memorable, consistent and professional brands with their own personality, aligned with your business goals.",
   "Design de logotipo": "Logo design",
   "Identidade visual": "Visual identity",
   "Diretrizes de marca": "Brand guidelines",
-  "Criamos websites premium que combinam estética refinada com performance e otimização para conversão, adaptados a todos os dispositivos.":
-    "We create premium websites that blend refined aesthetics with performance and conversion optimization, across every device.",
-  "Websites institucionais": "Corporate websites",
-  "Landing pages": "Landing pages",
-  "E-commerce": "E-commerce",
-  "SEO técnico": "Technical SEO",
-  "Desenhamos interfaces centradas no utilizador, com pesquisa, prototipagem e testes para garantir experiências digitais intuitivas.":
-    "We design user-centered interfaces with research, prototyping and testing to ensure intuitive digital experiences.",
-  "Pesquisa de utilizadores": "User research",
-  "Wireframes": "Wireframes",
-  "Prototipagem": "Prototyping",
-  "Testes de usabilidade": "Usability testing",
-  "Damos vida à sua marca com animações, microinterações e vídeos explicativos que comunicam mensagens de forma envolvente.":
-    "We bring your brand to life with animations, micro-interactions and explainer videos that engage.",
-  "Animações de interface": "Interface animations",
-  "Vídeos explicativos": "Explainer videos",
-  "Motion graphics": "Motion graphics",
-  "Transições premium": "Premium transitions",
-  "Produzimos materiais gráficos de alta qualidade, desde brochuras e cartões de visita a posts para redes sociais e apresentações.":
-    "We produce high-quality graphic materials, from brochures and business cards to social media posts and presentations.",
-  "Editorial": "Editorial",
-  "Social media": "Social media",
-  "Packaging": "Packaging",
-  "Apresentações": "Presentations",
-  "Desenvolvemos sistemas de design escaláveis que garantem consistência visual e eficiência no desenvolvimento de produtos digitais.":
-    "We develop scalable design systems that ensure visual consistency and efficient product development.",
-  "Componentes reutilizáveis": "Reusable components",
-  "Documentação": "Documentation",
-  "Tokens de design": "Design tokens",
-  "Integração com dev": "Dev integration",
+  "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.":
+    "We update your company's image without losing its essence, preparing it to grow and keep pace with market evolution.",
+  "Revisão de posicionamento": "Positioning review",
+  "Redesign de logotipo": "Logo redesign",
+  "Atualização visual": "Visual update",
+  "Relançamento de marca": "Brand relaunch",
+  "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.":
+    "We develop visual pieces that increase perceived value and clearly communicate the benefits of what you offer.",
+  "Materiais promocionais": "Promotional materials",
+  "Catálogos e brochuras": "Catalogs and brochures",
+  "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.":
+    "We produce strategic visual content for social media that reinforces brand authority and generates real engagement.",
+  "Templates para feed": "Feed templates",
+  "Stories e reels": "Stories and reels",
+  "Campanhas paid": "Paid campaigns",
+  "Identidade digital": "Digital identity",
 
   // Portfolio
   "Trabalhos que falam por ": "Work that speaks for ",
