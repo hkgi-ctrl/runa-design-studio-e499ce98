@@ -87,8 +87,8 @@ function ProcessoPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="As quatro etapas do nosso processo"
-            description="De ideia a realidade, acompanhá-lo em cada passo do caminho."
+            title="As quatro etapas do nosso processo criativo"
+            description="Da pesquisa à entrega final: exploração acelerada por IA, decisões e refinamento humanos."
           />
           <div className="mt-16 space-y-8">
             {steps.map((step, index) => (
