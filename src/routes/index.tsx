@@ -8,6 +8,7 @@ import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { AudienceTeaser } from "@/components/audience-teaser";
 import { WhyRunaSection } from "@/components/why-runa-section";
+import { EssenceSection } from "@/components/essence-section";
 import { useTranslation } from "react-i18next";
 import runaMark from "@/assets/runa-r-hero.png.asset.json";
 
@@ -59,8 +60,6 @@ const processSteps = [
   { step: "03", title: "Estratégia", description: "Curadoria humana: escolhemos e fundamentamos o caminho com maior impacto." },
   { step: "04", title: "Design Final", description: "Refinamento artesanal, pixel a pixel, até à entrega premium." },
 ];
-
-import { EssenceSection } from "@/components/essence-section";
 
 function HomePage() {
   return (
