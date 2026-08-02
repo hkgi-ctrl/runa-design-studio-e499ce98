@@ -489,24 +489,10 @@ export const en: Dict = {
     "Articles on design, branding and digital strategy.",
 
   // Services (home cards)
-  "Branding": "Branding",
-  "Identidades visuais memoráveis que contam a história da sua marca e a destacam da concorrência.":
-    "Memorable visual identities that tell your brand's story and set it apart from the competition.",
-  "Web Design": "Web Design",
-  "Websites premium, responsivos e otimizados para conversão, com foco em resultados mensuráveis.":
-    "Premium, responsive websites optimized for conversion, focused on measurable results.",
-  "UI/UX Design": "UI/UX Design",
-  "Interfaces intuitivas e experiências digitais que os seus utilizadores adoram usar.":
-    "Intuitive interfaces and digital experiences your users will love.",
-  "Motion Design": "Motion Design",
-  "Animações e microinterações que dão vida à sua marca e captam a atenção do público.":
-    "Animations and micro-interactions that bring your brand to life and capture attention.",
-  "Design Gráfico": "Graphic Design",
-  "Materiais gráficos de alta qualidade para comunicação consistente em todos os pontos de contacto.":
-    "High-quality graphic materials for consistent communication across every touchpoint.",
-  "Design Systems": "Design Systems",
-  "Sistemas de design escaláveis que garantem consistência e eficiência nos seus projetos digitais.":
-    "Scalable design systems that ensure consistency and efficiency across your digital projects.",
+  "Identidade Visual": "Visual Identity",
+  "Modernização de Marca": "Brand Modernization",
+  "Design para Produtos e Serviços": "Design for Products & Services",
+  "Design para Redes Sociais": "Social Media Design",
 
   // Home portfolio items
   "Aura Skincare": "Aura Skincare",
