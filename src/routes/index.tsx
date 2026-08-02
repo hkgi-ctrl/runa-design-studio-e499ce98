@@ -7,6 +7,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { AudienceTeaser } from "@/components/audience-teaser";
+import { WhyRunaSection } from "@/components/why-runa-section";
 import { useTranslation } from "react-i18next";
 import runaMark from "@/assets/runa-r-hero.png.asset.json";
 
@@ -67,6 +68,7 @@ function HomePage() {
       <AudienceTeaser />
       <PortfolioSection />
       <ProcessSection />
+      <WhyRunaSection />
       <FAQPreviewSection />
       <CTASection
         title="Pronto para elevar a sua marca?"

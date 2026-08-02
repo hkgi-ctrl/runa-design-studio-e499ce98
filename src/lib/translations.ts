@@ -534,9 +534,65 @@ export const es: Dict = {
   "Como posso pedir um orçamento?": "¿Cómo puedo pedir un presupuesto?",
   "Basta preencher o formulário de contacto. Analisaremos o seu projeto e responderemos o mais rapidamente possível.":
     "Basta con rellenar el formulario de contacto. Analizaremos tu proyecto y responderemos lo antes posible.",
+
+  // Why RUNA
+  "Diferenciais": "Diferenciales",
+  "Porque escolher a RUNA?": "¿Por qué elegir RUNA?",
+  "Mais do que criar um logótipo, desenvolvemos identidades visuais estratégicas que ajudam empresas a transmitir confiança, destacar-se da concorrência e crescer com consistência.":
+    "Más que crear un logotipo, desarrollamos identidades visuales estratégicas que ayudan a las empresas a transmitir confianza, destacarse de la competencia y crecer con consistencia.",
+  "Design Estratégico": "Diseño Estratégico",
+  "Cada projeto começa por compreender o seu negócio, os seus objetivos e o mercado onde atua.":
+    "Cada proyecto comienza por comprender su negocio, sus objetivos y el mercado en el que opera.",
+  "Inteligência Artificial como aliada": "Inteligencia Artificial como aliada",
+  "Utilizamos inteligência artificial para explorar mais possibilidades criativas, mantendo todas as decisões estratégicas e o refinamento final sob supervisão humana.":
+    "Utilizamos inteligencia artificial para explorar más posibilidades creativas, manteniendo todas las decisiones estratégicas y el refinamiento final bajo supervisión humana.",
+  "Identidades pensadas para o mundo real": "Identidades pensadas para el mundo real",
+  "Criamos marcas preparadas para websites, redes sociais, embalagens, publicidade e materiais impressos.":
+    "Creamos marcas preparadas para webs, redes sociales, envases, publicidad y materiales impresos.",
+  "Processo transparente": "Proceso transparente",
+  "Mantemos uma comunicação clara durante todo o projeto, envolvendo o cliente em cada etapa importante.":
+    "Mantenemos una comunicación clara durante todo el proyecto, involucrando al cliente en cada etapa importante.",
+  "Foco em resultados": "Enfoque en resultados",
+  "Cada decisão de design procura fortalecer a perceção da marca, aumentar a credibilidade e gerar mais valor para o negócio.":
+    "Cada decisión de diseño busca fortalecer la percepción de la marca, aumentar la credibilidad y generar más valor para el negocio.",
+  "Preparado para todos os canais": "Preparado para todos los canales",
+  "Desenvolvemos marcas com visão de longo prazo, preparadas para crescer e manter consistência em todos os pontos de contacto com o cliente.":
+    "Desarrollamos marcas con visión a largo plazo, preparadas para crecer y mantener consistencia en todos los puntos de contacto con el cliente.",
+  "Um bom design não é apenas estética. É uma ferramenta para fortalecer a confiança, aumentar o valor percebido da sua empresa e criar uma marca preparada para crescer.":
+    "Un buen diseño no es solo estética. Es una herramienta para fortalecer la confianza, aumentar el valor percibido de su empresa y crear una marca preparada para crecer.",
+  "Vamos construir uma marca que represente o verdadeiro valor do seu negócio.":
+    "Construyamos una marca que represente el verdadero valor de su negocio.",
 };
 
 export const en: Dict = {
+  // Why RUNA
+  "Diferenciais": "Differentiators",
+  "Porque escolher a RUNA?": "Why choose RUNA?",
+  "Mais do que criar um logótipo, desenvolvemos identidades visuais estratégicas que ajudam empresas a transmitir confiança, destacar-se da concorrência e crescer com consistência.":
+    "More than creating a logo, we develop strategic visual identities that help companies build trust, stand out from the competition and grow consistently.",
+  "Design Estratégico": "Strategic Design",
+  "Cada projeto começa por compreender o seu negócio, os seus objetivos e o mercado onde atua.":
+    "Every project starts by understanding your business, your goals and the market you operate in.",
+  "Inteligência Artificial como aliada": "Artificial Intelligence as an ally",
+  "Utilizamos inteligência artificial para explorar mais possibilidades criativas, mantendo todas as decisões estratégicas e o refinamento final sob supervisão humana.":
+    "We use artificial intelligence to explore more creative possibilities, while all strategic decisions and the final refinement stay under human supervision.",
+  "Identidades pensadas para o mundo real": "Identities designed for the real world",
+  "Criamos marcas preparadas para websites, redes sociais, embalagens, publicidade e materiais impressos.":
+    "We create brands ready for websites, social media, packaging, advertising and print materials.",
+  "Processo transparente": "Transparent process",
+  "Mantemos uma comunicação clara durante todo o projeto, envolvendo o cliente em cada etapa importante.":
+    "We keep clear communication throughout the project, involving the client at every key stage.",
+  "Foco em resultados": "Results focused",
+  "Cada decisão de design procura fortalecer a perceção da marca, aumentar a credibilidade e gerar mais valor para o negócio.":
+    "Every design decision aims to strengthen brand perception, increase credibility and generate more value for the business.",
+  "Preparado para todos os canais": "Ready for every channel",
+  "Desenvolvemos marcas com visão de longo prazo, preparadas para crescer e manter consistência em todos os pontos de contacto com o cliente.":
+    "We develop brands with a long-term vision, ready to grow and stay consistent across every customer touchpoint.",
+  "Um bom design não é apenas estética. É uma ferramenta para fortalecer a confiança, aumentar o valor percebido da sua empresa e criar uma marca preparada para crescer.":
+    "Good design is not just aesthetics. It is a tool to strengthen trust, increase your company's perceived value and build a brand ready to grow.",
+  "Vamos construir uma marca que represente o verdadeiro valor do seu negócio.":
+    "Let's build a brand that reflects the true value of your business.",
+
   // Navigation
   "Home": "Home",
   "Sobre": "About",
