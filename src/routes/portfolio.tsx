@@ -4,7 +4,11 @@ import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
-import auraBranding from "@/assets/portfolio-aura-branding.jpg";
+import auraLogo from "@/assets/aura-1.png.asset.json";
+import auraTote from "@/assets/aura-2-2.png.asset.json";
+import auraSerum from "@/assets/aura-3.png.asset.json";
+import auraCard from "@/assets/aura-4.png.asset.json";
+import auraBox from "@/assets/aura-5.png.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -24,8 +28,16 @@ const projects: Array<{
   description: string;
   tags: string[];
   image?: string;
+  gallery?: string[];
 }> = [
-  { category: "Branding", title: "AURA", description: "Estudo de caso RUNA — Skincare de luxo: pele calma.", tags: ["Branding", "Packaging"], image: auraBranding },
+  {
+    category: "Branding",
+    title: "AURA",
+    description: "Estudo de caso RUNA — Skincare de luxo: pele calma.",
+    tags: ["Branding", "Packaging"],
+    image: auraSerum.url,
+    gallery: [auraLogo.url, auraTote.url, auraCard.url, auraBox.url],
+  },
   { category: "Web Design", title: "Vertex Arquitetura", description: "Website institucional minimalista para escritório de arquitetura de referência.", tags: ["Web Design", "UI/UX"] },
   { category: "UI/UX", title: "PayFlow App", description: "Design de interface para aplicação de pagamentos mobile.", tags: ["UI/UX", "App Design"] },
   { category: "Motion", title: "Nova Energia", description: "Campanha de motion graphics para empresa de energias renováveis.", tags: ["Motion", "Video"] },
