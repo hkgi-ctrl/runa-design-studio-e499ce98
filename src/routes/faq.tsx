@@ -23,36 +23,29 @@ export const Route = createFileRoute("/faq")({
 
 const faqs = [
   {
-    question: "Quanto tempo demora um projeto de branding?",
-    answer: "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade, do número de revisões e da rapidez no feedback. Projetos mais simples podem ser concluídos em menos tempo.",
+    question: "Trabalham apenas com empresas em Portugal?",
+    answer:
+      "Não. A RUNA trabalha remotamente com clientes em qualquer lugar, adaptando cada projeto às necessidades do negócio.",
   },
   {
-    question: "Qual é o processo de trabalho?",
-    answer: "O nosso processo divide-se em quatro etapas: Pesquisa, Exploração com IA, Estratégia e Design Final. A IA acelera a exploração de ideias, mas a direção criativa, a análise e o refinamento final são sempre humanos.",
+    question: "Quanto tempo demora um projeto?",
+    answer:
+      "Depende do serviço e da complexidade. Após analisarmos o seu pedido, enviamos um cronograma personalizado.",
   },
   {
-    question: "Trabalham com clientes internacionais?",
-    answer: "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada, a comunicação é totalmente digital e entregamos todos os assets prontos para uso em qualquer mercado.",
+    question: "Posso contratar apenas um serviço?",
+    answer:
+      "Sim. Pode contratar um serviço específico ou um projeto completo de branding, consoante as necessidades da sua empresa.",
   },
   {
-    question: "Quantas revisões estão incluídas?",
-    answer: "O número de revisões depende do plano escolhido. O plano Essencial inclui 2 rondas de revisões, o Profissional inclui 4, e o Enterprise inclui revisões ilimitadas. Sempre que possível, procuramos ser flexíveis.",
+    question: "A inteligência artificial substitui o trabalho do designer?",
+    answer:
+      "Não. A inteligência artificial é utilizada para acelerar a exploração de ideias e aumentar a eficiência do processo criativo. As decisões estratégicas, o refinamento e o resultado final são sempre conduzidos pela equipa da RUNA.",
   },
   {
-    question: "Como é feito o pagamento?",
-    answer: "O pagamento é feito em tranches. Normalmente, solicitamos 50% no início do projeto e os restantes 50% na entrega final. Para projetos de maior dimensão, podemos definir um plano de pagamentos personalizado.",
-  },
-  {
-    question: "Entregam apenas o design ou também desenvolvem o website?",
-    answer: "O nosso foco principal é o design. No entanto, temos parceiros de desenvolvimento com quem colaboramos regularmente e podemos acompanhar a implementação para garantir fidelidade ao design aprovado.",
-  },
-  {
-    question: "Posso pedir alterações após a entrega?",
-    answer: "Sim, oferecemos um período de suporte pós-entrega para pequenos ajustes. Alterações de maior dimensão podem ser orçamentadas separadamente como um novo projeto ou manutenção.",
-  },
-  {
-    question: "Como posso começar um projeto?",
-    answer: "É simples: entre em contacto connosco através do formulário, email ou telefone. Marcaremos uma conversa inicial gratuita para conhecer o seu projeto e apresentar uma proposta personalizada.",
+    question: "Como posso pedir um orçamento?",
+    answer:
+      "Basta preencher o formulário de contacto. Analisaremos o seu projeto e responderemos o mais rapidamente possível.",
   },
 ];
 
@@ -68,10 +61,13 @@ function FAQPage() {
               {t("FAQ")}
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              {t("Perguntas ")}<span className="gradient-text">{t("frequentes")}</span>
+              {t("Ainda tem alguma ")}
+              <span className="gradient-text">{t("dúvida?")}</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              {t("Respostas claras para as questões mais comuns sobre os nossos serviços e forma de trabalhar.")}
+              {t(
+                "Reunimos as respostas às perguntas que mais recebemos antes do início de um projeto.",
+              )}
             </p>
           </div>
         </div>
