@@ -476,7 +476,7 @@ export const es: Dict = {
 
   // Audience
   "Quem ajudamos a crescer": "A quién ayudamos a crecer",
-  "Criamos identidades visuais e soluções de design para empresas e profissionais que procuram transmitir mais confiança, destacar-se da concorrência e crescer de forma consistente.": "Creamos identidades visuales y soluciones de diseño para empresas y profesionales que buscan transmitir más confianza, destacarse de la competencia y crecer de forma consistente.",
+  "Especializados em pequenas e médias empresas, mas preparados para criar marcas que crescem em qualquer mercado.": "Especializados en pequeñas y medianas empresas, pero preparados para crear marcas que crezcan en cualquier mercado.",
   "Pequenas Empresas": "Pequeñas Empresas",
   "Ajudamos pequenas empresas a construir uma imagem profissional que transmite confiança desde o primeiro contacto com o cliente.": "Ayudamos a las pequeñas empresas a construir una imagen profesional que transmite confianza desde el primer contacto con el cliente.",
   "Restaurantes": "Restaurantes",
@@ -986,7 +986,7 @@ export const en: Dict = {
 
   // Audience
   "Quem ajudamos a crescer": "Who we help grow",
-  "Criamos identidades visuais e soluções de design para empresas e profissionais que procuram transmitir mais confiança, destacar-se da concorrência e crescer de forma consistente.": "We create visual identities and design solutions for companies and professionals looking to convey more trust, stand out from the competition and grow consistently.",
+  "Especializados em pequenas e médias empresas, mas preparados para criar marcas que crescem em qualquer mercado.": "Specialised in small and medium-sized businesses, but ready to create brands that grow in any market.",
   "Pequenas Empresas": "Small Businesses",
   "Ajudamos pequenas empresas a construir uma imagem profissional que transmite confiança desde o primeiro contacto com o cliente.": "We help small businesses build a professional image that conveys trust from the very first contact with the customer.",
   "Restaurantes": "Restaurants",
