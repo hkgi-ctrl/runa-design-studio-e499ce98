@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, useEffect, useCallback } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
@@ -36,7 +38,7 @@ const projects: Array<{
     description: "Estudo de caso RUNA — Skincare de luxo: pele calma.",
     tags: ["Branding", "Packaging"],
     image: auraSerum.url,
-    gallery: [auraLogo.url, auraTote.url, auraCard.url, auraBox.url],
+    gallery: [auraSerum.url, auraTote.url, auraCard.url, auraBox.url],
   },
   { category: "Web Design", title: "Vertex Arquitetura", description: "Website institucional minimalista para escritório de arquitetura de referência.", tags: ["Web Design", "UI/UX"] },
   { category: "UI/UX", title: "PayFlow App", description: "Design de interface para aplicação de pagamentos mobile.", tags: ["UI/UX", "App Design"] },
