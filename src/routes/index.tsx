@@ -240,49 +240,6 @@ function ProcessSection() {
   );
 }
 
-function TestimonialsSection() {
-  const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
-  const { t } = useTranslation();
-
-  return (
-    <section className="py-24 sm:py-32" ref={ref}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          eyebrow="Testemunhos"
-          title="O que dizem os nossos clientes"
-          description="A satisfação dos nossos clientes é o melhor testemunho da qualidade do nosso trabalho."
-        />
-        <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 lg:grid-cols-3`}>
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={testimonial.author}
-              className="glass border-border/50 bg-card/40"
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <CardContent className="p-6">
-                <p className="text-base leading-relaxed text-foreground">
-                  &ldquo;{t(testimonial.quote)}&rdquo;
-                </p>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-turquoise to-petroleum" />
-                  <div>
-                    <div className="font-display text-sm font-semibold text-foreground">
-                      {t(testimonial.author)}
-                    </div>
-                    <div className="text-xs text-muted-foreground">
-                      {t(testimonial.role)}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function FAQPreviewSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const { t } = useTranslation();
