@@ -29,7 +29,7 @@ const steps = [
     step: "02",
     icon: Sparkles,
     title: "Exploração com IA",
-    description: "Com a direção definida, usamos inteligência artificial para gerar e testar centenas de direções visuais em tempo recorde — ampliando o campo de possibilidades muito além do habitual.",
+    description: "Com a direção definida, usamos inteligência artificial para gerar e testar várias direções visuais e otimizar o tempo de entrega — ampliando o campo de possibilidades muito além do habitual.",
     details: ["Geração de conceitos assistida por IA", "Moodboards e variações rápidas", "Testes de forma, cor e tipografia", "Iteração em larga escala"],
   },
   {
