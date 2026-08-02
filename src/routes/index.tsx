@@ -23,34 +23,24 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    icon: Palette,
-    title: "Branding",
-    description: "Identidades visuais memoráveis que contam a história da sua marca e a destacam da concorrência.",
+    icon: Sparkles,
+    title: "Identidade Visual",
+    description: "Marcas memoráveis, consistentes e profissionais.",
   },
   {
-    icon: Globe,
-    title: "Web Design",
-    description: "Websites premium, responsivos e otimizados para conversão, com foco em resultados mensuráveis.",
+    icon: RefreshCw,
+    title: "Modernização de Marca",
+    description: "Atualização visual para empresas em evolução.",
   },
   {
-    icon: MousePointer,
-    title: "UI/UX Design",
-    description: "Interfaces intuitivas e experiências digitais que os seus utilizadores adoram usar.",
+    icon: Package,
+    title: "Design para Produtos e Serviços",
+    description: "Peças visuais que aumentam a perceção de valor.",
   },
   {
-    icon: Video,
-    title: "Motion Design",
-    description: "Animações e microinterações que dão vida à sua marca e captam a atenção do público.",
-  },
-  {
-    icon: PenTool,
-    title: "Design Gráfico",
-    description: "Materiais gráficos de alta qualidade para comunicação consistente em todos os pontos de contacto.",
-  },
-  {
-    icon: Layers,
-    title: "Design Systems",
-    description: "Sistemas de design escaláveis que garantem consistência e eficiência nos seus projetos digitais.",
+    icon: Megaphone,
+    title: "Design para Redes Sociais",
+    description: "Conteúdo visual estratégico para autoridade e engajamento.",
   },
 ];
 
