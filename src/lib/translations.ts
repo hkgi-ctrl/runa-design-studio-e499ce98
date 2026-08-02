@@ -1046,4 +1046,25 @@ export const en: Dict = {
   "Pequeno café local com atendimento ao cliente": "Small local café serving a customer",
   "Equipa de empresa de média dimensão em reunião": "Mid-sized company team in a meeting",
   "Empreendedora a trabalhar no seu novo negócio": "Entrepreneur working on her new business",
+
+  // FAQ page (updated)
+  "Ainda tem alguma ": "Still have a ",
+  "dúvida?": "question?",
+  "Reunimos as respostas às perguntas que mais recebemos antes do início de um projeto.":
+    "We've gathered the answers to the questions we get most often before a project begins.",
+  "Trabalham apenas com empresas em Portugal?": "Do you only work with companies in Portugal?",
+  "Não. A RUNA trabalha remotamente com clientes em qualquer lugar, adaptando cada projeto às necessidades do negócio.":
+    "No. RUNA works remotely with clients anywhere, adapting each project to the business's needs.",
+  "Quanto tempo demora um projeto?": "How long does a project take?",
+  "Depende do serviço e da complexidade. Após analisarmos o seu pedido, enviamos um cronograma personalizado.":
+    "It depends on the service and complexity. After reviewing your request, we send a personalized timeline.",
+  "Posso contratar apenas um serviço?": "Can I hire just one service?",
+  "Sim. Pode contratar um serviço específico ou um projeto completo de branding, consoante as necessidades da sua empresa.":
+    "Yes. You can hire a specific service or a complete branding project, depending on your company's needs.",
+  "A inteligência artificial substitui o trabalho do designer?": "Does artificial intelligence replace the designer's work?",
+  "Não. A inteligência artificial é utilizada para acelerar a exploração de ideias e aumentar a eficiência do processo criativo. As decisões estratégicas, o refinamento e o resultado final são sempre conduzidos pela equipa da RUNA.":
+    "No. Artificial intelligence is used to accelerate idea exploration and increase creative process efficiency. Strategic decisions, refinement and the final result are always led by the RUNA team.",
+  "Como posso pedir um orçamento?": "How can I request a quote?",
+  "Basta preencher o formulário de contacto. Analisaremos o seu projeto e responderemos o mais rapidamente possível.":
+    "Just fill out the contact form. We'll review your project and respond as quickly as possible.",
 };
