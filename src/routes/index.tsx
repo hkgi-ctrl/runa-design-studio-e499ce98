@@ -8,6 +8,7 @@ import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { AudienceTeaser } from "@/components/audience-teaser";
 import { WhyRunaSection } from "@/components/why-runa-section";
+import { EssenceSection } from "@/components/essence-section";
 import { useTranslation } from "react-i18next";
 import runaMark from "@/assets/runa-r-hero.png.asset.json";
 
@@ -66,8 +67,9 @@ function HomePage() {
       <HeroSection />
       <ServicesSection />
       <AudienceTeaser />
-      <PortfolioSection />
       <ProcessSection />
+      <EssenceSection />
+      <PortfolioSection />
       <WhyRunaSection />
       <FAQPreviewSection />
       <CTASection
