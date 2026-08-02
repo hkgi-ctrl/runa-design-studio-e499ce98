@@ -55,7 +55,7 @@ export function AudienceSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Quem ajudamos a crescer"
-          description="Especializados em pequenas e médias empresas, mas preparados para criar marcas que crescem em qualquer mercado."
+          description="Criamos identidades visuais e soluções de design para empresas e profissionais que procuram transmitir mais confiança, destacar-se da concorrência e crescer de forma consistente."
         />
 
         <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 lg:grid-cols-3`}>

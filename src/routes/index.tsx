@@ -144,16 +144,16 @@ function ServicesSection() {
           title="Soluções criativas sob medida"
           description="Oferecemos um leque completo de serviços de design para ajudar a sua marca a destacar-se e crescer."
         />
-        <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3`}>
+        <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2`}>
           {services.map((service, index) => (
             <Card
               key={service.title}
-              className="group glass border-border/50 bg-card/50 transition-all duration-300 hover:-translate-y-1 hover:border-turquoise/30 hover:bg-card/80"
+              className="group glass min-h-[220px] border-border/50 bg-card/50 transition-all duration-300 hover:-translate-y-1 hover:border-turquoise/30 hover:bg-card/80"
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-              <CardContent className="p-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
-                  <service.icon className="h-6 w-6" />
+              <CardContent className="p-8">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
+                  <service.icon className="h-7 w-7" />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
                   {t(service.title)}
