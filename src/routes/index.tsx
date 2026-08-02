@@ -100,10 +100,10 @@ function HeroSection() {
           />
         </div>
         <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
-          {t("Design que ")}<span className="gradient-text">{t("impulsiona")}</span>{t(" negócios")}
+          {t("Design estratégico que ")}<span className="gradient-text">{t("impulsiona")}</span>{t(" negócios")}
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-          {t("Criamos marcas, websites e experiências digitais premium que captam atenção, transmitem valor e convertem visitantes em clientes.")}
+          {t("Criamos identidades visuais, conteúdos e experiências de marca para pequenas e médias empresas que querem destacar-se, transmitir confiança e crescer de forma consistente.")}
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button
