@@ -59,24 +59,18 @@ export const es: Dict = {
     "Artículos sobre diseño, branding y estrategia digital.",
 
   // Services (home cards)
-  "Branding": "Branding",
-  "Identidades visuais memoráveis que contam a história da sua marca e a destacam da concorrência.":
-    "Identidades visuales memorables que cuentan la historia de tu marca y la destacan de la competencia.",
-  "Web Design": "Diseño Web",
-  "Websites premium, responsivos e otimizados para conversão, com foco em resultados mensuráveis.":
-    "Sitios web premium, responsivos y optimizados para conversión, con foco en resultados medibles.",
-  "UI/UX Design": "Diseño UI/UX",
-  "Interfaces intuitivas e experiências digitais que os seus utilizadores adoram usar.":
-    "Interfaces intuitivas y experiencias digitales que a tus usuarios les encantará usar.",
-  "Motion Design": "Motion Design",
-  "Animações e microinterações que dão vida à sua marca e captam a atenção do público.":
-    "Animaciones y microinteracciones que dan vida a tu marca y captan la atención del público.",
-  "Design Gráfico": "Diseño Gráfico",
-  "Materiais gráficos de alta qualidade para comunicação consistente em todos os pontos de contacto.":
-    "Materiales gráficos de alta calidad para una comunicación consistente en todos los puntos de contacto.",
-  "Design Systems": "Design Systems",
-  "Sistemas de design escaláveis que garantem consistência e eficiência nos seus projetos digitais.":
-    "Sistemas de diseño escalables que garantizan consistencia y eficiencia en tus proyectos digitales.",
+  "Identidade Visual": "Identidad Visual",
+  "Marcas memoráveis, consistentes e profissionais.":
+    "Marcas memorables, consistentes y profesionales.",
+  "Modernização de Marca": "Modernización de Marca",
+  "Atualização visual para empresas em evolução.":
+    "Actualización visual para empresas en evolución.",
+  "Design para Produtos e Serviços": "Diseño para Productos y Servicios",
+  "Peças visuais que aumentam a perceção de valor.":
+    "Piezas visuales que aumentan la percepción de valor.",
+  "Design para Redes Sociais": "Diseño para Redes Sociales",
+  "Conteúdo visual estratégico para autoridade e engajamento.":
+    "Contenido visual estratégico para autoridad y engagement.",
 
   // Home portfolio items
   "Aura Skincare": "Aura Skincare",
@@ -242,41 +236,27 @@ export const es: Dict = {
   "Cada serviço é adaptado às necessidades específicas do seu negócio.":
     "Cada servicio se adapta a las necesidades específicas de tu negocio.",
   "Saber mais": "Saber más",
-  "Construímos identidades de marca completas, desde o naming e logotipo até às diretrizes de marca, garantindo consistência em todos os pontos de contacto.":
-    "Construimos identidades de marca completas, desde el naming y el logotipo hasta las guías de marca, garantizando consistencia en todos los puntos de contacto.",
+  "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.":
+    "Creamos marcas memorables, consistentes y profesionales, con personalidad propia y alineadas con los objetivos de tu negocio.",
   "Design de logotipo": "Diseño de logotipo",
   "Identidade visual": "Identidad visual",
   "Diretrizes de marca": "Guías de marca",
-  "Criamos websites premium que combinam estética refinada com performance e otimização para conversão, adaptados a todos os dispositivos.":
-    "Creamos sitios web premium que combinan estética refinada con rendimiento y optimización para conversión, adaptados a todos los dispositivos.",
-  "Websites institucionais": "Sitios institucionales",
-  "Landing pages": "Landing pages",
-  "E-commerce": "E-commerce",
-  "SEO técnico": "SEO técnico",
-  "Desenhamos interfaces centradas no utilizador, com pesquisa, prototipagem e testes para garantir experiências digitais intuitivas.":
-    "Diseñamos interfaces centradas en el usuario, con investigación, prototipado y pruebas para garantizar experiencias digitales intuitivas.",
-  "Pesquisa de utilizadores": "Investigación de usuarios",
-  "Wireframes": "Wireframes",
-  "Prototipagem": "Prototipado",
-  "Testes de usabilidade": "Pruebas de usabilidad",
-  "Damos vida à sua marca com animações, microinterações e vídeos explicativos que comunicam mensagens de forma envolvente.":
-    "Damos vida a tu marca con animaciones, microinteracciones y vídeos explicativos que comunican mensajes de forma envolvente.",
-  "Animações de interface": "Animaciones de interfaz",
-  "Vídeos explicativos": "Vídeos explicativos",
-  "Motion graphics": "Motion graphics",
-  "Transições premium": "Transiciones premium",
-  "Produzimos materiais gráficos de alta qualidade, desde brochuras e cartões de visita a posts para redes sociais e apresentações.":
-    "Producimos materiales gráficos de alta calidad, desde folletos y tarjetas de visita hasta publicaciones para redes sociales y presentaciones.",
-  "Editorial": "Editorial",
-  "Social media": "Social media",
-  "Packaging": "Packaging",
-  "Apresentações": "Presentaciones",
-  "Desenvolvemos sistemas de design escaláveis que garantem consistência visual e eficiência no desenvolvimento de produtos digitais.":
-    "Desarrollamos sistemas de diseño escalables que garantizan consistencia visual y eficiencia en el desarrollo de productos digitales.",
-  "Componentes reutilizáveis": "Componentes reutilizables",
-  "Documentação": "Documentación",
-  "Tokens de design": "Tokens de diseño",
-  "Integração com dev": "Integración con dev",
+  "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.":
+    "Actualizamos la imagen de tu empresa sin perder su esencia, preparándola para crecer y acompañar la evolución del mercado.",
+  "Revisão de posicionamento": "Revisión de posicionamiento",
+  "Redesign de logotipo": "Rediseño de logotipo",
+  "Atualização visual": "Actualización visual",
+  "Relançamento de marca": "Relanzamiento de marca",
+  "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.":
+    "Desarrollamos piezas visuales que aumentan la percepción de valor y comunican con claridad los beneficios de lo que ofreces.",
+  "Materiais promocionais": "Materiales promocionales",
+  "Catálogos e brochuras": "Catálogos y folletos",
+  "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.":
+    "Producimos contenido visual estratégico para redes sociales que refuerza la autoridad de la marca y genera engagement real.",
+  "Templates para feed": "Templates para feed",
+  "Stories e reels": "Stories y reels",
+  "Campanhas paid": "Campañas paid",
+  "Identidade digital": "Identidad digital",
 
   // Portfolio page
   "Trabalhos que falam por ": "Trabajos que hablan por ",
@@ -517,24 +497,18 @@ export const en: Dict = {
     "Articles on design, branding and digital strategy.",
 
   // Services (home cards)
-  "Branding": "Branding",
-  "Identidades visuais memoráveis que contam a história da sua marca e a destacam da concorrência.":
-    "Memorable visual identities that tell your brand's story and set it apart from the competition.",
-  "Web Design": "Web Design",
-  "Websites premium, responsivos e otimizados para conversão, com foco em resultados mensuráveis.":
-    "Premium, responsive websites optimized for conversion, focused on measurable results.",
-  "UI/UX Design": "UI/UX Design",
-  "Interfaces intuitivas e experiências digitais que os seus utilizadores adoram usar.":
-    "Intuitive interfaces and digital experiences your users will love.",
-  "Motion Design": "Motion Design",
-  "Animações e microinterações que dão vida à sua marca e captam a atenção do público.":
-    "Animations and micro-interactions that bring your brand to life and capture attention.",
-  "Design Gráfico": "Graphic Design",
-  "Materiais gráficos de alta qualidade para comunicação consistente em todos os pontos de contacto.":
-    "High-quality graphic materials for consistent communication across every touchpoint.",
-  "Design Systems": "Design Systems",
-  "Sistemas de design escaláveis que garantem consistência e eficiência nos seus projetos digitais.":
-    "Scalable design systems that ensure consistency and efficiency across your digital projects.",
+  "Identidade Visual": "Visual Identity",
+  "Marcas memoráveis, consistentes e profissionais.":
+    "Memorable, consistent and professional brands.",
+  "Modernização de Marca": "Brand Modernization",
+  "Atualização visual para empresas em evolução.":
+    "Visual update for evolving companies.",
+  "Design para Produtos e Serviços": "Design for Products & Services",
+  "Peças visuais que aumentam a perceção de valor.":
+    "Visual pieces that increase perceived value.",
+  "Design para Redes Sociais": "Social Media Design",
+  "Conteúdo visual estratégico para autoridade e engajamento.":
+    "Strategic visual content for authority and engagement.",
 
   // Home portfolio items
   "Aura Skincare": "Aura Skincare",
@@ -700,41 +674,27 @@ export const en: Dict = {
   "Cada serviço é adaptado às necessidades específicas do seu negócio.":
     "Each service is tailored to your business's specific needs.",
   "Saber mais": "Learn more",
-  "Construímos identidades de marca completas, desde o naming e logotipo até às diretrizes de marca, garantindo consistência em todos os pontos de contacto.":
-    "We build complete brand identities, from naming and logo to brand guidelines, ensuring consistency across every touchpoint.",
+  "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.":
+    "We create memorable, consistent and professional brands with their own personality, aligned with your business goals.",
   "Design de logotipo": "Logo design",
   "Identidade visual": "Visual identity",
   "Diretrizes de marca": "Brand guidelines",
-  "Criamos websites premium que combinam estética refinada com performance e otimização para conversão, adaptados a todos os dispositivos.":
-    "We create premium websites that blend refined aesthetics with performance and conversion optimization, across every device.",
-  "Websites institucionais": "Corporate websites",
-  "Landing pages": "Landing pages",
-  "E-commerce": "E-commerce",
-  "SEO técnico": "Technical SEO",
-  "Desenhamos interfaces centradas no utilizador, com pesquisa, prototipagem e testes para garantir experiências digitais intuitivas.":
-    "We design user-centered interfaces with research, prototyping and testing to ensure intuitive digital experiences.",
-  "Pesquisa de utilizadores": "User research",
-  "Wireframes": "Wireframes",
-  "Prototipagem": "Prototyping",
-  "Testes de usabilidade": "Usability testing",
-  "Damos vida à sua marca com animações, microinterações e vídeos explicativos que comunicam mensagens de forma envolvente.":
-    "We bring your brand to life with animations, micro-interactions and explainer videos that engage.",
-  "Animações de interface": "Interface animations",
-  "Vídeos explicativos": "Explainer videos",
-  "Motion graphics": "Motion graphics",
-  "Transições premium": "Premium transitions",
-  "Produzimos materiais gráficos de alta qualidade, desde brochuras e cartões de visita a posts para redes sociais e apresentações.":
-    "We produce high-quality graphic materials, from brochures and business cards to social media posts and presentations.",
-  "Editorial": "Editorial",
-  "Social media": "Social media",
-  "Packaging": "Packaging",
-  "Apresentações": "Presentations",
-  "Desenvolvemos sistemas de design escaláveis que garantem consistência visual e eficiência no desenvolvimento de produtos digitais.":
-    "We develop scalable design systems that ensure visual consistency and efficient product development.",
-  "Componentes reutilizáveis": "Reusable components",
-  "Documentação": "Documentation",
-  "Tokens de design": "Design tokens",
-  "Integração com dev": "Dev integration",
+  "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.":
+    "We update your company's image without losing its essence, preparing it to grow and keep pace with market evolution.",
+  "Revisão de posicionamento": "Positioning review",
+  "Redesign de logotipo": "Logo redesign",
+  "Atualização visual": "Visual update",
+  "Relançamento de marca": "Brand relaunch",
+  "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.":
+    "We develop visual pieces that increase perceived value and clearly communicate the benefits of what you offer.",
+  "Materiais promocionais": "Promotional materials",
+  "Catálogos e brochuras": "Catalogs and brochures",
+  "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.":
+    "We produce strategic visual content for social media that reinforces brand authority and generates real engagement.",
+  "Templates para feed": "Feed templates",
+  "Stories e reels": "Stories and reels",
+  "Campanhas paid": "Paid campaigns",
+  "Identidade digital": "Digital identity",
 
   // Portfolio
   "Trabalhos que falam por ": "Work that speaks for ",

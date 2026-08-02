@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Palette, Globe, MousePointer, Video, PenTool, Layers, ArrowRight } from "lucide-react";
+import { Sparkles, RefreshCw, Package, Megaphone, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import runaSymbol from "@/assets/runa-symbol.png.asset.json";
@@ -21,40 +21,28 @@ export const Route = createFileRoute("/servicos")({
 
 const services = [
   {
-    icon: Palette,
-    title: "Branding",
-    description: "Construímos identidades de marca completas, desde o naming e logotipo até às diretrizes de marca, garantindo consistência em todos os pontos de contacto.",
+    icon: Sparkles,
+    title: "Identidade Visual",
+    description: "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.",
     features: ["Estratégia de marca", "Design de logotipo", "Identidade visual", "Diretrizes de marca"],
   },
   {
-    icon: Globe,
-    title: "Web Design",
-    description: "Criamos websites premium que combinam estética refinada com performance e otimização para conversão, adaptados a todos os dispositivos.",
-    features: ["Websites institucionais", "Landing pages", "E-commerce", "SEO técnico"],
+    icon: RefreshCw,
+    title: "Modernização de Marca",
+    description: "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.",
+    features: ["Revisão de posicionamento", "Redesign de logotipo", "Atualização visual", "Relançamento de marca"],
   },
   {
-    icon: MousePointer,
-    title: "UI/UX Design",
-    description: "Desenhamos interfaces centradas no utilizador, com pesquisa, prototipagem e testes para garantir experiências digitais intuitivas.",
-    features: ["Pesquisa de utilizadores", "Wireframes", "Prototipagem", "Testes de usabilidade"],
+    icon: Package,
+    title: "Design para Produtos e Serviços",
+    description: "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.",
+    features: ["Packaging", "Materiais promocionais", "Apresentações", "Catálogos e brochuras"],
   },
   {
-    icon: Video,
-    title: "Motion Design",
-    description: "Damos vida à sua marca com animações, microinterações e vídeos explicativos que comunicam mensagens de forma envolvente.",
-    features: ["Animações de interface", "Vídeos explicativos", "Motion graphics", "Transições premium"],
-  },
-  {
-    icon: PenTool,
-    title: "Design Gráfico",
-    description: "Produzimos materiais gráficos de alta qualidade, desde brochuras e cartões de visita a posts para redes sociais e apresentações.",
-    features: ["Editorial", "Social media", "Packaging", "Apresentações"],
-  },
-  {
-    icon: Layers,
-    title: "Design Systems",
-    description: "Desenvolvemos sistemas de design escaláveis que garantem consistência visual e eficiência no desenvolvimento de produtos digitais.",
-    features: ["Componentes reutilizáveis", "Documentação", "Tokens de design", "Integração com dev"],
+    icon: Megaphone,
+    title: "Design para Redes Sociais",
+    description: "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.",
+    features: ["Templates para feed", "Stories e reels", "Campanhas paid", "Identidade digital"],
   },
 ];
 
