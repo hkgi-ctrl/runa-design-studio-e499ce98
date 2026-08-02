@@ -20,11 +20,11 @@ export const es: Dict = {
 
   // Home hero
   "Estúdio Criativo Premium": "Estudio Creativo Premium",
-  "Design que ": "Diseño que ",
+  "Design estratégico que ": "Diseño estratégico que ",
   "impulsiona": "impulsa",
   " negócios": " negocios",
-  "Criamos marcas, websites e experiências digitais premium que captam atenção, transmitem valor e convertem visitantes em clientes.":
-    "Creamos marcas, sitios web y experiencias digitales premium que captan atención, transmiten valor y convierten visitantes en clientes.",
+  "Criamos identidades visuais, conteúdos e experiências de marca para pequenas e médias empresas que querem destacar-se, transmitir confiança e crescer de forma consistente.":
+    "Creamos identidades visuales, contenidos y experiencias de marca para pequeñas y medianas empresas que quieren destacarse, transmitir confianza y crecer de forma consistente.",
   "Ver portfólio": "Ver portafolio",
   "Projetos": "Proyectos",
   "Anos": "Años",
@@ -492,11 +492,11 @@ export const en: Dict = {
 
   // Home hero
   "Estúdio Criativo Premium": "Premium Creative Studio",
-  "Design que ": "Design that ",
+  "Design estratégico que ": "Strategic design that ",
   "impulsiona": "drives",
   " negócios": " business",
-  "Criamos marcas, websites e experiências digitais premium que captam atenção, transmitem valor e convertem visitantes em clientes.":
-    "We craft brands, websites and premium digital experiences that capture attention, convey value and turn visitors into customers.",
+  "Criamos identidades visuais, conteúdos e experiências de marca para pequenas e médias empresas que querem destacar-se, transmitir confiança e crescer de forma consistente.":
+    "We create visual identities, content and brand experiences for small and medium-sized businesses that want to stand out, convey confidence and grow consistently.",
   "Ver portfólio": "See portfolio",
   "Projetos": "Projects",
   "Anos": "Years",
