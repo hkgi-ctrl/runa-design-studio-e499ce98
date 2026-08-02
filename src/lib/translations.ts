@@ -562,7 +562,6 @@ export const es: Dict = {
     "Un buen diseño no es solo estética. Es una herramienta para fortalecer la confianza, aumentar el valor percibido de su empresa y crear una marca preparada para crecer.",
   "Vamos construir uma marca que represente o verdadeiro valor do seu negócio.":
     "Construyamos una marca que represente el verdadero valor de su negocio.",
-  "Solicitar Orçamento": "Solicitar Presupuesto",
 };
 
 export const en: Dict = {
