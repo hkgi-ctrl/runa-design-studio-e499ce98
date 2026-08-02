@@ -80,6 +80,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  loader: () => {
+    const lang = resolveLang() ?? "pt";
+    // Ensure head()/meta and the first render already use the right language.
+    applyLanguage(lang);
+    return { lang };
+  },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
