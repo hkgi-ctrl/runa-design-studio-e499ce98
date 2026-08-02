@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslation } from "react-i18next";
-import essenceImage from "@/assets/runa-essence.png";
+import essenceImage from "@/assets/logo-agenda.png.asset.json";
 
 export function EssenceSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
@@ -57,11 +57,11 @@ export function EssenceSection() {
 
           <div className="relative overflow-hidden rounded-3xl border border-border/50 bg-card/30">
             <img
-              src={essenceImage}
+              src={essenceImage.url}
               alt={t("Ambiente criativo RUNA Design")}
               className="w-full object-cover"
               loading="lazy"
-              width={1280}
+              width={1536}
               height={1024}
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background/20 via-transparent to-turquoise/5" />
