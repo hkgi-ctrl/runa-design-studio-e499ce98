@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Qual é o processo de trabalho?",
-    answer: "O nosso processo divide-se em quatro etapas: Descoberta, Estratégia, Design e Entrega. Mantemos comunicação próxima durante todo o projeto e realizamos checkpoints regulares para garantir alinhamento.",
+    answer: "O nosso processo divide-se em quatro etapas: Pesquisa, Exploração com IA, Estratégia e Design Final. A IA acelera a exploração de ideias, mas a direção criativa, a análise e o refinamento final são sempre humanos.",
   },
   {
     question: "Trabalham com clientes internacionais?",

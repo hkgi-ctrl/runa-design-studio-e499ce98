@@ -52,10 +52,10 @@ const portfolio = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Descoberta", description: "Conhecemos o seu negócio, público-alvo e objetivos para definir a estratégia certa." },
-  { step: "02", title: "Estratégia", description: "Desenvolvemos o conceito criativo e o plano de execução alinhado aos seus objetivos." },
-  { step: "03", title: "Design", description: "Criamos as soluções visuais e experienciais com atenção a cada detalhe." },
-  { step: "04", title: "Entrega", description: "Preparamos e implementamos todos os assets, garantindo qualidade e consistência." },
+  { step: "01", title: "Pesquisa", description: "Imersão no negócio, mercado e público para encontrar o território criativo certo." },
+  { step: "02", title: "Exploração com IA", description: "Usamos IA para gerar centenas de direções visuais em tempo recorde." },
+  { step: "03", title: "Estratégia", description: "Curadoria humana: escolhemos e fundamentamos o caminho com maior impacto." },
+  { step: "04", title: "Design Final", description: "Refinamento artesanal, pixel a pixel, até à entrega premium." },
 ];
 
 const testimonials = [
