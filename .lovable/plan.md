@@ -1,44 +1,21 @@
+# Corrigir o seletor de idiomas
 
-# Internacionalização do site (PT · ES · EN)
+## O que verifiquei agora
 
-Sim, é totalmente possível. Proponho adicionar suporte multilíngue com **Português (padrão)**, **Espanhol** e **Inglês**, com um seletor de idioma no cabeçalho.
+- Nenhum ficheiro do projeto chama `t.changeLanguage`. O `LanguageSwitcher` usa corretamente `i18n.changeLanguage(code)` obtido de `useTranslation()`, e o snapshot atual de erros de runtime já não mostra `t.changeLanguage is not a function` — esse erro não é reproduzível no estado atual do código.
+- Num teste real da página apareceu um problema concreto: o cabeçalho arranca já em **EN** e o React lança erro de hidratação ("server rendered text didn't match the client": servidor "Sobre" vs cliente "About"). O servidor renderiza sempre `pt`, mas o detetor de idioma do browser escolhe outro idioma no cliente, o que regenera a árvore e pode deixar o seletor num estado inconsistente.
 
-## O que vai ser feito
+## O que vou fazer
 
-1. **Biblioteca de tradução**
-   - Instalar `i18next` + `react-i18next` (padrão da indústria, leve, sem dependência de backend).
-   - Configurar em `src/lib/i18n.ts` com deteção automática do idioma do navegador e persistência da escolha em `localStorage`.
-   - Inicializar no `__root.tsx` para funcionar em todas as rotas.
+1. **Confirmar a origem do erro reportado**: procurar em todo o projeto qualquer uso incorreto do objeto de tradução (por exemplo `t.changeLanguage` ou desestruturação errada de `useTranslation()`) e corrigir se existir; caso não exista, garantir que existe uma única instância i18n partilhada por todo o site.
+2. **Eliminar o desencontro servidor/cliente**: o primeiro render passa a ser sempre em Português; a preferência guardada é aplicada só depois da hidratação. Assim o site nunca mistura idiomas nem quebra a árvore React.
+3. **Persistência**: manter a escolha em `localStorage` (`runa-lang`) e atualizar o atributo `lang` do `<html>` a cada mudança.
+4. **Idioma inicial**: Português por defeito; se houver escolha guardada, é essa que se aplica. A deteção automática do browser deixa de abrir o site em inglês sem o utilizador pedir.
+5. **Validação em todas as páginas**: testar PT/ES/EN em `/`, `/sobre`, `/servicos`, `/portfolio`, `/processo`, `/faq` e `/contacto`, confirmando que o conteúdo muda, que a escolha persiste ao navegar e recarregar, e que não há erros na consola.
 
-2. **Ficheiros de tradução**
-   - Criar `src/locales/pt.json`, `src/locales/es.json`, `src/locales/en.json`.
-   - Extrair todos os textos visíveis das páginas (Home, Sobre, Serviços, Portfólio, Processo, Planos, FAQ, Blog, Contacto), Navigation, Footer, CTAs e SectionHeaders para chaves de tradução.
-   - PT permanece exatamente como está hoje; ES e EN são traduções fiéis do conteúdo atual.
+## Notas técnicas
 
-3. **Seletor de idioma no cabeçalho**
-   - Adicionar em `src/components/navigation.tsx` um dropdown compacto (globo + código do idioma: PT / ES / EN) à direita, antes do botão "Iniciar projeto".
-   - Versão mobile: incluir o seletor dentro do menu lateral.
-   - Estilo alinhado ao design atual (turquesa/silver, glass).
-
-4. **SEO por idioma**
-   - `<html lang="…">` no `__root.tsx` passa a refletir o idioma ativo.
-   - `title` e `description` de cada rota traduzidos (via `head()` lendo do i18next).
-   - Adicionar `<meta property="og:locale">` conforme o idioma.
-
-5. **Datas e textos dinâmicos**
-   - Ajustar formatações de data (ex.: no Blog) para respeitar o locale ativo.
-
-## O que **não** muda
-- Layout, cores, tipografia, componentes visuais e rotas — tudo permanece igual.
-- URLs continuam as mesmas (sem prefixo `/en`, `/es`); a escolha fica guardada no navegador. Se preferir URLs por idioma (ex.: `/en/servicos`), diga-me e eu revejo o plano.
-
-## Detalhes técnicos
-
-- **Stack**: `i18next`, `react-i18next`, `i18next-browser-languagedetector`.
-- **Padrão de uso nos componentes**: `const { t } = useTranslation(); <h1>{t('home.hero.title')}</h1>`.
-- **Fallback**: PT sempre como fallback quando faltar uma chave.
-- **SSR-safe**: inicialização síncrona com recursos importados estaticamente (sem fetch em runtime), compatível com o Worker do TanStack Start.
-- **Estrutura das chaves**: agrupadas por página/componente (`nav.*`, `footer.*`, `home.*`, `servicos.*`, etc.) para manutenção fácil.
-
-## Pergunta rápida antes de implementar
-Prefere manter uma **única URL por página** (idioma guardado no navegador — mais simples) ou quer **URLs separadas por idioma** tipo `/en/services`, `/es/servicios` (melhor para SEO internacional, mas requer duplicar as rotas)? Se não indicar, sigo com a opção mais simples (URL única).
+- `src/lib/i18n.ts`: inicialização determinística com `lng: "pt"`; leitura de `localStorage` movida para depois da hidratação.
+- Um efeito no root (ou pequeno hook) aplica a linguagem persistida com `i18n.changeLanguage` após montar.
+- `src/components/language-switcher.tsx`: mantém `i18n.changeLanguage`, com escrita explícita em `localStorage` e atualização de `document.documentElement.lang`.
+- Sem alterações aos dicionários de tradução existentes.
