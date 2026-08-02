@@ -68,8 +68,8 @@ function HomePage() {
       <AudienceTeaser />
       <PortfolioSection />
       <ProcessSection />
-      <FAQPreviewSection />
       <WhyRunaSection />
+      <FAQPreviewSection />
       <CTASection
         title="Pronto para elevar a sua marca?"
         description="Vamos criar algo extraordinário juntos. Fale connosco e descubra como podemos ajudar o seu negócio a crescer."
