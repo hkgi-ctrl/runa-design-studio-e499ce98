@@ -54,15 +54,9 @@ const portfolio = [
 
 const processSteps = [
   { step: "01", title: "Pesquisa", description: "Imersão no negócio, mercado e público para encontrar o território criativo certo." },
-  { step: "02", title: "Exploração com IA", description: "Usamos IA para gerar centenas de direções visuais em tempo recorde." },
+  { step: "02", title: "Exploração com IA", description: "Usamos inteligência artificial para gerar e testar várias direções visuais e otimizar o tempo de entrega." },
   { step: "03", title: "Estratégia", description: "Curadoria humana: escolhemos e fundamentamos o caminho com maior impacto." },
   { step: "04", title: "Design Final", description: "Refinamento artesanal, pixel a pixel, até à entrega premium." },
-];
-
-const testimonials = [
-  { quote: "A RUNA transformou completamente a nossa presença digital. O novo site triplicou as conversões.", author: "Ana Rodrigues", role: "CEO, Aura Skincare" },
-  { quote: "Profissionalismo criativo e atenção ao detalhe fora do comum. Recomendo sem hesitar.", author: "Miguel Costa", role: "Fundador, Vertex Arquitetura" },
-  { quote: "A equipa entendeu exactamente o que precisávamos e superou todas as expectativas.", author: "Sofia Martins", role: "CMO, PayFlow" },
 ];
 
 function HomePage() {
@@ -73,7 +67,6 @@ function HomePage() {
       <AudienceTeaser />
       <PortfolioSection />
       <ProcessSection />
-      <TestimonialsSection />
       <FAQPreviewSection />
       <CTASection
         title="Pronto para elevar a sua marca?"
