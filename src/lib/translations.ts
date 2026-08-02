@@ -592,7 +592,6 @@ export const en: Dict = {
     "Good design is not just aesthetics. It is a tool to strengthen trust, increase your company's perceived value and build a brand ready to grow.",
   "Vamos construir uma marca que represente o verdadeiro valor do seu negócio.":
     "Let's build a brand that reflects the true value of your business.",
-  "Solicitar Orçamento": "Request a Quote",
 
   // Navigation
   "Home": "Home",
