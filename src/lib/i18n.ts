@@ -1,7 +1,11 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { es, en } from "./translations";
-import { SUPPORTED_LANGS, type SupportedLang } from "./lang";
+import { SUPPORTED_LANGS, getClientLang, type SupportedLang } from "./lang";
+
+// On the client the persisted cookie is the same source the server used for
+// this request, so the very first render already matches the SSR markup.
+const initialLang: SupportedLang = getClientLang() ?? "pt";
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
@@ -14,7 +18,7 @@ if (!i18n.isInitialized) {
     // Deterministic base language. The resolved language for the current
     // request/visit is applied by `applyLanguage` before rendering, so server
     // and client markup always match.
-    lng: "pt",
+    lng: initialLang,
     supportedLngs: [...SUPPORTED_LANGS],
     keySeparator: false,
     nsSeparator: false,
