@@ -54,15 +54,9 @@ const portfolio = [
 
 const processSteps = [
   { step: "01", title: "Pesquisa", description: "Imersão no negócio, mercado e público para encontrar o território criativo certo." },
-  { step: "02", title: "Exploração com IA", description: "Usamos IA para gerar centenas de direções visuais em tempo recorde." },
+  { step: "02", title: "Exploração com IA", description: "Usamos inteligência artificial para gerar e testar várias direções visuais e otimizar o tempo de entrega." },
   { step: "03", title: "Estratégia", description: "Curadoria humana: escolhemos e fundamentamos o caminho com maior impacto." },
   { step: "04", title: "Design Final", description: "Refinamento artesanal, pixel a pixel, até à entrega premium." },
-];
-
-const testimonials = [
-  { quote: "A RUNA transformou completamente a nossa presença digital. O novo site triplicou as conversões.", author: "Ana Rodrigues", role: "CEO, Aura Skincare" },
-  { quote: "Profissionalismo criativo e atenção ao detalhe fora do comum. Recomendo sem hesitar.", author: "Miguel Costa", role: "Fundador, Vertex Arquitetura" },
-  { quote: "A equipa entendeu exactamente o que precisávamos e superou todas as expectativas.", author: "Sofia Martins", role: "CMO, PayFlow" },
 ];
 
 function HomePage() {
@@ -73,7 +67,6 @@ function HomePage() {
       <AudienceTeaser />
       <PortfolioSection />
       <ProcessSection />
-      <TestimonialsSection />
       <FAQPreviewSection />
       <CTASection
         title="Pronto para elevar a sua marca?"
@@ -240,49 +233,6 @@ function ProcessSection() {
                 {t(step.description)}
               </p>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function TestimonialsSection() {
-  const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
-  const { t } = useTranslation();
-
-  return (
-    <section className="py-24 sm:py-32" ref={ref}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          eyebrow="Testemunhos"
-          title="O que dizem os nossos clientes"
-          description="A satisfação dos nossos clientes é o melhor testemunho da qualidade do nosso trabalho."
-        />
-        <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 lg:grid-cols-3`}>
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={testimonial.author}
-              className="glass border-border/50 bg-card/40"
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <CardContent className="p-6">
-                <p className="text-base leading-relaxed text-foreground">
-                  &ldquo;{t(testimonial.quote)}&rdquo;
-                </p>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-turquoise to-petroleum" />
-                  <div>
-                    <div className="font-display text-sm font-semibold text-foreground">
-                      {t(testimonial.author)}
-                    </div>
-                    <div className="text-xs text-muted-foreground">
-                      {t(testimonial.role)}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           ))}
         </div>
       </div>

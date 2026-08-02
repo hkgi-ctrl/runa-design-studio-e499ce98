@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/language-switcher";
-import runaLogo from "@/assets/runa-header-logo-v11.png.asset.json";
+import runaLogo from "@/assets/runa-header-logo-v12.png.asset.json";
 
 const navLinks = [
   { to: "/", label: "Home" },
