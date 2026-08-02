@@ -37,7 +37,7 @@ const projects: Array<{
     title: "AURA",
     description: "Estudo de caso RUNA — Skincare de luxo: pele calma.",
     tags: ["Branding", "Packaging"],
-    image: auraSerum.url,
+    image: auraLogo.url,
     gallery: [auraSerum.url, auraTote.url, auraCard.url, auraBox.url],
   },
   { category: "Web Design", title: "Vertex Arquitetura", description: "Website institucional minimalista para escritório de arquitetura de referência.", tags: ["Web Design", "UI/UX"] },
