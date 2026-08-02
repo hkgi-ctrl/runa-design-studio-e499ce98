@@ -7,7 +7,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { useTranslation } from "react-i18next";
-import runaMark from "@/assets/runa-mark-transparent.png.asset.json";
+import runaMark from "@/assets/runa-r-hero.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -102,13 +102,11 @@ function HeroSection() {
       <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-turquoise/5 blur-3xl" />
 
       <div ref={ref} className={`reveal relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8 ${isVisible ? "visible" : ""}`}>
-        <div className="relative mx-auto mb-8 mt-5 inline-flex h-[178px] w-[178px] items-center justify-center sm:h-[237px] sm:w-[237px]">
-          <div className="absolute inset-0 rounded-full bg-turquoise/20 blur-2xl animate-pulse-glow" />
-          <div className="absolute -inset-4 rounded-full bg-[radial-gradient(circle_at_50%_50%,_oklch(0.8754_0.105_193.25_/_0.35),_transparent_70%)]" />
+        <div className="mx-auto mb-8 mt-5 flex items-center justify-center">
           <img
             src={runaMark.url}
             alt="RUNA Design"
-            className="relative z-10 h-full w-full object-contain drop-shadow-[0_8px_30px_oklch(0.8754_0.105_193.25_/_0.55)]"
+            className="h-[150px] w-auto object-contain drop-shadow-[0_10px_28px_oklch(0.2_0.02_240_/_0.5)] sm:h-[190px]"
           />
         </div>
         <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
