@@ -18,7 +18,13 @@ export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
 });
 
-const projects = [
+const projects: Array<{
+  category: string;
+  title: string;
+  description: string;
+  tags: string[];
+  image?: string;
+}> = [
   { category: "Branding", title: "AURA", description: "Estudo de caso RUNA — Skincare de luxo: pele calma.", tags: ["Branding", "Packaging"], image: auraBranding },
   { category: "Web Design", title: "Vertex Arquitetura", description: "Website institucional minimalista para escritório de arquitetura de referência.", tags: ["Web Design", "UI/UX"] },
   { category: "UI/UX", title: "PayFlow App", description: "Design de interface para aplicação de pagamentos mobile.", tags: ["UI/UX", "App Design"] },
