@@ -236,41 +236,28 @@ export const es: Dict = {
   "Cada serviço é adaptado às necessidades específicas do seu negócio.":
     "Cada servicio se adapta a las necesidades específicas de tu negocio.",
   "Saber mais": "Saber más",
-  "Construímos identidades de marca completas, desde o naming e logotipo até às diretrizes de marca, garantindo consistência em todos os pontos de contacto.":
-    "Construimos identidades de marca completas, desde el naming y el logotipo hasta las guías de marca, garantizando consistencia en todos los puntos de contacto.",
+  "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.":
+    "Creamos marcas memorables, consistentes y profesionales, con personalidad propia y alineadas con los objetivos de tu negocio.",
+  "Estratégia de marca": "Estrategia de marca",
   "Design de logotipo": "Diseño de logotipo",
   "Identidade visual": "Identidad visual",
   "Diretrizes de marca": "Guías de marca",
-  "Criamos websites premium que combinam estética refinada com performance e otimização para conversão, adaptados a todos os dispositivos.":
-    "Creamos sitios web premium que combinan estética refinada con rendimiento y optimización para conversión, adaptados a todos los dispositivos.",
-  "Websites institucionais": "Sitios institucionales",
-  "Landing pages": "Landing pages",
-  "E-commerce": "E-commerce",
-  "SEO técnico": "SEO técnico",
-  "Desenhamos interfaces centradas no utilizador, com pesquisa, prototipagem e testes para garantir experiências digitais intuitivas.":
-    "Diseñamos interfaces centradas en el usuario, con investigación, prototipado y pruebas para garantizar experiencias digitales intuitivas.",
-  "Pesquisa de utilizadores": "Investigación de usuarios",
-  "Wireframes": "Wireframes",
-  "Prototipagem": "Prototipado",
-  "Testes de usabilidade": "Pruebas de usabilidad",
-  "Damos vida à sua marca com animações, microinterações e vídeos explicativos que comunicam mensagens de forma envolvente.":
-    "Damos vida a tu marca con animaciones, microinteracciones y vídeos explicativos que comunican mensajes de forma envolvente.",
-  "Animações de interface": "Animaciones de interfaz",
-  "Vídeos explicativos": "Vídeos explicativos",
-  "Motion graphics": "Motion graphics",
-  "Transições premium": "Transiciones premium",
-  "Produzimos materiais gráficos de alta qualidade, desde brochuras e cartões de visita a posts para redes sociais e apresentações.":
-    "Producimos materiales gráficos de alta calidad, desde folletos y tarjetas de visita hasta publicaciones para redes sociales y presentaciones.",
-  "Editorial": "Editorial",
-  "Social media": "Social media",
-  "Packaging": "Packaging",
-  "Apresentações": "Presentaciones",
-  "Desenvolvemos sistemas de design escaláveis que garantem consistência visual e eficiência no desenvolvimento de produtos digitais.":
-    "Desarrollamos sistemas de diseño escalables que garantizan consistencia visual y eficiencia en el desarrollo de productos digitales.",
-  "Componentes reutilizáveis": "Componentes reutilizables",
-  "Documentação": "Documentación",
-  "Tokens de design": "Tokens de diseño",
-  "Integração com dev": "Integración con dev",
+  "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.":
+    "Actualizamos la imagen de tu empresa sin perder su esencia, preparándola para crecer y acompañar la evolución del mercado.",
+  "Revisão de posicionamento": "Revisión de posicionamiento",
+  "Redesign de logotipo": "Rediseño de logotipo",
+  "Atualização visual": "Actualización visual",
+  "Relançamento de marca": "Relanzamiento de marca",
+  "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.":
+    "Desarrollamos piezas visuales que aumentan la percepción de valor y comunican con claridad los beneficios de lo que ofreces.",
+  "Materiais promocionais": "Materiales promocionales",
+  "Catálogos e brochuras": "Catálogos y folletos",
+  "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.":
+    "Producimos contenido visual estratégico para redes sociales que refuerza la autoridad de la marca y genera engagement real.",
+  "Templates para feed": "Templates para feed",
+  "Stories e reels": "Stories y reels",
+  "Campanhas paid": "Campañas paid",
+  "Identidade digital": "Identidad digital",
 
   // Portfolio page
   "Trabalhos que falam por ": "Trabajos que hablan por ",
