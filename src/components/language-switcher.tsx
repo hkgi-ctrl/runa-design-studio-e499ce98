@@ -7,7 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { setStoredLang, type SupportedLang } from "@/lib/i18n";
+import { persistLang, type SupportedLang } from "@/lib/lang";
 
 const LANGS: { code: SupportedLang; label: string }[] = [
   { code: "pt", label: "Português" },
@@ -20,7 +20,7 @@ export function LanguageSwitcher({ variant = "compact" }: { variant?: "compact" 
   const current = (i18n.resolvedLanguage || i18n.language || "pt").slice(0, 2).toUpperCase();
 
   const change = (code: SupportedLang) => {
-    setStoredLang(code);
+    persistLang(code);
     void i18n.changeLanguage(code);
     if (typeof document !== "undefined") {
       document.documentElement.lang = code;
