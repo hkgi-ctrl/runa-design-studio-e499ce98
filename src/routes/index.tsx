@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
-import { AudienceSection } from "@/components/audience-section";
+import { AudienceTeaser } from "@/components/audience-teaser";
 import { useTranslation } from "react-i18next";
 import runaMark from "@/assets/runa-r-hero.png.asset.json";
 
@@ -70,7 +70,7 @@ function HomePage() {
     <>
       <HeroSection />
       <ServicesSection />
-      <AudienceSection />
+      <AudienceTeaser />
       <PortfolioSection />
       <ProcessSection />
       <TestimonialsSection />
