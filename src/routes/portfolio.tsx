@@ -49,6 +49,26 @@ const projects: Array<{
 
 function PortfolioPage() {
   const { t } = useTranslation();
+  const [lightbox, setLightbox] = useState<{ images: string[]; index: number } | null>(null);
+
+  const close = useCallback(() => setLightbox(null), []);
+  const step = useCallback((delta: number) => {
+    setLightbox((lb) =>
+      lb ? { ...lb, index: (lb.index + delta + lb.images.length) % lb.images.length } : lb,
+    );
+  }, []);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, close, step]);
+
   return (
     <>
       <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
@@ -101,11 +121,20 @@ function PortfolioPage() {
                   </p>
                   {project.gallery && (
                     <div className="mt-4 grid grid-cols-4 gap-2">
-                      {project.gallery.map((src) => (
-                        <div key={src} className="aspect-square overflow-hidden rounded-md border border-border/50">
-                          <img src={src} alt={t(project.title)} loading="lazy" className="h-full w-full object-cover" />
-                        </div>
-                      ))}
+                      {project.gallery.map((src, i) => {
+                        const images = [project.image, ...(project.gallery ?? [])].filter(Boolean) as string[];
+                        return (
+                          <button
+                            key={src}
+                            type="button"
+                            aria-label={`${t(project.title)} — ${t("ampliar imagem")} ${i + 1}`}
+                            onClick={() => setLightbox({ images, index: i + 1 })}
+                            className="aspect-square overflow-hidden rounded-md border border-border/50 transition-colors hover:border-turquoise/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-turquoise"
+                          >
+                            <img src={src} alt={t(project.title)} loading="lazy" className="h-full w-full object-cover" />
+                          </button>
+                        );
+                      })}
                     </div>
                   )}
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -126,6 +155,46 @@ function PortfolioPage() {
         title="Quer ver o seu projeto aqui?"
         description="Vamos trabalhar juntos para criar algo verdadeiramente especial."
       />
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/90 p-4 backdrop-blur-md"
+          role="dialog"
+          aria-modal="true"
+          onClick={close}
+        >
+          <button
+            type="button"
+            aria-label={t("Fechar")}
+            onClick={close}
+            className="absolute right-4 top-4 rounded-full border border-border/60 bg-card/70 p-2 text-foreground transition-colors hover:border-turquoise/60 hover:text-turquoise"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            aria-label={t("Anterior")}
+            onClick={(e) => { e.stopPropagation(); step(-1); }}
+            className="absolute left-4 rounded-full border border-border/60 bg-card/70 p-3 text-foreground transition-colors hover:border-turquoise/60 hover:text-turquoise"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <img
+            src={lightbox.images[lightbox.index]}
+            alt=""
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[85vh] max-w-[85vw] rounded-lg object-contain shadow-2xl"
+          />
+          <button
+            type="button"
+            aria-label={t("Seguinte")}
+            onClick={(e) => { e.stopPropagation(); step(1); }}
+            className="absolute right-4 rounded-full border border-border/60 bg-card/70 p-3 text-foreground transition-colors hover:border-turquoise/60 hover:text-turquoise"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+      )}
     </>
   );
 }
