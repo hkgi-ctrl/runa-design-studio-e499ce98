@@ -60,14 +60,17 @@ const processSteps = [
   { step: "04", title: "Design Final", description: "Refinamento artesanal, pixel a pixel, até à entrega premium." },
 ];
 
+import { EssenceSection } from "@/components/essence-section";
+
 function HomePage() {
   return (
     <>
       <HeroSection />
       <ServicesSection />
       <AudienceTeaser />
-      <PortfolioSection />
       <ProcessSection />
+      <EssenceSection />
+      <PortfolioSection />
       <WhyRunaSection />
       <FAQPreviewSection />
       <CTASection
