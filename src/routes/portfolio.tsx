@@ -4,8 +4,7 @@ import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
-import runaGlass from "@/assets/runa-glass.png.asset.json";
-import runaLogo from "@/assets/runa-logo.png.asset.json";
+import auraBranding from "@/assets/portfolio-aura-branding.jpg";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -20,7 +19,7 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 const projects = [
-  { category: "Branding", title: "Aura Skincare", description: "Identidade visual completa para marca de cosmética premium portuguesa.", tags: ["Branding", "Packaging"] },
+  { category: "Branding", title: "AURA", description: "Estudo de caso RUNA — Skincare de luxo: pele calma.", tags: ["Branding", "Packaging"], image: auraBranding },
   { category: "Web Design", title: "Vertex Arquitetura", description: "Website institucional minimalista para escritório de arquitetura de referência.", tags: ["Web Design", "UI/UX"] },
   { category: "UI/UX", title: "PayFlow App", description: "Design de interface para aplicação de pagamentos mobile.", tags: ["UI/UX", "App Design"] },
   { category: "Motion", title: "Nova Energia", description: "Campanha de motion graphics para empresa de energias renováveis.", tags: ["Motion", "Video"] },
@@ -51,24 +50,6 @@ function PortfolioPage() {
 
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 grid gap-6 lg:grid-cols-2">
-            <div className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/40 shadow-2xl">
-              <img src={runaGlass.url} alt="Aplicação do logo RUNA em vidro corporativo" className="w-full transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-graphite-deep/95 via-graphite-deep/60 to-transparent p-6">
-                <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">{t("Case study")}</Badge>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">{t("RUNA — Sinalética corporativa")}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{t("Aplicação da identidade em vidro e superfícies de interior.")}</p>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-3xl border border-border/50 bg-white shadow-2xl">
-              <img src={runaLogo.url} alt="Logo principal RUNA Design" className="w-full transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-graphite-deep/95 via-graphite-deep/40 to-transparent p-6">
-                <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">{t("Branding")}</Badge>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">{t("RUNA — Identidade principal")}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{t("Sistema de logotipo com acabamento metálico premium.")}</p>
-              </div>
-            </div>
-          </div>
           <SectionHeader
             title="Projetos selecionados"
             description="Cada projeto é uma história única de transformação visual e digital."
@@ -77,7 +58,18 @@ function PortfolioPage() {
             {projects.map((project) => (
               <Card key={project.title} className="group overflow-hidden glass border-border/50 bg-card/40 transition-all hover:-translate-y-1 hover:border-turquoise/30">
                 <div className="aspect-[4/3] gradient-runa relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_oklch(0.8754_0.105_193.25_/_0.15),_transparent_60%)]" />
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={t(project.title)}
+                      width={1200}
+                      height={912}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_oklch(0.8754_0.105_193.25_/_0.15),_transparent_60%)]" />
+                  )}
                 </div>
                 <CardContent className="p-6">
                   <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">
