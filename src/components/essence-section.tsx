@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslation } from "react-i18next";
-import essenceImage from "@/assets/runa-essence.png";
+import essenceImage from "@/assets/logo-agenda.png.asset.json";
 
 export function EssenceSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
