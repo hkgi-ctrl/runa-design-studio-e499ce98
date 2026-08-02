@@ -13,7 +13,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navigation } from "../components/navigation";
 import { Footer } from "../components/footer";
-import "../lib/i18n";
+import i18n, { applyLanguage } from "../lib/i18n";
+import { resolveLang } from "../lib/resolve-lang";
 import { useTranslation } from "react-i18next";
 
 function NotFoundComponent() {
@@ -79,6 +80,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  loader: () => {
+    const lang = resolveLang() ?? "pt";
+    // Ensure head()/meta and the first render already use the right language.
+    applyLanguage(lang);
+    return { lang };
+  },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -110,8 +117,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  // Resolved from the persisted cookie on both server and client so the
+  // `lang` attribute matches during hydration.
+  const lang = resolveLang() ?? "pt";
   return (
-    <html lang="pt">
+    <html lang={lang}>
       <head>
         <HeadContent />
       </head>
@@ -125,7 +135,11 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const { i18n } = useTranslation();
+  const { lang } = Route.useLoaderData();
+  // Applied during render (not in an effect) so SSR and the hydration pass
+  // use the same language.
+  applyLanguage(lang);
+
   useEffect(() => {
     if (typeof document !== "undefined") {
       document.documentElement.lang = i18n.resolvedLanguage || "pt";

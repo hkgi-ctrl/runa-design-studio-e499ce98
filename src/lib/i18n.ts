@@ -1,33 +1,41 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import { es, en } from "./translations";
+import { SUPPORTED_LANGS, getClientLang, type SupportedLang } from "./lang";
+
+// On the client the persisted cookie is the same source the server used for
+// this request, so the very first render already matches the SSR markup.
+const initialLang: SupportedLang = getClientLang() ?? "pt";
 
 if (!i18n.isInitialized) {
-  const chain = i18n.use(initReactI18next);
-  if (typeof window !== "undefined") {
-    chain.use(LanguageDetector);
-  }
-  chain.init({
+  i18n.use(initReactI18next).init({
     resources: {
       pt: { translation: {} },
       es: { translation: es },
       en: { translation: en },
     },
     fallbackLng: "pt",
-    lng: typeof window === "undefined" ? "pt" : undefined,
-    supportedLngs: ["pt", "es", "en"],
+    // Deterministic base language. The resolved language for the current
+    // request/visit is applied by `applyLanguage` before rendering, so server
+    // and client markup always match.
+    lng: initialLang,
+    supportedLngs: [...SUPPORTED_LANGS],
     keySeparator: false,
     nsSeparator: false,
     interpolation: { escapeValue: false },
     returnEmptyString: false,
-    detection: {
-      order: ["localStorage", "navigator"],
-      lookupLocalStorage: "runa-lang",
-      caches: ["localStorage"],
-    },
     react: { useSuspense: false },
   });
+}
+
+/**
+ * Sets the active language synchronously. Resources are bundled, so no
+ * async loading happens and the very next render already uses `lang`.
+ */
+export function applyLanguage(lang: SupportedLang) {
+  if (i18n.language !== lang) {
+    void i18n.changeLanguage(lang);
+  }
 }
 
 export default i18n;
