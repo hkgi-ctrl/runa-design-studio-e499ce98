@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navigation } from "../components/navigation";
 import { Footer } from "../components/footer";
 import "../lib/i18n";
+import { getStoredLang } from "../lib/i18n";
 import { useTranslation } from "react-i18next";
 
 function NotFoundComponent() {
@@ -126,6 +127,14 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const { i18n } = useTranslation();
+  useEffect(() => {
+    const stored = getStoredLang();
+    if (stored && stored !== i18n.resolvedLanguage) {
+      void i18n.changeLanguage(stored);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     if (typeof document !== "undefined") {
       document.documentElement.lang = i18n.resolvedLanguage || "pt";
