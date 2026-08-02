@@ -60,17 +60,9 @@ export const es: Dict = {
 
   // Services (home cards)
   "Identidade Visual": "Identidad Visual",
-  "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.":
-    "Creamos marcas memorables, consistentes y profesionales, con personalidad propia y alineadas con los objetivos de tu negocio.",
   "Modernização de Marca": "Modernización de Marca",
-  "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.":
-    "Actualizamos la imagen de tu empresa sin perder su esencia, preparándola para crecer y acompañar la evolución del mercado.",
   "Design para Produtos e Serviços": "Diseño para Productos y Servicios",
-  "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.":
-    "Desarrollamos piezas visuales que aumentan la percepción de valor y comunican con claridad los beneficios de lo que ofreces.",
   "Design para Redes Sociais": "Diseño para Redes Sociales",
-  "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.":
-    "Producimos contenido visual estratégico para redes sociales que refuerza la autoridad de la marca y genera engagement real.",
 
   // Home portfolio items
   "Aura Skincare": "Aura Skincare",
