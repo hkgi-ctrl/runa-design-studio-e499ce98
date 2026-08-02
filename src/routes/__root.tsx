@@ -117,7 +117,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  const lang = i18n.resolvedLanguage || "pt";
+  // Resolved from the persisted cookie on both server and client so the
+  // `lang` attribute matches during hydration.
+  const lang = resolveLang() ?? "pt";
   return (
     <html lang={lang}>
       <head>
