@@ -59,24 +59,18 @@ export const es: Dict = {
     "Artículos sobre diseño, branding y estrategia digital.",
 
   // Services (home cards)
-  "Branding": "Branding",
-  "Identidades visuais memoráveis que contam a história da sua marca e a destacam da concorrência.":
-    "Identidades visuales memorables que cuentan la historia de tu marca y la destacan de la competencia.",
-  "Web Design": "Diseño Web",
-  "Websites premium, responsivos e otimizados para conversão, com foco em resultados mensuráveis.":
-    "Sitios web premium, responsivos y optimizados para conversión, con foco en resultados medibles.",
-  "UI/UX Design": "Diseño UI/UX",
-  "Interfaces intuitivas e experiências digitais que os seus utilizadores adoram usar.":
-    "Interfaces intuitivas y experiencias digitales que a tus usuarios les encantará usar.",
-  "Motion Design": "Motion Design",
-  "Animações e microinterações que dão vida à sua marca e captam a atenção do público.":
-    "Animaciones y microinteracciones que dan vida a tu marca y captan la atención del público.",
-  "Design Gráfico": "Diseño Gráfico",
-  "Materiais gráficos de alta qualidade para comunicação consistente em todos os pontos de contacto.":
-    "Materiales gráficos de alta calidad para una comunicación consistente en todos los puntos de contacto.",
-  "Design Systems": "Design Systems",
-  "Sistemas de design escaláveis que garantem consistência e eficiência nos seus projetos digitais.":
-    "Sistemas de diseño escalables que garantizan consistencia y eficiencia en tus proyectos digitales.",
+  "Identidade Visual": "Identidad Visual",
+  "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.":
+    "Creamos marcas memorables, consistentes y profesionales, con personalidad propia y alineadas con los objetivos de tu negocio.",
+  "Modernização de Marca": "Modernización de Marca",
+  "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.":
+    "Actualizamos la imagen de tu empresa sin perder su esencia, preparándola para crecer y acompañar la evolución del mercado.",
+  "Design para Produtos e Serviços": "Diseño para Productos y Servicios",
+  "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.":
+    "Desarrollamos piezas visuales que aumentan la percepción de valor y comunican con claridad los beneficios de lo que ofreces.",
+  "Design para Redes Sociais": "Diseño para Redes Sociales",
+  "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.":
+    "Producimos contenido visual estratégico para redes sociales que refuerza la autoridad de la marca y genera engagement real.",
 
   // Home portfolio items
   "Aura Skincare": "Aura Skincare",
