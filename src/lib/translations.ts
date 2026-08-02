@@ -230,7 +230,6 @@ export const es: Dict = {
   "Saber mais": "Saber más",
   "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.":
     "Creamos marcas memorables, consistentes y profesionales, con personalidad propia y alineadas con los objetivos de tu negocio.",
-  "Estratégia de marca": "Estrategia de marca",
   "Design de logotipo": "Diseño de logotipo",
   "Identidade visual": "Identidad visual",
   "Diretrizes de marca": "Guías de marca",
