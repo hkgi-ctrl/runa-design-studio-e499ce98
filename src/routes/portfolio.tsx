@@ -80,8 +80,6 @@ function PortfolioPage() {
                     <img
                       src={project.image}
                       alt={t(project.title)}
-                      width={1200}
-                      height={912}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -99,6 +97,15 @@ function PortfolioPage() {
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {t(project.description)}
                   </p>
+                  {project.gallery && (
+                    <div className="mt-4 grid grid-cols-4 gap-2">
+                      {project.gallery.map((src) => (
+                        <div key={src} className="aspect-square overflow-hidden rounded-md border border-border/50">
+                          <img src={src} alt={t(project.title)} loading="lazy" className="h-full w-full object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span key={tag} className="rounded-full bg-secondary px-2.5 py-1 text-xs text-secondary-foreground">
