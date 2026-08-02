@@ -513,6 +513,27 @@ export const es: Dict = {
   "Pequeno café local com atendimento ao cliente": "Pequeña cafetería local atendiendo a un cliente",
   "Equipa de empresa de média dimensão em reunião": "Equipo de una empresa mediana en reunión",
   "Empreendedora a trabalhar no seu novo negócio": "Emprendedora trabajando en su nuevo negocio",
+
+  // FAQ page (updated)
+  "Ainda tem alguma ": "¿Aún tienes alguna ",
+  "dúvida?": "duda?",
+  "Reunimos as respostas às perguntas que mais recebemos antes do início de um projeto.":
+    "Hemos reunido las respuestas a las preguntas que más recibimos antes del inicio de un proyecto.",
+  "Trabalham apenas com empresas em Portugal?": "¿Trabajan solo con empresas en Portugal?",
+  "Não. A RUNA trabalha remotamente com clientes em qualquer lugar, adaptando cada projeto às necessidades do negócio.":
+    "No. RUNA trabaja remotamente con clientes de cualquier lugar, adaptando cada proyecto a las necesidades del negocio.",
+  "Quanto tempo demora um projeto?": "¿Cuánto dura un proyecto?",
+  "Depende do serviço e da complexidade. Após analisarmos o seu pedido, enviamos um cronograma personalizado.":
+    "Depende del servicio y de la complejidad. Tras analizar tu solicitud, enviamos un cronograma personalizado.",
+  "Posso contratar apenas um serviço?": "¿Puedo contratar solo un servicio?",
+  "Sim. Pode contratar um serviço específico ou um projeto completo de branding, consoante as necessidades da sua empresa.":
+    "Sí. Puedes contratar un servicio específico o un proyecto completo de branding, según las necesidades de tu empresa.",
+  "A inteligência artificial substitui o trabalho do designer?": "¿La inteligencia artificial sustituye el trabajo del diseñador?",
+  "Não. A inteligência artificial é utilizada para acelerar a exploração de ideias e aumentar a eficiência do processo criativo. As decisões estratégicas, o refinamento e o resultado final são sempre conduzidos pela equipa da RUNA.":
+    "No. La inteligencia artificial se utiliza para acelerar la exploración de ideas y aumentar la eficiencia del proceso creativo. Las decisiones estratégicas, el refinamiento y el resultado final siempre están guiados por el equipo de RUNA.",
+  "Como posso pedir um orçamento?": "¿Cómo puedo pedir un presupuesto?",
+  "Basta preencher o formulário de contacto. Analisaremos o seu projeto e responderemos o mais rapidamente possível.":
+    "Basta con rellenar el formulario de contacto. Analizaremos tu proyecto y responderemos lo antes posible.",
 };
 
 export const en: Dict = {
