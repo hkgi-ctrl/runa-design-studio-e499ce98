@@ -57,11 +57,11 @@ export function EssenceSection() {
 
           <div className="relative overflow-hidden rounded-3xl border border-border/50 bg-card/30">
             <img
-              src={essenceImage}
+              src={essenceImage.url}
               alt={t("Ambiente criativo RUNA Design")}
               className="w-full object-cover"
               loading="lazy"
-              width={1280}
+              width={1536}
               height={1024}
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background/20 via-transparent to-turquoise/5" />
