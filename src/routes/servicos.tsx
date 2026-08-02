@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Palette, Globe, MousePointer, Video, PenTool, Layers, ArrowRight } from "lucide-react";
+import { Sparkles, RefreshCw, Package, Megaphone, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import runaSymbol from "@/assets/runa-symbol.png.asset.json";
