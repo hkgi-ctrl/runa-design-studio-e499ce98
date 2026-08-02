@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as QuemAjudamosRouteImport } from './routes/quem-ajudamos'
 import { Route as ProcessoRouteImport } from './routes/processo'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -31,6 +32,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ServicosRoute = ServicosRouteImport.update({
   id: '/servicos',
   path: '/servicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemAjudamosRoute = QuemAjudamosRouteImport.update({
+  id: '/quem-ajudamos',
+  path: '/quem-ajudamos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProcessoRoute = ProcessoRouteImport.update({
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/portfolio': typeof PortfolioRoute
   '/processo': typeof ProcessoRoute
+  '/quem-ajudamos': typeof QuemAjudamosRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/portfolio': typeof PortfolioRoute
   '/processo': typeof ProcessoRoute
+  '/quem-ajudamos': typeof QuemAjudamosRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/portfolio': typeof PortfolioRoute
   '/processo': typeof ProcessoRoute
+  '/quem-ajudamos': typeof QuemAjudamosRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/portfolio'
     | '/processo'
+    | '/quem-ajudamos'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/portfolio'
     | '/processo'
+    | '/quem-ajudamos'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/portfolio'
     | '/processo'
+    | '/quem-ajudamos'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   PortfolioRoute: typeof PortfolioRoute
   ProcessoRoute: typeof ProcessoRoute
+  QuemAjudamosRoute: typeof QuemAjudamosRoute
   ServicosRoute: typeof ServicosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/servicos'
       fullPath: '/servicos'
       preLoaderRoute: typeof ServicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-ajudamos': {
+      id: '/quem-ajudamos'
+      path: '/quem-ajudamos'
+      fullPath: '/quem-ajudamos'
+      preLoaderRoute: typeof QuemAjudamosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/processo': {
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   PortfolioRoute: PortfolioRoute,
   ProcessoRoute: ProcessoRoute,
+  QuemAjudamosRoute: QuemAjudamosRoute,
   ServicosRoute: ServicosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,
