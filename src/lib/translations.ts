@@ -60,9 +60,17 @@ export const es: Dict = {
 
   // Services (home cards)
   "Identidade Visual": "Identidad Visual",
+  "Marcas memoráveis, consistentes e profissionais.":
+    "Marcas memorables, consistentes y profesionales.",
   "Modernização de Marca": "Modernización de Marca",
+  "Atualização visual para empresas em evolução.":
+    "Actualización visual para empresas en evolución.",
   "Design para Produtos e Serviços": "Diseño para Productos y Servicios",
+  "Peças visuais que aumentam a perceção de valor.":
+    "Piezas visuales que aumentan la percepción de valor.",
   "Design para Redes Sociais": "Diseño para Redes Sociales",
+  "Conteúdo visual estratégico para autoridade e engajamento.":
+    "Contenido visual estratégico para autoridad y engagement.",
 
   // Home portfolio items
   "Aura Skincare": "Aura Skincare",
