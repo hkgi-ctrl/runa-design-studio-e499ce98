@@ -97,7 +97,17 @@ function PortfolioPage() {
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <Card key={project.title} className="group overflow-hidden glass border-border/50 bg-card/40 transition-all hover:-translate-y-1 hover:border-turquoise/30">
-                <div className="aspect-[4/3] gradient-runa relative overflow-hidden">
+                <button
+                  type="button"
+                  aria-label={`${t(project.title)} — ${t("ampliar imagem principal")}`}
+                  onClick={() =>
+                    setLightbox({
+                      images: [project.image, ...(project.gallery ?? [])].filter(Boolean) as string[],
+                      index: 0,
+                    })
+                  }
+                  className="relative aspect-[4/3] w-full cursor-zoom-in overflow-hidden gradient-runa text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-turquoise"
+                >
                   {project.image ? (
                     <img
                       src={project.image}
@@ -108,7 +118,12 @@ function PortfolioPage() {
                   ) : (
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_oklch(0.8754_0.105_193.25_/_0.15),_transparent_60%)]" />
                   )}
-                </div>
+                  <div className="absolute inset-0 flex items-center justify-center bg-background/0 transition-colors duration-300 hover:bg-background/20">
+                    <span className="rounded-full border border-border/60 bg-card/70 px-3 py-1.5 text-xs font-medium text-foreground opacity-0 shadow-sm transition-opacity duration-300 group-hover:opacity-100">
+                      {t("Clique para ampliar")}
+                    </span>
+                  </div>
+                </button>
                 <CardContent className="p-6">
                   <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">
                     {t(project.category)}

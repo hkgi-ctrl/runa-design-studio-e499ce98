@@ -265,6 +265,9 @@ export const es: Dict = {
   "si": "sí",
   "Uma seleção dos projetos mais recentes onde aplicámos estratégia, criatividade e execução impecável.":
     "Una selección de los proyectos más recientes donde aplicamos estrategia, creatividad y ejecución impecable.",
+  "Clique para ampliar": "Haz clic para ampliar",
+  "ampliar imagem principal": "ampliar imagen principal",
+  "ampliar imagem": "ampliar imagen",
   "Case study": "Case study",
   "RUNA — Sinalética corporativa": "RUNA — Señalética corporativa",
   "Aplicação da identidade em vidro e superfícies de interior.":
@@ -868,6 +871,9 @@ export const en: Dict = {
   "si": "itself",
   "Uma seleção dos projetos mais recentes onde aplicámos estratégia, criatividade e execução impecável.":
     "A selection of recent projects where we applied strategy, creativity and flawless execution.",
+  "Clique para ampliar": "Click to enlarge",
+  "ampliar imagem principal": "enlarge main image",
+  "ampliar imagem": "enlarge image",
   "Case study": "Case study",
   "RUNA — Sinalética corporativa": "RUNA — Corporate signage",
   "Aplicação da identidade em vidro e superfícies de interior.":
