@@ -292,6 +292,9 @@ export const es: Dict = {
   "VIRCLAN": "VIRCLAN",
   "Estudo de caso RUNA — Atualização de uma marca existente, novo conceito e reposicionamento estratégico.":
     "Caso de estudio RUNA — Actualización de una marca existente, nuevo concepto y reposicionamiento estratégico.",
+  "JACIRA ALVES": "JACIRA ALVES",
+  "Estudo de caso RUNA — Apresentação estratégica que adicionou mais valor percebido aos produtos.":
+    "Caso de estudio RUNA — Presentación estratégica que añadió más valor percibido a los productos.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Identidad visual completa para marca de cosmética premium portuguesa.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
@@ -912,6 +915,9 @@ export const en: Dict = {
   "VIRCLAN": "VIRCLAN",
   "Estudo de caso RUNA — Atualização de uma marca existente, novo conceito e reposicionamento estratégico.":
     "RUNA case study — Update of an existing brand, new concept and strategic repositioning.",
+  "JACIRA ALVES": "JACIRA ALVES",
+  "Estudo de caso RUNA — Apresentação estratégica que adicionou mais valor percebido aos produtos.":
+    "RUNA case study — Strategic presentation that added more perceived value to the products.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Complete visual identity for a premium Portuguese cosmetics brand.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
