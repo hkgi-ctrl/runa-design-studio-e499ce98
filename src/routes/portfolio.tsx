@@ -58,10 +58,10 @@ const projects: Array<{
   },
   {
     category: "Rebranding",
-    title: "Petito",
+    title: "PETITO",
     description: "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.",
     tags: ["Rebranding", "Identidade Visual"],
-    image: petitoLogo.url,
+    image: petitoMain.url,
     gallery: [petitoPackaging.url, petitoLifestyle.url, petitoRebranding.url],
   },
   {

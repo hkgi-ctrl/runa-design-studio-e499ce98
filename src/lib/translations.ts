@@ -283,7 +283,7 @@ export const es: Dict = {
     "Caso de estudio RUNA — Skincare de lujo: piel calmada.",
   "Packaging": "Packaging",
   "Rebranding": "Rebranding",
-  "Petito": "Petito",
+  "PETITO": "PETITO",
   "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.":
     "Caso de estudio RUNA — Rebranding de la marca Petito: nueva propuesta de identidad.",
   "NORTE": "NORTE",
@@ -906,7 +906,7 @@ export const en: Dict = {
     "RUNA case study — Luxury skincare: calm skin.",
   "Packaging": "Packaging",
   "Rebranding": "Rebranding",
-  "Petito": "Petito",
+  "PETITO": "PETITO",
   "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.":
     "RUNA case study — Rebranding of the Petito brand: new identity proposal.",
   "NORTE": "NORTE",
