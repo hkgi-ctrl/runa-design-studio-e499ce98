@@ -11,6 +11,10 @@ import auraTote from "@/assets/aura-2-2.png.asset.json";
 import auraSerum from "@/assets/aura-3.png.asset.json";
 import auraCard from "@/assets/aura-4.png.asset.json";
 import auraBox from "@/assets/aura-5.png.asset.json";
+import petitoLogo from "@/assets/petito-1.png.asset.json";
+import petitoPackaging from "@/assets/petito-2.png.asset.json";
+import petitoLifestyle from "@/assets/petito-3.png.asset.json";
+import petitoRebranding from "@/assets/petito-4.png.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -40,7 +44,14 @@ const projects: Array<{
     image: auraLogo.url,
     gallery: [auraSerum.url, auraTote.url, auraCard.url, auraBox.url],
   },
-  { category: "Web Design", title: "Vertex Arquitetura", description: "Website institucional minimalista para escritório de arquitetura de referência.", tags: ["Web Design", "UI/UX"] },
+  {
+    category: "Rebranding",
+    title: "Petito",
+    description: "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.",
+    tags: ["Rebranding", "Identidade Visual"],
+    image: petitoLogo.url,
+    gallery: [petitoPackaging.url, petitoLifestyle.url, petitoRebranding.url],
+  },
   { category: "UI/UX", title: "PayFlow App", description: "Design de interface para aplicação de pagamentos mobile.", tags: ["UI/UX", "App Design"] },
   { category: "Motion", title: "Nova Energia", description: "Campanha de motion graphics para empresa de energias renováveis.", tags: ["Motion", "Video"] },
   { category: "Branding", title: "Mesa Real", description: "Branding e comunicação para restaurante de alta cozinha lisboeta.", tags: ["Branding", "Editorial"] },
