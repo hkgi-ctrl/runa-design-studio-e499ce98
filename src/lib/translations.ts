@@ -286,6 +286,9 @@ export const es: Dict = {
   "Petito": "Petito",
   "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.":
     "Caso de estudio RUNA — Rebranding de la marca Petito: nueva propuesta de identidad.",
+  "NORTE": "NORTE",
+  "Estudo de caso RUNA — Turismo de expedição além do mapa.":
+    "Caso de estudio RUNA — Turismo de expedición más allá del mapa.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Identidad visual completa para marca de cosmética premium portuguesa.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
@@ -900,6 +903,9 @@ export const en: Dict = {
   "Petito": "Petito",
   "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.":
     "RUNA case study — Rebranding of the Petito brand: new identity proposal.",
+  "NORTE": "NORTE",
+  "Estudo de caso RUNA — Turismo de expedição além do mapa.":
+    "RUNA case study — Expedition tourism beyond the map.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Complete visual identity for a premium Portuguese cosmetics brand.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
