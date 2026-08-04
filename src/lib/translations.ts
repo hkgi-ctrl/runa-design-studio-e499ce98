@@ -278,6 +278,14 @@ export const es: Dict = {
   "Projetos selecionados": "Proyectos seleccionados",
   "Cada projeto é uma história única de transformação visual e digital.":
     "Cada proyecto es una historia única de transformación visual y digital.",
+  "AURA": "AURA",
+  "Estudo de caso RUNA — Skincare de luxo: pele calma.":
+    "Caso de estudio RUNA — Skincare de lujo: piel calmada.",
+  "Packaging": "Packaging",
+  "Rebranding": "Rebranding",
+  "Petito": "Petito",
+  "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.":
+    "Caso de estudio RUNA — Rebranding de la marca Petito: nueva propuesta de identidad.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Identidad visual completa para marca de cosmética premium portuguesa.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
@@ -884,6 +892,14 @@ export const en: Dict = {
   "Projetos selecionados": "Selected projects",
   "Cada projeto é uma história única de transformação visual e digital.":
     "Each project is a unique story of visual and digital transformation.",
+  "AURA": "AURA",
+  "Estudo de caso RUNA — Skincare de luxo: pele calma.":
+    "RUNA case study — Luxury skincare: calm skin.",
+  "Packaging": "Packaging",
+  "Rebranding": "Rebranding",
+  "Petito": "Petito",
+  "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.":
+    "RUNA case study — Rebranding of the Petito brand: new identity proposal.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Complete visual identity for a premium Portuguese cosmetics brand.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
