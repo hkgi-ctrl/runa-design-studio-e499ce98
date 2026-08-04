@@ -23,6 +23,7 @@ import virclanLogo from "@/assets/virclan-1.png.asset.json";
 import virclanVariant1 from "@/assets/virclan-2.png.asset.json";
 import virclanVariant2 from "@/assets/virclan-3.png.asset.json";
 import virclanAplicacao from "@/assets/virclan-4.png.asset.json";
+import virclanVariant3 from "@/assets/virclan-5.png.asset.json";
 import jaciraLogo from "@/assets/jacira-1.png.asset.json";
 import jaciraCartoes from "@/assets/jacira-2.png.asset.json";
 import jaciraPoster from "@/assets/jacira-3.png.asset.json";
@@ -78,7 +79,7 @@ const projects: Array<{
     description: "Estudo de caso RUNA — Atualização de uma marca existente, novo conceito e reposicionamento estratégico.",
     tags: ["Rebranding", "Identidade Visual"],
     image: virclanLogo.url,
-    gallery: [virclanVariant1.url, virclanVariant2.url, virclanAplicacao.url],
+    gallery: [virclanVariant1.url, virclanVariant2.url, virclanAplicacao.url, virclanVariant3.url],
   },
   {
     category: "Branding",
