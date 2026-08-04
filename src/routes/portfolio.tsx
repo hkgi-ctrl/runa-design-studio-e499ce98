@@ -100,9 +100,6 @@ const projects: Array<{
     image: displayKalorama.url,
     gallery: [displayBeatles.url, displayCafe.url],
   },
-  { category: "Motion", title: "Nova Energia", description: "Campanha de motion graphics para empresa de energias renováveis.", tags: ["Motion", "Video"] },
-  { category: "Branding", title: "Mesa Real", description: "Branding e comunicação para restaurante de alta cozinha lisboeta.", tags: ["Branding", "Editorial"] },
-  { category: "Web Design", title: "TechVision", description: "Website corporativo com design system completo para empresa de tecnologia.", tags: ["Web Design", "Design System"] },
 ];
 
 function PortfolioPage() {
