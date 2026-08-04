@@ -11,7 +11,7 @@ import auraTote from "@/assets/aura-2-2.png.asset.json";
 import auraSerum from "@/assets/aura-3.png.asset.json";
 import auraCard from "@/assets/aura-4.png.asset.json";
 import auraBox from "@/assets/aura-5.png.asset.json";
-import petitoLogo from "@/assets/petito-1.png.asset.json";
+import petitoMain from "@/assets/petito-main.png.asset.json";
 import petitoPackaging from "@/assets/petito-2.png.asset.json";
 import petitoLifestyle from "@/assets/petito-3.png.asset.json";
 import petitoRebranding from "@/assets/petito-4.png.asset.json";
@@ -58,10 +58,10 @@ const projects: Array<{
   },
   {
     category: "Rebranding",
-    title: "Petito",
+    title: "PETITO",
     description: "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.",
     tags: ["Rebranding", "Identidade Visual"],
-    image: petitoLogo.url,
+    image: petitoMain.url,
     gallery: [petitoPackaging.url, petitoLifestyle.url, petitoRebranding.url],
   },
   {
