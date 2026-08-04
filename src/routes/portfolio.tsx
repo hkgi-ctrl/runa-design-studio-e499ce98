@@ -23,6 +23,10 @@ import virclanLogo from "@/assets/virclan-1.png.asset.json";
 import virclanVariant1 from "@/assets/virclan-2.png.asset.json";
 import virclanVariant2 from "@/assets/virclan-3.png.asset.json";
 import virclanAplicacao from "@/assets/virclan-4.png.asset.json";
+import jaciraLogo from "@/assets/jacira-1.png.asset.json";
+import jaciraCartoes from "@/assets/jacira-2.png.asset.json";
+import jaciraPoster from "@/assets/jacira-3.png.asset.json";
+import jaciraVestido from "@/assets/jacira-4.png.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -75,6 +79,14 @@ const projects: Array<{
     tags: ["Rebranding", "Identidade Visual"],
     image: virclanLogo.url,
     gallery: [virclanVariant1.url, virclanVariant2.url, virclanAplicacao.url],
+  },
+  {
+    category: "Branding",
+    title: "JACIRA ALVES",
+    description: "Estudo de caso RUNA — Apresentação estratégica que adicionou mais valor percebido aos produtos.",
+    tags: ["Branding", "Identidade Visual"],
+    image: jaciraLogo.url,
+    gallery: [jaciraCartoes.url, jaciraPoster.url, jaciraVestido.url],
   },
   { category: "Motion", title: "Nova Energia", description: "Campanha de motion graphics para empresa de energias renováveis.", tags: ["Motion", "Video"] },
   { category: "Branding", title: "Mesa Real", description: "Branding e comunicação para restaurante de alta cozinha lisboeta.", tags: ["Branding", "Editorial"] },
