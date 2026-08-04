@@ -15,6 +15,10 @@ import petitoLogo from "@/assets/petito-1.png.asset.json";
 import petitoPackaging from "@/assets/petito-2.png.asset.json";
 import petitoLifestyle from "@/assets/petito-3.png.asset.json";
 import petitoRebranding from "@/assets/petito-4.png.asset.json";
+import norteLogo from "@/assets/norte-1.png.asset.json";
+import norteFlatlay from "@/assets/norte-2.png.asset.json";
+import norteGarrafa from "@/assets/norte-3.png.asset.json";
+import norteCasaco from "@/assets/norte-4.png.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -51,6 +55,14 @@ const projects: Array<{
     tags: ["Rebranding", "Identidade Visual"],
     image: petitoLogo.url,
     gallery: [petitoPackaging.url, petitoLifestyle.url, petitoRebranding.url],
+  },
+  {
+    category: "Branding",
+    title: "NORTE",
+    description: "Estudo de caso RUNA — Turismo de expedição além do mapa.",
+    tags: ["Branding", "Identidade Visual"],
+    image: norteLogo.url,
+    gallery: [norteFlatlay.url, norteGarrafa.url, norteCasaco.url],
   },
   { category: "UI/UX", title: "PayFlow App", description: "Design de interface para aplicação de pagamentos mobile.", tags: ["UI/UX", "App Design"] },
   { category: "Motion", title: "Nova Energia", description: "Campanha de motion graphics para empresa de energias renováveis.", tags: ["Motion", "Video"] },
