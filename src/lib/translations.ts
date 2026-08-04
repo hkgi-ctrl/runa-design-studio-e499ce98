@@ -295,6 +295,11 @@ export const es: Dict = {
   "JACIRA ALVES": "JACIRA ALVES",
   "Estudo de caso RUNA — Apresentação estratégica que adicionou mais valor percebido aos produtos.":
     "Caso de estudio RUNA — Presentación estratégica que añadió más valor percibido a los productos.",
+  "Publicidade": "Publicidad",
+  "Campanhas & Displays": "Campañas & Displays",
+  "Estudo de caso RUNA — Material publicitário para eventos e displays de lançamento de produto.":
+    "Caso de estudio RUNA — Material publicitario para eventos y displays de lanzamiento de producto.",
+  "Design Gráfico": "Diseño Gráfico",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Identidad visual completa para marca de cosmética premium portuguesa.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
@@ -918,6 +923,11 @@ export const en: Dict = {
   "JACIRA ALVES": "JACIRA ALVES",
   "Estudo de caso RUNA — Apresentação estratégica que adicionou mais valor percebido aos produtos.":
     "RUNA case study — Strategic presentation that added more perceived value to the products.",
+  "Publicidade": "Advertising",
+  "Campanhas & Displays": "Campaigns & Displays",
+  "Estudo de caso RUNA — Material publicitário para eventos e displays de lançamento de produto.":
+    "RUNA case study — Advertising material for events and product launch displays.",
+  "Design Gráfico": "Graphic Design",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Complete visual identity for a premium Portuguese cosmetics brand.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
