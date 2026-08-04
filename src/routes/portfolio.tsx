@@ -19,6 +19,10 @@ import norteLogo from "@/assets/norte-1.png.asset.json";
 import norteFlatlay from "@/assets/norte-2.png.asset.json";
 import norteGarrafa from "@/assets/norte-3.png.asset.json";
 import norteCasaco from "@/assets/norte-4.png.asset.json";
+import virclanLogo from "@/assets/virclan-1.png.asset.json";
+import virclanVariant1 from "@/assets/virclan-2.png.asset.json";
+import virclanVariant2 from "@/assets/virclan-3.png.asset.json";
+import virclanAplicacao from "@/assets/virclan-4.png.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -64,7 +68,14 @@ const projects: Array<{
     image: norteLogo.url,
     gallery: [norteFlatlay.url, norteGarrafa.url, norteCasaco.url],
   },
-  { category: "UI/UX", title: "PayFlow App", description: "Design de interface para aplicação de pagamentos mobile.", tags: ["UI/UX", "App Design"] },
+  {
+    category: "Rebranding",
+    title: "VIRCLAN",
+    description: "Estudo de caso RUNA — Atualização de uma marca existente, novo conceito e reposicionamento estratégico.",
+    tags: ["Rebranding", "Identidade Visual"],
+    image: virclanLogo.url,
+    gallery: [virclanVariant1.url, virclanVariant2.url, virclanAplicacao.url],
+  },
   { category: "Motion", title: "Nova Energia", description: "Campanha de motion graphics para empresa de energias renováveis.", tags: ["Motion", "Video"] },
   { category: "Branding", title: "Mesa Real", description: "Branding e comunicação para restaurante de alta cozinha lisboeta.", tags: ["Branding", "Editorial"] },
   { category: "Web Design", title: "TechVision", description: "Website corporativo com design system completo para empresa de tecnologia.", tags: ["Web Design", "Design System"] },

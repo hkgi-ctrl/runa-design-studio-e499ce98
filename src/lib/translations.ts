@@ -289,6 +289,9 @@ export const es: Dict = {
   "NORTE": "NORTE",
   "Estudo de caso RUNA — Turismo de expedição além do mapa.":
     "Caso de estudio RUNA — Turismo de expedición más allá del mapa.",
+  "VIRCLAN": "VIRCLAN",
+  "Estudo de caso RUNA — Atualização de uma marca existente, novo conceito e reposicionamento estratégico.":
+    "Caso de estudio RUNA — Actualización de una marca existente, nuevo concepto y reposicionamiento estratégico.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Identidad visual completa para marca de cosmética premium portuguesa.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
@@ -906,6 +909,9 @@ export const en: Dict = {
   "NORTE": "NORTE",
   "Estudo de caso RUNA — Turismo de expedição além do mapa.":
     "RUNA case study — Expedition tourism beyond the map.",
+  "VIRCLAN": "VIRCLAN",
+  "Estudo de caso RUNA — Atualização de uma marca existente, novo conceito e reposicionamento estratégico.":
+    "RUNA case study — Update of an existing brand, new concept and strategic repositioning.",
   "Identidade visual completa para marca de cosmética premium portuguesa.":
     "Complete visual identity for a premium Portuguese cosmetics brand.",
   "Website institucional minimalista para escritório de arquitetura de referência.":
