@@ -49,7 +49,7 @@ export function AudienceSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-28 sm:py-36" ref={ref}>
+    <section className="py-20 sm:py-28" ref={ref}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Quem ajudamos a crescer"
