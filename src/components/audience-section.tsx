@@ -1,6 +1,4 @@
-import { Store, Building2, Rocket, Check, ArrowRight, ShieldCheck, Gem, Split, MessageSquare, TrendingUp } from "lucide-react";
-import { Link } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
+import { Store, Building2, Rocket, Check, ShieldCheck, Gem, Split, MessageSquare, TrendingUp } from "lucide-react";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslation } from "react-i18next";
@@ -113,18 +111,6 @@ export function AudienceSection() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="mt-16 text-center">
-          <p className="text-base text-muted-foreground">
-            {t("A sua empresa pode ser a próxima a destacar-se no mercado.")}
-          </p>
-          <Button asChild size="lg" className="group mt-5 bg-turquoise text-graphite-deep hover:bg-turquoise/90">
-            <Link to="/contacto">
-              {t("Solicitar Orçamento")}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

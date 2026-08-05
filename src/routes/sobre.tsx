@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
+import { AudienceSection } from "@/components/audience-section";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Heart, Lightbulb, Users } from "lucide-react";
@@ -112,6 +113,8 @@ function SobrePage() {
           </div>
         </div>
       </section>
+
+      <AudienceSection />
 
       <CTASection
         title="Quer conhecer-nos melhor?"
