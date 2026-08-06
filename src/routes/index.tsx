@@ -142,7 +142,7 @@ function HeroSection() {
       </div>
 
       {/* Glass R — central background element: scale 130%, slightly right, screen blend */}
-      <div className="hero-r-stage pointer-events-none absolute left-[54%] top-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="hero-r-stage pointer-events-none absolute left-[54%] top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-screen">
         <div className="hero-r-scale">
           <div className="hero-r-spin">
             <div className="hero-r-float">
@@ -150,7 +150,7 @@ function HeroSection() {
                 src={rVidro.url}
                 alt=""
                 aria-hidden
-                className="hero-r-glow h-[380px] w-auto mix-blend-screen sm:h-[520px] lg:h-[600px]"
+                className="hero-r-glow h-[440px] w-auto sm:h-[580px] lg:h-[680px]"
               />
             </div>
           </div>
