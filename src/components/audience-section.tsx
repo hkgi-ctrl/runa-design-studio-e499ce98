@@ -60,7 +60,7 @@ export function AudienceSection() {
           {audiences.map((item, index) => (
             <article
               key={item.title}
-              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border/50 bg-card/40 shadow-lg shadow-graphite-deep/30 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-turquoise/40 hover:shadow-xl hover:shadow-turquoise/10"
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border/50 bg-card/40 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-turquoise/40 hover:shadow-xl"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
               <div className="relative aspect-[16/10] overflow-hidden">
