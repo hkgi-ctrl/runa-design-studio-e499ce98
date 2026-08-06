@@ -33,7 +33,7 @@ export function SectionHeader({
         {t(title)}
       </h2>
       {description && (
-        <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+        <p className={`mt-4 text-lg leading-relaxed text-muted-foreground ${align === "center" ? "text-center" : ""}`}>
           {t(description)}
         </p>
       )}
