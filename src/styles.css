@@ -263,7 +263,7 @@
   animation: pulse-glow 4s ease-in-out infinite;
 }
 
-/* ===== Hero dark premium: glass R, neural backdrop, particles, metallic title ===== */
+/* ===== Hero dark premium: glass R, neural backdrop, particles ===== */
 
 .hero-r-stage {
   perspective: 1200px;
@@ -275,18 +275,8 @@
 
 .hero-r-spin {
   transform-style: preserve-3d;
-  animation: hero-spin-y 18s linear infinite;
+  animation: hero-spin-y 25s linear infinite;
   will-change: transform;
-}
-
-.hero-r-float {
-  animation: hero-float-y 4s ease-in-out infinite;
-  will-change: transform;
-}
-
-.hero-r-glow {
-  animation: hero-glow-pulse 3s ease-in-out infinite;
-  will-change: filter;
 }
 
 .hero-neural {
@@ -300,40 +290,12 @@
   will-change: transform, opacity;
 }
 
-.metallic-title {
-  background-image:
-    radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgb(255 255 255 / 0.95), rgb(255 255 255 / 0) 55%),
-    linear-gradient(112deg, #d9dde3 0%, #f7f9fb 22%, #98a2ad 45%, #d9dde3 60%, #31d6d0 82%, #00e5ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
 @keyframes hero-spin-y {
   from {
     transform: rotateY(0deg);
   }
   to {
     transform: rotateY(360deg);
-  }
-}
-
-@keyframes hero-float-y {
-  0%, 100% {
-    transform: translateY(-14px);
-  }
-  50% {
-    transform: translateY(14px);
-  }
-}
-
-@keyframes hero-glow-pulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 16px rgb(0 229 255 / 0.25));
-  }
-  50% {
-    filter: drop-shadow(0 0 42px rgb(0 229 255 / 0.55));
   }
 }
 
@@ -368,8 +330,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .hero-r-spin,
-  .hero-r-float,
-  .hero-r-glow,
   .hero-neural,
   .hero-particle {
     animation: none;
