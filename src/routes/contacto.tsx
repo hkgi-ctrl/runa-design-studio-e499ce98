@@ -61,6 +61,7 @@ function ContactoPage() {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
   const [service, setService] = useState("");
+  const [submissionId] = useState(() => crypto.randomUUID());
   const { t } = useTranslation();
   const hero = useScrollReveal<HTMLDivElement>();
   const formReveal = useScrollReveal<HTMLDivElement>();
@@ -82,6 +83,7 @@ function ContactoPage() {
           service,
           message: String(formData.get("message") ?? ""),
           website: String(formData.get("website") ?? ""),
+          submissionId,
         },
       });
       setSubmitted(true);
