@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play, Sparkles, RefreshCw, Package, Megaphone } from "lucide-react";
-import { useMemo, useRef, type CSSProperties, type MouseEvent } from "react";
+import { useMemo, type CSSProperties } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -112,50 +112,38 @@ function HomePage() {
 function HeroSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const { t } = useTranslation();
-  const titleRef = useRef<HTMLHeadingElement>(null);
-
-  // Metallic sheen that follows the cursor across the headline.
-  const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
-    const el = titleRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    el.style.setProperty("--mx", `${(((event.clientX - rect.left) / rect.width) * 100).toFixed(2)}%`);
-    el.style.setProperty("--my", `${(((event.clientY - rect.top) / rect.height) * 100).toFixed(2)}%`);
-  };
 
   return (
-    <section
-      onMouseMove={handleMouseMove}
-      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20"
-    >
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.8754_0.105_193.25_/_0.12),_transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_oklch(0.5556_0.066_218.27_/_0.15),_transparent_50%)]" />
 
-      {/* Neural backdrop — 35% opacity, slow parallax drift */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Neural backdrop — z-index -2, 40% opacity, slow parallax drift */}
+      <div className="absolute inset-0 z-[-2] overflow-hidden">
         <img
           src={fundoNeural.url}
           alt=""
           aria-hidden
-          className="hero-neural absolute inset-0 h-full w-full object-cover opacity-[0.35]"
+          className="hero-neural absolute inset-0 h-full w-full object-cover opacity-40"
         />
       </div>
 
-      {/* Glass R — central background element: scale 130%, slightly right, screen blend */}
-      <div className="hero-r-stage pointer-events-none absolute left-[54%] top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-screen">
+      {/* Glass R — behind the title (z-index -1), shifted right, 75% opacity, soft blur, slow 25s rotation */}
+      <div className="hero-r-stage pointer-events-none absolute left-[70%] top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2">
         <div className="hero-r-scale">
           <div className="hero-r-spin">
-            <div className="hero-r-float">
-              <img
-                src={rVidro.url}
-                alt=""
-                aria-hidden
-                className="hero-r-glow h-[440px] w-auto sm:h-[580px] lg:h-[680px]"
-              />
-            </div>
+            <img
+              src={rVidro.url}
+              alt=""
+              aria-hidden
+              className="h-[440px] w-auto opacity-75 blur-[0.5px] sm:h-[580px] lg:h-[680px]"
+            />
           </div>
         </div>
       </div>
+
+      {/* Dark radial scrim behind the headline for legibility */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[75vh] w-[95vw] max-w-[1400px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.8)_0%,_rgba(0,0,0,0.45)_45%,_transparent_72%)]" />
 
       <HeroParticles />
 
@@ -163,8 +151,7 @@ function HeroSection() {
 
       <div ref={ref} className={`reveal relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8 ${isVisible ? "visible" : ""}`}>
         <h1
-          ref={titleRef}
-          className="metallic-title font-display text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
+          className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-[#FFFFFF] [text-shadow:0_0_20px_black] sm:text-6xl md:text-7xl lg:text-8xl"
         >
           {t("Design estratégico que ")}
           {t("impulsiona")}
