@@ -35,7 +35,7 @@ export const Route = createFileRoute("/contacto")({
 });
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@runadesign.pt", href: "mailto:hello@runadesign.pt" },
+  { icon: Mail, label: "Email", value: "hello@runastudio.pt", href: "mailto:hello@runastudio.pt" },
   { icon: Phone, label: "Telefone", value: "+351 912 345 678", href: "tel:+351912345678" },
   { icon: MapPin, label: "Localização", value: "Lisboa, Portugal", href: "#" },
 ];
