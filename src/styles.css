@@ -141,6 +141,14 @@
     font-weight: 700;
     letter-spacing: -0.02em;
   }
+
+  /* Body copy justified site-wide (headings keep display alignment) */
+  p,
+  li {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
 }
 
 @layer utilities {

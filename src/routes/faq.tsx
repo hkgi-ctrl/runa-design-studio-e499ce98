@@ -90,7 +90,7 @@ function FAQPage() {
                   <AccordionTrigger className="text-left font-display text-lg font-semibold text-foreground hover:no-underline">
                     {t(faq.question)}
                   </AccordionTrigger>
-                  <AccordionContent className="pb-6 text-base leading-relaxed text-muted-foreground">
+                  <AccordionContent className="pb-6 text-base leading-relaxed text-muted-foreground text-justify">
                     {t(faq.answer)}
                   </AccordionContent>
                 </AccordionItem>
