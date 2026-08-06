@@ -99,7 +99,6 @@ function HomePage() {
       <EssenceSection />
       <PortfolioSection />
       <WhyRunaSection />
-      <FAQPreviewSection />
       <CTASection
         title="Pronto para elevar a sua marca?"
         description="Vamos criar algo extraordinário juntos. Fale connosco e descubra como podemos ajudar o seu negócio a crescer."
@@ -281,51 +280,6 @@ function ProcessSection() {
               </p>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FAQPreviewSection() {
-  const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
-  const { t } = useTranslation();
-
-  const faqs = [
-    { question: "Quanto tempo demora um projeto de branding?", answer: "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade e do número de revisões." },
-    { question: "Qual é o processo de trabalho?", answer: "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Mantemos comunicação próxima durante todo o processo." },
-    { question: "Trabalham com clientes internacionais?", answer: "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada e a comunicação é totalmente digital." },
-    { question: "A inteligência artificial substitui o trabalho do designer?", answer: "Não. A inteligência artificial é utilizada para acelerar a exploração de ideias e aumentar a eficiência do processo criativo. As decisões estratégicas, o refinamento e o resultado final são sempre conduzidos pela equipa da RUNA." },
-  ];
-
-  return (
-    <section className="py-24 sm:py-32" ref={ref}>
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          eyebrow="FAQ"
-          title="Perguntas frequentes"
-          description="Respostas às questões mais comuns sobre como trabalhamos."
-        />
-        <div className={`reveal ${isVisible ? "visible" : ""} mt-12 space-y-4`}>
-          {faqs.map((faq, index) => (
-            <div
-              key={faq.question}
-              className="rounded-2xl border border-border/50 bg-card/30 p-6"
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <h3 className="font-display text-lg font-semibold text-foreground">
-                {t(faq.question)}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {t(faq.answer)}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8 text-center">
-          <Button asChild variant="outline" className="border-silver/20 text-foreground hover:bg-silver/10">
-            <Link to="/faq">{t("Ver todas as perguntas")}</Link>
-          </Button>
         </div>
       </div>
     </section>
