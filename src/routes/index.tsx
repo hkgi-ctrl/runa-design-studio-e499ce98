@@ -11,6 +11,10 @@ import { WhyRunaSection } from "@/components/why-runa-section";
 import { EssenceSection } from "@/components/essence-section";
 import { useTranslation } from "react-i18next";
 import runaMark from "@/assets/runa-r-hero.png.asset.json";
+import jaciraLogo from "@/assets/jacira-1.png.asset.json";
+import petitoMain from "@/assets/petito-main.png.asset.json";
+import auraLogo from "@/assets/aura-1.png.asset.json";
+import norteLogo from "@/assets/norte-1.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,10 +52,34 @@ const services = [
 ];
 
 const portfolio = [
-  { category: "Branding", title: "Aura Skincare", description: "Identidade visual para marca de cosmética premium." },
-  { category: "Web Design", title: "Vertex Arquitetura", description: "Website institucional para escritório de arquitetura." },
-  { category: "UI/UX", title: "PayFlow App", description: "Design de interface para app de pagamentos." },
-  { category: "Motion", title: "Nova Energia", description: "Campanha de motion graphics para empresa de energia." },
+  {
+    category: "Branding",
+    title: "JACIRA ALVES",
+    description: "Estudo de caso RUNA — Apresentação estratégica que adicionou mais valor percebido aos produtos.",
+    tags: ["Branding", "Identidade Visual", "Social Media"],
+    image: jaciraLogo.url,
+  },
+  {
+    category: "Rebranding",
+    title: "PETITO",
+    description: "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.",
+    tags: ["Rebranding", "Identidade Visual", "Social Media"],
+    image: petitoMain.url,
+  },
+  {
+    category: "Branding",
+    title: "AURA",
+    description: "Estudo de caso RUNA — Skincare de luxo: pele calma.",
+    tags: ["Branding", "Packaging"],
+    image: auraLogo.url,
+  },
+  {
+    category: "Branding",
+    title: "NORTE",
+    description: "Estudo de caso RUNA — Turismo de expedição além do mapa.",
+    tags: ["Branding", "Identidade Visual"],
+    image: norteLogo.url,
+  },
 ];
 
 const processSteps = [
@@ -184,22 +212,37 @@ function PortfolioSection() {
             <Link
               key={item.title}
               to="/portfolio"
-              className="group relative overflow-hidden rounded-2xl bg-card aspect-[4/5]"
+              className="group block"
               style={{ transitionDelay: `${index * 75}ms` }}
             >
-              <div className="absolute inset-0 gradient-runa opacity-60 transition-opacity group-hover:opacity-80" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_oklch(0.8754_0.105_193.25_/_0.15),_transparent_60%)]" />
-              <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <span className="text-xs font-semibold uppercase tracking-wider text-turquoise">
-                  {t(item.category)}
-                </span>
-                <h3 className="mt-2 font-display text-xl font-semibold text-foreground">
-                  {t(item.title)}
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {t(item.description)}
-                </p>
-              </div>
+              <Card className="h-full overflow-hidden glass border-border/50 bg-card/40 transition-all hover:-translate-y-1 hover:border-turquoise/30">
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={t(item.title)}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <CardContent className="p-5">
+                  <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">
+                    {t(item.category)}
+                  </Badge>
+                  <h3 className="mt-3 font-display text-lg font-semibold text-foreground transition-colors group-hover:text-turquoise">
+                    {t(item.title)}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {t(item.description)}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {item.tags.map((tag) => (
+                      <span key={tag} className="rounded-full bg-secondary px-2.5 py-1 text-xs text-secondary-foreground">
+                        {t(tag)}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             </Link>
           ))}
         </div>
