@@ -435,6 +435,9 @@ export const es: Dict = {
   "Mensagem enviada!": "¡Mensaje enviado!",
   "Obrigado pelo contacto. Responderemos o mais brevemente possível.":
     "Gracias por tu mensaje. Responderemos lo antes posible.",
+  "A enviar...": "Enviando...",
+  "Não foi possível enviar a mensagem. Tente novamente ou contacte-nos diretamente através de hello@runastudio.pt.":
+    "No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos directamente a través de hello@runastudio.pt.",
   "Informações de contacto": "Información de contacto",
   "Estamos disponíveis de segunda a sexta, das 9h às 18h.":
     "Estamos disponibles de lunes a viernes, de 9h a 18h.",
@@ -1069,6 +1072,9 @@ export const en: Dict = {
   "Mensagem enviada!": "Message sent!",
   "Obrigado pelo contacto. Responderemos o mais brevemente possível.":
     "Thanks for reaching out. We'll respond as soon as possible.",
+  "A enviar...": "Sending...",
+  "Não foi possível enviar a mensagem. Tente novamente ou contacte-nos diretamente através de hello@runastudio.pt.":
+    "We couldn't send your message. Please try again or contact us directly at hello@runastudio.pt.",
   "Informações de contacto": "Contact info",
   "Estamos disponíveis de segunda a sexta, das 9h às 18h.":
     "We're available Monday to Friday, 9am to 6pm.",

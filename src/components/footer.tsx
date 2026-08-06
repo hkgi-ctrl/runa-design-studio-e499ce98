@@ -87,7 +87,7 @@ export function Footer() {
             <ul className="mt-4 space-y-4">
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-turquoise" />
-                <span>hello@runadesign.pt</span>
+                <span>hello@runastudio.pt</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-turquoise" />
@@ -122,20 +122,6 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             {t("© {{year}} RUNA Design. Todos os direitos reservados.", { year })}
           </p>
-          <div className="flex flex-wrap items-center gap-6">
-            <Link
-              to="/"
-              className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
-            >
-              {t("Privacidade")}
-            </Link>
-            <Link
-              to="/"
-              className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
-            >
-              {t("Termos")}
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

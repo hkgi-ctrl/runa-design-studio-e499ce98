@@ -21,6 +21,7 @@ import { Mail, MapPin, Phone, Send, Instagram, Facebook } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { sendContactMessage } from "@/lib/contact.functions";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -35,7 +36,7 @@ export const Route = createFileRoute("/contacto")({
 });
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@runadesign.pt", href: "mailto:hello@runadesign.pt" },
+  { icon: Mail, label: "Email", value: "hello@runastudio.pt", href: "mailto:hello@runastudio.pt" },
   { icon: Phone, label: "Telefone", value: "+351 912 345 678", href: "tel:+351912345678" },
   { icon: MapPin, label: "Localização", value: "Lisboa, Portugal", href: "#" },
 ];
@@ -57,15 +58,38 @@ const faqs = [
 
 function ContactoPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
   const [service, setService] = useState("");
   const { t } = useTranslation();
   const hero = useScrollReveal<HTMLDivElement>();
   const formReveal = useScrollReveal<HTMLDivElement>();
   const asideReveal = useScrollReveal<HTMLDivElement>();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (sending) return;
+    setSending(true);
+    setError(false);
+    const formData = new FormData(e.currentTarget);
+    try {
+      await sendContactMessage({
+        data: {
+          name: String(formData.get("name") ?? ""),
+          company: String(formData.get("company") ?? ""),
+          email: String(formData.get("email") ?? ""),
+          phone: String(formData.get("phone") ?? ""),
+          service,
+          message: String(formData.get("message") ?? ""),
+          website: String(formData.get("website") ?? ""),
+        },
+      });
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -118,21 +142,21 @@ function ContactoPage() {
                         <div className="grid gap-6 sm:grid-cols-2">
                           <div className="space-y-2">
                             <Label htmlFor="name">{t("Nome")}</Label>
-                            <Input id="name" placeholder={t("O seu nome")} required className="bg-background/50 border-border/50" />
+                            <Input id="name" name="name" placeholder={t("O seu nome")} required className="bg-background/50 border-border/50" />
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor="company">{t("Empresa")}</Label>
-                            <Input id="company" placeholder={t("A sua empresa")} className="bg-background/50 border-border/50" />
+                            <Input id="company" name="company" placeholder={t("A sua empresa")} className="bg-background/50 border-border/50" />
                           </div>
                         </div>
                         <div className="grid gap-6 sm:grid-cols-2">
                           <div className="space-y-2">
                             <Label htmlFor="email">{t("Email")}</Label>
-                            <Input id="email" type="email" placeholder={t("o.seu@email.pt")} required className="bg-background/50 border-border/50" />
+                            <Input id="email" name="email" type="email" placeholder={t("o.seu@email.pt")} required className="bg-background/50 border-border/50" />
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor="phone">{t("Telefone (opcional)")}</Label>
-                            <Input id="phone" type="tel" placeholder="+351 912 345 678" className="bg-background/50 border-border/50" />
+                            <Input id="phone" name="phone" type="tel" placeholder="+351 912 345 678" className="bg-background/50 border-border/50" />
                           </div>
                         </div>
                         <div className="space-y-2">
@@ -152,12 +176,29 @@ function ContactoPage() {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="message">{t("Mensagem")}</Label>
-                          <Textarea id="message" placeholder={t("Conte-nos sobre o seu projeto...")} rows={6} required className="bg-background/50 border-border/50" />
+                          <Textarea id="message" name="message" placeholder={t("Conte-nos sobre o seu projeto...")} rows={6} required className="bg-background/50 border-border/50" />
                         </div>
-                        <Button type="submit" className="w-full bg-turquoise text-graphite-deep hover:bg-turquoise/90">
+                        <input
+                          type="text"
+                          name="website"
+                          tabIndex={-1}
+                          autoComplete="off"
+                          aria-hidden="true"
+                          className="hidden"
+                        />
+                        <Button
+                          type="submit"
+                          disabled={sending}
+                          className="w-full bg-turquoise text-graphite-deep hover:bg-turquoise/90 disabled:opacity-70"
+                        >
                           <Send className="mr-2 h-4 w-4" />
-                          {t("Solicitar Orçamento")}
+                          {sending ? t("A enviar...") : t("Solicitar Orçamento")}
                         </Button>
+                        {error && (
+                          <p className="text-center text-sm text-destructive">
+                            {t("Não foi possível enviar a mensagem. Tente novamente ou contacte-nos diretamente através de hello@runastudio.pt.")}
+                          </p>
+                        )}
                       </form>
                     )}
                   </CardContent>
