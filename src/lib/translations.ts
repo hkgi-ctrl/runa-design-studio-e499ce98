@@ -199,15 +199,12 @@ export const es: Dict = {
 
   // Sobre page
   "Sobre nós": "Sobre nosotros",
-  "Criamos marcas que ": "Creamos marcas que ",
-  "resistem ao tempo": "resisten al tiempo",
-  "A RUNA Design é um estúdio criativo português dedicado a transformar ideias em experiências visuais memoráveis. Combinamos estratégia, estética e tecnologia para criar marcas e produtos digitais que geram impacto real.":
-    "RUNA Design es un estudio creativo portugués dedicado a transformar ideas en experiencias visuales memorables. Combinamos estrategia, estética y tecnología para crear marcas y productos digitales que generan un impacto real.",
-  "A nossa história": "Nuestra historia",
-  "Fundada em Lisboa, a RUNA Design nasceu da vontade de oferecer design de excelência a empresas que valorizam a qualidade e a originalidade. Ao longo dos anos, ajudámos dezenas de marcas nacionais e internacionais a encontrar a sua voz visual e a destacar-se nos seus mercados.":
-    "Fundada en Lisboa, RUNA Design nació de la voluntad de ofrecer diseño de excelencia a empresas que valoran la calidad y la originalidad. A lo largo de los años, hemos ayudado a decenas de marcas nacionales e internacionales a encontrar su voz visual y destacar en sus mercados.",
-  "Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.":
-    "Creemos que el buen diseño es más que estética: es una herramienta estratégica que comunica valores, construye confianza e impulsa resultados.",
+  "Criamos marcas preparadas para crescer.": "Creamos marcas preparadas para crecer.",
+  "A RUNA Creative Studio é um estúdio de design estratégico que ajuda pequenas e médias empresas a construir marcas fortes e consistentes. Combinamos criatividade, estratégia e inteligência artificial para desenvolver identidades visuais que transmitem confiança, reforçam a credibilidade e criam valor em cada ponto de contacto com o cliente.":
+    "RUNA Creative Studio es un estudio de diseño estratégico que ayuda a pequeñas y medianas empresas a construir marcas fuertes y consistentes. Combinamos creatividad, estrategia e inteligencia artificial para desarrollar identidades visuales que transmiten confianza, refuerzan la credibilidad y crean valor en cada punto de contacto con el cliente.",
+  "A nossa abordagem": "Nuestro enfoque",
+  "Acreditamos que uma marca vai muito além de um logótipo. Por isso, cada projeto começa por compreender o negócio, os seus objetivos e o seu público. A partir dessa base, criamos soluções visuais alinhadas com a estratégia da empresa, utilizando a inteligência artificial para acelerar a exploração criativa, sem abdicar da visão, do pensamento crítico e do refinamento humano em cada detalhe.":
+    "Creemos que una marca va mucho más allá de un logotipo. Por eso, cada proyecto comienza por comprender el negocio, sus objetivos y su público. A partir de esa base, creamos soluciones visuales alineadas con la estrategia de la empresa, utilizando la inteligencia artificial para acelerar la exploración creativa, sin renunciar a la visión, el pensamiento crítico y el refinamiento humano en cada detalle.",
   "Anos de experiência": "Años de experiencia",
   "Projetos entregues": "Proyectos entregados",
   "Clientes satisfeitos": "Clientes satisfechos",
@@ -827,15 +824,12 @@ export const en: Dict = {
 
   // Sobre / About
   "Sobre nós": "About us",
-  "Criamos marcas que ": "We build brands that ",
-  "resistem ao tempo": "stand the test of time",
-  "A RUNA Design é um estúdio criativo português dedicado a transformar ideias em experiências visuais memoráveis. Combinamos estratégia, estética e tecnologia para criar marcas e produtos digitais que geram impacto real.":
-    "RUNA Design is a Portuguese creative studio dedicated to turning ideas into memorable visual experiences. We combine strategy, aesthetics and technology to create brands and digital products that deliver real impact.",
-  "A nossa história": "Our story",
-  "Fundada em Lisboa, a RUNA Design nasceu da vontade de oferecer design de excelência a empresas que valorizam a qualidade e a originalidade. Ao longo dos anos, ajudámos dezenas de marcas nacionais e internacionais a encontrar a sua voz visual e a destacar-se nos seus mercados.":
-    "Founded in Lisbon, RUNA Design was born from the desire to offer design excellence to companies that value quality and originality. Over the years, we've helped dozens of national and international brands find their visual voice and stand out in their markets.",
-  "Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.":
-    "We believe good design is more than aesthetics: it's a strategic tool that communicates values, builds trust and drives results.",
+  "Criamos marcas preparadas para crescer.": "We build brands ready to grow.",
+  "A RUNA Creative Studio é um estúdio de design estratégico que ajuda pequenas e médias empresas a construir marcas fortes e consistentes. Combinamos criatividade, estratégia e inteligência artificial para desenvolver identidades visuais que transmitem confiança, reforçam a credibilidade e criam valor em cada ponto de contacto com o cliente.":
+    "RUNA Creative Studio is a strategic design studio that helps small and medium-sized businesses build strong, consistent brands. We combine creativity, strategy and artificial intelligence to develop visual identities that build trust, reinforce credibility and create value at every customer touchpoint.",
+  "A nossa abordagem": "Our approach",
+  "Acreditamos que uma marca vai muito além de um logótipo. Por isso, cada projeto começa por compreender o negócio, os seus objetivos e o seu público. A partir dessa base, criamos soluções visuais alinhadas com a estratégia da empresa, utilizando a inteligência artificial para acelerar a exploração criativa, sem abdicar da visão, do pensamento crítico e do refinamento humano em cada detalhe.":
+    "We believe a brand is much more than a logo. That is why every project begins by understanding the business, its goals and its audience. From that foundation, we create visual solutions aligned with the company's strategy, using artificial intelligence to accelerate creative exploration without compromising vision, critical thinking or human refinement in every detail.",
   "Anos de experiência": "Years of experience",
   "Projetos entregues": "Projects delivered",
   "Clientes satisfeitos": "Happy clients",
