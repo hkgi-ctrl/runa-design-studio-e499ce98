@@ -146,9 +146,6 @@ function ProcessoPage() {
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
                   {t(item.title)}
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                  {t(item.description)}
-                </p>
               </div>
             ))}
           </div>
