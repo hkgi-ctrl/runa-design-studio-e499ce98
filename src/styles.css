@@ -7,11 +7,16 @@
 /*
  * RUNA Design — design system.
  *
+ * Dark premium: base #080B12, chrome texture overlay 6% (blend overlay),
+ * film grain 4%, cyan glow #00E5FF 20px @ 15% (no black shadows),
+ * subtle cyan radial from top-right on every section.
+ *
  * Palette:
  *   Turquoise  #31D6D0  oklch(0.8754 0.105 193.25)
  *   Petroleum  #0E3444  oklch(0.5556 0.066 218.27)
  *   Silver     #D9DDE3  oklch(0.9528 0.0044 258.34)
  *   Graphite   #1A2230  oklch(0.5072 0.0324 257.8)
+ *   Cyan glow  #00E5FF
  */
 
 @theme inline {
@@ -52,6 +57,7 @@
   --color-silver: var(--silver);
   --color-graphite: var(--graphite);
   --color-graphite-deep: var(--graphite-deep);
+  --color-cyan: var(--cyan);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -67,8 +73,19 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Dark premium shadow scale: no black shadows — one cyan glow, 20px @ 15% */
+@theme {
+  --shadow: 0 0 20px var(--tw-shadow-color, rgb(0 229 255 / 0.15));
+  --shadow-xs: 0 0 20px var(--tw-shadow-color, rgb(0 229 255 / 0.15));
+  --shadow-sm: 0 0 20px var(--tw-shadow-color, rgb(0 229 255 / 0.15));
+  --shadow-md: 0 0 20px var(--tw-shadow-color, rgb(0 229 255 / 0.15));
+  --shadow-lg: 0 0 20px var(--tw-shadow-color, rgb(0 229 255 / 0.15));
+  --shadow-xl: 0 0 20px var(--tw-shadow-color, rgb(0 229 255 / 0.15));
+  --shadow-2xl: 0 0 20px var(--tw-shadow-color, rgb(0 229 255 / 0.15));
 }
 
 :root {
@@ -82,18 +99,19 @@
   --silver: oklch(0.9528 0.0044 258.34);
   --graphite: oklch(0.5072 0.0324 257.8);
   --graphite-deep: oklch(0.25 0.03 257.8);
+  --cyan: #00e5ff;
 
-  --background: oklch(0.18 0.03 257.8);
+  --background: #080b12;
   --foreground: oklch(0.9528 0.0044 258.34);
-  --card: oklch(0.22 0.03 257.8);
+  --card: #0d1424;
   --card-foreground: oklch(0.9528 0.0044 258.34);
-  --popover: oklch(0.22 0.03 257.8);
+  --popover: #0d1424;
   --popover-foreground: oklch(0.9528 0.0044 258.34);
   --primary: oklch(0.8754 0.105 193.25);
   --primary-foreground: oklch(0.129 0.042 264.695);
   --secondary: oklch(0.32 0.05 218.27);
   --secondary-foreground: oklch(0.9528 0.0044 258.34);
-  --muted: oklch(0.28 0.03 257.8);
+  --muted: #141c30;
   --muted-foreground: oklch(0.704 0.04 256.788);
   --accent: oklch(0.32 0.05 218.27);
   --accent-foreground: oklch(0.9528 0.0044 258.34);
@@ -149,6 +167,36 @@
     hyphens: auto;
     -webkit-hyphens: auto;
   }
+
+  /* Subtle cyan radial from the top-right of every section */
+  section {
+    background-image: radial-gradient(ellipse 60% 50% at 85% 0%, rgb(0 229 255 / 0.05), transparent 70%);
+    background-repeat: no-repeat;
+  }
+
+  /* Site-wide overlays: chrome texture (6%, overlay blend) + film grain (4%) */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    background-image: url("/__l5e/assets-v1/a9c5a006-8d09-4f72-8fcc-f57f510d885d/fundo_textura.webp");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 91;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+  }
 }
 
 @layer utilities {
@@ -157,16 +205,14 @@
   }
 
   .glass {
-    background: oklch(0.22 0.03 257.8 / 0.6);
+    background: rgb(13 20 36 / 0.6);
     backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     border: 1px solid oklch(0.9528 0.0044 258.34 / 0.08);
   }
 
   .glass-strong {
-    background: oklch(0.18 0.03 257.8 / 0.85);
+    background: rgb(8 11 18 / 0.85);
     backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
     border: 1px solid oklch(0.9528 0.0044 258.34 / 0.1);
   }
 
@@ -182,7 +228,7 @@
   }
 
   .glow-turquoise {
-    box-shadow: 0 0 40px -10px oklch(0.8754 0.105 193.25 / 0.4);
+    box-shadow: 0 0 20px rgb(0 229 255 / 0.15);
   }
 
   .reveal {

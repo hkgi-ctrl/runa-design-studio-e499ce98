@@ -122,7 +122,7 @@ function HeroSection() {
           <img
             src={runaMark.url}
             alt="RUNA Design"
-            className="h-[150px] w-auto object-contain drop-shadow-[0_10px_28px_oklch(0.2_0.02_240_/_0.5)] sm:h-[190px]"
+            className="h-[150px] w-auto object-contain drop-shadow-[0_0_20px_rgba(0,229,255,0.15)] sm:h-[190px]"
           />
         </div>
         <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">

@@ -48,7 +48,7 @@ export function Navigation() {
           <img
             src={runaLogo.url}
             alt="RUNA Design"
-            className="h-[21px] w-auto object-contain drop-shadow-[0_2px_16px_oklch(0.8754_0.105_193.25_/_0.55)] transition-transform duration-300 group-hover:scale-105"
+            className="h-[21px] w-auto object-contain drop-shadow-[0_0_20px_rgba(0,229,255,0.15)] transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 
@@ -101,7 +101,7 @@ export function Navigation() {
                 className="flex items-center"
                 onClick={() => setMobileOpen(false)}
               >
-                <img src={runaLogo.url} alt="RUNA Design" className="h-[23px] w-auto object-contain drop-shadow-[0_2px_16px_oklch(0.8754_0.105_193.25_/_0.55)]" />
+                <img src={runaLogo.url} alt="RUNA Design" className="h-[23px] w-auto object-contain drop-shadow-[0_0_20px_rgba(0,229,255,0.15)]" />
               </Link>
               <nav className="flex flex-col gap-2">
                 {navLinks.map((link) => (
