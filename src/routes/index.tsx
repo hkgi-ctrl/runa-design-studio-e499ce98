@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play, Sparkles, RefreshCw, Package, Megaphone } from "lucide-react";
-import { useMemo, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -231,32 +231,32 @@ function ServicesSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-24 sm:py-32" ref={ref}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 sm:py-32" ref={ref}>
+      <img
+        src={fundoNeural.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]"
+      />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Serviços"
           title="Soluções criativas sob medida"
           description="Oferecemos um leque completo de serviços de design para ajudar a sua marca a destacar-se e crescer."
         />
         <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2`}>
-          {services.map((service, index) => (
-            <Card
-              key={service.title}
-              className="group glass min-h-[220px] border-border/50 bg-card/50 transition-all duration-300 hover:-translate-y-1 hover:border-turquoise/30 hover:bg-card/80"
-              style={{ transitionDelay: `${index * 50}ms` }}
-            >
-              <CardContent className="p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
-                  <service.icon className="h-7 w-7" />
-                </div>
-                <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
-                  {t(service.title)}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {t(service.description)}
-                </p>
-              </CardContent>
-            </Card>
+          {services.map((service) => (
+            <div key={service.title} className="bento-card">
+              <div className="bento-icon">
+                <service.icon className="h-5 w-5" />
+              </div>
+              <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
+                {t(service.title)}
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                {t(service.description)}
+              </p>
+            </div>
           ))}
         </div>
       </div>
@@ -323,33 +323,92 @@ function PortfolioSection() {
 function ProcessSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const { t } = useTranslation();
+  const stepsRef = useRef<HTMLDivElement>(null);
+  const stepRefs = useRef<Array<HTMLDivElement | null>>([]);
+
+  // Scroll-driven progress: rail fill + traveling particle + per-step number fill.
+  useEffect(() => {
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const container = stepsRef.current;
+      if (!container) return;
+      const vh = window.innerHeight;
+      const rect = container.getBoundingClientRect();
+      const progress = Math.min(1, Math.max(0, (vh * 0.55 - rect.top) / rect.height));
+      container.style.setProperty("--rail-progress", progress.toFixed(4));
+      for (const el of stepRefs.current) {
+        if (!el) continue;
+        const r = el.getBoundingClientRect();
+        const fill = Math.min(1, Math.max(0, (vh * 0.78 - r.top) / (r.height * 0.85)));
+        el.style.setProperty("--fill", fill.toFixed(4));
+      }
+    };
+    const schedule = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    return () => {
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   return (
-    <section className="py-24 sm:py-32" ref={ref}>
+    <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          eyebrow="Processo"
-          title="Como trabalhamos"
-          description="Um processo estruturado e colaborativo que garante resultados excepcionais em cada projeto."
-        />
-        <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4`}>
-          {processSteps.map((step, index) => (
-            <div
-              key={step.step}
-              className="relative rounded-2xl border border-border/50 bg-card/30 p-6 backdrop-blur-sm"
-              style={{ transitionDelay: `${index * 100}ms` }}
+        <div className="grid gap-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20">
+          {/* Sticky intro column */}
+          <div ref={ref} className={`reveal ${isVisible ? "visible" : ""} lg:sticky lg:top-28 lg:self-start`}>
+            <span className="mb-3 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
+              {t("Processo")}
+            </span>
+            <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
+              {t("Como trabalhamos")}
+            </h2>
+            <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
+              {t("Um processo estruturado e colaborativo que garante resultados excepcionais em cada projeto.")}
+            </p>
+            <Link
+              to="/processo"
+              className="group mt-8 inline-flex items-center text-sm font-semibold text-turquoise transition-colors hover:text-cyan"
             >
-              <span className="font-display text-5xl font-bold text-turquoise/20">
-                {step.step}
-              </span>
-              <h3 className="mt-4 font-display text-xl font-semibold text-foreground">
-                {t(step.title)}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {t(step.description)}
-              </p>
+              {t("Conhecer o processo")}
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+
+          {/* Scrolling steps with rail + traveling particle */}
+          <div ref={stepsRef} className="process-steps">
+            <div className="process-rail" aria-hidden>
+              <div className="process-rail-fill" />
+              <span className="process-rail-particle" />
             </div>
-          ))}
+            {processSteps.map((step, index) => (
+              <div
+                key={step.step}
+                ref={(el) => {
+                  stepRefs.current[index] = el;
+                }}
+              >
+                <div className="process-number">
+                  <span className="process-number-outline">{step.step}</span>
+                  <span className="process-number-fill" aria-hidden>
+                    {step.step}
+                  </span>
+                </div>
+                <h3 className="mt-6 font-display text-2xl font-semibold text-foreground">
+                  {t(step.title)}
+                </h3>
+                <p className="mt-3 max-w-lg text-base leading-relaxed text-muted-foreground">
+                  {t(step.description)}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

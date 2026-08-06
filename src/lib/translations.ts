@@ -42,6 +42,7 @@ export const es: Dict = {
   "Como trabalhamos": "Cómo trabajamos",
   "Um processo estruturado e colaborativo que garante resultados excepcionais em cada projeto.":
     "Un proceso estructurado y colaborativo que garantiza resultados excepcionales en cada proyecto.",
+  "Conhecer o processo": "Conocer el proceso",
   "Testemunhos": "Testimonios",
   "O que dizem os nossos clientes": "Lo que dicen nuestros clientes",
   "A satisfação dos nossos clientes é o melhor testemunho da qualidade do nosso trabalho.":
@@ -679,6 +680,7 @@ export const en: Dict = {
   "Como trabalhamos": "How we work",
   "Um processo estruturado e colaborativo que garante resultados excepcionais em cada projeto.":
     "A structured, collaborative process that ensures exceptional results on every project.",
+  "Conhecer o processo": "Discover the process",
   "Testemunhos": "Testimonials",
   "O que dizem os nossos clientes": "What our clients say",
   "A satisfação dos nossos clientes é o melhor testemunho da qualidade do nosso trabalho.":
