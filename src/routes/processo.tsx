@@ -134,7 +134,6 @@ function ProcessoPage() {
           <SectionHeader
             eyebrow="Diferencial competitivo"
             title="IA para explorar. Humanos para decidir."
-            description="Somos um estúdio criativo premium que usa inteligência artificial para acelerar a exploração de ideias, mantendo o refinamento humano em todas as entregas."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {differentiators.map((item) => (
