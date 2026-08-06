@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play, Sparkles, RefreshCw, Package, Megaphone } from "lucide-react";
+import { useMemo, useRef, type CSSProperties, type MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,7 +11,8 @@ import { AudienceTeaser } from "@/components/audience-teaser";
 import { WhyRunaSection } from "@/components/why-runa-section";
 import { EssenceSection } from "@/components/essence-section";
 import { useTranslation } from "react-i18next";
-import runaMark from "@/assets/runa-r-hero.png.asset.json";
+import rVidro from "@/assets/R_Vidro.webp.asset.json";
+import fundoNeural from "@/assets/fundo_neural.webp.asset.json";
 import jaciraLogo from "@/assets/jacira-1.png.asset.json";
 import petitoMain from "@/assets/petito-main.png.asset.json";
 import auraLogo from "@/assets/aura-1.png.asset.json";
