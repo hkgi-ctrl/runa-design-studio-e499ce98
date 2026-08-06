@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play, Sparkles, RefreshCw, Package, Megaphone } from "lucide-react";
+import { useMemo, useRef, type CSSProperties, type MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,7 +11,8 @@ import { AudienceTeaser } from "@/components/audience-teaser";
 import { WhyRunaSection } from "@/components/why-runa-section";
 import { EssenceSection } from "@/components/essence-section";
 import { useTranslation } from "react-i18next";
-import runaMark from "@/assets/runa-r-hero.png.asset.json";
+import rVidro from "@/assets/R_Vidro_alpha.webp.asset.json";
+import fundoNeural from "@/assets/fundo_neural.webp.asset.json";
 import jaciraLogo from "@/assets/jacira-1.png.asset.json";
 import petitoMain from "@/assets/petito-main.png.asset.json";
 import auraLogo from "@/assets/aura-1.png.asset.json";
@@ -110,23 +112,63 @@ function HomePage() {
 function HeroSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const { t } = useTranslation();
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  // Metallic sheen that follows the cursor across the headline.
+  const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
+    const el = titleRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty("--mx", `${(((event.clientX - rect.left) / rect.width) * 100).toFixed(2)}%`);
+    el.style.setProperty("--my", `${(((event.clientY - rect.top) / rect.height) * 100).toFixed(2)}%`);
+  };
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
+    <section
+      onMouseMove={handleMouseMove}
+      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20"
+    >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.8754_0.105_193.25_/_0.12),_transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_oklch(0.5556_0.066_218.27_/_0.15),_transparent_50%)]" />
+
+      {/* Neural backdrop — 35% opacity, slow parallax drift */}
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={fundoNeural.url}
+          alt=""
+          aria-hidden
+          className="hero-neural absolute inset-0 h-full w-full object-cover opacity-[0.35]"
+        />
+      </div>
+
+      {/* Glass R — central background element: scale 130%, slightly right, screen blend */}
+      <div className="hero-r-stage pointer-events-none absolute left-[54%] top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-screen">
+        <div className="hero-r-scale">
+          <div className="hero-r-spin">
+            <div className="hero-r-float">
+              <img
+                src={rVidro.url}
+                alt=""
+                aria-hidden
+                className="hero-r-glow h-[440px] w-auto sm:h-[580px] lg:h-[680px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <HeroParticles />
+
       <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-turquoise/5 blur-3xl" />
 
-      <div ref={ref} className={`reveal relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8 ${isVisible ? "visible" : ""}`}>
-        <div className="mx-auto mb-8 mt-5 flex items-center justify-center">
-          <img
-            src={runaMark.url}
-            alt="RUNA Design"
-            className="h-[150px] w-auto object-contain drop-shadow-[0_0_20px_rgba(0,229,255,0.15)] sm:h-[190px]"
-          />
-        </div>
-        <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
-          {t("Design estratégico que ")}<span className="gradient-text">{t("impulsiona")}</span>{t(" negócios")}
+      <div ref={ref} className={`reveal relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8 ${isVisible ? "visible" : ""}`}>
+        <h1
+          ref={titleRef}
+          className="metallic-title font-display text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
+        >
+          {t("Design estratégico que ")}
+          {t("impulsiona")}
+          {t(" negócios")}
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
           {t("Criamos identidades visuais, conteúdos e experiências de marca para pequenas e médias empresas que querem destacar-se, transmitir confiança e crescer de forma consistente.")}
@@ -153,6 +195,47 @@ function HeroSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function HeroParticles() {
+  // Deterministic pseudo-random layout so SSR and hydration match.
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 22 }, (_, i) => ({
+        left: `${(3 + ((i * 41.7) % 94)).toFixed(2)}%`,
+        top: `${(12 + ((i * 29.3) % 76)).toFixed(2)}%`,
+        size: 2 + (i % 3) * 1.5,
+        duration: (7 + ((i * 1.3) % 6)).toFixed(2),
+        delay: ((i * 0.9) % 7).toFixed(2),
+        drift: `${(i % 2 === 0 ? 1 : -1) * (10 + ((i * 7) % 25))}px`,
+        peak: (0.35 + ((i * 13) % 40) / 100).toFixed(2),
+      })),
+    []
+  );
+
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+      {particles.map((p, i) => (
+        <span
+          key={i}
+          className="hero-particle absolute rounded-full bg-cyan"
+          style={
+            {
+              left: p.left,
+              top: p.top,
+              width: `${p.size}px`,
+              height: `${p.size}px`,
+              boxShadow: "0 0 8px rgb(0 229 255 / 0.6)",
+              "--dx": p.drift,
+              "--peak": p.peak,
+              animationDuration: `${p.duration}s`,
+              animationDelay: `${p.delay}s`,
+            } as CSSProperties
+          }
+        />
+      ))}
+    </div>
   );
 }
 
