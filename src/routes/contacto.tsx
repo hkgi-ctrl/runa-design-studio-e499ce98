@@ -1,13 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SectionHeader } from "@/components/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone, Send, Instagram, Linkedin, Twitter } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  Instagram,
+  Facebook,
+  Clock,
+  Target,
+  BrainCircuit,
+  MessagesSquare,
+  TrendingUp,
+} from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -27,15 +52,65 @@ const contactInfo = [
   { icon: MapPin, label: "Localização", value: "Lisboa, Portugal", href: "#" },
 ];
 
+const serviceOptions = [
+  "Identidade Visual",
+  "Modernização de Marca",
+  "Design para Produtos e Serviços",
+  "Design para Redes Sociais",
+  "Outro",
+];
+
+const differentials = [
+  {
+    icon: Target,
+    title: "Design Estratégico",
+    description: "Cada projeto começa por compreender o seu negócio, os seus objetivos e o mercado onde atua.",
+  },
+  {
+    icon: BrainCircuit,
+    title: "Inteligência Artificial como aliada",
+    description: "Utilizamos inteligência artificial para explorar mais possibilidades criativas, mantendo todas as decisões estratégicas e o refinamento final sob supervisão humana.",
+  },
+  {
+    icon: MessagesSquare,
+    title: "Processo transparente",
+    description: "Mantemos uma comunicação clara durante todo o projeto, envolvendo o cliente em cada etapa importante.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Foco em resultados",
+    description: "Cada decisão de design procura fortalecer a perceção da marca, aumentar a credibilidade e gerar mais valor para o negócio.",
+  },
+];
+
+const faqs = [
+  { question: "Quanto tempo demora um projeto de branding?", answer: "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade e do número de revisões." },
+  { question: "Qual é o processo de trabalho?", answer: "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Mantemos comunicação próxima durante todo o processo." },
+  { question: "Trabalham com clientes internacionais?", answer: "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada e a comunicação é totalmente digital." },
+  { question: "A inteligência artificial substitui o trabalho do designer?", answer: "Não. A inteligência artificial é utilizada para acelerar a exploração de ideias e aumentar a eficiência do processo criativo. As decisões estratégicas, o refinamento e o resultado final são sempre conduzidos pela equipa da RUNA." },
+];
+
+function BehanceIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
+    </svg>
+  );
+}
+
 const socialLinks = [
   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+  { icon: BehanceIcon, href: "https://behance.net", label: "Behance" },
 ];
 
 function ContactoPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [service, setService] = useState("");
   const { t } = useTranslation();
+  const hero = useScrollReveal<HTMLDivElement>();
+  const formReveal = useScrollReveal<HTMLDivElement>();
+  const asideReveal = useScrollReveal<HTMLDivElement>();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,9 +119,13 @@ function ContactoPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
+      <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.8754_0.105_193.25_/_0.1),_transparent_50%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="absolute -left-1/4 bottom-0 h-96 w-96 rounded-full bg-petroleum/20 blur-3xl" />
+        <div
+          ref={hero.ref}
+          className={`reveal ${hero.isVisible ? "visible" : ""} relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+        >
           <div className="max-w-3xl">
             <span className="mb-4 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
               {t("Contacto")}
@@ -61,12 +140,16 @@ function ContactoPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-28">
+      <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-5">
+          <div className="grid gap-10 lg:grid-cols-5 lg:gap-14">
             <div className="lg:col-span-3">
-              <Card className="glass border-border/50 bg-card/40">
-                <CardContent className="p-8">
+              <div
+                ref={formReveal.ref}
+                className={`reveal ${formReveal.isVisible ? "visible" : ""}`}
+              >
+                <Card className="glass border-border/50 bg-card/40">
+                  <CardContent className="p-8 sm:p-10">
                   {submitted ? (
                     <div className="py-12 text-center">
                       <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-turquoise/10">
@@ -87,17 +170,34 @@ function ContactoPage() {
                           <Input id="name" placeholder={t("O seu nome")} required className="bg-background/50 border-border/50" />
                         </div>
                         <div className="space-y-2">
+                          <Label htmlFor="company">{t("Empresa")}</Label>
+                          <Input id="company" placeholder={t("A sua empresa")} className="bg-background/50 border-border/50" />
+                        </div>
+                      </div>
+                      <div className="grid gap-6 sm:grid-cols-2">
+                        <div className="space-y-2">
                           <Label htmlFor="email">{t("Email")}</Label>
                           <Input id="email" type="email" placeholder={t("o.seu@email.pt")} required className="bg-background/50 border-border/50" />
                         </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">{t("Telefone (opcional)")}</Label>
+                          <Input id="phone" type="tel" placeholder="+351 912 345 678" className="bg-background/50 border-border/50" />
+                        </div>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="subject">{t("Assunto")}</Label>
-                        <Input id="subject" placeholder={t("Assunto da mensagem")} required className="bg-background/50 border-border/50" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="budget">{t("Orçamento estimado")}</Label>
-                        <Input id="budget" placeholder={t("Ex: 3.000€")} className="bg-background/50 border-border/50" />
+                        <Label htmlFor="service">{t("Serviço Pretendido")}</Label>
+                        <Select value={service} onValueChange={setService} required>
+                          <SelectTrigger id="service" className="w-full bg-background/50 border-border/50">
+                            <SelectValue placeholder={t("Selecione o serviço")} />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {serviceOptions.map((option) => (
+                              <SelectItem key={option} value={option}>
+                                {t(option)}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="message">{t("Mensagem")}</Label>
@@ -105,15 +205,20 @@ function ContactoPage() {
                       </div>
                       <Button type="submit" className="w-full bg-turquoise text-graphite-deep hover:bg-turquoise/90">
                         <Send className="mr-2 h-4 w-4" />
-                        {t("Enviar mensagem")}
+                        {t("Solicitar Orçamento")}
                       </Button>
                     </form>
                   )}
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
 
-            <div className="lg:col-span-2">
+            <div
+              ref={asideReveal.ref}
+              className={`reveal ${asideReveal.isVisible ? "visible" : ""} lg:col-span-2`}
+              style={{ transitionDelay: "150ms" }}
+            >
               <div className="space-y-6">
                 <Card className="glass border-border/50 bg-card/40">
                   <CardContent className="p-6">
@@ -143,6 +248,62 @@ function ContactoPage() {
                         </li>
                       ))}
                     </ul>
+                    <div className="mt-6 flex items-start gap-3 rounded-xl border border-turquoise/20 bg-turquoise/5 p-4">
+                      <Clock className="mt-0.5 h-5 w-5 shrink-0 text-turquoise" />
+                      <div>
+                        <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                          {t("Tempo médio de resposta")}
+                        </div>
+                        <div className="text-sm font-medium text-foreground">
+                          {t("Respondemos em até 24h em dias úteis.")}
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="glass border-border/50 bg-card/40">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-semibold text-foreground">
+                      {t("Porque escolher a RUNA?")}
+                    </h3>
+                    <ul className="mt-6 space-y-5">
+                      {differentials.map((item) => (
+                        <li key={item.title} className="flex items-start gap-3">
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-turquoise/10 text-turquoise">
+                            <item.icon className="h-4 w-4" />
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-sm font-semibold text-foreground">
+                              {t(item.title)}
+                            </div>
+                            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                              {t(item.description)}
+                            </p>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="glass border-border/50 bg-card/40">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-semibold text-foreground">
+                      {t("Perguntas frequentes")}
+                    </h3>
+                    <Accordion type="single" collapsible className="mt-4">
+                      {faqs.map((faq, index) => (
+                        <AccordionItem key={index} value={`item-${index}`} className="border-border/50">
+                          <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline">
+                            {t(faq.question)}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-sm leading-relaxed text-muted-foreground text-justify">
+                            {t(faq.answer)}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
                   </CardContent>
                 </Card>
 

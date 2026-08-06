@@ -444,6 +444,14 @@ export const es: Dict = {
   "Siga-nos": "Síguenos",
   "Acompanhe o nosso trabalho nas redes sociais.":
     "Sigue nuestro trabajo en redes sociales.",
+  "A sua empresa": "Tu empresa",
+  "Telefone (opcional)": "Teléfono (opcional)",
+  "Serviço Pretendido": "Servicio deseado",
+  "Selecione o serviço": "Selecciona el servicio",
+  "Outro": "Otro",
+  "Tempo médio de resposta": "Tiempo medio de respuesta",
+  "Respondemos em até 24h em dias úteis.":
+    "Respondemos en un plazo de 24 h en días laborables.",
 
   // Footer
   "Estúdio criativo especializado em branding, web design e experiências digitais premium que convertem.":
@@ -1070,6 +1078,14 @@ export const en: Dict = {
   "Siga-nos": "Follow us",
   "Acompanhe o nosso trabalho nas redes sociais.":
     "Follow our work on social media.",
+  "A sua empresa": "Your company",
+  "Telefone (opcional)": "Phone (optional)",
+  "Serviço Pretendido": "Desired service",
+  "Selecione o serviço": "Select a service",
+  "Outro": "Other",
+  "Tempo médio de resposta": "Average response time",
+  "Respondemos em até 24h em dias úteis.":
+    "We reply within 24h on business days.",
 
   // Footer
   "Estúdio criativo especializado em branding, web design e experiências digitais premium que convertem.":
