@@ -42,35 +42,18 @@ function SobrePage() {
               {t("Sobre nós")}
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              {t("Criamos marcas que ")}<span className="gradient-text">{t("resistem ao tempo")}</span>
+              {t("Criamos marcas preparadas para crescer.")}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              {t("A RUNA Design é um estúdio criativo português dedicado a transformar ideias em experiências visuais memoráveis. Combinamos estratégia, estética e tecnologia para criar marcas e produtos digitais que geram impacto real.")}
+              {t("A RUNA Creative Studio é um estúdio de design estratégico que ajuda pequenas e médias empresas a construir marcas fortes e consistentes. Combinamos criatividade, estratégia e inteligência artificial para desenvolver identidades visuais que transmitem confiança, reforçam a credibilidade e criam valor em cada ponto de contacto com o cliente.")}
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 overflow-hidden rounded-3xl border border-border/50 shadow-2xl shadow-turquoise/10">
-            <img
-              src={runaBrandBoard.url}
-              alt="Sistema de identidade visual RUNA Design"
-              className="w-full"
-              loading="lazy"
-            />
-          </div>
-          <div className="grid gap-12">
+...
             <div>
               <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
-                {t("A nossa história")}
+                {t("A nossa abordagem")}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                {t("Fundada em Lisboa, a RUNA Design nasceu da vontade de oferecer design de excelência a empresas que valorizam a qualidade e a originalidade. Ao longo dos anos, ajudámos dezenas de marcas nacionais e internacionais a encontrar a sua voz visual e a destacar-se nos seus mercados.")}
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                {t("Acreditamos que o bom design é mais do que estética: é uma ferramenta estratégica que comunica valores, constrói confiança e impulsiona resultados.")}
+                {t("Acreditamos que uma marca vai muito além de um logótipo. Por isso, cada projeto começa por compreender o negócio, os seus objetivos e o seu público. A partir dessa base, criamos soluções visuais alinhadas com a estratégia da empresa, utilizando a inteligência artificial para acelerar a exploração criativa, sem abdicar da visão, do pensamento crítico e do refinamento humano em cada detalhe.")}
               </p>
             </div>
           </div>
