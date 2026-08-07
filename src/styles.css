@@ -516,37 +516,3 @@
     cursor: none;
   }
 }
-
-/* ===== Infinite outline marquee (final CTA) ===== */
-
-.marquee {
-  overflow: hidden;
-  user-select: none;
-}
-
-.marquee-track {
-  display: inline-flex;
-  white-space: nowrap;
-  will-change: transform;
-  animation: marquee-scroll 30s linear infinite;
-}
-
-.marquee-outline-text {
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(0, 229, 255, 0.22);
-}
-
-@keyframes marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-  }
-}

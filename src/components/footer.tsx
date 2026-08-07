@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import rVidro from "@/assets/R_Vidro_alpha.webp.asset.json";
+import fundoTextura from "@/assets/fundo_textura.webp.asset.json";
 
 const footerLinks = {
   servicos: [
@@ -56,8 +58,22 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/50 bg-graphite-deep">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <footer className="relative overflow-hidden border-t border-border/50 bg-graphite-deep">
+      {/* Liquid texture overlay at 18% */}
+      <img
+        src={fundoTextura.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.18]"
+      />
+      {/* Glass R watermark — vertically centered, fully visible, never clipped (no negative offsets) */}
+      <img
+        src={rVidro.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute right-[5%] top-1/2 z-0 w-[min(420px,80vw)] -translate-y-1/2 select-none opacity-[0.08]"
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div>
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
