@@ -467,3 +467,86 @@
     animation: none;
   }
 }
+
+/* ===== Custom cursor: cyan dot + trailing ring (desktop only) ===== */
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 200;
+  border-radius: 999px;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #00e5ff;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(0, 229, 255, 0.5);
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.cursor-ring.cursor-ring-hover {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(0, 229, 255, 0.9);
+  background: rgba(0, 229, 255, 0.08);
+}
+
+@media (pointer: fine) {
+  html.has-custom-cursor body,
+  html.has-custom-cursor a,
+  html.has-custom-cursor button,
+  html.has-custom-cursor [role="button"],
+  html.has-custom-cursor label,
+  html.has-custom-cursor select,
+  html.has-custom-cursor summary {
+    cursor: none;
+  }
+}
+
+/* ===== Infinite outline marquee (final CTA) ===== */
+
+.marquee {
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0, 229, 255, 0.22);
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
