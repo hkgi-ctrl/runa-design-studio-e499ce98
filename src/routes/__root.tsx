@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navigation } from "../components/navigation";
 import { Footer } from "../components/footer";
+import { CustomCursor } from "../components/custom-cursor";
 import i18n, { applyLanguage } from "../lib/i18n";
 import { resolveLang } from "../lib/resolve-lang";
 import { useTranslation } from "react-i18next";
@@ -156,6 +157,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <CustomCursor />
       </div>
     </QueryClientProvider>
   );

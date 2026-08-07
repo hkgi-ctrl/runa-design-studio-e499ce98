@@ -34,7 +34,7 @@ export function CTASection({
         src={fundoTextura.url}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.15]"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.20]"
       />
       {/* Giant glass R watermark at 20% in the corner */}
       <img
@@ -43,7 +43,20 @@ export function CTASection({
         aria-hidden
         className="pointer-events-none absolute -bottom-[25%] -right-[12%] h-[150%] w-auto select-none opacity-20"
       />
-      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+      {/* Infinite outline marquee behind the content */}
+      <div className="marquee pointer-events-none absolute inset-x-0 top-1/2 z-0 -translate-y-1/2" aria-hidden>
+        <div className="marquee-track">
+          {[0, 1].map((half) => (
+            <span
+              key={half}
+              className="marquee-outline-text font-display text-7xl font-bold uppercase tracking-tight sm:text-8xl lg:text-9xl"
+            >
+              {"RUNA • VIRTUAL STUDIO • CHROME SYSTEM • ".repeat(3)}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <div ref={ref} className={`reveal ${isVisible ? "visible" : ""}`}>
           <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
             {t(title)}
