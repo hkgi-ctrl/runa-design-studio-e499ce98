@@ -234,12 +234,17 @@
   .reveal {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: blur(12px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+  filter: blur(0);
   }
 
   .reveal-delay-1 { transition-delay: 0.1s; }

@@ -13,6 +13,7 @@ import { EssenceSection } from "@/components/essence-section";
 import { useTranslation } from "react-i18next";
 import rVidro from "@/assets/R_Vidro_alpha.webp.asset.json";
 import fundoNeural from "@/assets/fundo_neural.webp.asset.json";
+import rIcone from "@/assets/R_icone_isolado.png.asset.json";
 import jaciraLogo from "@/assets/jacira-1.png.asset.json";
 import petitoMain from "@/assets/petito-main.png.asset.json";
 import auraLogo from "@/assets/aura-1.png.asset.json";
@@ -247,6 +248,12 @@ function ServicesSection() {
         <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2`}>
           {services.map((service) => (
             <div key={service.title} className="bento-card">
+              <img
+                src={rIcone.url}
+                alt=""
+                aria-hidden
+                className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
+              />
               <div className="bento-icon">
                 <service.icon className="h-5 w-5" />
               </div>
@@ -358,8 +365,14 @@ function ProcessSection() {
   }, []);
 
   return (
-    <section className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 sm:py-32">
+      <img
+        src={fundoNeural.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.08]"
+      />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20">
           {/* Sticky intro column */}
           <div ref={ref} className={`reveal ${isVisible ? "visible" : ""} lg:sticky lg:top-28 lg:self-start`}>
