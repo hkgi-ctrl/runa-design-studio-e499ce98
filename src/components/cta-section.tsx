@@ -29,33 +29,20 @@ export function CTASection({
 
   return (
     <section className="relative overflow-hidden bg-[#000000] py-24 sm:py-32">
-      {/* Texture overlay at 15% */}
+      {/* Liquid texture overlay at 18% */}
       <img
         src={fundoTextura.url}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.20]"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.18]"
       />
-      {/* Giant glass R watermark at 20% in the corner */}
+      {/* Glass R watermark — vertically centered, fully visible, never clipped (no negative offsets) */}
       <img
         src={rVidro.url}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute -bottom-[25%] -right-[12%] h-[150%] w-auto select-none opacity-20"
+        className="pointer-events-none absolute right-[5%] top-1/2 z-0 w-[min(420px,80vw)] -translate-y-1/2 select-none opacity-[0.08]"
       />
-      {/* Infinite outline marquee behind the content */}
-      <div className="marquee pointer-events-none absolute inset-x-0 top-1/2 z-0 -translate-y-1/2" aria-hidden>
-        <div className="marquee-track">
-          {[0, 1].map((half) => (
-            <span
-              key={half}
-              className="marquee-outline-text font-display text-7xl font-bold uppercase tracking-tight sm:text-8xl lg:text-9xl"
-            >
-              {"RUNA • VIRTUAL STUDIO • CHROME SYSTEM • ".repeat(3)}
-            </span>
-          ))}
-        </div>
-      </div>
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <div ref={ref} className={`reveal ${isVisible ? "visible" : ""}`}>
           <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
