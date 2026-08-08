@@ -114,7 +114,7 @@ function HeroSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
+    <section className="hero-section flex min-h-screen items-center justify-center pt-20">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.8754_0.105_193.25_/_0.12),_transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_oklch(0.5556_0.066_218.27_/_0.15),_transparent_50%)]" />
 
@@ -129,14 +129,14 @@ function HeroSection() {
       </div>
 
       {/* Glass R — behind the title (z-index -1), shifted right, 75% opacity, soft blur, slow 25s rotation */}
-      <div className="hero-r-stage pointer-events-none absolute left-[70%] top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2">
+      <div className="hero-r-stage">
         <div className="hero-r-scale">
           <div className="hero-r-spin">
             <img
               src={rVidro.url}
               alt=""
               aria-hidden
-              className="h-[440px] w-auto opacity-75 blur-[0.5px] sm:h-[580px] lg:h-[680px]"
+              className="h-[300px] w-auto opacity-75 blur-[0.5px] sm:h-[560px] lg:h-[680px]"
             />
           </div>
         </div>
@@ -231,14 +231,14 @@ function ServicesSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-24 sm:py-32" ref={ref}>
+    <section className="services-bleed py-24 sm:py-32" ref={ref}>
       <img
         src={fundoNeural.url}
         alt=""
         aria-hidden
         className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]"
       />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-[4] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Serviços"
           title="Soluções criativas sob medida"
