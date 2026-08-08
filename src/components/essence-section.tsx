@@ -47,7 +47,7 @@ export function EssenceSection() {
               width={1536}
               height={1024}
             />
-            <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-tr from-background/20 via-transparent to-turquoise/5" />
+            <div className="pointer-events-none absolute inset-0 z-[3] rounded-3xl bg-gradient-to-tr from-background/20 via-transparent to-turquoise/5" />
           </div>
         </div>
       </div>
