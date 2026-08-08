@@ -19,28 +19,11 @@ export function EssenceSection() {
             <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
               {t("Transformamos estratégia em marcas que inspiram confiança.")}
             </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              <p>
-                {t(
-                  "Na RUNA acreditamos que uma marca forte nasce da combinação entre estratégia, criatividade e tecnologia.",
-                )}
-              </p>
-              <p>
-                {t(
-                  "Cada projeto é desenvolvido para ajudar pequenas e médias empresas a comunicar com mais clareza, transmitir confiança e destacar-se num mercado cada vez mais competitivo.",
-                )}
-              </p>
-              <p>
-                {t(
-                  "Utilizamos inteligência artificial para acelerar a exploração criativa e aumentar a eficiência do processo, mantendo sempre o pensamento estratégico, a criatividade humana e o cuidado em cada detalhe.",
-                )}
-              </p>
-              <p>
-                {t(
-                  "Mais do que criar identidades visuais, desenvolvemos marcas preparadas para crescer e manter consistência em todos os pontos de contacto com os seus clientes.",
-                )}
-              </p>
-            </div>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              {t(
+                "Na RUNA, cada marca nasce da combinação entre estratégia, criatividade humana e inteligência artificial como aliada. Desenvolvemos identidades visuais estratégicas, preparadas para crescer e manter consistência em todos os pontos de contacto.",
+              )}
+            </p>
             <div className="mt-8">
               <Button
                 asChild
