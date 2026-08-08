@@ -280,7 +280,7 @@ function PortfolioSection() {
         <SectionHeader
           eyebrow="Portfólio"
           title="Trabalhos selecionados"
-          description="Uma amostra dos projetos que tivemos o privilégio de criar para clientes ambiciosos."
+          description=""
         />
         <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4`}>
           {portfolio.map((item, index) => (
