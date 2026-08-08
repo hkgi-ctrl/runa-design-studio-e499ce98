@@ -593,6 +593,8 @@ export const es: Dict = {
   "Preparado para todos os canais": "Preparado para todos los canales",
   "Desenvolvemos marcas com visão de longo prazo, preparadas para crescer e manter consistência em todos os pontos de contacto com o cliente.":
     "Desarrollamos marcas con visión a largo plazo, preparadas para crecer y mantener consistencia en todos los puntos de contacto con el cliente.",
+  "Design não é decoração. É a ferramenta que transforma <strong>percepção</strong> em <strong>confiança</strong>, e <strong>confiança</strong> em <strong>valor</strong>.":
+    "El diseño no es decoración. Es la herramienta que transforma la <strong>percepción</strong> en <strong>confianza</strong>, y la <strong>confianza</strong> en <strong>valor</strong>.",
   "Um bom design não é apenas estética. É uma ferramenta para fortalecer a confiança, aumentar o valor percebido da sua empresa e criar uma marca preparada para crescer.":
     "Un buen diseño no es solo estética. Es una herramienta para fortalecer la confianza, aumentar el valor percibido de su empresa y crear una marca preparada para crecer.",
   "Vamos construir uma marca que represente o verdadeiro valor do seu negócio.":
@@ -631,6 +633,8 @@ export const en: Dict = {
   "Preparado para todos os canais": "Ready for every channel",
   "Desenvolvemos marcas com visão de longo prazo, preparadas para crescer e manter consistência em todos os pontos de contacto com o cliente.":
     "We develop brands with a long-term vision, ready to grow and stay consistent across every customer touchpoint.",
+  "Design não é decoração. É a ferramenta que transforma <strong>percepção</strong> em <strong>confiança</strong>, e <strong>confiança</strong> em <strong>valor</strong>.":
+    "Design is not decoration. It is the tool that transforms <strong>perception</strong> into <strong>trust</strong>, and <strong>trust</strong> into <strong>value</strong>.",
   "Um bom design não é apenas estética. É uma ferramenta para fortalecer a confiança, aumentar o valor percebido da sua empresa e criar uma marca preparada para crescer.":
     "Good design is not just aesthetics. It is a tool to strengthen trust, increase your company's perceived value and build a brand ready to grow.",
   "Vamos construir uma marca que represente o verdadeiro valor do seu negócio.":
