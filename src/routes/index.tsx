@@ -3,7 +3,6 @@ import { ArrowRight, Play, Sparkles, RefreshCw, Package, Megaphone } from "lucid
 import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
@@ -56,30 +55,30 @@ const services = [
 
 const portfolio = [
   {
-    category: "Branding",
     title: "JACIRA ALVES",
-    description: "Estudo de caso RUNA — Apresentação estratégica que adicionou mais valor percebido aos produtos.",
+    description: "De produto artesanal para marca desejada, com ticket médio elevado.",
+    seal: "CLIENTE REAL" as const,
     tags: ["Branding", "Identidade Visual", "Social Media"],
     image: jaciraLogo.url,
   },
   {
-    category: "Rebranding",
     title: "PETITO",
-    description: "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.",
+    description: "Rebranding afetivo que transforma biscoitos naturais em gesto de cuidado.",
+    seal: "CLIENTE REAL" as const,
     tags: ["Rebranding", "Identidade Visual", "Social Media"],
     image: petitoMain.url,
   },
   {
-    category: "Branding",
     title: "AURA",
-    description: "Estudo de caso RUNA — Skincare de luxo: pele calma.",
+    description: "Branding minimalista que posiciona uma marca de skincare como luxo silencioso.",
+    seal: "ESTUDO DE CASO" as const,
     tags: ["Branding", "Packaging"],
     image: auraLogo.url,
   },
   {
-    category: "Branding",
     title: "NORTE",
-    description: "Estudo de caso RUNA — Turismo de expedição além do mapa.",
+    description: "Marca de aventura que vende a sensação de explorar o inexplorado.",
+    seal: "ESTUDO DE CASO" as const,
     tags: ["Branding", "Identidade Visual"],
     image: norteLogo.url,
   },
@@ -299,12 +298,15 @@ function PortfolioSection() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                  <span className="pointer-events-none absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 text-[10px] uppercase tracking-[1px] text-white opacity-70 backdrop-blur-md">
+                    {item.seal === "CLIENTE REAL" && (
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#00FF88]" />
+                    )}
+                    {t(item.seal)}
+                  </span>
                 </div>
                 <CardContent className="p-5">
-                  <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">
-                    {t(item.category)}
-                  </Badge>
-                  <h3 className="mt-3 font-display text-lg font-semibold text-foreground transition-colors group-hover:text-turquoise">
+                  <h3 className="font-display text-lg font-semibold text-foreground transition-colors group-hover:text-turquoise">
                     {t(item.title)}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">

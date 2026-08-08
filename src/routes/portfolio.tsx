@@ -4,7 +4,6 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import auraLogo from "@/assets/aura-1.png.asset.json";
 import auraTote from "@/assets/aura-2-2.png.asset.json";
@@ -45,57 +44,57 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 const projects: Array<{
-  category: string;
   title: string;
   description: string;
+  seal: "ESTUDO DE CASO" | "CLIENTE REAL";
   tags: string[];
   image?: string;
   gallery?: string[];
 }> = [
   {
-    category: "Branding",
     title: "AURA",
-    description: "Estudo de caso RUNA — Skincare de luxo: pele calma.",
+    description: "Branding minimalista que posiciona uma marca de skincare como luxo silencioso.",
+    seal: "ESTUDO DE CASO",
     tags: ["Branding", "Packaging"],
     image: auraLogo.url,
     gallery: [auraSerum.url, auraTote.url, auraCard.url, auraBox.url],
   },
   {
-    category: "Rebranding",
     title: "PETITO",
-    description: "Estudo de caso RUNA — Rebranding da marca Petito: nova proposta de identidade.",
+    description: "Rebranding afetivo que transforma biscoitos naturais em gesto de cuidado.",
+    seal: "CLIENTE REAL",
     tags: ["Rebranding", "Identidade Visual", "Social Media"],
     image: petitoMain.url,
     gallery: [petitoPackaging.url, petitoLifestyle.url, petitoRebranding.url],
   },
   {
-    category: "Branding",
     title: "NORTE",
-    description: "Estudo de caso RUNA — Turismo de expedição além do mapa.",
+    description: "Marca de aventura que vende a sensação de explorar o inexplorado.",
+    seal: "ESTUDO DE CASO",
     tags: ["Branding", "Identidade Visual"],
     image: norteLogo.url,
     gallery: [norteFlatlay.url, norteGarrafa.url, norteCasaco.url],
   },
   {
-    category: "Rebranding",
     title: "VIRCLAN",
-    description: "Estudo de caso RUNA — Atualização de uma marca existente, novo conceito e reposicionamento estratégico.",
+    description: "Rebranding que modernizou uma marca tech para um novo ciclo de crescimento.",
+    seal: "ESTUDO DE CASO",
     tags: ["Rebranding", "Identidade Visual"],
     image: virclanLogo.url,
     gallery: [virclanVariant1.url, virclanVariant2.url, virclanAplicacao.url, virclanVariant3.url],
   },
   {
-    category: "Branding",
     title: "JACIRA ALVES",
-    description: "Estudo de caso RUNA — Apresentação estratégica que adicionou mais valor percebido aos produtos.",
+    description: "De produto artesanal para marca desejada, com ticket médio elevado.",
+    seal: "CLIENTE REAL",
     tags: ["Branding", "Identidade Visual", "Social Media"],
     image: jaciraLogo.url,
     gallery: [jaciraCartoes.url, jaciraPoster.url, jaciraVestido.url],
   },
   {
-    category: "Publicidade",
     title: "Campanhas & Displays",
-    description: "Estudo de caso RUNA — Material publicitário para eventos e displays de lançamento de produto.",
+    description: "Key visual de alta energia para um dos maiores festivais de Portugal.",
+    seal: "ESTUDO DE CASO",
     tags: ["Publicidade", "Design Gráfico"],
     image: displayKalorama.url,
     gallery: [displayBeatles.url, displayCafe.url],
@@ -178,12 +177,15 @@ function PortfolioPage() {
                       {t("Clique para ampliar")}
                     </span>
                   </div>
+                  <span className="pointer-events-none absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 text-[10px] uppercase tracking-[1px] text-white opacity-70 backdrop-blur-md">
+                    {project.seal === "CLIENTE REAL" && (
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#00FF88]" />
+                    )}
+                    {t(project.seal)}
+                  </span>
                 </button>
                 <CardContent className="p-6">
-                  <Badge variant="outline" className="border-turquoise/30 bg-turquoise/10 text-turquoise">
-                    {t(project.category)}
-                  </Badge>
-                  <h3 className="mt-3 font-display text-xl font-semibold text-foreground transition-colors group-hover:text-turquoise">
+                  <h3 className="font-display text-xl font-semibold text-foreground transition-colors group-hover:text-turquoise">
                     {t(project.title)}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
