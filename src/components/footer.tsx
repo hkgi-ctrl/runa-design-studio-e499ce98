@@ -54,61 +54,40 @@ function FooterLinkList({ links }: { links: Array<{ to: string; label: string }>
 export function Footer() {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
+  const footerHeadingClass = "font-display text-sm font-semibold uppercase tracking-[1px] text-footer-heading";
 
   return (
-    <footer className="relative overflow-hidden border-t border-border/50 bg-graphite-deep">
-      {/* Liquid texture overlay at 18% */}
-      <img
-        src={fundoTextura.url}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.18]"
-      />
-      {/* Glass R watermark — vertically centered, fully visible, never clipped (no negative offsets) */}
-      <img
-        src={rVidro.url}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute right-[5%] top-1/2 z-0 w-[min(420px,80vw)] -translate-y-1/2 select-none opacity-[0.08]"
-      />
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <footer className="border-t border-footer-divider/50 bg-footer-background">
+      <div className="mx-auto max-w-7xl px-4 pb-10 pt-[60px] sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
-              {t("Serviços")}
-            </h3>
+            <h3 className={footerHeadingClass}>{t("Serviços")}</h3>
             <FooterLinkList links={footerLinks.servicos} />
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
-              {t("Empresa")}
-            </h3>
+            <h3 className={footerHeadingClass}>{t("Empresa")}</h3>
             <FooterLinkList links={footerLinks.empresa} />
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
-              {t("Suporte")}
-            </h3>
+            <h3 className={footerHeadingClass}>{t("Suporte")}</h3>
             <FooterLinkList links={footerLinks.suporte} />
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
-              {t("Contacto")}
-            </h3>
+            <h3 className={footerHeadingClass}>{t("Contacto")}</h3>
             <ul className="mt-4 space-y-4">
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-turquoise" />
+              <li className="flex items-center gap-3 text-sm text-footer-link">
+                <Mail className="h-4 w-4 shrink-0 text-turquoise" />
                 <span>hello@runastudio.pt</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-turquoise" />
+              <li className="flex items-center gap-3 text-sm text-footer-link">
+                <Phone className="h-4 w-4 shrink-0 text-turquoise" />
                 <span>+351 912 345 678</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-turquoise" />
+              <li className="flex items-center gap-3 text-sm text-footer-link">
+                <MapPin className="h-4 w-4 shrink-0 text-turquoise" />
                 <span>Lisboa, Portugal</span>
               </li>
             </ul>
@@ -123,7 +102,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-background/50 text-muted-foreground transition-colors hover:border-turquoise/50 hover:text-turquoise"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-footer-social-border bg-footer-social-background text-footer-link transition-colors hover:border-footer-social-hover hover:bg-footer-social-hover hover:text-footer-social-hover-foreground"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -132,8 +111,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 sm:flex-row">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-footer-divider/50 pt-6 sm:flex-row">
+          <p className="text-xs text-footer-copyright">
             {t("© {{year}} RUNA Design. Todos os direitos reservados.", { year })}
           </p>
         </div>
