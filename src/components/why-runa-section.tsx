@@ -97,9 +97,10 @@ export function WhyRunaSection() {
           className={`reveal ${bandVisible ? "visible" : ""} mt-16 rounded-2xl border border-turquoise/20 bg-card/30 px-6 py-10 text-center backdrop-blur-sm sm:px-12`}
         >
           <p className="mx-auto max-w-3xl font-display text-lg leading-relaxed text-foreground sm:text-xl">
-            {t(
-              "Um bom design não é apenas estética. É uma ferramenta para fortalecer a confiança, aumentar o valor percebido da sua empresa e criar uma marca preparada para crescer.",
-            )}
+            <Trans
+              i18nKey="Design não é decoração. É a ferramenta que transforma <strong>percepção</strong> em <strong>confiança</strong>, e <strong>confiança</strong> em <strong>valor</strong>."
+              components={{ strong: <strong className="font-bold" /> }}
+            />
           </p>
         </div>
 
