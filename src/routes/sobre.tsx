@@ -45,7 +45,7 @@ function SobrePage() {
               {t("Criamos marcas preparadas para crescer.")}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              {t("A RUNA Creative Studio é um estúdio de design estratégico que ajuda pequenas e médias empresas a construir marcas fortes e consistentes. Combinamos criatividade, estratégia e inteligência artificial para desenvolver identidades visuais que transmitem confiança, reforçam a credibilidade e criam valor em cada ponto de contacto com o cliente.")}
+              {t("Combinamos criatividade, estratégia e inteligência artificial para desenvolver identidades visuais que transmitem confiança, reforçam a credibilidade e criam valor em cada ponto de contacto com o cliente.")}
             </p>
 ...
             <div>
