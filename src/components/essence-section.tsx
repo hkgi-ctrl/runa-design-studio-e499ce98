@@ -38,16 +38,16 @@ export function EssenceSection() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-3xl border border-border/50 bg-card/30">
+          <div className="essence-image-wrapper relative rounded-3xl border border-border/50 bg-card/30">
             <img
               src={essenceImage.url}
               alt={t("Ambiente criativo RUNA Design")}
-              className="w-full object-cover"
+              className="essence-mockup-image w-full object-cover"
               loading="lazy"
               width={1536}
               height={1024}
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-background/20 via-transparent to-turquoise/5" />
+            <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-tr from-background/20 via-transparent to-turquoise/5" />
           </div>
         </div>
       </div>
