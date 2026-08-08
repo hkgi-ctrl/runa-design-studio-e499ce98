@@ -58,6 +58,7 @@
   --color-graphite: var(--graphite);
   --color-graphite-deep: var(--graphite-deep);
   --color-cyan: var(--cyan);
+  --color-essence-background: var(--essence-background);
 
   /* Footer tokens */
   --color-footer-background: var(--footer-background);
@@ -124,6 +125,8 @@
   --footer-social-border: oklch(0.275 0.0272 233.74);
   --footer-social-hover: oklch(0.9199 0.0722 178.61);
   --footer-social-hover-foreground: oklch(0.1741 0.0182 248.92);
+
+  --essence-background: #0a101a;
 
   --background: #080b12;
   --foreground: oklch(0.9528 0.0044 258.34);
@@ -316,6 +319,10 @@
     box-shadow: 0 0 20px rgb(0 229 255 / 0.15);
   }
 
+  .essence-section {
+    background-color: var(--color-essence-background);
+  }
+
   .essence-image-wrapper {
     position: relative;
     z-index: 2;
@@ -328,45 +335,34 @@
     content: "";
     position: absolute;
     pointer-events: none;
-    z-index: 0;
   }
 
   .essence-image-wrapper::before {
-    top: -10%;
-    left: -10%;
-    width: 120%;
-    height: 120%;
+    inset: -20%;
     background: radial-gradient(
-      ellipse at center,
-      rgb(86 255 255 / 0.28) 0%,
-      rgb(86 255 255 / 0.1) 35%,
-      transparent 65%
+      ellipse 80% 60% at 50% 50%,
+      rgb(86 255 255 / 0.42) 0%,
+      rgb(86 255 255 / 0.18) 25%,
+      rgb(86 255 255 / 0.06) 45%,
+      transparent 70%
     );
-    filter: blur(45px);
-    opacity: 1;
+    filter: blur(55px);
+    z-index: -1;
   }
 
   .essence-image-wrapper::after {
-    top: 4%;
-    left: 2%;
-    width: 96%;
-    height: 108%;
-    background: radial-gradient(
-      ellipse at center,
-      rgb(0 229 255 / 0.16) 0%,
-      rgb(0 229 255 / 0.06) 42%,
-      transparent 72%
-    );
-    filter: blur(72px);
-    opacity: 0.9;
+    inset: 10% -5% -15% -5%;
+    background: rgb(0 0 0 / 0.8);
+    filter: blur(35px);
+    z-index: -2;
   }
 
   .essence-mockup-image {
     position: relative;
-    z-index: 2;
-    border: 1px solid rgb(255 255 255 / 0.07);
+    z-index: 1;
+    border: 1px solid rgb(255 255 255 / 0.1);
     border-radius: 20px;
-    box-shadow: 0 40px 100px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.07);
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.06) inset, 0 40px 120px rgb(0 0 0 / 0.9), 0 20px 60px rgb(0 0 0 / 0.6);
     transform: translateZ(0);
   }
 
