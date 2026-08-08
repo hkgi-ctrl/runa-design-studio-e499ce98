@@ -136,7 +136,7 @@ function HeroSection() {
               src={rVidro.url}
               alt=""
               aria-hidden
-              className="h-[300px] w-auto opacity-75 blur-[0.5px] sm:h-[560px] lg:h-[680px]"
+              className="h-[300px] w-auto opacity-75 blur-[0.5px] sm:h-[560px] lg:h-[720px]"
             />
           </div>
         </div>
