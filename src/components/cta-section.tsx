@@ -35,6 +35,7 @@ export function CTASection({
         alt=""
         aria-hidden
         className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.18]"
+        style={{ objectPosition: "center", backgroundPosition: "center" }}
       />
       {/* Glass R watermark — vertically centered, fully visible, never clipped (no negative offsets) */}
       <img
@@ -45,13 +46,37 @@ export function CTASection({
       />
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <div ref={ref} className={`reveal ${isVisible ? "visible" : ""}`}>
-          <h2 className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-            {t(title)}
+          <h2
+            className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl"
+            style={{
+              textAlign: "center",
+              textWrap: "balance",
+              maxWidth: "720px",
+              margin: "0 auto 16px auto",
+            }}
+          >
+            {t(title).replace(/\s+/g, " ").trim()}
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            {t(description)}
+          <p
+            className="text-lg text-muted-foreground"
+            style={{
+              textAlign: "center",
+              margin: "0 auto",
+              maxWidth: "560px",
+              lineHeight: 1.6,
+              letterSpacing: "0.2px",
+              whiteSpace: "normal",
+              wordSpacing: "normal",
+              hyphens: "none",
+              WebkitHyphens: "none",
+            }}
+          >
+            {t(description).replace(/\s+/g, " ").trim()}
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div
+            className="flex flex-col items-center sm:flex-row"
+            style={{ display: "flex", justifyContent: "center", gap: "16px", marginTop: "28px" }}
+          >
             <Magnetic>
               <Button
                 asChild
