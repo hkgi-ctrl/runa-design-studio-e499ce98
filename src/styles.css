@@ -59,6 +59,18 @@
   --color-graphite-deep: var(--graphite-deep);
   --color-cyan: var(--cyan);
 
+  /* Footer tokens */
+  --color-footer-background: var(--footer-background);
+  --color-footer-divider: var(--footer-divider);
+  --color-footer-heading: var(--footer-heading);
+  --color-footer-link: var(--footer-link);
+  --color-footer-link-hover: var(--footer-link-hover);
+  --color-footer-copyright: var(--footer-copyright);
+  --color-footer-social-background: var(--footer-social-background);
+  --color-footer-social-border: var(--footer-social-border);
+  --color-footer-social-hover: var(--footer-social-hover);
+  --color-footer-social-hover-foreground: var(--footer-social-hover-foreground);
+
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -100,6 +112,18 @@
   --graphite: oklch(0.5072 0.0324 257.8);
   --graphite-deep: oklch(0.25 0.03 257.8);
   --cyan: #00e5ff;
+
+  /* Footer: solid RUNA blue-black with quiet chrome accents */
+  --footer-background: oklch(0.1741 0.0182 248.92);
+  --footer-divider: oklch(0.275 0.0272 233.74);
+  --footer-heading: oklch(1 0 0 / 0.7);
+  --footer-link: oklch(0.6257 0.0293 246.56);
+  --footer-link-hover: oklch(0.9199 0.0722 178.61);
+  --footer-copyright: oklch(1 0 0 / 0.5);
+  --footer-social-background: oklch(0.237 0.028 244.9);
+  --footer-social-border: oklch(0.275 0.0272 233.74);
+  --footer-social-hover: oklch(0.9199 0.0722 178.61);
+  --footer-social-hover-foreground: oklch(0.1741 0.0182 248.92);
 
   --background: #080b12;
   --foreground: oklch(0.9528 0.0044 258.34);

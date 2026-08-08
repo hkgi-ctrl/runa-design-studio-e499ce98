@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import rVidro from "@/assets/R_Vidro_alpha.webp.asset.json";
-import fundoTextura from "@/assets/fundo_textura.webp.asset.json";
 
 const footerLinks = {
   servicos: [
