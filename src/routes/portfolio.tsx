@@ -188,7 +188,7 @@ function PortfolioPage() {
                   <h3 className="font-display text-xl font-semibold text-foreground transition-colors group-hover:text-turquoise">
                     {t(project.title)}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <p className="portfolio-card-description mt-2 text-sm text-muted-foreground">
                     {t(project.description)}
                   </p>
                   {project.gallery && (

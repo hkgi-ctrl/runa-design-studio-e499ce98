@@ -309,7 +309,7 @@ function PortfolioSection() {
                   <h3 className="font-display text-lg font-semibold text-foreground transition-colors group-hover:text-turquoise">
                     {t(item.title)}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <p className="portfolio-card-description mt-2 text-sm text-muted-foreground">
                     {t(item.description)}
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">

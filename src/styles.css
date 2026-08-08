@@ -164,8 +164,6 @@
   p,
   li {
     text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
   }
 
   /* Subtle cyan radial from the top-right of every section */
@@ -200,6 +198,17 @@
 }
 
 @layer utilities {
+  .portfolio-card-description {
+    text-align: left;
+    line-height: 1.5;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
