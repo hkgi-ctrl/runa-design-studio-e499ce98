@@ -57,7 +57,7 @@ export function Footer() {
   const footerHeadingClass = "font-display text-sm font-semibold uppercase tracking-[1px] text-footer-heading";
 
   return (
-    <footer className="border-t border-footer-divider/50 bg-footer-background">
+    <footer className="relative z-[92] border-t border-footer-divider/50 bg-footer-background">
       <div className="mx-auto max-w-7xl px-4 pb-10 pt-[60px] sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div>
@@ -79,15 +79,15 @@ export function Footer() {
             <h3 className={footerHeadingClass}>{t("Contacto")}</h3>
             <ul className="mt-4 space-y-4">
               <li className="flex items-center gap-3 text-sm text-footer-link">
-                <Mail className="h-4 w-4 shrink-0 text-turquoise" />
+                <Mail className="h-4 w-4 shrink-0 text-footer-link-hover" />
                 <span>hello@runastudio.pt</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-footer-link">
-                <Phone className="h-4 w-4 shrink-0 text-turquoise" />
+                <Phone className="h-4 w-4 shrink-0 text-footer-link-hover" />
                 <span>+351 912 345 678</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-footer-link">
-                <MapPin className="h-4 w-4 shrink-0 text-turquoise" />
+                <MapPin className="h-4 w-4 shrink-0 text-footer-link-hover" />
                 <span>Lisboa, Portugal</span>
               </li>
             </ul>
