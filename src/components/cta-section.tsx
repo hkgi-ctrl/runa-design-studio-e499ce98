@@ -58,11 +58,13 @@ export function CTASection({
             {t(title).replace(/\s+/g, " ").trim()}
           </h2>
           <p
-            className="text-lg text-muted-foreground"
+            className="text-foreground"
             style={{
               textAlign: "center",
               margin: "0 auto",
-              maxWidth: "560px",
+              maxWidth: "520px",
+              fontSize: "16px",
+              opacity: 0.75,
               lineHeight: 1.6,
               letterSpacing: "0.2px",
               whiteSpace: "normal",
@@ -93,7 +95,7 @@ export function CTASection({
               asChild
               size="lg"
               variant="outline"
-              className="border-silver/20 text-foreground hover:bg-silver/10"
+              className="border-white/15 bg-[rgba(10,14,20,0.4)] text-foreground backdrop-blur-md hover:bg-[rgba(10,14,20,0.6)]"
             >
               <Link to={secondaryTo}>{t(secondaryLabel)}</Link>
             </Button>

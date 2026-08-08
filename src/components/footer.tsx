@@ -57,7 +57,7 @@ export function Footer() {
   const footerHeadingClass = "font-display text-sm font-semibold uppercase tracking-[1px] text-footer-heading";
 
   return (
-    <footer className="relative z-[92] border-t border-footer-divider/50 bg-footer-background">
+    <footer className="relative z-[92] bg-footer-background">
       <div className="mx-auto max-w-7xl px-4 pb-10 pt-[60px] sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div>
