@@ -4,7 +4,6 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import auraLogo from "@/assets/aura-1.png.asset.json";
 import auraTote from "@/assets/aura-2-2.png.asset.json";

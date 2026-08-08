@@ -3,7 +3,6 @@ import { ArrowRight, Play, Sparkles, RefreshCw, Package, Megaphone } from "lucid
 import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
