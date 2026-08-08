@@ -10,7 +10,7 @@ export function EssenceSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-24 sm:py-32" ref={ref}>
+    <section className="essence-section py-24 sm:py-32" ref={ref}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           className={`reveal ${isVisible ? "visible" : ""} grid gap-12 lg:grid-cols-2 lg:items-center`}
