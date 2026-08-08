@@ -8,11 +8,11 @@ import {
   TrendingUp,
   Smartphone,
 } from "lucide-react";
+import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { useTranslation } from "react-i18next";
 
 const reasons = [
   {
