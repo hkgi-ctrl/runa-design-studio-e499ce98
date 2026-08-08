@@ -28,7 +28,7 @@ export function CTASection({
   const { t } = useTranslation();
 
   return (
-    <section className="relative overflow-hidden bg-[#000000] py-24 sm:py-32">
+    <section className="section-textured relative overflow-hidden bg-[#000000] py-24 sm:py-32">
       {/* Liquid texture overlay at 18% */}
       <img
         src={fundoTextura.url}
@@ -44,7 +44,7 @@ export function CTASection({
         aria-hidden
         className="pointer-events-none absolute right-[5%] top-1/2 z-0 w-[min(420px,80vw)] -translate-y-1/2 select-none opacity-[0.08]"
       />
-      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="relative z-[2] mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <div ref={ref} className={`reveal ${isVisible ? "visible" : ""}`}>
           <h2
             className="font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl"
