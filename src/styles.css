@@ -316,6 +316,39 @@
     box-shadow: 0 0 20px rgb(0 229 255 / 0.15);
   }
 
+  .essence-image-wrapper {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+    isolation: isolate;
+  }
+
+  .essence-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    bottom: -20%;
+    background: radial-gradient(
+      ellipse at center,
+      rgb(0 229 255 / 0.18) 0%,
+      rgb(0 229 255 / 0.06) 40%,
+      transparent 70%
+    );
+    filter: blur(32px);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .essence-mockup-image {
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgb(255 255 255 / 0.08);
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgb(0 0 0 / 0.6), 0 10px 30px rgb(0 0 0 / 0.4);
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(24px);
