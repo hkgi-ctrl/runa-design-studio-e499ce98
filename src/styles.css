@@ -233,8 +233,26 @@
     background: linear-gradient(
       to bottom,
       #0a0e14 0%,
-      rgba(10, 14, 20, 0.8) 30%,
+      rgba(10, 14, 20, 0.7) 40%,
       rgba(10, 14, 20, 0) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Bottom fade so the textured CTA melts into the footer (no hard line) */
+  .section-textured::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(10, 17, 24, 0.6) 60%,
+      #0a1118 100%
     );
     z-index: 1;
     pointer-events: none;
