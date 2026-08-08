@@ -52,12 +52,12 @@ const projects: Array<{
   gallery?: string[];
 }> = [
   {
-    title: "AURA",
-    description: "Branding minimalista que posiciona uma marca de skincare como luxo silencioso.",
-    seal: "ESTUDO DE CASO",
-    tags: ["Branding", "Packaging"],
-    image: auraLogo.url,
-    gallery: [auraSerum.url, auraTote.url, auraCard.url, auraBox.url],
+    title: "JACIRA ALVES",
+    description: "De produto artesanal para marca desejada, com ticket médio elevado.",
+    seal: "CLIENTE REAL",
+    tags: ["Branding", "Identidade Visual", "Social Media"],
+    image: jaciraLogo.url,
+    gallery: [jaciraCartoes.url, jaciraPoster.url, jaciraVestido.url],
   },
   {
     title: "PETITO",
@@ -66,6 +66,14 @@ const projects: Array<{
     tags: ["Rebranding", "Identidade Visual", "Social Media"],
     image: petitoMain.url,
     gallery: [petitoPackaging.url, petitoLifestyle.url, petitoRebranding.url],
+  },
+  {
+    title: "AURA",
+    description: "Branding minimalista que posiciona uma marca de skincare como luxo silencioso.",
+    seal: "ESTUDO DE CASO",
+    tags: ["Branding", "Packaging"],
+    image: auraLogo.url,
+    gallery: [auraSerum.url, auraTote.url, auraCard.url, auraBox.url],
   },
   {
     title: "NORTE",
@@ -82,14 +90,6 @@ const projects: Array<{
     tags: ["Rebranding", "Identidade Visual"],
     image: virclanLogo.url,
     gallery: [virclanVariant1.url, virclanVariant2.url, virclanAplicacao.url, virclanVariant3.url],
-  },
-  {
-    title: "JACIRA ALVES",
-    description: "De produto artesanal para marca desejada, com ticket médio elevado.",
-    seal: "CLIENTE REAL",
-    tags: ["Branding", "Identidade Visual", "Social Media"],
-    image: jaciraLogo.url,
-    gallery: [jaciraCartoes.url, jaciraPoster.url, jaciraVestido.url],
   },
   {
     title: "Campanhas & Displays",
