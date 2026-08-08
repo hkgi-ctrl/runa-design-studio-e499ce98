@@ -601,14 +601,8 @@ export const es: Dict = {
   // Essence / About teaser
   "Transformamos estratégia em marcas que inspiram confiança.":
     "Transformamos estrategia en marcas que inspiran confianza.",
-  "Na RUNA acreditamos que uma marca forte nasce da combinação entre estratégia, criatividade e tecnologia.":
-    "En RUNA creemos que una marca fuerte nace de la combinación entre estrategia, creatividad y tecnología.",
-  "Cada projeto é desenvolvido para ajudar pequenas e médias empresas a comunicar com mais clareza, transmitir confiança e destacar-se num mercado cada vez mais competitivo.":
-    "Cada proyecto se desarrolla para ayudar a pequeñas y medianas empresas a comunicar con más claridad, transmitir confianza y destacarse en un mercado cada vez más competitivo.",
-  "Utilizamos inteligência artificial para acelerar a exploração criativa e aumentar a eficiência do processo, mantendo sempre o pensamento estratégico, a criatividade humana e o cuidado em cada detalhe.":
-    "Utilizamos inteligencia artificial para acelerar la exploración creativa y aumentar la eficiencia del proceso, manteniendo siempre el pensamiento estratégico, la creatividad humana y el cuidado en cada detalle.",
-  "Mais do que criar identidades visuais, desenvolvemos marcas preparadas para crescer e manter consistência em todos os pontos de contacto com os seus clientes.":
-    "Más que crear identidades visuales, desarrollamos marcas preparadas para crecer y mantener consistencia en todos los puntos de contacto con sus clientes.",
+   "Na RUNA, cada marca nasce da combinação entre estratégia, criatividade humana e inteligência artificial como aliada. Desenvolvemos identidades visuais estratégicas, preparadas para crescer e manter consistência em todos os pontos de contacto.":
+     "En RUNA, cada marca nace de la combinación entre estrategia, creatividad humana e inteligencia artificial como aliada. Desarrollamos identidades visuales estratégicas, preparadas para crecer y mantener la consistencia en todos los puntos de contacto.",
   "Conheça a RUNA": "Conoce RUNA",
   "Ambiente criativo RUNA Design": "Ambiente creativo RUNA Design",
 };
@@ -1211,14 +1205,8 @@ export const en: Dict = {
   // Essence / About teaser
   "Transformamos estratégia em marcas que inspiram confiança.":
     "We transform strategy into brands that inspire confidence.",
-  "Na RUNA acreditamos que uma marca forte nasce da combinação entre estratégia, criatividade e tecnologia.":
-    "At RUNA, we believe a strong brand is born from the combination of strategy, creativity and technology.",
-  "Cada projeto é desenvolvido para ajudar pequenas e médias empresas a comunicar com mais clareza, transmitir confiança e destacar-se num mercado cada vez mais competitivo.":
-    "Every project is developed to help small and medium-sized businesses communicate with greater clarity, convey confidence and stand out in an increasingly competitive market.",
-  "Utilizamos inteligência artificial para acelerar a exploração criativa e aumentar a eficiência do processo, mantendo sempre o pensamento estratégico, a criatividade humana e o cuidado em cada detalhe.":
-    "We use artificial intelligence to accelerate creative exploration and increase process efficiency, always maintaining strategic thinking, human creativity and care in every detail.",
-  "Mais do que criar identidades visuais, desenvolvemos marcas preparadas para crescer e manter consistência em todos os pontos de contacto com os seus clientes.":
-    "More than creating visual identities, we develop brands prepared to grow and maintain consistency at every touchpoint with their customers.",
+   "Na RUNA, cada marca nasce da combinação entre estratégia, criatividade humana e inteligência artificial como aliada. Desenvolvemos identidades visuais estratégicas, preparadas para crescer e manter consistência em todos os pontos de contacto.":
+     "At RUNA, every brand is born from the combination of strategy, human creativity, and artificial intelligence as an ally. We develop strategic visual identities prepared to grow and remain consistent across every touchpoint.",
   "Conheça a RUNA": "Meet RUNA",
   "Ambiente criativo RUNA Design": "RUNA Design creative environment",
 };
