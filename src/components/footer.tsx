@@ -41,7 +41,7 @@ function FooterLinkList({ links }: { links: Array<{ to: string; label: string }>
         <li key={link.label}>
           <Link
             to={link.to}
-            className="text-sm text-muted-foreground transition-colors hover:text-turquoise"
+            className="text-sm text-footer-link transition-colors hover:text-footer-link-hover"
           >
             {t(link.label)}
           </Link>
