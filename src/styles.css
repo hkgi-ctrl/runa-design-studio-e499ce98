@@ -484,13 +484,13 @@
 
 .hero-r-stage {
   position: absolute;
-  right: 3%;
+  right: 5%;
   top: auto;
-  bottom: -120px;
+  bottom: -60px;
   width: 520px;
-  height: 650px;
+  height: 720px;
   transform: none;
-  z-index: 3;
+  z-index: 2;
   pointer-events: none;
   overflow: visible;
   perspective: 1200px;
@@ -500,15 +500,20 @@
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 60%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0, 0, 0, 1) 55%,
+    rgba(0, 0, 0, 0) 90%
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 60%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0, 0, 0, 1) 55%,
+    rgba(0, 0, 0, 0) 90%
   );
+}
+
+.hero-r-stage::before,
+.hero-r-stage::after {
+  content: none !important;
 }
 
 .hero-section {
@@ -523,9 +528,10 @@
   position: relative;
   overflow: visible;
   z-index: 1;
-  margin-top: -100px;
-  padding-top: 100px;
-  background: linear-gradient(to bottom, rgba(10, 14, 20, 0) 0%, #0a0e14 40%);
+  margin-top: -60px;
+  padding-top: 140px;
+  border-top: none;
+  background: #0a0e14;
 }
 
 @media (max-width: 767px) {
