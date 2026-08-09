@@ -127,6 +127,7 @@
   --footer-social-hover-foreground: oklch(0.1741 0.0182 248.92);
 
   --essence-background: #0a101a;
+  --values-image-shadow: 0 0 20px rgb(125 211 224 / 0.08);
 
   --background: #080b12;
   --foreground: oklch(0.9528 0.0044 258.34);

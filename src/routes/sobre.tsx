@@ -6,8 +6,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Heart, Lightbulb, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import runaBrandBoard from "@/assets/runa-brand-board.png.asset.json";
-import runaValues from "@/assets/runa-values.png.asset.json";
+import valuesPenLine from "@/assets/valores-caneta-linha.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -68,11 +67,11 @@ function SobrePage() {
             description="Princípios que definem a nossa forma de trabalhar e criar."
           />
           <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-            <div className="overflow-hidden rounded-3xl border border-border/50">
+            <div className="values-image-frame h-auto overflow-hidden rounded-3xl border border-border/50 lg:h-full">
               <img
-                src={runaValues.url}
-                alt="Valores da marca RUNA Design"
-                className="w-full"
+                src={valuesPenLine.url}
+                alt="Caneta tinteiro preta a desenhar uma linha turquesa sobre papel preto texturizado"
+                className="values-image h-auto w-full rounded-3xl object-cover object-center lg:h-full"
                 loading="lazy"
               />
             </div>
