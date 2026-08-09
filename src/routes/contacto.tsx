@@ -266,7 +266,7 @@ function ContactoPage() {
                                  rel="noopener noreferrer"
                                  aria-label="Falar no WhatsApp"
                                  title="Falar no WhatsApp"
-                                 className="ml-1 flex h-6 w-6 items-center justify-center rounded-full border border-whatsapp/30 bg-whatsapp/20 text-whatsapp transition-all hover:bg-whatsapp hover:text-primary-foreground"
+                                 className="ml-1 flex h-6 w-6 items-center justify-center rounded-full border border-whatsapp/30 bg-whatsapp/20 text-whatsapp transition-all hover:bg-whatsapp hover:text-whatsapp-foreground"
                                >
                                  <WhatsAppIcon className="h-3 w-3" />
                                </a>
