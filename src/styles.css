@@ -330,6 +330,11 @@
     box-shadow: var(--values-image-shadow);
   }
 
+  .services-hero-image {
+    filter: brightness(0.95) contrast(1.08);
+    box-shadow: 0 0 30px rgb(125 211 224 / 0.12), 0 0 60px rgb(125 211 224 / 0.06);
+  }
+
   .essence-section {
     background-color: var(--color-essence-background);
   }

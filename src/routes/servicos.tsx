@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, RefreshCw, Package, Megaphone, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import runaSymbol from "@/assets/runa-symbol.png.asset.json";
+import servicesHeroImage from "@/assets/servicos-r-macro-turquesa.jpg.asset.json";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({
@@ -14,6 +14,8 @@ export const Route = createFileRoute("/servicos")({
       { name: "description", content: "Descubra os serviços da RUNA Design: branding, web design, UI/UX, motion design e design systems premium." },
       { property: "og:title", content: "Serviços — RUNA Design" },
       { property: "og:description", content: "Descubra os serviços da RUNA Design: branding, web design, UI/UX, motion design e design systems premium." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ServicosPage,
@@ -51,25 +53,28 @@ function ServicosPage() {
   return (
     <>
       <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.8754_0.105_193.25_/_0.1),_transparent_50%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-center">
-            <div className="max-w-3xl">
-            <span className="mb-4 inline-block rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
-              {t("Serviços")}
-            </span>
-            <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              {t("Soluções criativas para ")}<span className="gradient-text">{t("marcas ambiciosas")}</span>
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              {t("Oferecemos um leque completo de serviços de design para ajudar a sua empresa a comunicar com clareza, beleza e impacto.")}
-            </p>
+          <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-stretch lg:gap-12">
+            <div className="flex max-w-3xl flex-1 flex-col justify-center">
+              <span className="mb-4 inline-block w-fit rounded-full border border-turquoise/30 bg-turquoise/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-turquoise">
+                {t("Serviços")}
+              </span>
+              <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
+                {t("Soluções criativas para ")}<span className="gradient-text">{t("marcas ambiciosas")}</span>
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                {t("Oferecemos um leque completo de serviços de design para ajudar a sua empresa a comunicar com clareza, beleza e impacto.")}
+              </p>
             </div>
-            <div className="relative hidden lg:block">
-              <div className="absolute -inset-6 rounded-3xl bg-turquoise/10 blur-3xl" />
-              <div className="relative overflow-hidden rounded-3xl border border-border/50 shadow-2xl">
-                <img src={runaSymbol.url} alt="Símbolo RUNA Design" className="w-full" />
-              </div>
+            <div className="relative h-96 w-full flex-1 overflow-hidden rounded-3xl border border-white/5 lg:h-auto lg:min-h-0">
+              <img
+                src={servicesHeroImage.url}
+                alt={t("Mão a desenhar o símbolo RUNA com um lápis turquesa")}
+                className="services-hero-image h-full w-full object-cover object-top lg:absolute lg:inset-0 lg:object-center"
+                loading="eager"
+                width={768}
+                height={1024}
+              />
             </div>
           </div>
         </div>
