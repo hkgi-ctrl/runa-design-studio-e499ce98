@@ -440,8 +440,12 @@ export const es: Dict = {
   "Não foi possível enviar a mensagem. Tente novamente ou contacte-nos diretamente através de hello@runastudio.pt.":
     "No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos directamente a través de hello@runastudio.pt.",
   "Informações de contacto": "Información de contacto",
-  "Estamos disponíveis de segunda a sexta, das 9h às 18h.":
-    "Estamos disponibles de lunes a viernes, de 9h a 18h.",
+  "Disponibilidade": "Disponibilidad",
+  "Atendimento por agendamento": "Atención con cita previa",
+  "Resposta em até 24h úteis": "Respuesta en un plazo de 24 h laborables",
+  "Telefone / WhatsApp": "Teléfono / WhatsApp",
+  "Reuniões: Seg-Sex 19h-22h | Sáb 10h-16h":
+    "Reuniones: Lun-Vie 19h-22h | Sáb 10h-16h",
   "Telefone": "Teléfono",
   "Localização": "Ubicación",
   "Lisboa, Portugal": "Lisboa, Portugal",
@@ -1076,8 +1080,12 @@ export const en: Dict = {
   "Não foi possível enviar a mensagem. Tente novamente ou contacte-nos diretamente através de hello@runastudio.pt.":
     "We couldn't send your message. Please try again or contact us directly at hello@runastudio.pt.",
   "Informações de contacto": "Contact info",
-  "Estamos disponíveis de segunda a sexta, das 9h às 18h.":
-    "We're available Monday to Friday, 9am to 6pm.",
+  "Disponibilidade": "Availability",
+  "Atendimento por agendamento": "By appointment",
+  "Resposta em até 24h úteis": "Reply within 24 business hours",
+  "Telefone / WhatsApp": "Phone / WhatsApp",
+  "Reuniões: Seg-Sex 19h-22h | Sáb 10h-16h":
+    "Meetings: Mon-Fri 7pm-10pm | Sat 10am-4pm",
   "Telefone": "Phone",
   "Localização": "Location",
   "Lisboa, Portugal": "Lisbon, Portugal",
