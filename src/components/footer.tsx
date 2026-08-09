@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const footerLinks = {
@@ -19,11 +19,6 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-];
-
 function BehanceIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -31,6 +26,23 @@ function BehanceIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M20 11.5a8 8 0 0 1-11.8 7.05L4 20l1.45-4.05A8 8 0 1 1 20 11.5Z" />
+      <path d="M8.6 8.8c.18-.4.38-.42.7-.42h.25c.2 0 .35.03.48.33l.55 1.3c.1.24.07.4-.08.58l-.4.48c-.13.15-.1.3-.02.44.2.35.5.76.96 1.14.52.43 1.02.7 1.36.84.18.08.32.06.44-.08l.48-.56c.14-.17.3-.2.52-.1l1.25.6c.22.1.35.17.4.3.05.14.05.76-.3 1.08-.3.28-.8.4-1.12.4-.28 0-.64-.1-1.1-.28-.46-.2-1.3-.57-2.2-1.37-.72-.63-1.22-1.4-1.43-1.75-.2-.35-.5-.93-.5-1.42 0-.48.25-.92.36-1.09Z" />
+    </svg>
+  );
+}
+
+const socialLinks = [
+  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: BehanceIcon, href: "https://behance.net", label: "Behance" },
+  { icon: Linkedin, href: "https://linkedin.com/company/runastudio", label: "LinkedIn" },
+  { icon: WhatsAppIcon, href: "https://wa.me/351912345678", label: "WhatsApp" },
+  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+];
 
 function FooterLinkList({ links }: { links: Array<{ to: string; label: string }> }) {
   const { t } = useTranslation();
@@ -91,18 +103,16 @@ export function Footer() {
                 <span>Lisboa, Portugal</span>
               </li>
             </ul>
-            <div className="mt-6 flex gap-3">
-              {[
-                ...socialLinks,
-                { icon: BehanceIcon, href: "https://behance.net", label: "Behance" },
-              ].map((social) => (
+            <div className="mt-6 flex flex-wrap justify-start gap-2.5 sm:gap-3">
+              {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-footer-social-border bg-footer-social-background text-footer-link transition-colors hover:border-footer-social-hover hover:bg-footer-social-hover hover:text-footer-social-hover-foreground"
+                  title={social.label}
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-footer-link transition-all duration-300 hover:bg-footer-social-hover/10 hover:text-footer-link-hover"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
