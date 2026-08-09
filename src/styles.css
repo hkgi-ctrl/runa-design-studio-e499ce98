@@ -111,13 +111,14 @@
    --turquoise-foreground: oklch(0.208 0.042 265.755);
    --petroleum: oklch(0.5556 0.066 218.27);
    --petroleum-foreground: oklch(0.984 0.003 247.858);
-   --silver: oklch(0.9528 0.0044 258.34);
-   --graphite: oklch(0.5072 0.0324 257.8);
-   --graphite-deep: oklch(0.25 0.03 257.8);
-   --cyan: #00e5ff;
-   --whatsapp: #25d366;
+    --silver: oklch(0.9528 0.0044 258.34);
+    --graphite: oklch(0.5072 0.0324 257.8);
+    --graphite-deep: oklch(0.25 0.03 257.8);
+    --cyan: #00e5ff;
+    --whatsapp: #25d366;
+    --whatsapp-foreground: #ffffff;
 
-  /* Footer: solid RUNA blue-black with quiet chrome accents */
+   /* Footer: solid RUNA blue-black with quiet chrome accents */
   --footer-background: oklch(0.1741 0.0182 248.92);
   --footer-divider: oklch(0.275 0.0272 233.74);
   --footer-heading: oklch(1 0 0 / 0.7);
