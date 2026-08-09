@@ -55,11 +55,12 @@
    --color-petroleum: var(--petroleum);
    --color-petroleum-foreground: var(--petroleum-foreground);
    --color-silver: var(--silver);
-   --color-graphite: var(--graphite);
-   --color-graphite-deep: var(--graphite-deep);
-   --color-cyan: var(--cyan);
-   --color-whatsapp: var(--whatsapp);
-   --color-essence-background: var(--essence-background);
+    --color-graphite: var(--graphite);
+    --color-graphite-deep: var(--graphite-deep);
+    --color-cyan: var(--cyan);
+    --color-whatsapp: var(--whatsapp);
+    --color-whatsapp-foreground: var(--whatsapp-foreground);
+    --color-essence-background: var(--essence-background);
 
    /* Footer tokens */
   --color-footer-background: var(--footer-background);
