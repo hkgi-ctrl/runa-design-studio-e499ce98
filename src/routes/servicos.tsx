@@ -66,11 +66,11 @@ function ServicosPage() {
                 {t("Oferecemos um leque completo de serviços de design para ajudar a sua empresa a comunicar com clareza, beleza e impacto.")}
               </p>
             </div>
-            <div className="relative w-full flex-1 overflow-hidden rounded-3xl border border-white/5 lg:min-h-[28rem]">
+            <div className="relative h-96 w-full flex-1 overflow-hidden rounded-3xl border border-white/5 lg:h-auto lg:min-h-0">
               <img
                 src={servicesHeroImage.url}
                 alt={t("Mão a desenhar o símbolo RUNA com um lápis turquesa")}
-                className="services-hero-image h-96 w-full object-cover object-top lg:h-full lg:min-h-0 lg:object-center"
+                className="services-hero-image h-full w-full object-cover object-top lg:absolute lg:inset-0 lg:object-center"
                 loading="eager"
                 width={768}
                 height={1024}
