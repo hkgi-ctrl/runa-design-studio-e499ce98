@@ -6,7 +6,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Heart, Lightbulb, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import valuesPenLine from "@/assets/valores-caneta-linha.jpg.asset.json";
+import valuesPenLine from "@/assets/valores-caneta-curta.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -66,31 +66,31 @@ function SobrePage() {
             title="O que nos guia"
             description="Princípios que definem a nossa forma de trabalhar e criar."
           />
-          <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-            <div className="values-image-frame h-auto overflow-hidden rounded-3xl border border-border/50 lg:h-full">
+          <div className="mt-16 flex min-h-[400px] flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-6">
+            <div className="values-image-frame h-64 w-full min-h-0 overflow-hidden rounded-3xl border border-white/5 lg:h-auto lg:flex-1">
               <img
                 src={valuesPenLine.url}
-                alt="Caneta tinteiro preta a desenhar uma linha turquesa sobre papel preto texturizado"
-                className="values-image h-auto w-full rounded-3xl object-cover object-center lg:h-full"
-                loading="lazy"
+                alt="Caneta tinteiro preta a desenhar uma linha branca sobre papel preto texturizado"
+                className="values-image h-full w-full max-h-none min-h-0 rounded-3xl object-cover object-center"
+                loading="eager"
               />
             </div>
-            <div className="grid gap-6 sm:grid-cols-2">
-            {values.map((value, index) => (
-              <Card key={value.title} className="glass border-border/50 bg-card/40">
-                <CardContent className="p-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise">
-                    <value.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
-                    {t(value.title)}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {t(value.description)}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="grid h-full w-full grid-cols-1 content-between gap-4 lg:flex-[1.2] lg:grid-cols-2">
+              {values.map((value) => (
+                <Card key={value.title} className="glass border-border/50 bg-card/40">
+                  <CardContent className="p-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise">
+                      <value.icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
+                      {t(value.title)}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {t(value.description)}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>

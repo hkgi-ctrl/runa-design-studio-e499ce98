@@ -325,7 +325,7 @@
   }
 
   .values-image {
-    filter: brightness(0.9) contrast(1.05);
+    filter: brightness(0.92) contrast(1.08);
     border: 1px solid rgb(255 255 255 / 0.05);
     box-shadow: var(--values-image-shadow);
   }
