@@ -251,90 +251,98 @@ function ContactoPage() {
                     <p className="mt-2 text-sm text-muted-foreground">
                       {t("Estamos disponíveis de segunda a sexta, das 9h às 18h.")}
                     </p>
-                    <ul className="mt-6 space-y-4">
-                      {contactInfo.map((info) => (
-                        <li key={info.label}>
-                          <a
-                            href={info.href}
-                            className="group flex items-start gap-3 text-muted-foreground transition-colors hover:text-turquoise"
-                          >
-                            <info.icon className="mt-0.5 h-5 w-5 shrink-0 text-turquoise" />
-                            <div>
-                              <div className="text-xs uppercase tracking-wider text-muted-foreground">
-                                {t(info.label)}
-                              </div>
-                              <div className="text-sm font-medium text-foreground transition-colors group-hover:text-turquoise">
-                                {t(info.value)}
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+                     <ul className="mt-6 space-y-4">
+                       {contactInfo.map((info) => (
+                         <li key={info.label}>
+                           {info.label === "Telefone" ? (
+                             <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                               <Phone className="h-4 w-4 shrink-0 text-turquoise" />
+                               <a href="tel:+351912345678" className="transition-colors hover:text-foreground">
+                                 +351 912 345 678
+                               </a>
+                               <a
+                                 href="https://wa.me/351912345678"
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 aria-label="Falar no WhatsApp"
+                                 title="Falar no WhatsApp"
+                                 className="ml-1 flex h-6 w-6 items-center justify-center rounded-full border border-whatsapp/30 bg-whatsapp/20 text-whatsapp transition-all hover:bg-whatsapp hover:text-primary-foreground"
+                               >
+                                 <WhatsAppIcon className="h-3 w-3" />
+                               </a>
+                             </div>
+                           ) : (
+                             <a
+                               href={info.href}
+                               className="group flex items-start gap-3 text-muted-foreground transition-colors hover:text-turquoise"
+                             >
+                               <info.icon className="mt-0.5 h-5 w-5 shrink-0 text-turquoise" />
+                               <div>
+                                 <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                                   {t(info.label)}
+                                 </div>
+                                 <div className="text-sm font-medium text-foreground transition-colors group-hover:text-turquoise">
+                                   {t(info.value)}
+                                 </div>
+                               </div>
+                             </a>
+                           )}
+                         </li>
+                       ))}
+                     </ul>
+                   </CardContent>
+                 </Card>
 
-                <Card className="glass border-border/50 bg-card/40">
-                  <CardContent className="p-6">
-                    <h3 className="font-display text-xl font-semibold text-foreground">
-                      {t("Perguntas frequentes")}
-                    </h3>
-                    <Accordion type="single" collapsible className="mt-4">
-                      {faqs.map((faq, index) => (
-                        <AccordionItem key={index} value={`item-${index}`} className="border-border/50">
-                          <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline">
-                            {t(faq.question)}
-                          </AccordionTrigger>
-                          <AccordionContent className="text-sm leading-relaxed text-muted-foreground text-justify">
-                            {t(faq.answer)}
-                          </AccordionContent>
-                        </AccordionItem>
-                      ))}
-                    </Accordion>
-                  </CardContent>
-                </Card>
+                 <Card className="glass border-border/50 bg-card/40">
+                   <CardContent className="p-6">
+                     <h3 className="font-display text-xl font-semibold text-foreground">
+                       {t("Perguntas frequentes")}
+                     </h3>
+                     <Accordion type="single" collapsible className="mt-4">
+                       {faqs.map((faq, index) => (
+                         <AccordionItem key={index} value={`item-${index}`} className="border-border/50">
+                           <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline">
+                             {t(faq.question)}
+                           </AccordionTrigger>
+                           <AccordionContent className="text-sm leading-relaxed text-muted-foreground text-justify">
+                             {t(faq.answer)}
+                           </AccordionContent>
+                         </AccordionItem>
+                       ))}
+                     </Accordion>
+                   </CardContent>
+                 </Card>
 
-                <Card className="glass border-border/50 bg-card/40">
-                  <CardContent className="p-6">
-                    <h3 className="font-display text-xl font-semibold text-foreground">
-                      {t("Siga-nos")}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      {t("Acompanhe o nosso trabalho nas redes sociais.")}
-                    </p>
-                    <div className="mt-6 flex gap-3">
-                      {[
-                        { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                        { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-                        { icon: BehanceIcon, href: "https://behance.net", label: "Behance" },
-                      ].map((social) => (
-                        <a
-                          key={social.label}
-                          href={social.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={social.label}
-                          className="flex h-11 w-11 items-center justify-center rounded-full border border-border/50 bg-background/50 text-muted-foreground transition-colors hover:border-turquoise/50 hover:text-turquoise"
-                        >
-                          <social.icon className="h-5 w-5" />
-                        </a>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-
-function BehanceIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
-    </svg>
-  );
-}
+                 <Card className="glass border-border/50 bg-card/40">
+                   <CardContent className="p-6">
+                     <h3 className="font-display text-xl font-semibold text-foreground">
+                       {t("Siga-nos")}
+                     </h3>
+                     <p className="mt-2 text-sm text-muted-foreground">
+                       {t("Acompanhe o nosso trabalho nas redes sociais.")}
+                     </p>
+                     <div className="mt-6 flex flex-wrap justify-start gap-2.5 sm:gap-3">
+                       {socialLinks.map((social) => (
+                         <a
+                           key={social.label}
+                           href={social.href}
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label={social.label}
+                           title={social.label}
+                           className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-footer-link transition-all duration-300 hover:bg-footer-social-hover/10 hover:text-footer-link-hover"
+                         >
+                           <social.icon className="h-4 w-4" />
+                         </a>
+                       ))}
+                     </div>
+                   </CardContent>
+                 </Card>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
+     </>
+   );
+ }
