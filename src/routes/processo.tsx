@@ -133,7 +133,7 @@ function ProcessoPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Diferencial competitivo"
-            title="IA para explorar. Humanos para decidir."
+            title={"IA para explorar.\nHumanos para decidir"}
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {differentiators.map((item) => (
