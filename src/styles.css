@@ -49,18 +49,20 @@
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
 
-  /* RUNA brand tokens */
-  --color-turquoise: var(--turquoise);
-  --color-turquoise-foreground: var(--turquoise-foreground);
-  --color-petroleum: var(--petroleum);
-  --color-petroleum-foreground: var(--petroleum-foreground);
-  --color-silver: var(--silver);
-  --color-graphite: var(--graphite);
-  --color-graphite-deep: var(--graphite-deep);
-  --color-cyan: var(--cyan);
-  --color-essence-background: var(--essence-background);
+   /* RUNA brand tokens */
+   --color-turquoise: var(--turquoise);
+   --color-turquoise-foreground: var(--turquoise-foreground);
+   --color-petroleum: var(--petroleum);
+   --color-petroleum-foreground: var(--petroleum-foreground);
+   --color-silver: var(--silver);
+    --color-graphite: var(--graphite);
+    --color-graphite-deep: var(--graphite-deep);
+    --color-cyan: var(--cyan);
+    --color-whatsapp: var(--whatsapp);
+    --color-whatsapp-foreground: var(--whatsapp-foreground);
+    --color-essence-background: var(--essence-background);
 
-  /* Footer tokens */
+   /* Footer tokens */
   --color-footer-background: var(--footer-background);
   --color-footer-divider: var(--footer-divider);
   --color-footer-heading: var(--footer-heading);
@@ -104,17 +106,19 @@
 :root {
   --radius: 0.75rem;
 
-  /* RUNA brand */
-  --turquoise: oklch(0.8754 0.105 193.25);
-  --turquoise-foreground: oklch(0.208 0.042 265.755);
-  --petroleum: oklch(0.5556 0.066 218.27);
-  --petroleum-foreground: oklch(0.984 0.003 247.858);
-  --silver: oklch(0.9528 0.0044 258.34);
-  --graphite: oklch(0.5072 0.0324 257.8);
-  --graphite-deep: oklch(0.25 0.03 257.8);
-  --cyan: #00e5ff;
+   /* RUNA brand */
+   --turquoise: oklch(0.8754 0.105 193.25);
+   --turquoise-foreground: oklch(0.208 0.042 265.755);
+   --petroleum: oklch(0.5556 0.066 218.27);
+   --petroleum-foreground: oklch(0.984 0.003 247.858);
+    --silver: oklch(0.9528 0.0044 258.34);
+    --graphite: oklch(0.5072 0.0324 257.8);
+    --graphite-deep: oklch(0.25 0.03 257.8);
+    --cyan: #00e5ff;
+    --whatsapp: #25d366;
+    --whatsapp-foreground: #ffffff;
 
-  /* Footer: solid RUNA blue-black with quiet chrome accents */
+   /* Footer: solid RUNA blue-black with quiet chrome accents */
   --footer-background: oklch(0.1741 0.0182 248.92);
   --footer-divider: oklch(0.275 0.0272 233.74);
   --footer-heading: oklch(1 0 0 / 0.7);
