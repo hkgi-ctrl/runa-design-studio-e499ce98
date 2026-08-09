@@ -262,9 +262,21 @@ function ContactoPage() {
                                 <Phone className="h-4 w-4 shrink-0 text-turquoise" />
                                 <span className="text-xs uppercase tracking-wider">{t(info.label)}</span>
                               </div>
-                              <a href="tel:+351912345678" className="ml-6 font-medium text-foreground transition-colors hover:text-turquoise">
-                                +351 912 345 678
-                              </a>
+                              <div className="ml-6 mt-1 flex items-center gap-2 text-sm">
+                                <a href="tel:+351912345678" className="font-medium text-foreground transition-colors hover:text-turquoise">
+                                  +351 912 345 678
+                                </a>
+                                <a
+                                  href="https://wa.me/351912345678"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label="Falar no WhatsApp"
+                                  title="Falar no WhatsApp"
+                                  className="flex h-6 w-6 items-center justify-center rounded-full border border-whatsapp/30 bg-whatsapp/20 text-whatsapp transition-all hover:bg-whatsapp hover:text-whatsapp-foreground"
+                                >
+                                  <WhatsAppIcon className="h-3 w-3" />
+                                </a>
+                              </div>
                               <div className="ml-6 mt-1 text-xs text-muted-foreground">
                                 {t("Reuniões: Seg-Sex 19h-22h | Sáb 10h-16h")}
                               </div>
