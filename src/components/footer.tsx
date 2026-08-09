@@ -36,10 +36,14 @@ function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
+function LinkedinIcon({ className }: { className?: string }) {
+  return <Linkedin className={className} strokeWidth={1.5} aria-hidden="true" />;
+}
+
 const socialLinks = [
   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
   { icon: BehanceIcon, href: "https://behance.net", label: "Behance" },
-  { icon: Linkedin, href: "https://linkedin.com/company/runastudio", label: "LinkedIn" },
+  { icon: LinkedinIcon, href: "https://linkedin.com/company/runastudio", label: "LinkedIn" },
   { icon: WhatsAppIcon, href: "https://wa.me/351912345678", label: "WhatsApp" },
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
 ];
