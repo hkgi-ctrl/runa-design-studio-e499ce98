@@ -73,10 +73,8 @@ export function AudienceSection() {
                   loading="eager"
                   width={1280}
                   height={720}
-                  style={{ imageRendering: "crisp-edges" }}
-                  className={`h-full w-full object-cover ${item.imagePosition} brightness-[0.9] contrast-[1.05] transition-transform duration-500 group-hover:scale-105`}
+                  className={`h-full w-full object-cover ${item.imagePosition} brightness-[0.9] contrast-[1.05] [image-rendering:crisp-edges] transition-transform duration-500 group-hover:scale-105`}
                 />
-                <div className="absolute inset-0 bg-background/20" />
                 <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-7">
