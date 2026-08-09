@@ -10,6 +10,7 @@ const audiences = [
   {
     icon: Store,
     image: smallBusinessImg.url,
+    imagePosition: "object-[25%_50%]",
     alt: "Máquina de café artesanal numa cafetaria local",
     title: "Pequenas Empresas",
     description:
@@ -19,6 +20,7 @@ const audiences = [
   {
     icon: Building2,
     image: mediumBusinessImg.url,
+    imagePosition: "object-[50%_30%]",
     alt: "Sala de reuniões corporativa com contrato sobre a mesa",
     title: "Médias Empresas",
     description:
@@ -28,6 +30,7 @@ const audiences = [
   {
     icon: Rocket,
     image: entrepreneursImg.url,
+    imagePosition: "object-[50%_50%]",
     alt: "Caderno de esboços e portátil na secretária de um empreendedor",
     title: "Empreendedores",
     description:
