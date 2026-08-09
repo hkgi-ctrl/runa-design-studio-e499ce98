@@ -320,6 +320,16 @@
     box-shadow: 0 0 20px rgb(0 229 255 / 0.15);
   }
 
+  .values-image-frame {
+    box-shadow: var(--values-image-shadow);
+  }
+
+  .values-image {
+    filter: brightness(0.9) contrast(1.05);
+    border: 1px solid rgb(255 255 255 / 0.05);
+    box-shadow: var(--values-image-shadow);
+  }
+
   .essence-section {
     background-color: var(--color-essence-background);
   }
