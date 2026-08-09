@@ -70,13 +70,14 @@ export function AudienceSection() {
                 <img
                   src={item.image}
                   alt={t(item.alt)}
-                  loading="lazy"
+                  loading="eager"
                   width={1280}
                   height={720}
-                  className="h-full w-full object-cover brightness-[0.85] contrast-[1.1] transition-transform duration-500 group-hover:scale-105"
+                  style={{ imageRendering: "crisp-edges" }}
+                  className={`h-full w-full object-cover ${item.imagePosition} brightness-[0.9] contrast-[1.05] transition-transform duration-500 group-hover:scale-105`}
                 />
                 <div className="absolute inset-0 bg-background/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-7">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
