@@ -2,15 +2,15 @@ import { Store, Building2, Rocket, Check, ShieldCheck, Gem, Split, MessageSquare
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslation } from "react-i18next";
-import smallBusinessImg from "@/assets/audience-small-business.jpg";
-import mediumBusinessImg from "@/assets/audience-medium-business.jpg";
-import entrepreneursImg from "@/assets/audience-entrepreneurs.jpg";
+import smallBusinessImg from "@/assets/cafeteria.jpg.asset.json";
+import mediumBusinessImg from "@/assets/reuniao.jpg.asset.json";
+import entrepreneursImg from "@/assets/empreendedor.jpg.asset.json";
 
 const audiences = [
   {
     icon: Store,
-    image: smallBusinessImg,
-    alt: "Pequeno café local com atendimento ao cliente",
+    image: smallBusinessImg.url,
+    alt: "Máquina de café artesanal numa cafetaria local",
     title: "Pequenas Empresas",
     description:
       "Ajudamos pequenas empresas a construir uma imagem profissional que transmite confiança desde o primeiro contacto com o cliente.",
@@ -18,8 +18,8 @@ const audiences = [
   },
   {
     icon: Building2,
-    image: mediumBusinessImg,
-    alt: "Equipa de empresa de média dimensão em reunião",
+    image: mediumBusinessImg.url,
+    alt: "Sala de reuniões corporativa com contrato sobre a mesa",
     title: "Médias Empresas",
     description:
       "Modernizamos marcas que cresceram e precisam de uma identidade visual alinhada com a sua nova realidade.",
@@ -27,8 +27,8 @@ const audiences = [
   },
   {
     icon: Rocket,
-    image: entrepreneursImg,
-    alt: "Empreendedora a trabalhar no seu novo negócio",
+    image: entrepreneursImg.url,
+    alt: "Caderno de esboços e portátil na secretária de um empreendedor",
     title: "Empreendedores",
     description:
       "Criamos marcas fortes para novos negócios que querem começar com uma identidade profissional e preparada para crescer.",
@@ -63,15 +63,16 @@ export function AudienceSection() {
               className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border/50 bg-card/40 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-turquoise/40 hover:shadow-xl"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-video overflow-hidden rounded-2xl">
                 <img
                   src={item.image}
                   alt={t(item.alt)}
                   loading="lazy"
-                  width={1024}
-                  height={640}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  width={1280}
+                  height={720}
+                  className="h-full w-full object-cover brightness-[0.85] contrast-[1.1] transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-background/20" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-7">
