@@ -138,7 +138,7 @@ function ContactoPage() {
                     {submitted ? (
                       <div className="py-12 text-center">
                         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-turquoise/10">
-                          <Send className="h-8 w-8 text-turquoise" />
+                          <RunaIcon name="send" className="h-8 w-8 text-turquoise" />
                         </div>
                         <h3 className="mt-6 font-display text-2xl font-semibold text-foreground">
                           {t("Mensagem enviada!")}
@@ -201,7 +201,7 @@ function ContactoPage() {
                           disabled={sending}
                           className="w-full bg-turquoise text-graphite-deep hover:bg-turquoise/90 disabled:opacity-70"
                         >
-                          <Send className="mr-2 h-4 w-4" />
+                          <RunaIcon name="send" className="mr-2 h-4 w-4" />
                           {sending ? t("A enviar...") : t("Solicitar Orçamento")}
                         </Button>
                         {error && (
@@ -238,7 +238,7 @@ function ContactoPage() {
                           {info.label === "Telefone / WhatsApp" ? (
                             <div className="text-sm text-muted-foreground">
                               <div className="flex items-center gap-2.5">
-                                <Phone className="h-4 w-4 shrink-0 text-turquoise" />
+                                <RunaIcon name="phone" className="h-4 w-4 shrink-0 text-turquoise" />
                                 <span className="text-xs uppercase tracking-wider">{t(info.label)}</span>
                               </div>
                               <div className="ml-6 mt-1 flex items-center gap-2 text-sm">
@@ -253,7 +253,7 @@ function ContactoPage() {
                                   title="Falar no WhatsApp"
                                   className="flex h-6 w-6 items-center justify-center rounded-full border border-whatsapp/30 bg-whatsapp/20 text-whatsapp transition-all hover:bg-whatsapp hover:text-whatsapp-foreground"
                                 >
-                                  <WhatsAppIcon className="h-3 w-3" />
+                                  <RunaIcon name="whatsapp" className="h-3 w-3" />
                                 </a>
                               </div>
                               <div className="ml-6 mt-1 text-xs text-muted-foreground">
@@ -265,7 +265,7 @@ function ContactoPage() {
                               href={info.href}
                               className="group flex items-start gap-3 text-muted-foreground transition-colors hover:text-turquoise"
                             >
-                              <info.icon className="mt-0.5 h-5 w-5 shrink-0 text-turquoise" />
+                              <RunaIcon name={info.icon} className="mt-0.5 h-5 w-5 shrink-0 text-turquoise" />
                               <div>
                                 <div className="text-xs uppercase tracking-wider text-muted-foreground">
                                   {t(info.label)}
@@ -321,7 +321,7 @@ function ContactoPage() {
                            title={social.label}
                            className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-foreground/50 transition-all duration-300 hover:bg-foreground/10 hover:text-turquoise"
                          >
-                           <social.icon className="h-4 w-4" />
+                           <RunaIcon name={social.icon} className="h-4 w-4" />
                          </a>
                        ))}
                      </div>
