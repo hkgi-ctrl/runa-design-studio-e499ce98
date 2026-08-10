@@ -27,9 +27,9 @@ import jaciraLogo from "@/assets/jacira-1.png.asset.json";
 import jaciraCartoes from "@/assets/jacira-2.png.asset.json";
 import jaciraPoster from "@/assets/jacira-3.png.asset.json";
 import jaciraVestido from "@/assets/jacira-4.png.asset.json";
-import displayKalorama from "@/assets/display-kalorama.png.asset.json";
-import displayBeatles from "@/assets/display-beatles.png.asset.json";
-import displayCafe from "@/assets/display-cafe.png.asset.json";
+import campanhaKalorama from "@/assets/campanha-kalorama.png.asset.json";
+import campanhaBeatles from "@/assets/campanha-beatles.png.asset.json";
+import campanhaChoc from "@/assets/campanha-choc.png.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -96,8 +96,8 @@ const projects: Array<{
     description: "Key visual de alta energia para um dos maiores festivais de Portugal.",
     seal: "ESTUDO DE CASO",
     tags: ["Publicidade", "Design Gráfico"],
-    image: displayKalorama.url,
-    gallery: [displayBeatles.url, displayCafe.url],
+    image: campanhaKalorama.url,
+    gallery: [campanhaBeatles.url, campanhaChoc.url],
   },
 ];
 
