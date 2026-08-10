@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Play, Sparkles, RefreshCw, Package, Megaphone } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
+import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
 import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -30,24 +31,24 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const services = [
+const services: Array<{ icon: RunaIconName; title: string; description: string }> = [
   {
-    icon: Sparkles,
+    icon: "identity",
     title: "Identidade Visual",
     description: "Marcas memoráveis, consistentes e profissionais.",
   },
   {
-    icon: RefreshCw,
+    icon: "modernize",
     title: "Modernização de Marca",
     description: "Atualização visual para empresas em evolução.",
   },
   {
-    icon: Package,
+    icon: "product",
     title: "Design para Produtos e Serviços",
     description: "Peças visuais que aumentam a perceção de valor.",
   },
   {
-    icon: Megaphone,
+    icon: "social",
     title: "Design para Redes Sociais",
     description: "Conteúdo visual estratégico para autoridade e engajamento.",
   },
@@ -254,7 +255,7 @@ function ServicesSection() {
                 className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
               />
               <div className="bento-icon">
-                <service.icon className="h-5 w-5" />
+                <RunaIcon name={service.icon} className="h-5 w-5" />
               </div>
               <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
                 {t(service.title)}

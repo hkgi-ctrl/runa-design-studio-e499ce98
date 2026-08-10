@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, RefreshCw, Package, Megaphone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import servicesHeroImage from "@/assets/servicos-r-macro-turquesa.jpg.asset.json";
@@ -21,27 +22,32 @@ export const Route = createFileRoute("/servicos")({
   component: ServicosPage,
 });
 
-const services = [
+const services: Array<{
+  icon: RunaIconName;
+  title: string;
+  description: string;
+  features: string[];
+}> = [
   {
-    icon: Sparkles,
+    icon: "identity",
     title: "Identidade Visual",
     description: "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.",
     features: ["Estratégia de marca", "Design de logotipo", "Identidade visual", "Diretrizes de marca"],
   },
   {
-    icon: RefreshCw,
+    icon: "modernize",
     title: "Modernização de Marca",
     description: "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.",
     features: ["Revisão de posicionamento", "Redesign de logotipo", "Atualização visual", "Relançamento de marca"],
   },
   {
-    icon: Package,
+    icon: "product",
     title: "Design para Produtos e Serviços",
     description: "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.",
     features: ["Packaging", "Materiais promocionais", "Apresentações", "Catálogos e brochuras"],
   },
   {
-    icon: Megaphone,
+    icon: "social",
     title: "Design para Redes Sociais",
     description: "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.",
     features: ["Templates para feed", "Stories e reels", "Campanhas paid", "Identidade digital"],
@@ -92,7 +98,7 @@ function ServicosPage() {
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between">
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
-                      <service.icon className="h-7 w-7" />
+                      <RunaIcon name={service.icon} className="h-7 w-7" />
                     </div>
                     <Link
                       to="/contacto"
