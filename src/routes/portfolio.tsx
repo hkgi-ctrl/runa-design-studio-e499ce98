@@ -66,7 +66,7 @@ const projects: Array<{
     seal: "CLIENTE REAL",
     tags: ["Rebranding", "Identidade Visual", "Social Media"],
     image: petitoMain.url,
-    gallery: [petitoPackaging.url, petitoLifestyle.url, petitoRebranding.url],
+    gallery: [petitoPackaging.url, petitoLifestyle.url, petitoRebrandingFeature.url, petitoRebranding.url],
   },
   {
     title: "AURA",
