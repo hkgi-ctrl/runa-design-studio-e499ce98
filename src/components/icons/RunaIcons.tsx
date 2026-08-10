@@ -1,4 +1,4 @@
-import type { SVGProps } from "react";
+import type { ReactElement, SVGProps } from "react";
 
 export type RunaIconName =
   | "identity"
@@ -18,7 +18,7 @@ export type RunaIconName =
   | "linkedin"
   | "facebook";
 
-const paths: Record<RunaIconName, JSX.Element> = {
+const paths: Record<RunaIconName, ReactElement> = {
   // R geométrico minimalista
   identity: (
     <>
