@@ -14,6 +14,7 @@ import petitoMain from "@/assets/petito-main.png.asset.json";
 import petitoPackaging from "@/assets/petito-2.png.asset.json";
 import petitoLifestyle from "@/assets/petito-3.png.asset.json";
 import petitoRebranding from "@/assets/petito-4.png.asset.json";
+import petitoRebrandingFeature from "@/assets/REBRANDING_PETITO.png.asset.json";
 import norteLogo from "@/assets/norte-1.png.asset.json";
 import norteFlatlay from "@/assets/norte-2.png.asset.json";
 import norteGarrafa from "@/assets/norte-3.png.asset.json";
