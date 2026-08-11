@@ -8,6 +8,12 @@ export type RunaIconName =
   | "strategy"
   | "creation"
   | "application"
+  | "target"
+  | "ai"
+  | "palette"
+  | "chat"
+  | "growth"
+  | "mobile"
   | "mail"
   | "phone"
   | "whatsapp"
@@ -19,32 +25,81 @@ export type RunaIconName =
   | "facebook";
 
 const paths: Record<RunaIconName, ReactElement> = {
-  // R geométrico minimalista
+  // Símbolo R da RUNA: hastes retas com quebra a 45°
   identity: (
     <>
-      <path d="M7 21V4h6.5a4 4 0 0 1 0 8H7" />
-      <path d="M12 12l5.5 9" />
+      <path d="M6 21V3h8l3 3v4l-3 3H6" />
+      <path d="M11.5 13L18 21" />
     </>
   ),
-  // quebra geométrica / setas de renovação retas
+  // duas setas de renovação com quebra geométrica (antes/depois)
   modernize: (
     <>
-      <path d="M4 9h11l-3-3" />
-      <path d="M20 15H9l3 3" />
+      <path d="M4 10V7h12l-3-3" />
+      <path d="M20 14v3H8l3 3" />
     </>
   ),
-  // caixa/produto geométrica
+  // cubo isométrico em line
   product: (
     <>
       <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
       <path d="M4 7.5l8 4.5 8-4.5M12 12v9" />
     </>
   ),
-  // redes / nós conectados
+  // grid 2x2 (feed) com um ponto turquesa
   social: (
     <>
-      <path d="M6 4h12v10H9l-3 3V4z" />
-      <path d="M9 8h6M9 11h3" />
+      <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" />
+      <circle cx="16.5" cy="16.5" r="1.4" fill="currentColor" />
+    </>
+  ),
+  // alvo com 3 círculos e ponto central
+  target: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1.4" fill="currentColor" />
+    </>
+  ),
+  // cérebro com circuitos, geométrico
+  ai: (
+    <>
+      <path d="M12 4.5H9L6 7.5v3L4.5 12 6 13.5v3L9 19.5h3M12 4.5h3l3 3v3l1.5 1.5L18 13.5v3l-3 3h-3" />
+      <path d="M12 4.5v15M12 9h3.5M12 15H8.5" />
+      <circle cx="16.5" cy="9" r="1.2" fill="currentColor" />
+      <circle cx="7.5" cy="15" r="1.2" fill="currentColor" />
+    </>
+  ),
+  // paleta com gota e pontos
+  palette: (
+    <>
+      <path d="M12 3.5a8.5 8.5 0 1 0 0 17h2a2 2 0 0 0 0-4h-1a2.5 2.5 0 0 1 0-5h4.5a8.5 8.5 0 0 0-5.5-8z" />
+      <circle cx="8.5" cy="9" r="1.1" fill="currentColor" />
+      <circle cx="7" cy="13.5" r="1.1" fill="currentColor" />
+      <circle cx="12" cy="7.5" r="1.1" fill="currentColor" />
+    </>
+  ),
+  // dois balões sobrepostos com linha
+  chat: (
+    <>
+      <path d="M3.5 4.5h11v8h-7l-4 3.5v-11.5z" />
+      <path d="M8.5 15.5h6l4 3.5V10h-4" />
+      <path d="M6.5 8.5h5" />
+    </>
+  ),
+  // gráfico de linha ascendente com seta
+  growth: (
+    <>
+      <path d="M3.5 20V4M3.5 20h17" />
+      <path d="M6.5 16l4-4.5 3 2.5 5.5-6" />
+      <path d="M15 8h4v4" />
+    </>
+  ),
+  // smartphone com moldura reta
+  mobile: (
+    <>
+      <path d="M6.5 3h11v18h-11V3z" />
+      <path d="M10 5.5h4M10 18h4" />
     </>
   ),
   // alvo geométrico
