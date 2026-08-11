@@ -1,45 +1,54 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
+import {
+  IconAIBrain,
+  IconChatTransparent,
+  IconGraphResult,
+  IconPalette,
+  IconPhoneChannel,
+  IconTarget,
+  type RunaSvgProps,
+} from "@/components/icons/RunaIcons";
+import type { ComponentType } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const reasons: Array<{ icon: RunaIconName; title: string; description: string }> = [
+const reasons: Array<{ icon: ComponentType<RunaSvgProps>; title: string; description: string }> = [
   {
-    icon: "target",
+    icon: IconTarget,
     title: "Design Estratégico",
     description:
       "Cada projeto começa por compreender o seu negócio, os seus objetivos e o mercado onde atua.",
   },
   {
-    icon: "ai",
+    icon: IconAIBrain,
     title: "Inteligência Artificial como aliada",
     description:
       "Utilizamos inteligência artificial para explorar mais possibilidades criativas, mantendo todas as decisões estratégicas e o refinamento final sob supervisão humana.",
   },
   {
-    icon: "palette",
+    icon: IconPalette,
     title: "Identidades pensadas para o mundo real",
     description:
       "Criamos marcas preparadas para websites, redes sociais, embalagens, publicidade e materiais impressos.",
   },
   {
-    icon: "chat",
+    icon: IconChatTransparent,
     title: "Processo transparente",
     description:
       "Mantemos uma comunicação clara durante todo o projeto, envolvendo o cliente em cada etapa importante.",
   },
   {
-    icon: "growth",
+    icon: IconGraphResult,
     title: "Foco em resultados",
     description:
       "Cada decisão de design procura fortalecer a perceção da marca, aumentar a credibilidade e gerar mais valor para o negócio.",
   },
   {
-    icon: "mobile",
+    icon: IconPhoneChannel,
     title: "Preparado para todos os canais",
     description:
       "Desenvolvemos marcas com visão de longo prazo, preparadas para crescer e manter consistência em todos os pontos de contacto com o cliente.",
@@ -64,7 +73,9 @@ export function WhyRunaSection() {
           ref={ref}
           className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3`}
         >
-          {reasons.map((reason, index) => (
+          {reasons.map((reason, index) => {
+            const ReasonIcon = reason.icon;
+            return (
             <Card
               key={reason.title}
               className="group glass h-full border-border/50 bg-card/50 transition-all duration-300 hover:-translate-y-1 hover:border-turquoise/30 hover:bg-card/80"
@@ -72,7 +83,7 @@ export function WhyRunaSection() {
             >
               <CardContent className="p-8">
                 <div className="runa-icon-wrap">
-                  <RunaIcon name={reason.icon} className="h-5 w-5" />
+                  <ReasonIcon className="h-5 w-5" />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
                   {t(reason.title)}
@@ -82,7 +93,8 @@ export function WhyRunaSection() {
                 </p>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
 
         <div

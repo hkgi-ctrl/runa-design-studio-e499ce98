@@ -1,7 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
-import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
+import {
+  IconCubeIso,
+  IconGridFeed,
+  IconRefreshGeometric,
+  IconRunaGeometric,
+  type RunaSvgProps,
+} from "@/components/icons/RunaIcons";
 import { useEffect, useMemo, useRef, type CSSProperties } from "react";
+import type { ComponentType } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
@@ -31,24 +38,24 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const services: Array<{ icon: RunaIconName; title: string; description: string }> = [
+const services: Array<{ icon: ComponentType<RunaSvgProps>; title: string; description: string }> = [
   {
-    icon: "identity",
+    icon: IconRunaGeometric,
     title: "Identidade Visual",
     description: "Marcas memoráveis, consistentes e profissionais.",
   },
   {
-    icon: "modernize",
+    icon: IconRefreshGeometric,
     title: "Modernização de Marca",
     description: "Atualização visual para empresas em evolução.",
   },
   {
-    icon: "product",
+    icon: IconCubeIso,
     title: "Design para Produtos e Serviços",
     description: "Peças visuais que aumentam a perceção de valor.",
   },
   {
-    icon: "social",
+    icon: IconGridFeed,
     title: "Design para Redes Sociais",
     description: "Conteúdo visual estratégico para autoridade e engajamento.",
   },
@@ -246,7 +253,9 @@ function ServicesSection() {
           description="Oferecemos um leque completo de serviços de design para ajudar a sua marca a destacar-se e crescer."
         />
         <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2`}>
-          {services.map((service) => (
+          {services.map((service) => {
+            const ServiceIcon = service.icon;
+            return (
             <div key={service.title} className="bento-card">
               <img
                 src={rIcone.url}
@@ -255,7 +264,7 @@ function ServicesSection() {
                 className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
               />
               <div className="bento-icon">
-                <RunaIcon name={service.icon} className="h-5 w-5" />
+                <ServiceIcon className="h-5 w-5" />
               </div>
               <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
                 {t(service.title)}
@@ -264,7 +273,8 @@ function ServicesSection() {
                 {t(service.description)}
               </p>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
