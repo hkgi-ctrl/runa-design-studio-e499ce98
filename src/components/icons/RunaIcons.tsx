@@ -1,5 +1,137 @@
 import type { ReactElement, SVGProps } from "react";
 
+export type RunaSvgProps = SVGProps<SVGSVGElement>;
+
+function CustomIcon({ children, className, ...props }: RunaSvgProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      fill="none"
+      stroke="#7DD3E0"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+      className={className}
+      aria-hidden="true"
+      {...props}
+    >
+      {children}
+    </svg>
+  );
+}
+
+export function IconRunaGeometric(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M5 21V3h9l4 4v3l-4 4H5" />
+      <path d="M10 14h4l5 7" />
+      <path d="M8 7h5l1 1v1l-1 1H8" />
+    </CustomIcon>
+  );
+}
+
+export function IconRefreshGeometric(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M19 8V4l-2 2-2-2" />
+      <path d="M19 6h-8L7 8l-2 4" />
+      <path d="M5 16v4l2-2 2 2" />
+      <path d="M5 18h8l4-2 2-4" />
+    </CustomIcon>
+  );
+}
+
+export function IconCubeIso(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M12 2.75 20 7v9.5L12 21.25 4 16.5V7L12 2.75Z" />
+      <path d="m4 7 8 4.5L20 7M12 11.5v9.75" />
+      <path d="m8 5 8 4.5" />
+    </CustomIcon>
+  );
+}
+
+export function IconGridFeed(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M3.5 3.5h7v7h-7zM13.5 3.5h7v7h-7zM3.5 13.5h7v7h-7z" />
+      <path d="M13.5 13.5h7v7h-7z" fill="#7DD3E0" fillOpacity="0.2" />
+      <path d="M16 17h2" />
+    </CustomIcon>
+  );
+}
+
+export function IconTarget(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5.75" />
+      <circle cx="12" cy="12" r="2.5" />
+      <path d="m12 12 7-7M16.5 5H19v2.5" />
+      <rect x="11.35" y="11.35" width="1.3" height="1.3" fill="#7DD3E0" stroke="none" />
+    </CustomIcon>
+  );
+}
+
+export function IconAIBrain(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M11.5 4H8L5.5 6.5V10L3.5 12l2 2v3.5L8 20h3.5V4ZM12.5 4H16l2.5 2.5V10l2 2-2 2v3.5L16 20h-3.5V4Z" />
+      <path d="M8 8h2.5M13.5 8H16M8 16h2.5M13.5 16H16M12 12H8" />
+      <circle cx="7" cy="8" r="1" fill="#7DD3E0" fillOpacity="0.2" />
+      <circle cx="17" cy="8" r="1" fill="#7DD3E0" fillOpacity="0.2" />
+      <circle cx="7" cy="16" r="1" fill="#7DD3E0" fillOpacity="0.2" />
+    </CustomIcon>
+  );
+}
+
+export function IconPalette(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M12 3 7 9v4.5l2.5 2.5h5l2.5-2.5V9l-5-6Z" />
+      <path d="M12 8v4" />
+      <circle cx="5" cy="6" r="1.25" />
+      <circle cx="19" cy="6" r="1.25" />
+      <circle cx="19" cy="18" r="1.25" />
+      <path d="M4 17h6l2 2h4" />
+    </CustomIcon>
+  );
+}
+
+export function IconChatTransparent(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M3 4h13v9H9l-4 3v-3H3V4Z" />
+      <path d="M9 16h6l4 3v-3h2V8h-5" />
+      <path d="M6 8h7M12 12h5" />
+    </CustomIcon>
+  );
+}
+
+export function IconGraphResult(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M3 3v18h18" />
+      <path d="m6 17 4-5 3 2 6-8" />
+      <path d="M15 6h4v4" />
+      <path d="M6 20v-2M10 20v-5M14 20v-3" />
+    </CustomIcon>
+  );
+}
+
+export function IconPhoneChannel(props: RunaSvgProps) {
+  return (
+    <CustomIcon {...props}>
+      <path d="M7 2.5h10l2 2v15l-2 2H7l-2-2v-15l2-2Z" />
+      <path d="M9 5.5h6M5 17.5h14" />
+      <rect x="11" y="19" width="2" height="1" fill="#7DD3E0" fillOpacity="0.2" />
+      <path d="M8.5 9h3v3h-3zM13.5 9h2v2" />
+    </CustomIcon>
+  );
+}
+
 export type RunaIconName =
   | "identity"
   | "modernize"
