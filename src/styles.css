@@ -470,12 +470,23 @@
   height: 44px;
   width: 44px;
   border-radius: 14px;
-  color: #00e5ff;
-  background: rgba(0, 229, 255, 0.08);
-  border: 1px solid rgba(0, 229, 255, 0.2);
-  box-shadow:
-    0 0 18px rgba(0, 229, 255, 0.35),
-    inset 0 0 10px rgba(0, 229, 255, 0.12);
+  color: #7dd3e0;
+  background: #141e29;
+  border: 1px solid rgba(125, 211, 224, 0.2);
+  box-shadow: 0 0 15px rgba(125, 211, 224, 0.15);
+}
+
+.runa-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 12px;
+  color: #7dd3e0;
+  background: #141e29;
+  border: 1px solid rgba(125, 211, 224, 0.2);
+  box-shadow: 0 0 15px rgba(125, 211, 224, 0.15);
 }
 
 @media (max-width: 640px) {
