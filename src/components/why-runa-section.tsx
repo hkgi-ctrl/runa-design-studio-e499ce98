@@ -1,52 +1,45 @@
 import { Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  Target,
-  BrainCircuit,
-  Palette,
-  MessagesSquare,
-  TrendingUp,
-  Smartphone,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
 import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const reasons = [
+const reasons: Array<{ icon: RunaIconName; title: string; description: string }> = [
   {
-    icon: Target,
+    icon: "target",
     title: "Design Estratégico",
     description:
       "Cada projeto começa por compreender o seu negócio, os seus objetivos e o mercado onde atua.",
   },
   {
-    icon: BrainCircuit,
+    icon: "ai",
     title: "Inteligência Artificial como aliada",
     description:
       "Utilizamos inteligência artificial para explorar mais possibilidades criativas, mantendo todas as decisões estratégicas e o refinamento final sob supervisão humana.",
   },
   {
-    icon: Palette,
+    icon: "palette",
     title: "Identidades pensadas para o mundo real",
     description:
       "Criamos marcas preparadas para websites, redes sociais, embalagens, publicidade e materiais impressos.",
   },
   {
-    icon: MessagesSquare,
+    icon: "chat",
     title: "Processo transparente",
     description:
       "Mantemos uma comunicação clara durante todo o projeto, envolvendo o cliente em cada etapa importante.",
   },
   {
-    icon: TrendingUp,
+    icon: "growth",
     title: "Foco em resultados",
     description:
       "Cada decisão de design procura fortalecer a perceção da marca, aumentar a credibilidade e gerar mais valor para o negócio.",
   },
   {
-    icon: Smartphone,
+    icon: "mobile",
     title: "Preparado para todos os canais",
     description:
       "Desenvolvemos marcas com visão de longo prazo, preparadas para crescer e manter consistência em todos os pontos de contacto com o cliente.",
@@ -78,8 +71,8 @@ export function WhyRunaSection() {
               style={{ transitionDelay: `${index * 60}ms` }}
             >
               <CardContent className="p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
-                  <reason.icon className="h-6 w-6" />
+                <div className="runa-icon-wrap">
+                  <RunaIcon name={reason.icon} className="h-5 w-5" />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
                   {t(reason.title)}
