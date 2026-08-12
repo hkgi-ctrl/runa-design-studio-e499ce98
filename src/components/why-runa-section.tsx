@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
 import {
   IconAIBrain,
   IconChatTransparent,
@@ -11,7 +9,6 @@ import {
 } from "@/components/icons/RunaIcons";
 import type { ComponentType } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
@@ -99,7 +96,7 @@ export function WhyRunaSection() {
 
         <div
           ref={bandRef}
-          className={`reveal ${bandVisible ? "visible" : ""} mt-16 rounded-2xl border border-turquoise/20 bg-card/30 px-6 py-10 text-center backdrop-blur-sm sm:px-12`}
+          className={`reveal ${bandVisible ? "visible" : ""} mt-20 rounded-2xl border border-turquoise/20 bg-card/30 px-6 py-14 text-center backdrop-blur-sm sm:px-12 sm:py-16`}
         >
           <p className="mx-auto max-w-3xl font-display text-lg leading-relaxed text-foreground sm:text-xl">
             <Trans
@@ -109,23 +106,6 @@ export function WhyRunaSection() {
           </p>
         </div>
 
-        <div className="mt-16 text-center">
-          <h3 className="mx-auto max-w-2xl font-display text-2xl font-bold leading-tight text-foreground sm:text-3xl">
-            {t("Vamos construir uma marca que represente o verdadeiro valor do seu negócio.")}
-          </h3>
-          <div className="mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="group bg-turquoise text-graphite-deep hover:bg-turquoise/90"
-            >
-              <Link to="/contacto">
-                {t("Solicitar Orçamento")}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
