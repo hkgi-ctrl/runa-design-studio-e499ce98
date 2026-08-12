@@ -106,23 +106,6 @@ export function WhyRunaSection() {
           </p>
         </div>
 
-        <div className="mt-16 text-center">
-          <h3 className="mx-auto max-w-2xl font-display text-2xl font-bold leading-tight text-foreground sm:text-3xl">
-            {t("Vamos construir uma marca que represente o verdadeiro valor do seu negócio.")}
-          </h3>
-          <div className="mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="group bg-turquoise text-graphite-deep hover:bg-turquoise/90"
-            >
-              <Link to="/contacto">
-                {t("Solicitar Orçamento")}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
