@@ -96,7 +96,7 @@ export function WhyRunaSection() {
 
         <div
           ref={bandRef}
-          className={`reveal ${bandVisible ? "visible" : ""} mt-16 rounded-2xl border border-turquoise/20 bg-card/30 px-6 py-10 text-center backdrop-blur-sm sm:px-12`}
+          className={`reveal ${bandVisible ? "visible" : ""} mt-20 rounded-2xl border border-turquoise/20 bg-card/30 px-6 py-14 text-center backdrop-blur-sm sm:px-12 sm:py-16`}
         >
           <p className="mx-auto max-w-3xl font-display text-lg leading-relaxed text-foreground sm:text-xl">
             <Trans
