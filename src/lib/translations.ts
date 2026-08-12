@@ -796,14 +796,20 @@ export const en: Dict = {
 
   // Home FAQ preview
   "Quanto tempo demora um projeto de branding?": "How long does a branding project take?",
-  "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade e do número de revisões.":
-    "A full branding project typically takes 4 to 8 weeks, depending on complexity and revisions.",
+  "Cada projeto tem um tempo de desenvolvimento próprio. O prazo depende da complexidade, do escopo e dos objetivos da sua marca. Após a nossa conversa inicial, definimos juntos um cronograma realista para garantir qualidade e estratégia em cada etapa.":
+    "Each project has its own development time. The deadline depends on the complexity, scope and objectives of your brand. After our initial conversation, we define a realistic timeline together to ensure quality and strategy at every stage.",
   "Qual é o processo de trabalho?": "What is your workflow?",
-  "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Mantemos comunicação próxima durante todo o processo.":
-    "We start with discovery, followed by strategy, design and delivery. We keep close communication throughout.",
+  "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Você acompanha cada etapa com apresentações e validações para garantir alinhamento total.":
+    "We start with a discovery phase, followed by strategy, design and delivery. You follow each stage with presentations and validations to ensure full alignment.",
   "Trabalham com clientes internacionais?": "Do you work with international clients?",
   "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada e a comunicação é totalmente digital.":
     "Yes, we work with clients around the world. Meetings happen over video call and communication is fully digital.",
+  "Qual o investimento para um projeto de branding?": "What is the investment for a branding project?",
+  "O investimento varia conforme o tamanho e as necessidades da sua empresa. Não trabalhamos com pacotes fechados porque cada marca é única. Após entendermos seus objetivos, enviamos uma proposta personalizada com valor e escopo claros.":
+    "The investment varies according to the size and needs of your business. We don't work with closed packages because every brand is unique. After understanding your goals, we send a personalized proposal with clear value and scope.",
+  "A RUNA só faz logotipos?": "Does RUNA only design logos?",
+  "Não. O logotipo é apenas uma parte da identidade visual. Criamos sistemas de marca completos: estratégia, tipografia, paleta de cores, aplicações, tom de voz e guia de uso. O objetivo é construir marcas consistentes que se destacam em todos os pontos de contacto.":
+    "No. A logo is only one part of a visual identity. We create complete brand systems: strategy, typography, colour palette, applications, tone of voice and usage guidelines. The goal is to build consistent brands that stand out at every touchpoint.",
 
   // Home blog preview
   "Como criar uma identidade visual memorável": "How to build a memorable visual identity",
