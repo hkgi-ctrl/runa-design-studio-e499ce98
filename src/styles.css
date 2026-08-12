@@ -622,15 +622,20 @@
   }
 
   .hero-r-stage {
-    position: relative;
+    position: absolute;
+    inset: 0;
     right: auto;
     top: auto;
     bottom: auto;
     width: 100%;
-    height: 320px;
+    height: 100%;
     transform: none;
     mask-image: none;
     -webkit-mask-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
   .services-bleed {
