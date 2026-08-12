@@ -50,10 +50,12 @@ const serviceOptions = [
 ];
 
 const faqs = [
-  { question: "Quanto tempo demora um projeto de branding?", answer: "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade e do número de revisões." },
-  { question: "Qual é o processo de trabalho?", answer: "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Mantemos comunicação próxima durante todo o processo." },
+  { question: "Quanto tempo demora um projeto de branding?", answer: "Cada projeto tem um tempo de desenvolvimento próprio. O prazo depende da complexidade, do escopo e dos objetivos da sua marca. Após a nossa conversa inicial, definimos juntos um cronograma realista para garantir qualidade e estratégia em cada etapa." },
+  { question: "Qual é o processo de trabalho?", answer: "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Você acompanha cada etapa com apresentações e validações para garantir alinhamento total." },
   { question: "Trabalham com clientes internacionais?", answer: "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada e a comunicação é totalmente digital." },
   { question: "A inteligência artificial substitui o trabalho do designer?", answer: "Não. A inteligência artificial é utilizada para acelerar a exploração de ideias e aumentar a eficiência do processo criativo. As decisões estratégicas, o refinamento e o resultado final são sempre conduzidos pela equipa da RUNA." },
+  { question: "Qual o investimento para um projeto de branding?", answer: "O investimento varia conforme o tamanho e as necessidades da sua empresa. Não trabalhamos com pacotes fechados porque cada marca é única. Após entendermos seus objetivos, enviamos uma proposta personalizada com valor e escopo claros." },
+  { question: "A RUNA só faz logotipos?", answer: "Não. O logotipo é apenas uma parte da identidade visual. Criamos sistemas de marca completos: estratégia, tipografia, paleta de cores, aplicações, tom de voz e guia de uso. O objetivo é construir marcas consistentes que se destacam em todos os pontos de contacto." },
 ];
 
 const socialLinks: Array<{ icon: RunaIconName; href: string; label: string }> = [
