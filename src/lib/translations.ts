@@ -150,14 +150,20 @@ export const es: Dict = {
 
   // Home FAQ preview
   "Quanto tempo demora um projeto de branding?": "¿Cuánto tarda un proyecto de branding?",
-  "Um projeto de branding completo demora tipicamente entre 4 a 8 semanas, dependendo da complexidade e do número de revisões.":
-    "Un proyecto de branding completo suele tardar entre 4 y 8 semanas, dependiendo de la complejidad y del número de revisiones.",
+  "Cada projeto tem um tempo de desenvolvimento próprio. O prazo depende da complexidade, do escopo e dos objetivos da sua marca. Após a nossa conversa inicial, definimos juntos um cronograma realista para garantir qualidade e estratégia em cada etapa.":
+    "Cada proyecto tiene un tiempo de desarrollo propio. El plazo depende de la complejidad, del alcance y de los objetivos de tu marca. Tras nuestra conversa inicial, definimos juntos un cronograma realista para garantizar calidad y estrategia en cada etapa.",
   "Qual é o processo de trabalho?": "¿Cuál es el proceso de trabajo?",
-  "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Mantemos comunicação próxima durante todo o processo.":
-    "Empezamos con una fase de descubrimiento, seguida de estrategia, diseño y entrega. Mantenemos comunicación cercana durante todo el proceso.",
+  "Começamos com uma fase de descoberta, seguida de estratégia, design e entrega. Você acompanha cada etapa com apresentações e validações para garantir alinhamento total.":
+    "Empezamos con una fase de descubrimiento, seguida de estrategia, diseño y entrega. Acompañas cada etapa con presentaciones y validaciones para garantizar una alineación total.",
   "Trabalham com clientes internacionais?": "¿Trabajan con clientes internacionales?",
   "Sim, trabalhamos com clientes de todo o mundo. As reuniões são feitas por videochamada e a comunicação é totalmente digital.":
     "Sí, trabajamos con clientes de todo el mundo. Las reuniones se realizan por videollamada y la comunicación es totalmente digital.",
+  "Qual o investimento para um projeto de branding?": "¿Cuál es la inversión para un proyecto de branding?",
+  "O investimento varia conforme o tamanho e as necessidades da sua empresa. Não trabalhamos com pacotes fechados porque cada marca é única. Após entendermos seus objetivos, enviamos uma proposta personalizada com valor e escopo claros.":
+    "La inversión varía según el tamaño y las necesidades de tu empresa. No trabajamos con paquetes cerrados porque cada marca es única. Tras entender tus objetivos, enviamos una propuesta personalizada con valor y alcance claros.",
+  "A RUNA só faz logotipos?": "¿RUNA solo hace logotipos?",
+  "Não. O logotipo é apenas uma parte da identidade visual. Criamos sistemas de marca completos: estratégia, tipografia, paleta de cores, aplicações, tom de voz e guia de uso. O objetivo é construir marcas consistentes que se destacam em todos os pontos de contacto.":
+    "No. El logotipo es solo una parte de la identidad visual. Creamos sistemas de marca completos: estrategia, tipografía, paleta de colores, aplicaciones, tono de voz y guía de uso. El objetivo es construir marcas consistentes que se destacan en todos los puntos de contacto.",
 
   // Home blog preview
   "Como criar uma identidade visual memorável": "Cómo crear una identidad visual memorable",
