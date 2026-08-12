@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
 import {
   IconAIBrain,
   IconChatTransparent,
@@ -11,7 +9,6 @@ import {
 } from "@/components/icons/RunaIcons";
 import type { ComponentType } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
