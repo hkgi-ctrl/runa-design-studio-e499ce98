@@ -37,24 +37,24 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const services: Array<{ icon: ComponentType<RunaSvgProps>; title: string; description: string }> = [
+const services: Array<{ icon: ComponentType; title: string; description: string }> = [
   {
-    icon: IconRunaGeometric,
+    icon: IconIdentidade,
     title: "Identidade Visual",
     description: "Marcas memoráveis, consistentes e profissionais.",
   },
   {
-    icon: IconRefreshGeometric,
+    icon: IconModernizacao,
     title: "Modernização de Marca",
     description: "Atualização visual para empresas em evolução.",
   },
   {
-    icon: IconCubeIso,
+    icon: IconProdutos,
     title: "Design para Produtos e Serviços",
     description: "Peças visuais que aumentam a perceção de valor.",
   },
   {
-    icon: IconGridFeed,
+    icon: IconRedes,
     title: "Design para Redes Sociais",
     description: "Conteúdo visual estratégico para autoridade e engajamento.",
   },
