@@ -79,7 +79,7 @@ export function WhyRunaSection() {
             >
               <CardContent className="p-8">
                 <div className="runa-icon-wrap">
-                  <ReasonIcon className="h-5 w-5" />
+                  <ReasonIcon />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
                   {t(reason.title)}
