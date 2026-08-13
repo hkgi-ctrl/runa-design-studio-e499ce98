@@ -142,14 +142,14 @@ function ContactoPage() {
                 <Card className="glass border-border/50 bg-card/40">
                   <CardContent className="p-8 sm:p-10">
                     {submitted ? (
-                      <div className="py-12 text-center">
-                        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-turquoise/10">
+                      <div className="flex flex-col items-center justify-center py-12 text-center">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-turquoise/10">
                           <RunaIcon name="send" className="h-8 w-8 text-turquoise" />
                         </div>
-                        <h3 className="mt-6 font-display text-2xl font-semibold text-foreground">
+                        <h3 className="mt-6 text-center font-display text-2xl font-semibold text-foreground">
                           {t("Mensagem enviada!")}
                         </h3>
-                        <p className="mt-2 text-muted-foreground">
+                        <p className="mt-2 max-w-md text-center text-muted-foreground">
                           {t("Obrigado pelo contacto. Responderemos o mais brevemente possível.")}
                         </p>
                       </div>
