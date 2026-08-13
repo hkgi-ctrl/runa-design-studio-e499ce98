@@ -3,10 +3,10 @@ import type PhoneInputType from "react-phone-input-2";
 
 type PhoneInputProps = React.ComponentProps<typeof PhoneInputType>;
 
-function isComponentType(
+function isValidComponent(
   value: unknown,
 ): value is ComponentType<PhoneInputProps> {
-  return typeof value === "function" || typeof value === "object";
+  return typeof value === "function";
 }
 
 export function PhoneInputClient(props: PhoneInputProps) {
@@ -18,6 +18,7 @@ export function PhoneInputClient(props: PhoneInputProps) {
     Promise.all([
       import("react-phone-input-2"),
       import("react-phone-input-2/lib/style.css"),
+      import("./phone-input-client.css"),
     ])
       .then(([mod]) => {
         if (!mounted) return;
@@ -25,9 +26,13 @@ export function PhoneInputClient(props: PhoneInputProps) {
         const candidate: unknown =
           typeof mod === "function"
             ? mod
-            : raw?.default ?? raw?.PhoneInput ?? raw?.default ?? null;
-        if (isComponentType(candidate)) {
-          setComponent(() => candidate as ComponentType<PhoneInputProps>);
+            : isValidComponent(raw?.default)
+              ? raw?.default
+              : isValidComponent((raw?.default as Record<string, unknown>)?.default)
+                ? (raw?.default as Record<string, unknown>)?.default
+                : raw?.PhoneInput ?? null;
+        if (isValidComponent(candidate)) {
+          setComponent(() => candidate);
         } else {
           // eslint-disable-next-line no-console
           console.warn("react-phone-input-2 did not export a valid component", raw);

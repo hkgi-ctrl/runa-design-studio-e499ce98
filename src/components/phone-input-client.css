@@ -1,0 +1,130 @@
+/* Dark theme overrides for react-phone-input-2 inside the RUNA premium UI.
+   Loaded after the library's default CSS so these rules win. */
+
+.react-tel-input {
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  height: 2.25rem !important; /* 36px, matches shadcn Input h-9 */
+  background-color: #141E29 !important;
+  border: 1px solid rgba(125, 211, 224, 0.2) !important;
+  border-radius: 0.75rem !important; /* rounded-xl */
+  color: #f8fafc !important;
+  padding: 0.5rem 0.75rem 0.5rem 3rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+.react-tel-input .form-control::placeholder {
+  color: rgba(148, 163, 184, 0.7) !important;
+  opacity: 1 !important;
+}
+
+.react-tel-input .form-control:focus {
+  outline: none !important;
+  border-color: rgba(125, 211, 224, 0.4) !important;
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.15) !important;
+}
+
+.react-tel-input .flag-dropdown {
+  background-color: #141E29 !important;
+  border: 1px solid rgba(125, 211, 224, 0.2) !important;
+  border-right: none !important;
+  border-radius: 0.75rem 0 0 0.75rem !important;
+}
+
+.react-tel-input .flag-dropdown.open {
+  background-color: #141E29 !important;
+  border-radius: 0.75rem 0 0 0 !important;
+}
+
+.react-tel-input .flag-dropdown:hover {
+  background-color: rgba(20, 30, 41, 0.8) !important;
+}
+
+.react-tel-input .selected-flag {
+  background-color: transparent !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus,
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background-color: rgba(125, 211, 224, 0.08) !important;
+}
+
+.react-tel-input .country-list {
+  background-color: #141E29 !important;
+  border: 1px solid rgba(125, 211, 224, 0.2) !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.1) !important;
+  color: #f8fafc !important;
+  margin-top: 4px !important;
+}
+
+.react-tel-input .country-list .country {
+  color: #f8fafc !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.react-tel-input .country-list .country:hover {
+  background-color: rgba(125, 211, 224, 0.1) !important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background-color: rgba(125, 211, 224, 0.15) !important;
+}
+
+.react-tel-input .country-list .search {
+  background-color: #141E29 !important;
+  border-bottom: 1px solid rgba(125, 211, 224, 0.2) !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.react-tel-input .country-list .search-emoji {
+  color: #7DD3E0 !important;
+  opacity: 0.7 !important;
+}
+
+.react-tel-input .country-list .search-box {
+  background-color: #0d1424 !important;
+  border: 1px solid rgba(125, 211, 224, 0.2) !important;
+  border-radius: 0.5rem !important;
+  color: #f8fafc !important;
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.875rem !important;
+}
+
+.react-tel-input .country-list .search-box::placeholder {
+  color: rgba(148, 163, 184, 0.7) !important;
+  opacity: 1 !important;
+}
+
+.react-tel-input .country-list .no-entries-message {
+  color: rgba(148, 163, 184, 0.7) !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.react-tel-input .country-list .divider {
+  border-bottom: 1px solid rgba(125, 211, 224, 0.2) !important;
+}
+
+.react-tel-input .country-name {
+  color: #f8fafc !important;
+}
+
+.react-tel-input .dial-code {
+  color: rgba(148, 163, 184, 0.7) !important;
+}
+
+.react-tel-input .selected-flag .arrow {
+  border-top-color: #7DD3E0 !important;
+}
+
+.react-tel-input .selected-flag .arrow.up {
+  border-bottom-color: #7DD3E0 !important;
+  border-top-color: transparent !important;
+}
