@@ -174,7 +174,6 @@ function ContactoPage() {
                               country="pt"
                               enableSearch
                               disableCountryGuess
-                              masks={{ pt: "... ... ..." }}
                               value={phone}
                               onChange={(value: string) => setPhone(value)}
                               placeholder={t("Insira o seu número")}
