@@ -22,6 +22,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { sendContactMessage } from "@/lib/contact.functions";
+import { PhoneInputClient } from "@/components/phone-input-client";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -71,6 +72,7 @@ function ContactoPage() {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
   const [service, setService] = useState("");
+  const [phone, setPhone] = useState("");
   const [submissionId] = useState(() => crypto.randomUUID());
   const { t } = useTranslation();
   const hero = useScrollReveal<HTMLDivElement>();
@@ -89,7 +91,7 @@ function ContactoPage() {
           name: String(formData.get("name") ?? ""),
           company: String(formData.get("company") ?? ""),
           email: String(formData.get("email") ?? ""),
-          phone: String(formData.get("phone") ?? ""),
+          phone,
           service,
           message: String(formData.get("message") ?? ""),
           website: String(formData.get("website") ?? ""),
@@ -164,11 +166,22 @@ function ContactoPage() {
                         <div className="grid gap-6 sm:grid-cols-2">
                           <div className="space-y-2">
                             <Label htmlFor="email">{t("Email")}</Label>
-                            <Input id="email" name="email" type="email" placeholder={t("o.seu@email.pt")} required className="bg-background/50 border-border/50" />
+                            <Input id="email" name="email" type="email" placeholder={t("o.seu@email.com")} required className="bg-background/50 border-border/50" />
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor="phone">{t("Telefone (opcional)")}</Label>
-                            <Input id="phone" name="phone" type="tel" placeholder="+351 912 345 678" className="bg-background/50 border-border/50" />
+                            <PhoneInputClient
+                              country="pt"
+                              enableSearch
+                              value={phone}
+                              onChange={(value: string) => setPhone(value)}
+                              placeholder={t("Insira o seu número")}
+                              inputClass="w-full bg-[#141E29] border border-[#7DD3E0]/20 rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-turquoise/30"
+                              buttonClass="bg-[#141E29] border border-[#7DD3E0]/20 border-r-0 hover:bg-[#141E29]/80"
+                              dropdownClass="bg-[#141E29] border border-[#7DD3E0]/20 text-foreground"
+                              containerClass="w-full"
+                              inputProps={{ id: "phone", name: "phone" }}
+                            />
                           </div>
                         </div>
                         <div className="space-y-2">
