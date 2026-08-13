@@ -401,7 +401,7 @@ function ProcessSection() {
               className="group mt-8 inline-flex items-center text-sm font-semibold text-turquoise transition-colors hover:text-cyan"
             >
               {t("Conhecer o processo")}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <RunaIcon name="send" className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
