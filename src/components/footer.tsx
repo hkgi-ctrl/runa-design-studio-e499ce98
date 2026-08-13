@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Facebook } from "lucide-react";
 import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
 import { useTranslation } from "react-i18next";
 
