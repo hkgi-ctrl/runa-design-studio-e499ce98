@@ -263,7 +263,7 @@ function ServicesSection() {
                 className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
               />
               <div className="bento-icon">
-                <ServiceIcon className="h-5 w-5" />
+                <ServiceIcon />
               </div>
               <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
                 {t(service.title)}
