@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Resend } from "resend";
 import { z } from "zod";
 
 const schema = z.object({
@@ -28,15 +29,20 @@ export const Route = createFileRoute("/api/contact")({
           // Honeypot: bots preenchem o campo escondido.
           if (data.website) return Response.json({ success: true });
 
-          const supabaseUrl = process.env['SUPABASE_URL'];
-          const supabaseKey = process.env['SUPABASE_PUBLISHABLE_KEY'];
-          if (!supabaseUrl || !supabaseKey) throw new Error("Supabase env missing");
+          const supabaseUrl = process.env['VITE_SUPABASE_URL'] || process.env['SUPABASE_URL'];
+          const supabaseKey = process.env['VITE_SUPABASE_ANON_KEY'] || process.env['SUPABASE_PUBLISHABLE_KEY'];
+          const resendKey = process.env['RESEND_API_KEY'];
+
+          if (!supabaseUrl || !supabaseKey) {
+            throw new Error("Supabase env missing");
+          }
 
           // 1) Guarda na base de dados — garantido.
           const dbRes = await fetch(`${supabaseUrl}/rest/v1/contact_leads`, {
             method: "POST",
             headers: {
               apikey: supabaseKey,
+              Authorization: `Bearer ${supabaseKey}`,
               "Content-Type": "application/json",
               Prefer: "return=minimal",
             },
@@ -54,20 +60,18 @@ export const Route = createFileRoute("/api/contact")({
             return Response.json({ success: false, error: "storage_failed" }, { status: 500 });
           }
 
-          // 2) Tenta notificar por email (MailChannels via HTTP).
+          // 2) Tenta notificar por email via Resend.
           try {
-            const mailRes = await fetch("https://api.mailchannels.net/tx/v1/send", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                personalizations: [{ to: [{ email: "hello@runastudio.pt", name: "RUNA Studio" }] }],
-                from: { email: "hello@runastudio.pt", name: "RUNA Studio Site" },
-                reply_to: { email: data.email, name: data.nome },
-                subject: `[SITE] Novo contacto: ${data.servico || "Geral"} - ${data.nome}`,
-                content: [
-                  {
-                    type: "text/html",
-                    value: `<h2>Novo contacto do site runastudio.pt</h2>
+            if (!resendKey) {
+              console.error("RESEND_API_KEY missing");
+            } else {
+              const resend = new Resend(resendKey);
+              const emailRes = await resend.emails.send({
+                from: "RUNA Studio <hello@runastudio.pt>",
+                to: "hello@runastudio.pt",
+                replyTo: data.email,
+                subject: `[SITE] ${data.servico || "Geral"} - ${data.nome}`,
+                html: `<h2>Novo contacto do site runastudio.pt</h2>
 <p><strong>Nome:</strong> ${esc(data.nome)}</p>
 <p><strong>Empresa:</strong> ${esc(data.empresa || "-")}</p>
 <p><strong>Email:</strong> ${esc(data.email)}</p>
@@ -76,15 +80,13 @@ export const Route = createFileRoute("/api/contact")({
 <p><strong>Mensagem:</strong><br>${esc(data.mensagem).replace(/\n/g, "<br>")}</p>
 <hr>
 <p>Responda diretamente a este email para falar com o cliente.</p>`,
-                  },
-                ],
-              }),
-            });
-            if (!mailRes.ok) {
-              console.error("MailChannels failed", mailRes.status, await mailRes.text());
+              });
+              if (emailRes.error) {
+                console.error("Resend error", emailRes.error);
+              }
             }
           } catch (mailError) {
-            console.error("MailChannels error", mailError);
+            console.error("Resend exception", mailError);
           }
 
           return Response.json({ success: true });
