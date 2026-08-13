@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { RunaIcon } from "@/components/icons/RunaIcons";
 import { useRef, useState, type CSSProperties, type MouseEvent, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
