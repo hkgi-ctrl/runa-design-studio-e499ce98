@@ -12,39 +12,39 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const reasons: Array<{ icon: ComponentType<RunaSvgProps>; title: string; description: string }> = [
+const reasons: Array<{ icon: ComponentType; title: string; description: string }> = [
   {
-    icon: IconTarget,
+    icon: IconEstrategico,
     title: "Design Estratégico",
     description:
       "Cada projeto começa por compreender o seu negócio, os seus objetivos e o mercado onde atua.",
   },
   {
-    icon: IconAIBrain,
+    icon: IconIA,
     title: "Inteligência Artificial como aliada",
     description:
       "Utilizamos inteligência artificial para explorar mais possibilidades criativas, mantendo todas as decisões estratégicas e o refinamento final sob supervisão humana.",
   },
   {
-    icon: IconPalette,
+    icon: IconMundoReal,
     title: "Identidades pensadas para o mundo real",
     description:
       "Criamos marcas preparadas para websites, redes sociais, embalagens, publicidade e materiais impressos.",
   },
   {
-    icon: IconChatTransparent,
+    icon: IconProcesso,
     title: "Processo transparente",
     description:
       "Mantemos uma comunicação clara durante todo o projeto, envolvendo o cliente em cada etapa importante.",
   },
   {
-    icon: IconGraphResult,
+    icon: IconResultados,
     title: "Foco em resultados",
     description:
       "Cada decisão de design procura fortalecer a perceção da marca, aumentar a credibilidade e gerar mais valor para o negócio.",
   },
   {
-    icon: IconPhoneChannel,
+    icon: IconCanais,
     title: "Preparado para todos os canais",
     description:
       "Desenvolvemos marcas com visão de longo prazo, preparadas para crescer e manter consistência em todos os pontos de contacto com o cliente.",
