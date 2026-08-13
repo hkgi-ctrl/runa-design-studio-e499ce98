@@ -17,6 +17,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Facebook } from "lucide-react";
 import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -59,11 +60,13 @@ const faqs = [
   { question: "A RUNA só faz logotipos?", answer: "Não. O logotipo é apenas uma parte da identidade visual. Criamos sistemas de marca completos: estratégia, tipografia, paleta de cores, aplicações, tom de voz e guia de uso. O objetivo é construir marcas consistentes que se destacam em todos os pontos de contacto." },
 ];
 
-const socialLinks: Array<{ icon: RunaIconName; href: string; label: string }> = [
+const socialLinks: Array<{ icon: RunaIconName | "facebook"; href: string; label: string; disabled?: boolean; title?: string }> = [
   { icon: "instagram", href: "https://www.instagram.com/runa.studiodesign/", label: "Instagram RUNA" },
   { icon: "behance", href: "https://www.behance.net/runa_studiodesign", label: "Behance RUNA" },
   { icon: "linkedin", href: "https://www.linkedin.com/company/runa_studiodesign/", label: "LinkedIn RUNA" },
   { icon: "whatsapp", href: "https://wa.me/351923397753?text=Olá%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20de%20branding.", label: "WhatsApp" },
+  // TODO: Ativar Facebook quando página for desbloqueada - trocar href para https://www.facebook.com/runa.studiodesign
+  { icon: "facebook", href: "#", label: "Facebook RUNA em breve", disabled: true, title: "Facebook em breve" },
 ];
 
 function ContactoPage() {
@@ -325,21 +328,34 @@ function ContactoPage() {
                      <p className="mt-2 text-sm text-muted-foreground">
                        {t("Acompanhe o nosso trabalho nas redes sociais.")}
                      </p>
-                     <div className="mt-6 flex flex-wrap justify-start gap-2.5 sm:gap-3">
-                       {socialLinks.map((social) => (
-                         <a
-                           key={social.label}
-                           href={social.href}
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label={social.label}
-                           title={social.label}
-                           className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-foreground/50 transition-all duration-300 hover:bg-foreground/10 hover:text-turquoise"
-                         >
-                           <RunaIcon name={social.icon} className="h-4 w-4" />
-                         </a>
-                       ))}
-                     </div>
+                      <div className="mt-6 flex flex-wrap justify-start gap-2.5 sm:gap-3">
+                        {socialLinks.map((social) =>
+                          social.disabled ? (
+                            <a
+                              key={social.label}
+                              href="#"
+                              onClick={(e) => e.preventDefault()}
+                              aria-label={social.label}
+                              title={social.title}
+                              className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-foreground/50 opacity-40 transition-all duration-300 cursor-not-allowed"
+                            >
+                              <Facebook className="h-4 w-4" />
+                            </a>
+                          ) : (
+                            <a
+                              key={social.label}
+                              href={social.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={social.label}
+                              title={social.title ?? social.label}
+                              className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-foreground/50 transition-all duration-300 hover:bg-foreground/10 hover:text-turquoise"
+                            >
+                              <RunaIcon name={social.icon as RunaIconName} className="h-4 w-4" />
+                            </a>
+                          )
+                        )}
+                      </div>
                    </CardContent>
                  </Card>
                </div>
