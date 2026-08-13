@@ -22,7 +22,6 @@ import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { sendContactMessage } from "@/lib/contact.functions";
 import { PhoneInputClient } from "@/components/phone-input-client";
 
 export const Route = createFileRoute("/contacto")({
@@ -75,7 +74,6 @@ function ContactoPage() {
   const [error, setError] = useState(false);
   const [service, setService] = useState("");
   const [phone, setPhone] = useState("");
-  const [submissionId] = useState(() => crypto.randomUUID());
   const { t } = useTranslation();
   const hero = useScrollReveal<HTMLDivElement>();
   const formReveal = useScrollReveal<HTMLDivElement>();
@@ -88,18 +86,20 @@ function ContactoPage() {
     setError(false);
     const formData = new FormData(e.currentTarget);
     try {
-      await sendContactMessage({
-        data: {
-          name: String(formData.get("name") ?? ""),
-          company: String(formData.get("company") ?? ""),
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nome: String(formData.get("name") ?? ""),
+          empresa: String(formData.get("company") ?? ""),
           email: String(formData.get("email") ?? ""),
-          phone,
-          service,
-          message: String(formData.get("message") ?? ""),
+          telefone: phone,
+          servico: service,
+          mensagem: String(formData.get("message") ?? ""),
           website: String(formData.get("website") ?? ""),
-          submissionId,
-        },
+        }),
       });
+      if (!res.ok) throw new Error("request_failed");
       setSubmitted(true);
     } catch {
       setError(true);
