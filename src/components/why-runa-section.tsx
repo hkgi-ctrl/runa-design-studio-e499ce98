@@ -1,11 +1,10 @@
 import {
-  IconAIBrain,
-  IconChatTransparent,
-  IconGraphResult,
-  IconPalette,
-  IconPhoneChannel,
-  IconTarget,
-  type RunaSvgProps,
+  IconCanais,
+  IconEstrategico,
+  IconIA,
+  IconMundoReal,
+  IconProcesso,
+  IconResultados,
 } from "@/components/icons/RunaIcons";
 import type { ComponentType } from "react";
 import { Trans, useTranslation } from "react-i18next";
