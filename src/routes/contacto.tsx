@@ -38,7 +38,7 @@ export const Route = createFileRoute("/contacto")({
 
 const contactInfo: Array<{ icon: RunaIconName; label: string; value: string; href: string }> = [
   { icon: "mail", label: "Email", value: "hello@runastudio.pt", href: "mailto:hello@runastudio.pt" },
-  { icon: "phone", label: "Telefone / WhatsApp", value: "+351 912 345 678", href: "tel:+351912345678" },
+  { icon: "phone", label: "Telefone / WhatsApp", value: "+351 923 397 753", href: "tel:+351923397753" },
   { icon: "location", label: "Localização", value: "Lisboa, Portugal", href: "#" },
 ];
 
@@ -63,7 +63,7 @@ const socialLinks: Array<{ icon: RunaIconName; href: string; label: string }> = 
   { icon: "instagram", href: "https://instagram.com", label: "Instagram" },
   { icon: "behance", href: "https://behance.net", label: "Behance" },
   { icon: "linkedin", href: "https://linkedin.com/company/runastudio", label: "LinkedIn" },
-  { icon: "whatsapp", href: "https://wa.me/351912345678", label: "WhatsApp" },
+  { icon: "whatsapp", href: "https://wa.me/351923397753?text=Olá%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20de%20branding.", label: "WhatsApp" },
   { icon: "facebook", href: "https://facebook.com", label: "Facebook" },
 ];
 
@@ -176,7 +176,7 @@ function ContactoPage() {
                               disableCountryGuess
                               value={phone}
                               onChange={(value: string) => setPhone(value)}
-                              placeholder={t("Insira o seu número")}
+                              placeholder="+351 923 397 753"
                               inputClass="w-full bg-[#141E29] border border-[#7DD3E0]/20 rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-turquoise/30"
                               buttonClass="bg-[#141E29] border border-[#7DD3E0]/20 border-r-0 hover:bg-[#141E29]/80"
                               dropdownClass="bg-[#141E29] border border-[#7DD3E0]/20 text-foreground"
@@ -258,11 +258,11 @@ function ContactoPage() {
                                 <span className="text-xs uppercase tracking-wider">{t(info.label)}</span>
                               </div>
                               <div className="ml-6 mt-1 flex items-center gap-2 text-sm">
-                                <a href="tel:+351912345678" className="font-medium text-foreground transition-colors hover:text-turquoise">
-                                  +351 912 345 678
+                                <a href="tel:+351923397753" className="font-medium text-foreground transition-colors hover:text-turquoise">
+                                  +351 923 397 753
                                 </a>
                                 <a
-                                  href="https://wa.me/351912345678"
+                                  href="https://wa.me/351923397753?text=Olá%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20de%20branding."
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   aria-label="Falar no WhatsApp"
