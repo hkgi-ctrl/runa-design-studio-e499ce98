@@ -1,11 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Play } from "lucide-react";
 import {
-  IconCubeIso,
-  IconGridFeed,
-  IconRefreshGeometric,
-  IconRunaGeometric,
-  type RunaSvgProps,
+  IconIdentidade,
+  IconModernizacao,
+  IconProdutos,
+  IconRedes,
+  RunaIcon,
 } from "@/components/icons/RunaIcons";
 import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import type { ComponentType } from "react";
@@ -38,24 +37,24 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const services: Array<{ icon: ComponentType<RunaSvgProps>; title: string; description: string }> = [
+const services: Array<{ icon: ComponentType; title: string; description: string }> = [
   {
-    icon: IconRunaGeometric,
+    icon: IconIdentidade,
     title: "Identidade Visual",
     description: "Marcas memoráveis, consistentes e profissionais.",
   },
   {
-    icon: IconRefreshGeometric,
+    icon: IconModernizacao,
     title: "Modernização de Marca",
     description: "Atualização visual para empresas em evolução.",
   },
   {
-    icon: IconCubeIso,
+    icon: IconProdutos,
     title: "Design para Produtos e Serviços",
     description: "Peças visuais que aumentam a perceção de valor.",
   },
   {
-    icon: IconGridFeed,
+    icon: IconRedes,
     title: "Design para Redes Sociais",
     description: "Conteúdo visual estratégico para autoridade e engajamento.",
   },
@@ -176,7 +175,7 @@ function HeroSection() {
           >
             <Link to="/contacto">
               {t("Iniciar projeto")}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <RunaIcon name="send" className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
           <Button
@@ -264,7 +263,7 @@ function ServicesSection() {
                 className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
               />
               <div className="bento-icon">
-                <ServiceIcon className="h-5 w-5" />
+                <ServiceIcon />
               </div>
               <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
                 {t(service.title)}
@@ -402,7 +401,7 @@ function ProcessSection() {
               className="group mt-8 inline-flex items-center text-sm font-semibold text-turquoise transition-colors hover:text-cyan"
             >
               {t("Conhecer o processo")}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <RunaIcon name="send" className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 

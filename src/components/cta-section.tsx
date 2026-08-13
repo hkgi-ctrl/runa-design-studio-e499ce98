@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { RunaIcon } from "@/components/icons/RunaIcons";
 import { useRef, useState, type CSSProperties, type MouseEvent, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
@@ -87,7 +87,7 @@ export function CTASection({
               >
                 <Link to={primaryTo}>
                   {t(primaryLabel)}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <RunaIcon name="send" className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
             </Magnetic>
