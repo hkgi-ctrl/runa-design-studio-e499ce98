@@ -80,7 +80,7 @@ export const template = {
     name: "Maria Silva",
     company: "Aura Skincare",
     email: "maria@example.com",
-    phone: "+351 912 345 678",
+    phone: "+351 923 397 753",
     service: "Identidade Visual",
     message: "Olá! Gostaria de pedir um orçamento para a identidade visual da minha marca.",
   },

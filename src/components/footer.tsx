@@ -23,7 +23,7 @@ const socialLinks: Array<{ icon: RunaIconName; href: string; label: string }> = 
   { icon: "instagram", href: "https://instagram.com", label: "Instagram" },
   { icon: "behance", href: "https://behance.net", label: "Behance" },
   { icon: "linkedin", href: "https://linkedin.com/company/runastudio", label: "LinkedIn" },
-  { icon: "whatsapp", href: "https://wa.me/351912345678", label: "WhatsApp" },
+  { icon: "whatsapp", href: "https://wa.me/351923397753?text=Olá%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20de%20branding.", label: "WhatsApp" },
   { icon: "facebook", href: "https://facebook.com", label: "Facebook" },
 ];
 
@@ -79,7 +79,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-footer-link">
                 <RunaIcon name="phone" className="h-4 w-4 shrink-0 text-footer-link-hover" />
-                <span>+351 912 345 678</span>
+                <span>+351 923 397 753</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-footer-link">
                 <RunaIcon name="location" className="h-4 w-4 shrink-0 text-footer-link-hover" />
