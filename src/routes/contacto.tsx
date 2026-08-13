@@ -328,21 +328,34 @@ function ContactoPage() {
                      <p className="mt-2 text-sm text-muted-foreground">
                        {t("Acompanhe o nosso trabalho nas redes sociais.")}
                      </p>
-                     <div className="mt-6 flex flex-wrap justify-start gap-2.5 sm:gap-3">
-                       {socialLinks.map((social) => (
-                         <a
-                           key={social.label}
-                           href={social.href}
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label={social.label}
-                           title={social.label}
-                           className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-foreground/50 transition-all duration-300 hover:bg-foreground/10 hover:text-turquoise"
-                         >
-                           <RunaIcon name={social.icon} className="h-4 w-4" />
-                         </a>
-                       ))}
-                     </div>
+                      <div className="mt-6 flex flex-wrap justify-start gap-2.5 sm:gap-3">
+                        {socialLinks.map((social) =>
+                          social.disabled ? (
+                            <a
+                              key={social.label}
+                              href="#"
+                              onClick={(e) => e.preventDefault()}
+                              aria-label={social.label}
+                              title={social.title}
+                              className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-foreground/50 opacity-40 transition-all duration-300 cursor-not-allowed"
+                            >
+                              <Facebook className="h-4 w-4" />
+                            </a>
+                          ) : (
+                            <a
+                              key={social.label}
+                              href={social.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={social.label}
+                              title={social.title ?? social.label}
+                              className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-foreground/50 transition-all duration-300 hover:bg-foreground/10 hover:text-turquoise"
+                            >
+                              <RunaIcon name={social.icon as RunaIconName} className="h-4 w-4" />
+                            </a>
+                          )
+                        )}
+                      </div>
                    </CardContent>
                  </Card>
                </div>
