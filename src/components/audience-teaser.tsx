@@ -20,7 +20,7 @@ export function AudienceTeaser() {
           <Button asChild size="lg" className="group bg-turquoise text-graphite-deep hover:bg-turquoise/90">
             <Link to="/sobre">
               {t("Conhecer os públicos que ajudamos")}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <RunaIcon name="send" className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
         </div>
