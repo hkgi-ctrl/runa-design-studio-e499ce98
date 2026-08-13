@@ -28,6 +28,7 @@ import jaciraLogo from "@/assets/jacira-1.png.asset.json";
 import jaciraCartoes from "@/assets/jacira-2.png.asset.json";
 import jaciraPoster from "@/assets/jacira-3.png.asset.json";
 import jaciraVestido from "@/assets/jacira-4.png.asset.json";
+import jaciraSacola from "@/assets/jacira-sacola-croche.png.asset.json";
 import campanhaKalorama from "@/assets/campanha-kalorama.png.asset.json";
 import campanhaBeatles from "@/assets/campanha-beatles.png.asset.json";
 import campanhaChoc from "@/assets/campanha-choc.png.asset.json";
@@ -58,7 +59,7 @@ const projects: Array<{
     seal: "CLIENTE REAL",
     tags: ["Branding", "Identidade Visual", "Social Media"],
     image: jaciraLogo.url,
-    gallery: [jaciraCartoes.url, jaciraPoster.url, jaciraVestido.url],
+    gallery: [jaciraCartoes.url, jaciraPoster.url, jaciraVestido.url, jaciraSacola.url],
   },
   {
     title: "PETITO",
