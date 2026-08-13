@@ -19,6 +19,7 @@ import norteLogo from "@/assets/norte-1.png.asset.json";
 import norteFlatlay from "@/assets/norte-2.png.asset.json";
 import norteGarrafa from "@/assets/norte-3.png.asset.json";
 import norteCasaco from "@/assets/norte-4.png.asset.json";
+import norteCampanha from "@/assets/norte-campanha.png.asset.json";
 import virclanLogo from "@/assets/virclan-6.png.asset.json";
 import virclanVariant1 from "@/assets/virclan-7.png.asset.json";
 import virclanVariant2 from "@/assets/virclan-8.png.asset.json";
@@ -82,9 +83,9 @@ const projects: Array<{
     title: "NORTE",
     description: "Marca de aventura que vende a sensação de explorar o inexplorado.",
     seal: "ESTUDO DE CASO",
-    tags: ["Branding", "Identidade Visual"],
+    tags: ["Branding", "Identidade Visual", "Social Media"],
     image: norteLogo.url,
-    gallery: [norteFlatlay.url, norteGarrafa.url, norteCasaco.url],
+    gallery: [norteFlatlay.url, norteGarrafa.url, norteCasaco.url, norteCampanha.url],
   },
   {
     title: "VIRCLAN",
