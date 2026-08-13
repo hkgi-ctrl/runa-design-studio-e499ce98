@@ -173,7 +173,7 @@ function ContactoPage() {
                             <PhoneInputClient
                               country="pt"
                               enableSearch
-                              countryCodeEditable={false}
+                              disableCountryGuess
                               value={phone}
                               onChange={(value: string) => setPhone(value)}
                               placeholder={t("Insira o seu número")}
