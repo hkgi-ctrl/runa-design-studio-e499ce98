@@ -89,19 +89,32 @@ export function Footer() {
               </li>
             </ul>
             <div className="mt-6 flex flex-wrap justify-start gap-2.5 sm:gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  title={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-footer-link transition-all duration-300 hover:bg-footer-social-hover/10 hover:text-footer-link-hover"
-                >
-                  <RunaIcon name={social.icon} className="h-4 w-4" />
-                </a>
-              ))}
+              {socialLinks.map((social) =>
+                social.disabled ? (
+                  <a
+                    key={social.label}
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
+                    aria-label={social.label}
+                    title={social.title}
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-footer-link opacity-40 transition-all duration-300 cursor-not-allowed"
+                  >
+                    <Facebook className="h-4 w-4" />
+                  </a>
+                ) : (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    title={social.title ?? social.label}
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-footer-link transition-all duration-300 hover:bg-footer-social-hover/10 hover:text-footer-link-hover"
+                  >
+                    <RunaIcon name={social.icon as RunaIconName} className="h-4 w-4" />
+                  </a>
+                )
+              )}
             </div>
           </div>
         </div>
