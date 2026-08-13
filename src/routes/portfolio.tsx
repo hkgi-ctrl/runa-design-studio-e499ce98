@@ -34,6 +34,7 @@ import campanhaCidadePerdida from "@/assets/DISPLAY_CIDADE_PERDIDA.png.asset.jso
 import campanhaKalorama from "@/assets/campanha-kalorama.png.asset.json";
 import campanhaBeatles from "@/assets/campanha-beatles.png.asset.json";
 import campanhaChoc from "@/assets/campanha-choc.png.asset.json";
+import displayShows1 from "@/assets/DISPLAY_SHOWS_1.png.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -101,7 +102,7 @@ const projects: Array<{
     seal: "ESTUDO DE CASO",
     tags: ["Publicidade", "Design Gráfico"],
     image: campanhaKalorama.url,
-    gallery: [campanhaCidadePerdida.url, campanhaBeatles.url, campanhaChoc.url],
+    gallery: [campanhaCidadePerdida.url, campanhaBeatles.url, campanhaChoc.url, displayShows1.url],
   },
 ];
 
