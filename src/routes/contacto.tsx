@@ -176,7 +176,7 @@ function ContactoPage() {
                               disableCountryGuess
                               value={phone}
                               onChange={(value: string) => setPhone(value)}
-                              placeholder={t("+351 923 397 753")}
+                              placeholder="+351 923 397 753"
                               inputClass="w-full bg-[#141E29] border border-[#7DD3E0]/20 rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-turquoise/30"
                               buttonClass="bg-[#141E29] border border-[#7DD3E0]/20 border-r-0 hover:bg-[#141E29]/80"
                               dropdownClass="bg-[#141E29] border border-[#7DD3E0]/20 text-foreground"
