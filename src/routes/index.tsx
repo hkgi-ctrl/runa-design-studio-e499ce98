@@ -1,11 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Play } from "lucide-react";
 import {
-  IconCubeIso,
-  IconGridFeed,
-  IconRefreshGeometric,
-  IconRunaGeometric,
-  type RunaSvgProps,
+  IconIdentidade,
+  IconModernizacao,
+  IconProdutos,
+  IconRedes,
+  RunaIcon,
 } from "@/components/icons/RunaIcons";
 import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import type { ComponentType } from "react";
