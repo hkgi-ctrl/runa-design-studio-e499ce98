@@ -29,6 +29,7 @@ import jaciraCartoes from "@/assets/jacira-2.png.asset.json";
 import jaciraPoster from "@/assets/jacira-3.png.asset.json";
 import jaciraVestido from "@/assets/jacira-4.png.asset.json";
 import jaciraSacola from "@/assets/jacira-sacola-croche.png.asset.json";
+import campanhaCidadePerdida from "@/assets/DISPLAY_CIDADE_PERDIDA.png.asset.json";
 import campanhaKalorama from "@/assets/campanha-kalorama.png.asset.json";
 import campanhaBeatles from "@/assets/campanha-beatles.png.asset.json";
 import campanhaChoc from "@/assets/campanha-choc.png.asset.json";
@@ -99,7 +100,7 @@ const projects: Array<{
     seal: "ESTUDO DE CASO",
     tags: ["Publicidade", "Design Gráfico"],
     image: campanhaKalorama.url,
-    gallery: [campanhaBeatles.url, campanhaChoc.url],
+    gallery: [campanhaCidadePerdida.url, campanhaBeatles.url, campanhaChoc.url],
   },
 ];
 
