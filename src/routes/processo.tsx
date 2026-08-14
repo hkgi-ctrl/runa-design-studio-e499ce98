@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
-import { Search, Sparkles, Compass, PenTool, BrainCircuit, UserCheck } from "lucide-react";
+import { IconPesquisa, IconExploracao, IconEstrategiaProc, IconDesignFinal, IconIAEstrategica, IconRefinamentoHumano } from "@/components/icons/RunaIcons";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslation } from "react-i18next";
 
@@ -20,28 +20,28 @@ export const Route = createFileRoute("/processo")({
 const steps = [
   {
     step: "01",
-    icon: Search,
+    icon: IconPesquisa,
     title: "Pesquisa",
     description: "Tudo começa com escuta e análise. Estudamos o seu negócio, mercado, concorrência e público-alvo para definir o território criativo onde a marca vai competir.",
     details: ["Briefing estratégico", "Análise de mercado e concorrência", "Mapeamento de público-alvo", "Definição de objetivos"],
   },
   {
     step: "02",
-    icon: Sparkles,
+    icon: IconExploracao,
     title: "Exploração com IA",
     description: "Com a direção definida, usamos inteligência artificial para gerar e testar várias direções visuais e otimizar o tempo de entrega — ampliando o campo de possibilidades muito além do habitual.",
     details: ["Geração de conceitos assistida por IA", "Moodboards e variações rápidas", "Testes de forma, cor e tipografia", "Iteração em larga escala"],
   },
   {
     step: "03",
-    icon: Compass,
+    icon: IconEstrategiaProc,
     title: "Estratégia",
     description: "Aqui entra a curadoria humana. Analisamos o que a exploração revelou, descartamos o óbvio e fundamentamos a direção com maior potencial de diferenciação e conversão.",
     details: ["Curadoria e crítica criativa", "Direção de arte definida", "Narrativa e posicionamento", "Plano de entregáveis"],
   },
   {
     step: "04",
-    icon: PenTool,
+    icon: IconDesignFinal,
     title: "Design Final",
     description: "O refinamento é sempre humano. Redesenhamos, ajustamos e polimos cada detalhe até ao nível premium, entregando ficheiros, documentação e apoio à implementação.",
     details: ["Refinamento manual pixel a pixel", "Consistência em todos os formatos", "Manual de marca e ficheiros finais", "Suporte de implementação"],
@@ -50,12 +50,12 @@ const steps = [
 
 const differentiators = [
   {
-    icon: BrainCircuit,
+    icon: IconIAEstrategica,
     title: "IA como ferramenta estratégica",
     description: "A inteligência artificial acelera a exploração de ideias e multiplica as possibilidades criativas em cada projeto.",
   },
   {
-    icon: UserCheck,
+    icon: IconRefinamentoHumano,
     title: "Refinamento sempre humano",
     description: "Direção criativa, análise e refinamento final permanecem nas mãos da nossa equipa. Nada é entregue sem curadoria humana.",
   },
@@ -97,9 +97,9 @@ function ProcessoPage() {
                 className="relative rounded-2xl border border-border/50 bg-card/30 p-8 backdrop-blur-sm"
               >
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-turquoise/10">
-                    <step.icon className="h-7 w-7 text-turquoise" strokeWidth={1.5} />
-                  </div>
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-turquoise/10">
+                  <step.icon />
+                </div>
                   <div className="flex-1">
                     <span className="font-display text-sm font-bold tracking-widest text-turquoise/60">
                       {step.step}
@@ -141,7 +141,7 @@ function ProcessoPage() {
                 key={item.title}
                 className="rounded-2xl border border-turquoise/20 bg-card/30 p-8 backdrop-blur-sm"
               >
-                <item.icon className="h-8 w-8 text-turquoise" strokeWidth={1.5} />
+                <item.icon />
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
                   {t(item.title)}
                 </h3>
