@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
-import { Search, Sparkles, Compass, PenTool, BrainCircuit, UserCheck } from "lucide-react";
+import { IconPesquisa, IconExploracao, IconEstrategiaProc, IconDesignFinal, IconIAEstrategica, IconRefinamentoHumano } from "@/components/icons/RunaIcons";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslation } from "react-i18next";
 
