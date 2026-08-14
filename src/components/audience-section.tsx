@@ -87,8 +87,8 @@ export function AudienceSection() {
                 <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-7">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
-                  <item.icon className="h-6 w-6" />
+                <div className="runa-icon-wrap transition-colors group-hover:[--icon-bg:#31D6D0]">
+                  <item.icon />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">{t(item.title)}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(item.description)}</p>
