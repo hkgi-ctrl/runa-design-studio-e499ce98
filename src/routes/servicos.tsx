@@ -2,10 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
-import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
+import {
+  IconIdentidade,
+  IconModernizacao,
+  IconProdutos,
+  IconRedes,
+  RunaIcon,
+} from "@/components/icons/RunaIcons";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import type { ComponentType } from "react";
 import servicesHeroImage from "@/assets/servicos-r-macro-turquesa.jpg.asset.json";
 
 export const Route = createFileRoute("/servicos")({
