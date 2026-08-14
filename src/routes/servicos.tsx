@@ -99,18 +99,20 @@ function ServicosPage() {
             description="Cada serviço é adaptado às necessidades específicas do seu negócio."
           />
           <div className="mt-16 grid gap-6 lg:grid-cols-2">
-            {services.map((service) => (
+            {services.map((service) => {
+              const ServiceIcon = service.icon;
+              return (
               <Card key={service.title} className="group glass border-border/50 bg-card/40 transition-all hover:-translate-y-1 hover:border-turquoise/30">
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
-                      <RunaIcon name={service.icon} className="h-7 w-7" />
+                    <div className="bento-icon">
+                      <ServiceIcon />
                     </div>
                     <Link
                       to="/contacto"
                       className="flex items-center gap-1 text-sm font-medium text-turquoise opacity-0 transition-opacity group-hover:opacity-100"
                     >
-                      {t("Saber mais")} <ArrowRight className="h-4 w-4" />
+                      {t("Saber mais")} <RunaIcon name="send" className="h-4 w-4" />
                     </Link>
                   </div>
                   <h3 className="mt-6 font-display text-2xl font-semibold text-foreground">
