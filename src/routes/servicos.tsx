@@ -131,7 +131,8 @@ function ServicosPage() {
                   </ul>
                 </CardContent>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
