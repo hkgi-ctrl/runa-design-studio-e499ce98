@@ -29,31 +29,31 @@ export const Route = createFileRoute("/servicos")({
 });
 
 const services: Array<{
-  icon: RunaIconName;
+  icon: ComponentType;
   title: string;
   description: string;
   features: string[];
 }> = [
   {
-    icon: "identity",
+    icon: IconIdentidade,
     title: "Identidade Visual",
     description: "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.",
     features: ["Estratégia de marca", "Design de logotipo", "Identidade visual", "Diretrizes de marca"],
   },
   {
-    icon: "modernize",
+    icon: IconModernizacao,
     title: "Modernização de Marca",
     description: "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.",
     features: ["Revisão de posicionamento", "Redesign de logotipo", "Atualização visual", "Relançamento de marca"],
   },
   {
-    icon: "product",
+    icon: IconProdutos,
     title: "Design para Produtos e Serviços",
     description: "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.",
     features: ["Packaging", "Materiais promocionais", "Apresentações", "Catálogos e brochuras"],
   },
   {
-    icon: "social",
+    icon: IconRedes,
     title: "Design para Redes Sociais",
     description: "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.",
     features: ["Templates para feed", "Stories e reels", "Campanhas paid", "Identidade digital"],
