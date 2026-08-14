@@ -4,7 +4,12 @@ import { CTASection } from "@/components/cta-section";
 import { AudienceSection } from "@/components/audience-section";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Heart, Lightbulb, Users } from "lucide-react";
+import {
+  IconProposito,
+  IconPaixao,
+  IconInovacao,
+  IconColaboracao,
+} from "@/components/icons/RunaIcons";
 import { useTranslation } from "react-i18next";
 import valuesPenLine from "@/assets/valores-caneta-curta.jpg.asset.json";
 
