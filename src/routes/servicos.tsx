@@ -2,10 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
-import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
+import {
+  IconIdentidade,
+  IconModernizacao,
+  IconProdutos,
+  IconRedes,
+  RunaIcon,
+} from "@/components/icons/RunaIcons";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import type { ComponentType } from "react";
 import servicesHeroImage from "@/assets/servicos-r-macro-turquesa.jpg.asset.json";
 
 export const Route = createFileRoute("/servicos")({
@@ -23,31 +29,31 @@ export const Route = createFileRoute("/servicos")({
 });
 
 const services: Array<{
-  icon: RunaIconName;
+  icon: ComponentType;
   title: string;
   description: string;
   features: string[];
 }> = [
   {
-    icon: "identity",
+    icon: IconIdentidade,
     title: "Identidade Visual",
     description: "Criamos marcas memoráveis, consistentes e profissionais, com personalidade própria e alinhadas aos objetivos do seu negócio.",
     features: ["Estratégia de marca", "Design de logotipo", "Identidade visual", "Diretrizes de marca"],
   },
   {
-    icon: "modernize",
+    icon: IconModernizacao,
     title: "Modernização de Marca",
     description: "Atualizamos a imagem da sua empresa sem perder a essência, preparando-a para crescer e acompanhar a evolução do mercado.",
     features: ["Revisão de posicionamento", "Redesign de logotipo", "Atualização visual", "Relançamento de marca"],
   },
   {
-    icon: "product",
+    icon: IconProdutos,
     title: "Design para Produtos e Serviços",
     description: "Desenvolvemos peças visuais que aumentam a perceção de valor e comunicam com clareza os benefícios do que oferece.",
     features: ["Packaging", "Materiais promocionais", "Apresentações", "Catálogos e brochuras"],
   },
   {
-    icon: "social",
+    icon: IconRedes,
     title: "Design para Redes Sociais",
     description: "Produzimos conteúdo visual estratégico para redes sociais que reforça a autoridade da marca e gera engajamento real.",
     features: ["Templates para feed", "Stories e reels", "Campanhas paid", "Identidade digital"],
@@ -93,18 +99,20 @@ function ServicosPage() {
             description="Cada serviço é adaptado às necessidades específicas do seu negócio."
           />
           <div className="mt-16 grid gap-6 lg:grid-cols-2">
-            {services.map((service) => (
+            {services.map((service) => {
+              const ServiceIcon = service.icon;
+              return (
               <Card key={service.title} className="group glass border-border/50 bg-card/40 transition-all hover:-translate-y-1 hover:border-turquoise/30">
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
-                      <RunaIcon name={service.icon} className="h-7 w-7" />
+                    <div className="bento-icon">
+                      <ServiceIcon />
                     </div>
                     <Link
                       to="/contacto"
                       className="flex items-center gap-1 text-sm font-medium text-turquoise opacity-0 transition-opacity group-hover:opacity-100"
                     >
-                      {t("Saber mais")} <ArrowRight className="h-4 w-4" />
+                      {t("Saber mais")} <RunaIcon name="send" className="h-4 w-4" />
                     </Link>
                   </div>
                   <h3 className="mt-6 font-display text-2xl font-semibold text-foreground">
@@ -123,7 +131,8 @@ function ServicosPage() {
                   </ul>
                 </CardContent>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
