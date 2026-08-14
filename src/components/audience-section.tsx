@@ -87,7 +87,7 @@ export function AudienceSection() {
                 <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-7">
-                <div className="runa-icon-wrap transition-colors group-hover:[--icon-bg:#31D6D0]">
+                <div className="runa-icon-wrap">
                   <item.icon />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">{t(item.title)}</h3>
