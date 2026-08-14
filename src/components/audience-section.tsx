@@ -1,4 +1,13 @@
-import { Store, Building2, Rocket, Check, ShieldCheck, Gem, Split, MessageSquare, TrendingUp } from "lucide-react";
+import {
+  IconPequenas,
+  IconMedias,
+  IconEmpreendedores,
+  IconConfianca,
+  IconValoriza,
+  IconDiferencia,
+  IconComunicacao,
+  IconPercecao,
+} from "@/components/icons/RunaIcons";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslation } from "react-i18next";
@@ -8,7 +17,7 @@ import entrepreneursImg from "@/assets/empreendedor.jpg.asset.json";
 
 const audiences = [
   {
-    icon: Store,
+    icon: IconPequenas,
     image: smallBusinessImg.url,
     imagePosition: "object-[25%_50%]",
     alt: "Máquina de café artesanal numa cafetaria local",
@@ -18,7 +27,7 @@ const audiences = [
     examples: ["Restaurantes", "Cafés", "Clínicas", "Salões de beleza", "Lojas locais", "Empresas de serviços"],
   },
   {
-    icon: Building2,
+    icon: IconMedias,
     image: mediumBusinessImg.url,
     imagePosition: "object-[50%_30%]",
     alt: "Sala de reuniões corporativa com contrato sobre a mesa",
@@ -28,7 +37,7 @@ const audiences = [
     examples: ["Empresas em expansão", "Indústria", "Distribuição", "Escritórios", "Comércio", "Empresas B2B"],
   },
   {
-    icon: Rocket,
+    icon: IconEmpreendedores,
     image: entrepreneursImg.url,
     imagePosition: "object-[50%_50%]",
     alt: "Caderno de esboços e portátil na secretária de um empreendedor",
@@ -40,11 +49,11 @@ const audiences = [
 ];
 
 const benefits = [
-  { icon: ShieldCheck, label: "Transmite confiança" },
-  { icon: Gem, label: "Valoriza a marca" },
-  { icon: Split, label: "Diferencia da concorrência" },
-  { icon: MessageSquare, label: "Melhora a comunicação" },
-  { icon: TrendingUp, label: "Aumenta a perceção de valor" },
+  { icon: IconConfianca, label: "Transmite confiança" },
+  { icon: IconValoriza, label: "Valoriza a marca" },
+  { icon: IconDiferencia, label: "Diferencia da concorrência" },
+  { icon: IconComunicacao, label: "Melhora a comunicação" },
+  { icon: IconPercecao, label: "Aumenta a perceção de valor" },
 ];
 
 export function AudienceSection() {
@@ -78,8 +87,8 @@ export function AudienceSection() {
                 <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-7">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise transition-colors group-hover:bg-turquoise group-hover:text-graphite-deep">
-                  <item.icon className="h-6 w-6" />
+                <div className="runa-icon-wrap">
+                  <item.icon />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">{t(item.title)}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(item.description)}</p>
@@ -106,11 +115,11 @@ export function AudienceSection() {
                 key={benefit.label}
                 className="flex flex-col items-center gap-3 rounded-2xl border border-border/40 bg-card/40 p-5 text-center"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-turquoise/10 text-turquoise">
-                  <benefit.icon className="h-5 w-5" />
+                <span className="runa-icon-wrap">
+                  <benefit.icon />
                 </span>
                 <span className="text-sm font-medium text-foreground">{t(benefit.label)}</span>
-                <Check className="h-4 w-4 text-turquoise/60" aria-hidden="true" />
+                <svg className="h-4 w-4 text-turquoise/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
               </li>
             ))}
           </ul>

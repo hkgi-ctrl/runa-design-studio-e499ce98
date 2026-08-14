@@ -108,6 +108,72 @@ export const IconCanais = () => (
 
 )
 
+// --- SOBRE - VALORES (4) ---
+
+export const IconProposito = IconEstrategico;
+
+export const IconPaixao = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><path d="M12 20l-3.5-3.2C4 13 2 11 2 8.5A4.5 4.5 0 0 1 9 5c1.5 0 2.3.8 3 1.5C12.7 5.8 13.5 5 15 5a4.5 4.5 0 0 1 7 3.5C22 11 20 13 15.5 16.8L12 20z"/></svg>
+  </div>
+);
+
+export const IconInovacao = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+  </div>
+);
+
+export const IconColaboracao = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><circle cx="8" cy="8" r="3"/><path d="M2 20a6 6 0 0 1 12 0"/><circle cx="16" cy="10" r="2.5"/><path d="M19.5 20a5 5 0 0 0-5-5"/></svg>
+  </div>
+);
+
+// --- SOBRE - QUEM AJUDAMOS (3) ---
+
+export const IconPequenas = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><path d="M3 9l1-5h16l1 5M3 9h18v10H3z"/><path d="M8 13h1M12 13h1M16 13h1M8 17h1M12 17h1"/></svg>
+  </div>
+);
+
+export const IconMedias = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 21V9h6v12M9 12h6M9 15h6"/></svg>
+  </div>
+);
+
+export const IconEmpreendedores = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><path d="M9 13a5 5 0 0 0 6-6c0-2-1.5-3-3-3S9 5 9 7a5 5 0 0 0 6 6"/><path d="M13 13l5 5"/><path d="M15 13h5v5"/></svg>
+  </div>
+);
+
+// --- SOBRE - PORQUE INVESTIR (5) ---
+
+export const IconConfianca = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+  </div>
+);
+
+export const IconValoriza = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 7l10 5 10-5"/><path d="M2 7v5l10 5 10-5V7"/></svg>
+  </div>
+);
+
+export const IconDiferencia = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7"><path d="M7 17V7h10"/><path d="M7 7l5 5"/><path d="M17 7l-5 5"/></svg>
+  </div>
+);
+
+export const IconComunicacao = IconProcesso;
+
+export const IconPercecao = IconResultados;
+
 // --- LEGACY EXPORTS (mantidos para compatibilidade com componentes existentes) ---
 
 import type { ReactElement, SVGProps } from "react";

@@ -4,7 +4,12 @@ import { CTASection } from "@/components/cta-section";
 import { AudienceSection } from "@/components/audience-section";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Heart, Lightbulb, Users } from "lucide-react";
+import {
+  IconProposito,
+  IconPaixao,
+  IconInovacao,
+  IconColaboracao,
+} from "@/components/icons/RunaIcons";
 import { useTranslation } from "react-i18next";
 import valuesPenLine from "@/assets/valores-caneta-curta.jpg.asset.json";
 
@@ -21,10 +26,10 @@ export const Route = createFileRoute("/sobre")({
 });
 
 const values = [
-  { icon: Target, title: "Propósito", description: "Criamos design com intenção, alinhado aos objetivos de negócio dos nossos clientes." },
-  { icon: Heart, title: "Paixão", description: "Acreditamos que o melhor design nasce do cuidado e da dedicação a cada detalhe." },
-  { icon: Lightbulb, title: "Inovação", description: "Exploramos novas ideias e tecnologias para entregar soluções diferenciadoras." },
-  { icon: Users, title: "Colaboração", description: "Trabalhamos em parceria próxima com os nossos clientes em cada etapa do projeto." },
+  { icon: IconProposito, title: "Propósito", description: "Criamos design com intenção, alinhado aos objetivos de negócio dos nossos clientes." },
+  { icon: IconPaixao, title: "Paixão", description: "Acreditamos que o melhor design nasce do cuidado e da dedicação a cada detalhe." },
+  { icon: IconInovacao, title: "Inovação", description: "Exploramos novas ideias e tecnologias para entregar soluções diferenciadoras." },
+  { icon: IconColaboracao, title: "Colaboração", description: "Trabalhamos em parceria próxima com os nossos clientes em cada etapa do projeto." },
 ];
 
 function SobrePage() {
@@ -79,8 +84,8 @@ function SobrePage() {
               {values.map((value) => (
                 <Card key={value.title} className="glass border-border/50 bg-card/40">
                   <CardContent className="p-6">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise">
-                      <value.icon className="h-6 w-6" />
+                    <div className="runa-icon-wrap">
+                      <value.icon />
                     </div>
                     <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
                       {t(value.title)}
