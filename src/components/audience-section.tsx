@@ -17,7 +17,7 @@ import entrepreneursImg from "@/assets/empreendedor.jpg.asset.json";
 
 const audiences = [
   {
-    icon: Store,
+    icon: IconPequenas,
     image: smallBusinessImg.url,
     imagePosition: "object-[25%_50%]",
     alt: "Máquina de café artesanal numa cafetaria local",
@@ -27,7 +27,7 @@ const audiences = [
     examples: ["Restaurantes", "Cafés", "Clínicas", "Salões de beleza", "Lojas locais", "Empresas de serviços"],
   },
   {
-    icon: Building2,
+    icon: IconMedias,
     image: mediumBusinessImg.url,
     imagePosition: "object-[50%_30%]",
     alt: "Sala de reuniões corporativa com contrato sobre a mesa",
@@ -37,7 +37,7 @@ const audiences = [
     examples: ["Empresas em expansão", "Indústria", "Distribuição", "Escritórios", "Comércio", "Empresas B2B"],
   },
   {
-    icon: Rocket,
+    icon: IconEmpreendedores,
     image: entrepreneursImg.url,
     imagePosition: "object-[50%_50%]",
     alt: "Caderno de esboços e portátil na secretária de um empreendedor",
@@ -49,11 +49,11 @@ const audiences = [
 ];
 
 const benefits = [
-  { icon: ShieldCheck, label: "Transmite confiança" },
-  { icon: Gem, label: "Valoriza a marca" },
-  { icon: Split, label: "Diferencia da concorrência" },
-  { icon: MessageSquare, label: "Melhora a comunicação" },
-  { icon: TrendingUp, label: "Aumenta a perceção de valor" },
+  { icon: IconConfianca, label: "Transmite confiança" },
+  { icon: IconValoriza, label: "Valoriza a marca" },
+  { icon: IconDiferencia, label: "Diferencia da concorrência" },
+  { icon: IconComunicacao, label: "Melhora a comunicação" },
+  { icon: IconPercecao, label: "Aumenta a perceção de valor" },
 ];
 
 export function AudienceSection() {
