@@ -97,9 +97,9 @@ function ProcessoPage() {
                 className="relative rounded-2xl border border-border/50 bg-card/30 p-8 backdrop-blur-sm"
               >
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-turquoise/10">
-                    <step.icon className="h-7 w-7 text-turquoise" strokeWidth={1.5} />
-                  </div>
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-turquoise/10">
+                  <step.icon />
+                </div>
                   <div className="flex-1">
                     <span className="font-display text-sm font-bold tracking-widest text-turquoise/60">
                       {step.step}
@@ -141,7 +141,7 @@ function ProcessoPage() {
                 key={item.title}
                 className="rounded-2xl border border-turquoise/20 bg-card/30 p-8 backdrop-blur-sm"
               >
-                <item.icon className="h-8 w-8 text-turquoise" strokeWidth={1.5} />
+                <item.icon />
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">
                   {t(item.title)}
                 </h3>
