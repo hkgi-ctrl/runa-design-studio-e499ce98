@@ -519,4 +519,63 @@ export function RunaIcon({ name, className, ...props }: RunaIconProps) {
   );
 }
 
+// --- PROCESSO - 4 ETAPAS + DIFERENCIAL ---
+
+export const IconPesquisa = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7">
+      <circle cx="11" cy="11" r="6"/>
+      <path d="M21 21l-4.3-4.3"/>
+    </svg>
+  </div>
+);
+
+export const IconExploracao = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7">
+      <path d="M9.5 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z"/>
+      <path d="M18 7l1 1.5 1.5 1-1.5 1L18 12l-1-1.5L15.5 9.5l1.5-1L18 7z"/>
+    </svg>
+  </div>
+);
+
+export const IconEstrategiaProc = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7">
+      <circle cx="12" cy="12" r="7"/>
+      <circle cx="12" cy="12" r="3"/>
+      <circle cx="12" cy="12" r="0.5" fill="#5EEAD4" stroke="none"/>
+    </svg>
+  </div>
+);
+
+export const IconDesignFinal = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7">
+      <path d="M12 20h9"/>
+      <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+    </svg>
+  </div>
+);
+
+export const IconIAEstrategica = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7">
+      <path d="M9.5 7.5a3 3 0 0 0 0 6"/>
+      <path d="M14.5 7.5a3 3 0 0 1 0 6"/>
+      <path d="M9 11h6"/>
+    </svg>
+  </div>
+);
+
+export const IconRefinamentoHumano = () => (
+  <div className={wrapper}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7">
+      <circle cx="9" cy="7" r="3"/>
+      <path d="M2 20a7 7 0 0 1 14 0"/>
+      <path d="M16 11l2 2 4-4"/>
+    </svg>
+  </div>
+);
+
 export default RunaIcon;
