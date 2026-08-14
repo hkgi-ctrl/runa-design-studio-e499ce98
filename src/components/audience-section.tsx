@@ -115,11 +115,11 @@ export function AudienceSection() {
                 key={benefit.label}
                 className="flex flex-col items-center gap-3 rounded-2xl border border-border/40 bg-card/40 p-5 text-center"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-turquoise/10 text-turquoise">
-                  <benefit.icon className="h-5 w-5" />
+                <span className="runa-icon-wrap">
+                  <benefit.icon />
                 </span>
                 <span className="text-sm font-medium text-foreground">{t(benefit.label)}</span>
-                <Check className="h-4 w-4 text-turquoise/60" aria-hidden="true" />
+                <svg className="h-4 w-4 text-turquoise/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
               </li>
             ))}
           </ul>
