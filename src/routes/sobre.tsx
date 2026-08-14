@@ -84,8 +84,8 @@ function SobrePage() {
               {values.map((value) => (
                 <Card key={value.title} className="glass border-border/50 bg-card/40">
                   <CardContent className="p-6">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-turquoise/10 text-turquoise">
-                      <value.icon className="h-6 w-6" />
+                    <div className="runa-icon-wrap">
+                      <value.icon />
                     </div>
                     <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
                       {t(value.title)}
