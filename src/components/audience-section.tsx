@@ -1,4 +1,13 @@
-import { Store, Building2, Rocket, Check, ShieldCheck, Gem, Split, MessageSquare, TrendingUp } from "lucide-react";
+import {
+  IconPequenas,
+  IconMedias,
+  IconEmpreendedores,
+  IconConfianca,
+  IconValoriza,
+  IconDiferencia,
+  IconComunicacao,
+  IconPercecao,
+} from "@/components/icons/RunaIcons";
 import { SectionHeader } from "@/components/section-header";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslation } from "react-i18next";
