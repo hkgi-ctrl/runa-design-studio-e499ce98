@@ -26,10 +26,10 @@ export const Route = createFileRoute("/sobre")({
 });
 
 const values = [
-  { icon: Target, title: "Propósito", description: "Criamos design com intenção, alinhado aos objetivos de negócio dos nossos clientes." },
-  { icon: Heart, title: "Paixão", description: "Acreditamos que o melhor design nasce do cuidado e da dedicação a cada detalhe." },
-  { icon: Lightbulb, title: "Inovação", description: "Exploramos novas ideias e tecnologias para entregar soluções diferenciadoras." },
-  { icon: Users, title: "Colaboração", description: "Trabalhamos em parceria próxima com os nossos clientes em cada etapa do projeto." },
+  { icon: IconProposito, title: "Propósito", description: "Criamos design com intenção, alinhado aos objetivos de negócio dos nossos clientes." },
+  { icon: IconPaixao, title: "Paixão", description: "Acreditamos que o melhor design nasce do cuidado e da dedicação a cada detalhe." },
+  { icon: IconInovacao, title: "Inovação", description: "Exploramos novas ideias e tecnologias para entregar soluções diferenciadoras." },
+  { icon: IconColaboracao, title: "Colaboração", description: "Trabalhamos em parceria próxima com os nossos clientes em cada etapa do projeto." },
 ];
 
 function SobrePage() {
