@@ -102,8 +102,8 @@ const projects: Array<{
     description: "Key visual de alta energia para um dos maiores festivais de Portugal.",
     seal: "ESTUDO DE CASO",
     tags: ["Publicidade", "Design Gráfico"],
-    image: campanhaKalorama.url,
-    gallery: [campanhaCidadePerdida.url, campanhaBeatles.url, campanhaChoc.url, displayShows1.url],
+    image: campanhaChoc.url,
+    gallery: [campanhaKalorama.url, campanhaCidadePerdida.url, campanhaBeatles.url, displayShows1.url],
   },
 ];
 
