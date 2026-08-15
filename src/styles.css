@@ -439,13 +439,14 @@
     box-shadow 0.45s ease;
 }
 
-.bento-card:hover {
+.bento-card:hover,
+.bento-card.visible {
   transform: translateY(-8px);
   border-color: #00e5ff;
   box-shadow: 0 24px 48px -20px rgba(0, 229, 255, 0.25);
 }
 
-/* Light sheen sweep on hover */
+/* Light sheen sweep on hover/reveal */
 .bento-card::before {
   content: "";
   position: absolute;
@@ -459,8 +460,15 @@
   pointer-events: none;
 }
 
-.bento-card:hover::before {
+.bento-card:hover::before,
+.bento-card.visible::before {
   left: 135%;
+}
+
+/* Deeper lift on hover when already visible */
+.bento-card.visible:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 32px 56px -20px rgba(0, 229, 255, 0.35);
 }
 
 .bento-icon {

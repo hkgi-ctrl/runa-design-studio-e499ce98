@@ -233,6 +233,36 @@ function HeroParticles() {
   );
 }
 
+function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
+  const { ref, isVisible } = useScrollReveal<HTMLDivElement>({ threshold: 0.3 });
+  const { t } = useTranslation();
+  const ServiceIcon = service.icon;
+
+  return (
+    <div
+      ref={ref}
+      className={`bento-card reveal ${isVisible ? "visible" : ""}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <img
+        src={rIcone.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
+      />
+      <div className="bento-icon">
+        <ServiceIcon />
+      </div>
+      <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
+        {t(service.title)}
+      </h3>
+      <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+        {t(service.description)}
+      </p>
+    </div>
+  );
+}
+
 function ServicesSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const { t } = useTranslation();
@@ -245,35 +275,16 @@ function ServicesSection() {
         aria-hidden
         className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]"
       />
-      <div className="relative z-[4] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={`reveal ${isVisible ? "visible" : ""} relative z-[4] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}>
         <SectionHeader
           eyebrow="Serviços"
           title="Soluções criativas sob medida"
           description="Oferecemos um leque completo de serviços de design para ajudar a sua marca a destacar-se e crescer."
         />
-        <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2`}>
-          {services.map((service) => {
-            const ServiceIcon = service.icon;
-            return (
-            <div key={service.title} className="bento-card">
-              <img
-                src={rIcone.url}
-                alt=""
-                aria-hidden
-                className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
-              />
-              <div className="bento-icon">
-                <ServiceIcon />
-              </div>
-              <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
-                {t(service.title)}
-              </h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                {t(service.description)}
-              </p>
-            </div>
-            );
-          })}
+        <div className="mt-16 grid gap-6 sm:grid-cols-2">
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} service={service} index={index} />
+          ))}
         </div>
       </div>
     </section>
