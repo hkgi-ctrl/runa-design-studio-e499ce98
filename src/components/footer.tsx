@@ -66,7 +66,7 @@ const socialLinks = [
   { icon: IconLinkedIn, href: "https://www.linkedin.com/company/runa-studiodesign/", label: "LinkedIn RUNA" },
   { icon: IconWhatsApp, href: "https://wa.me/351923397753?text=Ol%C3%A1%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20projeto.", label: "WhatsApp" },
   // TODO: Ativar Facebook quando página for desbloqueada - trocar href para https://www.facebook.com/runa.studiodesign
-  { icon: IconFacebook, href: "#", label: "Facebook RUNA em breve", disabled: true, title: "Facebook em breve" },
+  { icon: IconFacebook, href: "#", label: "Facebook RUNA em breve", title: "Facebook em breve" },
 ];
 
 
