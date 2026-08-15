@@ -92,9 +92,9 @@ export function AudienceSection() {
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold text-foreground">{t(item.title)}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(item.description)}</p>
-                <ul className="mt-6 grid grid-cols-2 gap-2">
+                <ul className="mt-6 grid grid-cols-2 gap-2 text-left">
                   {item.examples.map((example) => (
-                    <li key={example} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <li key={example} className="flex items-center justify-start gap-2 text-left text-sm text-muted-foreground">
                       <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise" />
                       {t(example)}
                     </li>
