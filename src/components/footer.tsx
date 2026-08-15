@@ -60,7 +60,13 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
+const socialLinks: Array<{
+  icon: () => JSX.Element;
+  href: string;
+  label: string;
+  title?: string;
+  disabled?: boolean;
+}> = [
   { icon: IconInstagram, href: "https://www.instagram.com/runa.studiodesign/", label: "Instagram RUNA" },
   { icon: IconBehance, href: "https://www.behance.net/runa_studiodesign", label: "Behance RUNA" },
   { icon: IconLinkedIn, href: "https://www.linkedin.com/company/runa-studiodesign/", label: "LinkedIn RUNA" },
