@@ -62,7 +62,7 @@ const footerLinks = {
 };
 
 const socialLinks: Array<{
-  icon: () => JSX.Element;
+  icon: React.FC;
   href: string;
   label: string;
   title?: string;
