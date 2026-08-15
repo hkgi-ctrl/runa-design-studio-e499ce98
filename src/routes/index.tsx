@@ -121,7 +121,7 @@ function HeroSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="hero-section flex min-h-screen items-center justify-center overflow-hidden pt-20">
+    <section className="hero-section flex min-h-screen items-center justify-center pt-20">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.8754_0.105_193.25_/_0.12),_transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_oklch(0.5556_0.066_218.27_/_0.15),_transparent_50%)]" />
 

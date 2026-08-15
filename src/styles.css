@@ -176,6 +176,9 @@
 
   html {
     scroll-behavior: smooth;
+    /* Prevent decorative bleed elements from creating horizontal panning,
+       which would push the fixed header's menu button out of view. */
+    overflow-x: clip;
   }
 
   body {
@@ -184,6 +187,7 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {
