@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "@tanstack/react-router";
 import { RunaIcon } from "@/components/icons/RunaIcons";
 import { useTranslation } from "react-i18next";
