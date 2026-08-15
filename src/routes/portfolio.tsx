@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeader } from "@/components/section-header";
 import { CTASection } from "@/components/cta-section";
@@ -235,7 +236,7 @@ function PortfolioPage() {
 
       {lightbox && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/90 p-4 backdrop-blur-md"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4 backdrop-blur-xl"
           role="dialog"
           aria-modal="true"
           onClick={close}
@@ -244,32 +245,46 @@ function PortfolioPage() {
             type="button"
             aria-label={t("Fechar")}
             onClick={close}
-            className="absolute right-4 top-4 rounded-full border border-border/60 bg-card/70 p-2 text-foreground transition-colors hover:border-turquoise/60 hover:text-turquoise"
+            className="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-xl border border-[#5EEAD4]/30 bg-[#101828]/80 text-[#5EEAD4] shadow-[0_0_20px_rgba(94,234,212,0.2)] backdrop-blur-md transition-all hover:border-[#5EEAD4]/60 hover:shadow-[0_0_30px_rgba(94,234,212,0.3)]"
           >
             <X className="h-5 w-5" />
           </button>
+
           <button
             type="button"
             aria-label={t("Anterior")}
             onClick={(e) => { e.stopPropagation(); step(-1); }}
-            className="absolute left-4 rounded-full border border-border/60 bg-card/70 p-3 text-foreground transition-colors hover:border-turquoise/60 hover:text-turquoise"
+            className="absolute top-1/2 left-4 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-xl border border-[#5EEAD4]/30 bg-[#101828]/80 text-[#5EEAD4] shadow-[0_0_20px_rgba(94,234,212,0.2)] backdrop-blur-md transition-all hover:border-[#5EEAD4]/60 hover:shadow-[0_0_30px_rgba(94,234,212,0.3)]"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
-          <img
-            src={lightbox.images[lightbox.index]}
-            alt=""
-            onClick={(e) => e.stopPropagation()}
-            className="max-h-[85vh] max-w-[85vw] rounded-lg object-contain shadow-2xl"
-          />
+
           <button
             type="button"
             aria-label={t("Seguinte")}
             onClick={(e) => { e.stopPropagation(); step(1); }}
-            className="absolute right-4 rounded-full border border-border/60 bg-card/70 p-3 text-foreground transition-colors hover:border-turquoise/60 hover:text-turquoise"
+            className="absolute top-1/2 right-4 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-xl border border-[#5EEAD4]/30 bg-[#101828]/80 text-[#5EEAD4] shadow-[0_0_20px_rgba(94,234,212,0.2)] backdrop-blur-md transition-all hover:border-[#5EEAD4]/60 hover:shadow-[0_0_30px_rgba(94,234,212,0.3)]"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
+
+          <AnimatePresence>
+            <motion.div
+              key={lightbox.index}
+              initial={{ x: "30%", scale: 0.85, opacity: 0 }}
+              animate={{ x: 0, scale: 1, opacity: 1 }}
+              exit={{ x: "-30%", scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1], delay: 0.1 }}
+              onClick={(e) => e.stopPropagation()}
+              className="rounded-2xl border border-[#5EEAD4]/15 shadow-[0_25px_80px_rgba(0,0,0,0.6),0_0_60px_rgba(94,234,212,0.25)]"
+            >
+              <img
+                src={lightbox.images[lightbox.index]}
+                alt=""
+                className="max-h-[85vh] max-w-[85vw] rounded-2xl object-contain"
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
       )}
     </>
