@@ -6,7 +6,6 @@ import {
   IconRedes,
   RunaIcon,
 } from "@/components/icons/RunaIcons";
-import { motion } from "framer-motion";
 import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import type { ComponentType } from "react";
 import { Button } from "@/components/ui/button";
