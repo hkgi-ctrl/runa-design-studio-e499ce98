@@ -129,18 +129,19 @@ export function Footer() {
                 <span>Lisboa, Portugal</span>
               </li>
             </ul>
-            <div className="mt-6 flex flex-wrap justify-start gap-2.5 sm:gap-3">
-              {socialLinks.map((social) =>
-                social.disabled ? (
+            <div className="mt-6 flex flex-wrap justify-start gap-4">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return social.disabled ? (
                   <a
                     key={social.label}
                     href="#"
                     onClick={(e) => e.preventDefault()}
                     aria-label={social.label}
                     title={social.title}
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-footer-link opacity-40 transition-all duration-300 cursor-not-allowed"
+                    className={`${socialIcon} opacity-40 cursor-not-allowed`}
                   >
-                    <Facebook className="h-4 w-4" />
+                    <Icon />
                   </a>
                 ) : (
                   <a
@@ -150,12 +151,12 @@ export function Footer() {
                     rel="noopener noreferrer"
                     aria-label={social.label}
                     title={social.title ?? social.label}
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-footer-social-background text-footer-link transition-all duration-300 hover:bg-footer-social-hover/10 hover:text-footer-link-hover"
+                    className={socialIcon}
                   >
-                    <RunaIcon name={social.icon as RunaIconName} className="h-4 w-4" />
+                    <Icon />
                   </a>
-                )
-              )}
+                );
+              })}
             </div>
           </div>
         </div>
