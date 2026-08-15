@@ -235,11 +235,10 @@ function HeroParticles() {
 }
 
 function ServicesSection() {
-  const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const { t } = useTranslation();
 
   return (
-    <section className="services-bleed py-24 sm:py-32" ref={ref}>
+    <section className="services-bleed py-24 sm:py-32">
       <img
         src={fundoNeural.url}
         alt=""
@@ -252,27 +251,44 @@ function ServicesSection() {
           title="Soluções criativas sob medida"
           description="Oferecemos um leque completo de serviços de design para ajudar a sua marca a destacar-se e crescer."
         />
-        <div className={`reveal ${isVisible ? "visible" : ""} mt-16 grid gap-6 sm:grid-cols-2`}>
-          {services.map((service) => {
+        <div className="mt-16 grid gap-6 sm:grid-cols-2">
+          {services.map((service, index) => {
             const ServiceIcon = service.icon;
             return (
-            <div key={service.title} className="bento-card">
-              <img
-                src={rIcone.url}
-                alt=""
-                aria-hidden
-                className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
-              />
-              <div className="bento-icon">
-                <ServiceIcon />
-              </div>
-              <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
-                {t(service.title)}
-              </h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                {t(service.description)}
-              </p>
-            </div>
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  borderColor: "rgba(94,234,212,0.4)",
+                  boxShadow: "0 0 30px rgba(94,234,212,0.15)",
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: index * 0.1 }}
+                className="relative overflow-hidden rounded-[28px] border border-[#5EEAD4]/20 bg-[rgba(255,255,255,0.04)] p-6 backdrop-blur-[24px] transition-all sm:p-8"
+              >
+                <img
+                  src={rIcone.url}
+                  alt=""
+                  aria-hidden
+                  className="pointer-events-none absolute bottom-4 right-4 h-20 w-20 -rotate-12 select-none opacity-[0.06]"
+                />
+                <motion.div
+                  whileInView={{ scale: 1.05 }}
+                  transition={{ delay: 0.2, duration: 0.4 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="bento-icon"
+                >
+                  <ServiceIcon />
+                </motion.div>
+                <h3 className="mt-7 font-display text-2xl font-semibold text-foreground">
+                  {t(service.title)}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  {t(service.description)}
+                </p>
+              </motion.div>
             );
           })}
         </div>
