@@ -63,7 +63,7 @@ const socialLinks: Array<{ icon: RunaIconName | "facebook"; href: string; label:
   { icon: "instagram", href: "https://www.instagram.com/runa.studiodesign/", label: "Instagram RUNA" },
   { icon: "behance", href: "https://www.behance.net/runa_studiodesign", label: "Behance RUNA" },
   { icon: "linkedin", href: "https://www.linkedin.com/company/runa_studiodesign/", label: "LinkedIn RUNA" },
-  { icon: "whatsapp", href: "https://wa.me/351923397753?text=Olá%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20de%20branding.", label: "WhatsApp" },
+  { icon: "whatsapp", href: "https://wa.me/351923397753?text=Ol%C3%A1%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20projeto.", label: "WhatsApp" },
   // TODO: Ativar Facebook quando página for desbloqueada - trocar href para https://www.facebook.com/runa.studiodesign
   { icon: "facebook", href: "#", label: "Facebook RUNA em breve", disabled: true, title: "Facebook em breve" },
 ];
@@ -264,7 +264,7 @@ function ContactoPage() {
                                   +351 923 397 753
                                 </a>
                                 <a
-                                  href="https://wa.me/351923397753?text=Olá%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20de%20branding."
+                                  href="https://wa.me/351923397753?text=Ol%C3%A1%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20projeto."
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   aria-label="Falar no WhatsApp"
