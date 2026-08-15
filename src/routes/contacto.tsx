@@ -17,7 +17,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Facebook } from "lucide-react";
 import { RunaIcon, type RunaIconName } from "@/components/icons/RunaIcons";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
