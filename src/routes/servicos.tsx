@@ -121,10 +121,10 @@ function ServicosPage() {
                   <p className="mt-3 text-base leading-relaxed text-muted-foreground">
                     {t(service.description)}
                   </p>
-                  <ul className="mt-6 grid grid-cols-2 gap-2">
+                  <ul className="mt-6 grid grid-cols-2 gap-2 text-left">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="h-1.5 w-1.5 rounded-full bg-turquoise" />
+                      <li key={feature} className="flex items-center justify-start gap-2 text-left text-sm text-muted-foreground">
+                        <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-turquoise" />
                         {t(feature)}
                       </li>
                     ))}
