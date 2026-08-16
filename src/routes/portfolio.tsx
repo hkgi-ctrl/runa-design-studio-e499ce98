@@ -33,7 +33,7 @@ import jaciraVestido from "@/assets/jacira-4.png.asset.json";
 import jaciraSacola from "@/assets/jacira-sacola-croche.png.asset.json";
 import campanhaChoc from "@/assets/campanha-choc.png.asset.json";
 import campanhaMeo from "@/assets/meo_final.png.asset.json";
-import campanhaShows from "@/assets/DISPLAY_SHOWS_1-2.png.asset.json";
+import campanhaCafeFinal from "@/assets/cafe_final.png.asset.json";
 import campanhaBeatles from "@/assets/beatels_final.png.asset.json";
 import campanhaCidadePerdida from "@/assets/final_lost_city.webp.asset.json";
 
@@ -103,7 +103,7 @@ const projects: Array<{
     seal: "ESTUDO DE CASO",
     tags: ["Publicidade", "Design Gráfico"],
     image: campanhaChoc.url,
-    gallery: [campanhaMeo.url, campanhaShows.url, campanhaBeatles.url, campanhaCidadePerdida.url],
+    gallery: [campanhaMeo.url, campanhaCafeFinal.url, campanhaBeatles.url, campanhaCidadePerdida.url],
   },
 ];
 
