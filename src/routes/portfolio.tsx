@@ -21,6 +21,7 @@ import norteFlatlay from "@/assets/norte-2.png.asset.json";
 import norteGarrafa from "@/assets/norte-3.png.asset.json";
 import norteCasaco from "@/assets/norte-4.png.asset.json";
 import norteCampanha from "@/assets/norte-campanha.png.asset.json";
+import nortePatagonia from "@/assets/patagonia.png.asset.json";
 import virclanLogo from "@/assets/virclan-6.png.asset.json";
 import virclanVariant1 from "@/assets/virclan-7.png.asset.json";
 import virclanVariant2 from "@/assets/virclan-8.png.asset.json";
@@ -87,7 +88,7 @@ const projects: Array<{
     seal: "ESTUDO DE CASO",
     tags: ["Branding", "Identidade Visual", "Social Media"],
     image: norteLogo.url,
-    gallery: [norteFlatlay.url, norteGarrafa.url, norteCasaco.url, norteCampanha.url],
+    gallery: [norteFlatlay.url, norteGarrafa.url, norteCasaco.url, nortePatagonia.url],
   },
   {
     title: "VIRCLAN",
