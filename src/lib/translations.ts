@@ -16,6 +16,8 @@ export const es: Dict = {
   "Contacto": "Contacto",
   "Quem ajudamos": "A quién ayudamos",
   "Conhecer os públicos que ajudamos": "Conocer los públicos a los que ayudamos",
+  "Especializados em pequenas e médias empresas, mas preparados para criar marcas que crescem em qualquer mercado.":
+    "Especializados en pequeñas y medianas empresas, pero preparados para crear marcas que crecen en cualquier mercado.",
   "Iniciar projeto": "Iniciar proyecto",
   "Abrir menu": "Abrir menú",
   "Idioma": "Idioma",
@@ -663,6 +665,8 @@ export const en: Dict = {
   "Contacto": "Contact",
   "Quem ajudamos": "Who we help",
   "Conhecer os públicos que ajudamos": "Meet the audiences we help",
+  "Especializados em pequenas e médias empresas, mas preparados para criar marcas que crescem em qualquer mercado.":
+    "Specialized in small and medium businesses, yet ready to build brands that grow in any market.",
   "Iniciar projeto": "Start a project",
   "Abrir menu": "Open menu",
   "Idioma": "Language",
