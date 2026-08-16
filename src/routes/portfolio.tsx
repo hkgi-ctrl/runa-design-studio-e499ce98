@@ -31,11 +31,11 @@ import jaciraCartoes from "@/assets/jacira-2.png.asset.json";
 import jaciraPoster from "@/assets/jacira-3.png.asset.json";
 import jaciraVestido from "@/assets/jacira-4.png.asset.json";
 import jaciraSacola from "@/assets/jacira-sacola-croche.png.asset.json";
-import campanhaCidadePerdida from "@/assets/DISPLAY_CIDADE_PERDIDA.png.asset.json";
-import campanhaKalorama from "@/assets/campanha-kalorama.png.asset.json";
-import campanhaBeatles from "@/assets/campanha-beatles.png.asset.json";
 import campanhaChoc from "@/assets/campanha-choc.png.asset.json";
-import displayShows1 from "@/assets/DISPLAY_SHOWS_1.png.asset.json";
+import campanhaMeo from "@/assets/meo_final.png.asset.json";
+import campanhaShows from "@/assets/DISPLAY_SHOWS_1-2.png.asset.json";
+import campanhaBeatles from "@/assets/beatels_final.png.asset.json";
+import campanhaCidadePerdida from "@/assets/final_lost_city.webp.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -103,7 +103,7 @@ const projects: Array<{
     seal: "ESTUDO DE CASO",
     tags: ["Publicidade", "Design Gráfico"],
     image: campanhaChoc.url,
-    gallery: [campanhaKalorama.url, campanhaCidadePerdida.url, campanhaBeatles.url, displayShows1.url],
+    gallery: [campanhaMeo.url, campanhaShows.url, campanhaBeatles.url, campanhaCidadePerdida.url],
   },
 ];
 
