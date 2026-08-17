@@ -24,18 +24,23 @@ jobs:
       - name: Gerar Build do Projeto
         run: npm run build
 
-      - name: Preparar arquivos estáticos finais
+      - name: Localizar e Injetar index.html e .htaccess
         run: |
-          # Define a pasta exata de saída
           TARGET_DIR=".output/public"
           mkdir -p $TARGET_DIR
 
-          # Copia o index.html original da raiz para dentro do diretório de envio
-          if [ -f "index.html" ]; then
+          # Procura qualquer index.html gerado na build (ignorando node_modules)
+          PROCESSED_INDEX=$(find . -maxdepth 4 -name "index.html" ! -path "*/node_modules/*" ! -path "./index.html" | head -n 1)
+
+          if [ -n "$PROCESSED_INDEX" ]; then
+            echo "Index processado encontrado em: $PROCESSED_INDEX"
+            cp "$PROCESSED_INDEX" $TARGET_DIR/index.html
+          elif [ -f "index.html" ]; then
+            echo "Usando index da raiz..."
             cp index.html $TARGET_DIR/index.html
           fi
 
-          # Cria o .htaccess dentro do mesmo diretório
+          # Cria o .htaccess para suporte a SPA
           cat << 'EOF' > $TARGET_DIR/.htaccess
           <IfModule mod_rewrite.c>
             RewriteEngine On
