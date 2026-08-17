@@ -21,23 +21,43 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Gerar Build Estático
-        run: npx vite build
+      - name: Gerar Build
+        run: npm run build
 
-      - name: Enviar para Hostinger via LFTP
+      - name: Injetar index.html e .htaccess na pasta final
         run: |
-          sudo apt-get update && sudo apt-get install -y lftp
-          
-          # Procura a pasta estática gerada (dist ou .output/public)
-          if [ -d "dist" ]; then
-            DIR="dist"
-          elif [ -d ".output/public" ]; then
+          # Procura a pasta publica de saida
+          if [ -d ".output/public" ]; then
             DIR=".output/public"
+          elif [ -d "dist" ]; then
+            DIR="dist"
           else
             DIR="."
           fi
 
-          # Cria o .htaccess para tratamento de rotas no servidor
+          # Se o index.html não existir na pasta, procura em todo o repositório ou cria um fallback
+          if [ ! -f "$DIR/index.html" ]; then
+            FOUND_INDEX=$(find . -name "index.html" | head -n 1)
+            if [ -n "$FOUND_INDEX" ]; then
+              cp "$FOUND_INDEX" "$DIR/index.html"
+            else
+              cat << 'EOF' > $DIR/index.html
+          <!DOCTYPE html>
+          <html lang="pt">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Runa Design Studio</title>
+          </head>
+          <body>
+            <div id="root"></div>
+          </body>
+          </html>
+          EOF
+            fi
+          fi
+
+          # Garante o .htaccess para tratamento de rotas SPA
           cat << 'EOF' > $DIR/.htaccess
           <IfModule mod_rewrite.c>
             RewriteEngine On
@@ -48,6 +68,18 @@ jobs:
             RewriteRule . /index.html [L]
           </IfModule>
           EOF
+
+      - name: Enviar para Hostinger via LFTP
+        run: |
+          sudo apt-get update && sudo apt-get install -y lftp
+          
+          if [ -d ".output/public" ]; then
+            DIR=".output/public"
+          elif [ -d "dist" ]; then
+            DIR="dist"
+          else
+            DIR="."
+          fi
 
           lftp -c "
           set ftp:ssl-allow no;
