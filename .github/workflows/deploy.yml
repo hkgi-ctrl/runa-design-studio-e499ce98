@@ -21,12 +21,16 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Compilar SPA Estático (Vite)
-        run: npx vite build --outDir dist
+      - name: Gerar Build do Projeto
+        run: npm run build
 
-      - name: Criar arquivo .htaccess para SPA
+      - name: Criar arquivo .htaccess na pasta gerada
         run: |
-          cat << 'EOF' > dist/.htaccess
+          # Garante que a pasta de saída existe
+          mkdir -p .output/public
+
+          # Cria o .htaccess diretamente dentro da pasta .output/public
+          cat << 'EOF' > .output/public/.htaccess
           <IfModule mod_rewrite.c>
             RewriteEngine On
             RewriteBase /
@@ -44,6 +48,6 @@ jobs:
           lftp -c "
           set ftp:ssl-allow no;
           open -u ${{ secrets.FTP_USERNAME }},'${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }};
-          mirror --reverse --delete --verbose --no-perms ./dist/ /public_html/;
+          mirror --reverse --delete --verbose --no-perms ./.output/public/ /public_html/;
           quit;
           "
