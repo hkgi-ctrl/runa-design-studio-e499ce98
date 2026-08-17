@@ -138,10 +138,13 @@ function ContactoPage() {
                           <RunaIcon name="send" className="h-8 w-8 text-turquoise" />
                         </div>
                         <h3 className="mt-6 text-center font-display text-2xl font-semibold text-foreground">
-                          {t("Mensagem enviada!")}
+                          {t("Recebido.")}
                         </h3>
                         <p className="mt-2 max-w-md text-center text-muted-foreground">
-                          {t("Obrigado pelo contacto. Responderemos o mais brevemente possível.")}
+                          {t("Obrigado por confiar na RUNA. Já tenho o seu contacto.")}
+                        </p>
+                        <p className="mt-2 max-w-md text-center text-muted-foreground">
+                          {t("Respondo pessoalmente em até 24h úteis com os próximos passos.")}
                         </p>
                       </div>
                     ) : (
