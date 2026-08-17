@@ -21,33 +21,37 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Gerar Build do Projeto
-        run: npm run build
+      - name: Gerar Build Estático
+        run: npx vite build
 
-      - name: Criar arquivo .htaccess na pasta gerada
+      - name: Enviar para Hostinger via LFTP
         run: |
-          # Garante que a pasta de saída existe
-          mkdir -p .output/public
+          sudo apt-get update && sudo apt-get install -y lftp
+          
+          # Procura a pasta estática gerada (dist ou .output/public)
+          if [ -d "dist" ]; then
+            DIR="dist"
+          elif [ -d ".output/public" ]; then
+            DIR=".output/public"
+          else
+            DIR="."
+          fi
 
-          # Cria o .htaccess diretamente dentro da pasta .output/public
-          cat << 'EOF' > .output/public/.htaccess
+          # Cria o .htaccess para tratamento de rotas no servidor
+          cat << 'EOF' > $DIR/.htaccess
           <IfModule mod_rewrite.c>
             RewriteEngine On
             RewriteBase /
             RewriteRule ^index\.html$ - [L]
             RewriteCond %{REQUEST_FILENAME} !-f
             RewriteCond %{REQUEST_FILENAME} !-d
-            RewriteCond %{REQUEST_FILENAME} !-l
             RewriteRule . /index.html [L]
           </IfModule>
           EOF
 
-      - name: Enviar para Hostinger via LFTP
-        run: |
-          sudo apt-get update && sudo apt-get install -y lftp
           lftp -c "
           set ftp:ssl-allow no;
           open -u ${{ secrets.FTP_USERNAME }},'${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }};
-          mirror --reverse --delete --verbose --no-perms ./.output/public/ /public_html/;
+          mirror --reverse --delete --verbose --no-perms ./$DIR/ /public_html/;
           quit;
           "
