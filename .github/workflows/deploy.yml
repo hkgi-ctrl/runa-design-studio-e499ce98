@@ -24,24 +24,19 @@ jobs:
       - name: Gerar Build do Projeto
         run: npm run build
 
-      - name: Injetar index.html real e .htaccess
+      - name: Preparar arquivos estáticos finais
         run: |
-          # Identifica a pasta de saída gerada pelo build
-          if [ -d ".output/public" ]; then
-            DIR=".output/public"
-          elif [ -d "dist" ]; then
-            DIR="dist"
-          else
-            DIR="."
-          fi
+          # Define a pasta exata de saída
+          TARGET_DIR=".output/public"
+          mkdir -p $TARGET_DIR
 
-          # Copia o index.html VERDADEIRO da raiz do repositório para a pasta de distribuição
+          # Copia o index.html original da raiz para dentro do diretório de envio
           if [ -f "index.html" ]; then
-            cp index.html $DIR/index.html
+            cp index.html $TARGET_DIR/index.html
           fi
 
-          # Cria o .htaccess para suporte a SPA
-          cat << 'EOF' > $DIR/.htaccess
+          # Cria o .htaccess dentro do mesmo diretório
+          cat << 'EOF' > $TARGET_DIR/.htaccess
           <IfModule mod_rewrite.c>
             RewriteEngine On
             RewriteBase /
@@ -56,17 +51,9 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
           
-          if [ -d ".output/public" ]; then
-            DIR=".output/public"
-          elif [ -d "dist" ]; then
-            DIR="dist"
-          else
-            DIR="."
-          fi
-
           lftp -c "
           set ftp:ssl-allow no;
           open -u ${{ secrets.FTP_USERNAME }},'${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }};
-          mirror --reverse --delete --verbose --no-perms ./$DIR/ /public_html/;
+          mirror --reverse --delete --verbose --no-perms ./.output/public/ /public_html/;
           quit;
           "
