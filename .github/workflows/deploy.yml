@@ -22,8 +22,8 @@ jobs:
       - name: Instalar dependências
         run: npm ci || npm install
 
-      - name: Gerar Build do Site
-        run: npm run build
+      - name: Gerar Build Estático (Vite SPA)
+        run: npx vite build --outDir dist
 
       - name: Enviar para Hostinger via LFTP
         run: |
@@ -31,6 +31,7 @@ jobs:
           lftp -c "
           set ftp:ssl-allow no;
           open -u ${{ secrets.FTP_USERNAME }},'${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }};
-          mirror --reverse --delete --verbose .output/public/ /public_html/;
+          mirror --reverse --delete --verbose --no-perms dist/ /public_html/;
+          chmod -R 755 /public_html/;
           quit;
           "
