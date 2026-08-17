@@ -1,9 +1,9 @@
-name: Deploy Estático para Hostinger
+name: Deploy para Hostinger
 
 on:
   push:
     branches:
-      - main  # Ou o nome da sua branch padrão do Lovable
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,20 +16,20 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-level: '20'
+          node-version: 20
           cache: 'npm'
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm ci || npm install
 
-      - name: Gerar build estático (Preset GitHub Pages)
-        run: npx nitro build --preset github-pages
+      - name: Gerar Build do Site
+        run: npm run build
 
-      - name: Sincronizar arquivos com a Hostinger (FTP)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Enviar para Hostinger via FTP
+        uses: SamKirsch/ftp-deploy-action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: .output/public/  # Pasta que o comando gera com o index.html correto!
-          server-dir: public_html/
+          local-dir: .output/public/
+          server-dir: /public_html/
