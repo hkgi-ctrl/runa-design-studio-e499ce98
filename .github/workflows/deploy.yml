@@ -16,22 +16,42 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
 
       - name: Instalar dependências
-        run: npm ci || npm install
+        run: npm install
 
-      - name: Gerar Build Estático (Vite SPA)
-        run: npx vite build --outDir dist
+      - name: Gerar Build do Projeto
+        run: npm run build
+
+      - name: Verificar diretórios gerados
+        run: |
+          echo "=== CONTEÚDO DO DIRETÓRIO RAIZ ==="
+          ls -la
+          echo "=== VERIFICANDO PASTA DIST OU OUTPUT ==="
+          ls -la dist || ls -la .output || true
 
       - name: Enviar para Hostinger via LFTP
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
+          
+          # Define a pasta de origem correta (dist ou .output/public)
+          if [ -d "dist" ]; then
+            BUILD_DIR="dist"
+          elif [ -d ".output/public" ]; then
+            BUILD_DIR=".output/public"
+          elif [ -d ".output" ]; then
+            BUILD_DIR=".output"
+          else
+            BUILD_DIR="."
+          fi
+
+          echo "Enviando conteúdo da pasta $BUILD_DIR para public_html..."
+
           lftp -c "
           set ftp:ssl-allow no;
           open -u ${{ secrets.FTP_USERNAME }},'${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }};
-          mirror --reverse --delete --verbose --no-perms dist/ /public_html/;
+          mirror --reverse --delete --verbose --no-perms $BUILD_DIR/ /public_html/;
           chmod -R 755 /public_html/;
           quit;
           "
