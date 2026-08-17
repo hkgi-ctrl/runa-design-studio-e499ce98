@@ -274,6 +274,24 @@ export const es: Dict = {
   "Clique para ampliar": "Haz clic para ampliar",
   "ampliar imagem principal": "ampliar imagen principal",
   "ampliar imagem": "ampliar imagen",
+  "Anterior": "Anterior",
+  "Seguinte": "Siguiente",
+  "Fechar": "Cerrar",
+  "CLIENTE REAL": "CLIENTE REAL",
+  "ESTUDO DE CASO": "CASO DE ESTUDIO",
+  "Branding": "Branding",
+  "De produto artesanal para marca desejada, com ticket médio elevado.":
+    "De producto artesanal a marca deseada, con ticket medio elevado.",
+  "Rebranding afetivo que transforma biscoitos naturais em gesto de cuidado.":
+    "Rebranding afectivo que transforma galletas naturales en gesto de cuidado.",
+  "Branding minimalista que posiciona uma marca de skincare como luxo silencioso.":
+    "Branding minimalista que posiciona una marca de skincare como lujo silencioso.",
+  "Marca de aventura que vende a sensação de explorar o inexplorado.":
+    "Marca de aventura que vende la sensación de explorar lo inexplorado.",
+  "Rebranding que modernizou uma marca tech para um novo ciclo de crescimento.":
+    "Rebranding que modernizó una marca tech para un nuevo ciclo de crecimiento.",
+  "Key visual de alta energia para um dos maiores festivais de Portugal.":
+    "Key visual de alta energía para uno de los mayores festivales de Portugal.",
   "Case study": "Case study",
   "RUNA — Sinalética corporativa": "RUNA — Señalética corporativa",
   "Aplicação da identidade em vidro e superfícies de interior.":
@@ -923,6 +941,24 @@ export const en: Dict = {
   "Clique para ampliar": "Click to enlarge",
   "ampliar imagem principal": "enlarge main image",
   "ampliar imagem": "enlarge image",
+  "Anterior": "Previous",
+  "Seguinte": "Next",
+  "Fechar": "Close",
+  "CLIENTE REAL": "REAL CLIENT",
+  "ESTUDO DE CASO": "CASE STUDY",
+  "Branding": "Branding",
+  "De produto artesanal para marca desejada, com ticket médio elevado.":
+    "From artisanal product to coveted brand, with a high average ticket.",
+  "Rebranding afetivo que transforma biscoitos naturais em gesto de cuidado.":
+    "Affectionate rebranding that turns natural cookies into a caring gesture.",
+  "Branding minimalista que posiciona uma marca de skincare como luxo silencioso.":
+    "Minimalist branding that positions a skincare brand as silent luxury.",
+  "Marca de aventura que vende a sensação de explorar o inexplorado.":
+    "Adventure brand that sells the feeling of exploring the unexplored.",
+  "Rebranding que modernizou uma marca tech para um novo ciclo de crescimento.":
+    "Rebranding that modernized a tech brand for a new growth cycle.",
+  "Key visual de alta energia para um dos maiores festivais de Portugal.":
+    "High-energy key visual for one of Portugal's biggest festivals.",
   "Case study": "Case study",
   "RUNA — Sinalética corporativa": "RUNA — Corporate signage",
   "Aplicação da identidade em vidro e superfícies de interior.":
