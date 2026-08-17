@@ -3,7 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { RunaIcon } from "@/components/icons/RunaIcons";
 import { useTranslation } from "react-i18next";
 
-const socialIcon = "w-11 h-11 rounded-xl bg-[#101828] border border-[#5EEAD4]/30 flex items-center justify-center shadow-[0_0_24px_rgba(94,234,212,0.2)] hover:border-[#5EEAD4]/60 hover:shadow-[0_0_30px_rgba(94,234,212,0.3)] transition-all duration-300";
+const socialIcon =
+  "w-11 h-11 rounded-xl bg-[#101828] border border-[#5EEAD4]/30 flex items-center justify-center shadow-[0_0_24px_rgba(94,234,212,0.2)] hover:border-[#5EEAD4]/60 hover:shadow-[0_0_30px_rgba(94,234,212,0.3)] transition-all duration-300";
 
 const IconInstagram = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" strokeWidth="1.7">
@@ -43,7 +44,6 @@ const IconFacebook = () => (
   </svg>
 );
 
-
 const footerLinks = {
   servicos: [
     { to: "/servicos", label: "Identidade Visual" },
@@ -56,9 +56,7 @@ const footerLinks = {
     { to: "/portfolio", label: "Portfólio" },
     { to: "/processo", label: "Processo" },
   ],
-  suporte: [
-    { to: "/faq", label: "FAQ" },
-  ],
+  suporte: [{ to: "/faq", label: "FAQ" }],
 };
 
 const socialLinks: Array<{
@@ -71,11 +69,13 @@ const socialLinks: Array<{
   { icon: IconInstagram, href: "https://www.instagram.com/runa.studiodesign/", label: "Instagram RUNA" },
   { icon: IconBehance, href: "https://www.behance.net/runa_studiodesign", label: "Behance RUNA" },
   { icon: IconLinkedIn, href: "https://www.linkedin.com/company/runa-studiodesign/", label: "LinkedIn RUNA" },
-  { icon: IconWhatsApp, href: "https://wa.me/351923397753?text=Ol%C3%A1%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20projeto.", label: "WhatsApp" },
-  // TODO: Ativar Facebook quando página for desbloqueada - trocar href para https://www.facebook.com/runa.studiodesign
-  { icon: IconFacebook, href: "#", label: "Facebook RUNA em breve", title: "Facebook em breve" },
+  {
+    icon: IconWhatsApp,
+    href: "https://wa.me/351923397753?text=Ol%C3%A1%20RUNA%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20projeto.",
+    label: "WhatsApp",
+  },
+  { icon: IconFacebook, href: "https://www.facebook.com/runastudiodesign", label: "Facebook RUNA" },
 ];
-
 
 function FooterLinkList({ links }: { links: Array<{ to: string; label: string }> }) {
   const { t } = useTranslation();
@@ -84,10 +84,7 @@ function FooterLinkList({ links }: { links: Array<{ to: string; label: string }>
     <ul className="mt-4 space-y-3">
       {links.map((link) => (
         <li key={link.label}>
-          <Link
-            to={link.to}
-            className="text-sm text-footer-link transition-colors hover:text-footer-link-hover"
-          >
+          <Link to={link.to} className="text-sm text-footer-link transition-colors hover:text-footer-link-hover">
             {t(link.label)}
           </Link>
         </li>
