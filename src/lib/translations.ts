@@ -460,9 +460,11 @@ export const es: Dict = {
   "Mensagem": "Mensaje",
   "Conte-nos sobre o seu projeto...": "Cuéntanos sobre tu proyecto...",
   "Enviar mensagem": "Enviar mensaje",
-  "Mensagem enviada!": "¡Mensaje enviado!",
-  "Obrigado pelo contacto. Responderemos o mais brevemente possível.":
-    "Gracias por tu mensaje. Responderemos lo antes posible.",
+  "Recebido.": "Recibido.",
+  "Obrigado por confiar na RUNA. Já tenho o seu contacto.":
+    "Gracias por confiar en RUNA. Ya tengo tu contacto.",
+  "Respondo pessoalmente em até 24h úteis com os próximos passos.":
+    "Respondo personalmente en hasta 24h laborables con los siguientes pasos.",
   "A enviar...": "Enviando...",
   "Não foi possível enviar a mensagem. Tente novamente ou contacte-nos diretamente através de hello@runastudio.pt.":
     "No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos directamente a través de hello@runastudio.pt.",
@@ -1127,9 +1129,11 @@ export const en: Dict = {
   "Mensagem": "Message",
   "Conte-nos sobre o seu projeto...": "Tell us about your project...",
   "Enviar mensagem": "Send message",
-  "Mensagem enviada!": "Message sent!",
-  "Obrigado pelo contacto. Responderemos o mais brevemente possível.":
-    "Thanks for reaching out. We'll respond as soon as possible.",
+  "Recebido.": "Received.",
+  "Obrigado por confiar na RUNA. Já tenho o seu contacto.":
+    "Thank you for trusting RUNA. I have your contact details.",
+  "Respondo pessoalmente em até 24h úteis com os próximos passos.":
+    "I'll reply personally within 24 business hours with the next steps.",
   "A enviar...": "Sending...",
   "Não foi possível enviar a mensagem. Tente novamente ou contacte-nos diretamente através de hello@runastudio.pt.":
     "We couldn't send your message. Please try again or contact us directly at hello@runastudio.pt.",
