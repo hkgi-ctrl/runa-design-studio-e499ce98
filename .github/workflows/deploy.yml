@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Enviar para Hostinger via FTP
-        uses: SamKirland/FTP-Deploy-Action@v4.3.4
+        uses: marianodev/ftp-deploy-action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
