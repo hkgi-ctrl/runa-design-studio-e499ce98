@@ -274,6 +274,24 @@ export const es: Dict = {
   "Clique para ampliar": "Haz clic para ampliar",
   "ampliar imagem principal": "ampliar imagen principal",
   "ampliar imagem": "ampliar imagen",
+  "Anterior": "Anterior",
+  "Seguinte": "Siguiente",
+  "Fechar": "Cerrar",
+  "CLIENTE REAL": "CLIENTE REAL",
+  "ESTUDO DE CASO": "CASO DE ESTUDIO",
+  "Branding": "Branding",
+  "De produto artesanal para marca desejada, com ticket médio elevado.":
+    "De producto artesanal a marca deseada, con ticket medio elevado.",
+  "Rebranding afetivo que transforma biscoitos naturais em gesto de cuidado.":
+    "Rebranding afectivo que transforma galletas naturales en gesto de cuidado.",
+  "Branding minimalista que posiciona uma marca de skincare como luxo silencioso.":
+    "Branding minimalista que posiciona una marca de skincare como lujo silencioso.",
+  "Marca de aventura que vende a sensação de explorar o inexplorado.":
+    "Marca de aventura que vende la sensación de explorar lo inexplorado.",
+  "Rebranding que modernizou uma marca tech para um novo ciclo de crescimento.":
+    "Rebranding que modernizó una marca tech para un nuevo ciclo de crecimiento.",
+  "Key visual de alta energia para um dos maiores festivais de Portugal.":
+    "Key visual de alta energía para uno de los mayores festivales de Portugal.",
   "Case study": "Case study",
   "RUNA — Sinalética corporativa": "RUNA — Señalética corporativa",
   "Aplicação da identidade em vidro e superfícies de interior.":
