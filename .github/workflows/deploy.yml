@@ -21,12 +21,12 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Gerar Build
+      - name: Gerar Build do Projeto
         run: npm run build
 
-      - name: Injetar index.html e .htaccess na pasta final
+      - name: Injetar index.html real e .htaccess
         run: |
-          # Procura a pasta publica de saida
+          # Identifica a pasta de saída gerada pelo build
           if [ -d ".output/public" ]; then
             DIR=".output/public"
           elif [ -d "dist" ]; then
@@ -35,29 +35,12 @@ jobs:
             DIR="."
           fi
 
-          # Se o index.html não existir na pasta, procura em todo o repositório ou cria um fallback
-          if [ ! -f "$DIR/index.html" ]; then
-            FOUND_INDEX=$(find . -name "index.html" | head -n 1)
-            if [ -n "$FOUND_INDEX" ]; then
-              cp "$FOUND_INDEX" "$DIR/index.html"
-            else
-              cat << 'EOF' > $DIR/index.html
-          <!DOCTYPE html>
-          <html lang="pt">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Runa Design Studio</title>
-          </head>
-          <body>
-            <div id="root"></div>
-          </body>
-          </html>
-          EOF
-            fi
+          # Copia o index.html VERDADEIRO da raiz do repositório para a pasta de distribuição
+          if [ -f "index.html" ]; then
+            cp index.html $DIR/index.html
           fi
 
-          # Garante o .htaccess para tratamento de rotas SPA
+          # Cria o .htaccess para suporte a SPA
           cat << 'EOF' > $DIR/.htaccess
           <IfModule mod_rewrite.c>
             RewriteEngine On
