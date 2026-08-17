@@ -24,34 +24,26 @@ jobs:
       - name: Gerar Build do Projeto
         run: npm run build
 
-      - name: Verificar diretórios gerados
-        run: |
-          echo "=== CONTEÚDO DO DIRETÓRIO RAIZ ==="
-          ls -la
-          echo "=== VERIFICANDO PASTA DIST OU OUTPUT ==="
-          ls -la dist || ls -la .output || true
-
       - name: Enviar para Hostinger via LFTP
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
           
-          # Define a pasta de origem correta (dist ou .output/public)
+          # Detecta qual pasta de build foi gerada pelo Vite/Lovable
           if [ -d "dist" ]; then
-            BUILD_DIR="dist"
+            TARGET_DIR="dist"
           elif [ -d ".output/public" ]; then
-            BUILD_DIR=".output/public"
-          elif [ -d ".output" ]; then
-            BUILD_DIR=".output"
+            TARGET_DIR=".output/public"
           else
-            BUILD_DIR="."
+            TARGET_DIR="."
           fi
 
-          echo "Enviando conteúdo da pasta $BUILD_DIR para public_html..."
+          echo "Pasta detectada para envio: $TARGET_DIR"
 
           lftp -c "
           set ftp:ssl-allow no;
           open -u ${{ secrets.FTP_USERNAME }},'${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }};
-          mirror --reverse --delete --verbose --no-perms $BUILD_DIR/ /public_html/;
-          chmod -R 755 /public_html/;
+          mirror --reverse --delete --verbose --no-perms ./$TARGET_DIR/ /public_html/;
+          chmod -R 755 /public_html;
+          find /public_html -type f -exec chmod 644 {} \;
           quit;
           "
